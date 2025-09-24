@@ -1,1 +1,6 @@
-npx --no -- commitlint --edit "$1"
+#!/bin/sh
+# Forzamos el PATH para que incluya Node de Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
+
+# Ejecutamos commitlint usando el binario local
+node ./node_modules/.bin/commitlint --edit "$1"
