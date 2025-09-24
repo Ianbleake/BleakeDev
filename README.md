@@ -91,7 +91,7 @@ Si quieres ponerte en contacto conmigo:
 
 * 🌐 [Mi sitio web](https://tusitio.dev)
 * 💼 [LinkedIn](https://linkedin.com/in/tuusuario)
-* 🐙 [GitHub](https://github.com/tuusuario)
+* 🐙 [GitHub](https://github.com/Ianbleake)
 * ✉️ [Correo](mailto:bleakedev@gmail.com)
 
 ---
