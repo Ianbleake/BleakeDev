@@ -1,9 +1,10 @@
+import Page from '@/components/ui/page';
 import React from 'react';
 
 export default function Home(): React.ReactElement {
   return (
-    <div>
-      home
-    </div>
+    <Page>
+      
+    </Page>
   );
 }
