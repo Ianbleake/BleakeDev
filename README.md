@@ -80,8 +80,8 @@ La aplicación estará disponible en **[http://localhost:3000](http://localhost:
 | Inicio                                    | Proyectos                                         |
 | ----------------------------------------- | ------------------------------------------------- |
 | <img width="1438" height="749" alt="image" src="https://github.com/user-attachments/assets/1ae3a135-7d95-4a79-9f5b-06c3c3970e63" />
-) | <img width="1438" height="755" alt="image" src="https://github.com/user-attachments/assets/2ca27c2a-15a8-4741-83f9-82a41d1fcdf0" />
-) |
+| <img width="1438" height="755" alt="image" src="https://github.com/user-attachments/assets/2ca27c2a-15a8-4741-83f9-82a41d1fcdf0" />
+|
 
 *(Agrega tus capturas reales después de montar el proyecto)*
 
