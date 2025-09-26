@@ -1,21 +1,18 @@
 import React from "react";
 import ProyectsStatus from "./components/proyectsStatus";
-import Button from "@/components/ui/button";
+import InformativeTexts from "./components/informativeTexts";
+import ActionButtons from "./components/actionButtons";
 
 export default function Introduction(): React.ReactElement {
   return (
-    <div className="h-160 w-full bg-gray-900 flex flex-col gap-2 p-8">
+    <div className="h-120 w-full bg-gray-900 flex flex-col gap-2 p-8">
       
       <ProyectsStatus />
       
-      <div>
+      <InformativeTexts />
 
-      </div>
+      <ActionButtons />
 
-      <div>
-        <Button label="View My Work" isLink={true} route="/proyects" />
-        <Button label="Contact Me" isLink={true} route="/contact" variant="secondary" className="ml-4" />
-      </div>
     </div>
   );
 }
