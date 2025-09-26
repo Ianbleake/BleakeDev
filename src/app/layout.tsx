@@ -5,7 +5,12 @@ import Body from "@/components/body";
 export const metadata: Metadata = {
   title: "BleakeDev",
   description: "Portfolio website of BleakeDev",
+  icons: {
+    icon: "/icons/buho.png",
+  },
 };
+
+
 
 export default function RootLayout({
   children,
