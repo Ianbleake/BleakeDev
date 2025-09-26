@@ -14,6 +14,7 @@ export default function Introduction(): React.ReactElement {
 
       <div>
         <Button label="View My Work" isLink={true} route="/proyects" />
+        <Button label="Contact Me" isLink={true} route="/contact" variant="secondary" className="ml-4" />
       </div>
     </div>
   );
