@@ -5,14 +5,14 @@ import { MdEmail, MdPhone, MdLocationOn, MdAccessTime } from "react-icons/md";
 export default function Social(): React.ReactElement {
 
   const contactInfo = [
-    { icon: <MdEmail size={20} />, title: "Email", value: "hello@alexdev.com", description: "Send me an email anytime" },
-    { icon: <MdPhone size={20} />, title: "Phone", value: "+1 (555) 123-4567", description: "Mon-Fri from 8am to 6pm" },
-    { icon: <MdLocationOn size={20} />, title: "Office", value: "San Francisco, CA", description: "Available for remote work" },
+    { icon: <MdEmail size={20} />, title: "Email", value: "bleakedev@gmail.com", description: "Send me an email anytime" },
+    { icon: <MdPhone size={20} />, title: "Phone", value: "+52 (56) 4119-3628", description: "Mon-Fri after the 6pm (Mx.city-timezone)" },
+    { icon: <MdLocationOn size={20} />, title: "Office", value: "CDMX, MX", description: "Available for remote work" },
     { icon: <MdAccessTime size={20} />, title: "Response Time", value: "24 hours", description: "Average response time" },
   ];
 
   const socialLinks = [
-    { icon: <FaGithub size={20} />, label: "GitHub", href: "#" },
+    { icon: <FaGithub size={20} />, label: "GitHub", href: "https://github.com/Ianbleake" },
     { icon: <FaLinkedin size={20} />, label: "LinkedIn", href: "#" },
     { icon: <FaTwitter size={20} />, label: "Twitter", href: "#" },
   ];
@@ -24,7 +24,7 @@ export default function Social(): React.ReactElement {
         <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
         <div className="grid gap-6">
           {contactInfo.map((item, i) => (
-            <div key={i} className="border border-emerald-600/30 shadow-xl bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl p-6 flex items-start">
+            <div key={i} className="border border-emerald-600/30 shadow-xl bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl p-6 flex items-center justify-start">
               <div className="w-12 h-12 bg-emerald-100/20 rounded-lg flex items-center justify-center mr-4">
                 {item.icon}
               </div>

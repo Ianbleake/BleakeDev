@@ -23,7 +23,7 @@ export default function Header(): React.ReactElement {
         <h1 className="text-2xl font-semibold text-white">Bleake<span className="text-emerald-600">Dev</span></h1>
       </Link>
 
-      <a href="#" target="_blank">
+      <a href="https://github.com/Ianbleake" target="_blank">
         <SiGithub size={30} color={twTheme.colors.emerald[600]} />
       </a>
 
