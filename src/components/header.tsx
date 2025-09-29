@@ -13,7 +13,7 @@ export default function Header(): React.ReactElement {
   const pathname = usePathname();
 
   if (pathname === "/contact") return (
-    <header className="fixed h-16 w-full bg-gray-800 flex items-center justify-between px-8">
+    <header className="fixed h-16 w-full bg-gray-800 flex items-center justify-between px-8 z-10">
 
       <Link href={"/"} className="cursor-pointer">
         <IoMdArrowRoundBack size={30} color={twTheme.colors.emerald[600]} />
@@ -31,7 +31,7 @@ export default function Header(): React.ReactElement {
   );
 
   return (
-    <header className="fixed h-16 w-full bg-gray-800 flex items-center justify-between px-8">
+    <header className="fixed h-16 w-full bg-gray-800 flex items-center justify-between px-8 z-10 border-b border-gray-800 shadow-md shadow-emerald-900">
       <Link href={"/"} >
         <h1 className="text-2xl font-semibold text-white">Bleake<span className="text-emerald-600">Dev</span></h1>
       </Link>
