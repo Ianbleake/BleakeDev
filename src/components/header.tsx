@@ -3,6 +3,8 @@ import Button from "./ui/button";
 import Link from "next/link";
 
 export default function Header(): React.ReactElement {
+
+  
   return (
     <header className="fixed h-16 w-full bg-gray-800 flex items-center justify-between px-8">
       <Link href={"/"} >
