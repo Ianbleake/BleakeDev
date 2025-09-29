@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/Ianbleake/BleakeDev/compare/portafolio-v0.3.0...portafolio-v0.4.0) (2025-09-29)
+
+
+### Features
+
+* add contact page ([83e2ff3](https://github.com/Ianbleake/BleakeDev/commit/83e2ff3e9993ca187d680ae3803c6b9efd27a284))
+* add contact page header ([b31f0ec](https://github.com/Ianbleake/BleakeDev/commit/b31f0ecd90b78fb2647ef61a706fb16d58288916))
+* implementar formulario de contacto con validación y envío de mensajes ([d57a87d](https://github.com/Ianbleake/BleakeDev/commit/d57a87dfe0d40960956b672633bf2fd5e2ec7536))
+
+
+### Bug Fixes
+
+* contact info ([53f057b](https://github.com/Ianbleake/BleakeDev/commit/53f057b81e1f0954cdc1047728f845279603cf41))
+* header position ([8248cb0](https://github.com/Ianbleake/BleakeDev/commit/8248cb06b43300a57dc378c8f7bea81cd88429ae))
+* header shadow ([abee74d](https://github.com/Ianbleake/BleakeDev/commit/abee74d89843c6e1da1c3acd0d972a7d4ede269a))
+
 ## [0.3.0](https://github.com/Ianbleake/BleakeDev/compare/portafolio-v0.2.0...portafolio-v0.3.0) (2025-09-26)
 
 
