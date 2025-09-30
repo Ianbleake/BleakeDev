@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/Ianbleake/BleakeDev/compare/portafolio-v0.4.2...portafolio-v0.5.0) (2025-09-30)
+
+
+### Features
+
+* add savy assets ([b977999](https://github.com/Ianbleake/BleakeDev/commit/b977999d1e2f4a7dd85b8df57cfcdd917be38b0b))
+
 ## [0.4.2](https://github.com/Ianbleake/BleakeDev/compare/portafolio-v0.4.1...portafolio-v0.4.2) (2025-09-30)
 
 
