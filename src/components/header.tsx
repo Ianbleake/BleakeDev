@@ -7,17 +7,20 @@ import { usePathname } from "next/navigation";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { twTheme } from "@/utils/ThemeColors";
 import { SiGithub } from "react-icons/si";
+import { useRouter } from "next/navigation";
 
 export default function Header(): React.ReactElement {
 
+  const router = useRouter();
+
   const pathname = usePathname();
 
-  if (pathname === "/contact") return (
+  if (pathname !== "/") return (
     <header className="fixed h-16 w-full bg-gray-800 flex items-center justify-between px-8 z-10 shadow-md shadow-emerald-900">
 
-      <Link href={"/"} className="cursor-pointer">
+      <div onClick={() => router.back()} className="cursor-pointer">
         <IoMdArrowRoundBack size={30} color={twTheme.colors.emerald[600]} />
-      </Link>
+      </div>
 
       <Link href={"/"} >
         <h1 className="text-2xl font-semibold text-white">Bleake<span className="text-emerald-600">Dev</span></h1>

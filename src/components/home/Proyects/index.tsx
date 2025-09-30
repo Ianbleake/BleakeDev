@@ -17,25 +17,25 @@ export default function Proyects(): React.ReactElement {
           <div className="grid lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <Card key={index} className="border border-emerald-600/30 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden bg-gradient-to-br from-emerald-600 to-emerald-700">
-                <div className="h-48 bg-gradient-to-br from-emerald-700 to-emerald-800 relative overflow-hidden">
-                <div
-                  className="absolute inset-0 bg-black/10"
-                  style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover' }}
-                ></div>
+                <div style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover' }} className="h-48 bg-gradient-to-br from-emerald-700 to-emerald-800 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-black/10" ></div>
 
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-emerald-100/20 backdrop-blur-sm text-emerald-100 px-3 py-1 rounded-full text-sm font-medium border border-emerald-300/20">
-                      {project.status}
-                    </span>
-                  </div>
-                  <div className="absolute bottom-4 left-4 text-emerald-100">
+                  <div className="absolute bottom-4 left-4 text-emerald-600">
                     <div className="text-2xl font-bold opacity-40">
                       {project.title.substring(0, 2)}
                     </div>
                   </div>
                 </div>
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
+                  <div className="relative">
+                    <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
+                    <div className="absolute bottom-1 right-1 z-20">
+                      <span className="bg-emerald-400/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium border border-white/20">
+                        {project.status}
+                      </span>
+                    </div>
+                  </div>
+
                   <p className="text-emerald-100 mb-4 leading-relaxed">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map((tech, techIndex) => (
@@ -44,7 +44,7 @@ export default function Proyects(): React.ReactElement {
                       </span>
                     ))}
                   </div>
-                  <Button isExternal={project.isExternal} route={project.link} isLink={!project.isExternal} label="View Project" variant="primary" className="w-full" />
+                  <Button isExternal={project.isExternal} route={project.link !== "#" ? project.link : `/proyects/${project.id}`} isLink={!project.isExternal} label="View Project" variant="primary" className="w-full" />
                 </CardContent>
               </Card>
             ))}
