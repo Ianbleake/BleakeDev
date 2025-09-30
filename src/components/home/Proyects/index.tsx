@@ -44,7 +44,7 @@ export default function Proyects(): React.ReactElement {
                       </span>
                     ))}
                   </div>
-                  <Button isExternal={project.isExternal} route={project.link} isLink={!project.isExternal} label="View Project" variant="primary" className="w-full" />
+                  <Button isExternal={project.isExternal} route={project.link !== "#" ? project.link : `/proyects/${project.id}`} isLink={!project.isExternal} label="View Project" variant="primary" className="w-full" />
                 </CardContent>
               </Card>
             ))}
