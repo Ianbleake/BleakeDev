@@ -4,7 +4,7 @@ type Project = {
   description: string;
   tech: string[];
   category: string;
-  status: string;
+  status: "Completed" | "In Progress" | "Planned";
   image: string;
   isExternal: boolean;
   link: string;

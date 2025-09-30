@@ -2,6 +2,10 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import Button from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import ProyectStatus from "./components/proyectStatus";
+import ProyectCategory from "./components/proyectCategory";
+import { FiGithub } from "react-icons/fi";
+import { twTheme } from "@/utils/ThemeColors";
 
 type ProyectCardProps = {
   proyect: Project;
@@ -21,11 +25,9 @@ export default function ProyectCard({
     
       <div className="h-48 relative overflow-hidden bg-cover bg-center" style={{ backgroundImage: `url(${proyect.image})` }}>
         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all"></div>
-        <div className="absolute bottom-4 right-4">
-          <span className="bg-emerald-400/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium border border-emerald-900/20">
-            {proyect.status}
-          </span>
-        </div>
+
+        <ProyectCategory category={proyect.category} />
+
       </div>
 
       {/* Project Content */}
@@ -35,11 +37,7 @@ export default function ProyectCard({
             {proyect.title}
           </h3>
 
-          <div className="absolute bottom-1 right-1 z-20">
-            <div className="text-white/70 text-sm font-medium mb-1">
-              {proyect.category}
-            </div>
-          </div>
+          <ProyectStatus  status={proyect.status} />
 
         </div>
 
@@ -69,14 +67,20 @@ export default function ProyectCard({
           <Button
             variant="primary"
             className="flex-1 border-emerald-300 text-emerald-100 hover:bg-emerald-800/50 hover:text-white transition-all bg-transparent"
-            label="Live Demo"
+            label={proyect.status === "In Progress" || proyect.status === "Planned" ? "Coming Soon" : "Visit proyect"}
+            isExternal
+            route={proyect.link}
+            disabled={proyect.status === "In Progress" || proyect.status === "Planned"}
           >
           </Button>
           <Button
             variant="primary"
             className="border-emerald-300 text-emerald-100 hover:bg-emerald-800/50 hover:text-white transition-all bg-transparent"
             label="GitHub"
+            isExternal
+            route={proyect.github}
           >
+            <FiGithub size={20} color={twTheme.colors.emerald[100]}/>
           </Button>
         </div>
       </CardContent>
