@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.1](https://github.com/Ianbleake/BleakeDev/compare/portafolio-v0.4.0...portafolio-v0.4.1) (2025-09-30)
+
+
+### Bug Fixes
+
+* update aboy me and header texts ([16a095f](https://github.com/Ianbleake/BleakeDev/commit/16a095fcb34b4bb3917cfb0f0751bb49f58fd2c1))
+* update contact links ([9739839](https://github.com/Ianbleake/BleakeDev/commit/9739839ff68d6396f7307da5dc4eb94e2f7b3225))
+* update hero texts ([304ef50](https://github.com/Ianbleake/BleakeDev/commit/304ef507d240ee4d0ed33b50588e1bc9226a1cfe))
+* update skills ([478d5b4](https://github.com/Ianbleake/BleakeDev/commit/478d5b46e722f2edf4ab42b7db8a4bb85808a5e7))
+
 ## [0.4.0](https://github.com/Ianbleake/BleakeDev/compare/portafolio-v0.3.0...portafolio-v0.4.0) (2025-09-29)
 
 
