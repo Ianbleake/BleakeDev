@@ -1,3 +1,5 @@
 import { projects } from "./proyects";
 
-export const categories = ["All", "Web Apps", "E-commerce", "Tools", "Open Source"];
+const uniqueCategories = Array.from(new Set(projects.map(project => project.category)));
+
+export const categories = ["All", ...uniqueCategories];
