@@ -5,14 +5,15 @@ export default function InformativeTexts(): React.ReactElement {
     <div className="flex flex-col items-start">
 
       <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-        Creative Developer & 
-        <span className="text-emerald-400 block">Digital Craftsman</span>
+        Turning Ideas Into 
+        <span className="text-emerald-400 block">Digital Products</span>
       </h1>
 
       <p className="text-xl text-stone-300 mb-8 leading-relaxed">
-        I build exceptional digital experiences that blend beautiful design with powerful functionality. 
-        Specialized in modern web technologies and user-centered solutions.
+        From websites to mobile apps, I create digital solutions tailored to your needs.
+        Combining design, functionality, and technology for impactful results.
       </p>
+
 
     </div>
   );

@@ -7,20 +7,20 @@ export default function Hero(): React.ReactElement {
         <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 text-white border border-white/10">
           <div className="grid grid-cols-2 gap-6">
             <div>
-              <div className="text-3xl font-bold mb-1 text-emerald-100">150+</div>
-              <div className="text-emerald-200 text-sm">Projects Completed</div>
+              <div className="text-3xl font-bold mb-1 text-emerald-100">10+</div>
+              <div className="text-emerald-200 text-sm">Projects Delivered</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-1 text-emerald-100">5+</div>
+              <div className="text-3xl font-bold mb-1 text-emerald-100">3+</div>
               <div className="text-emerald-200 text-sm">Years Experience</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-1 text-emerald-100">50+</div>
-              <div className="text-emerald-200 text-sm">Happy Clients</div>
+              <div className="text-3xl font-bold mb-1 text-emerald-100">Ecommerse & Websites</div>
+              <div className="text-emerald-200 text-sm">Specialized Solutions</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-1 text-emerald-100">24/7</div>
-              <div className="text-emerald-200 text-sm">Support</div>
+              <div className="text-3xl font-bold mb-1 text-emerald-100">Clean Code</div>
+              <div className="text-emerald-200 text-sm">and quality development</div>
             </div>
           </div>
         </div>
