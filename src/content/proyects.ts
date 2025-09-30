@@ -1,23 +1,21 @@
 export const projects = [
   {
-    title: "EcoCommerce",
-    description: "Sustainable e-commerce platform with carbon footprint tracking and eco-friendly product recommendations.",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    status: "Live",
-    link: "#"
+    title: "Link Me Up",
+    description: "Link Me Up is a PWA that allows bulk importing of contacts from Excel or CSV files, with the ability to review and edit the data before saving them to the device.",
+    tech: ["React", "Vite", "TailwindCSS", "Zustand","TypeScript"],
+    status: "Completed",
+    isExternal: true,
+    link: "https://link-me-up-zeta.vercel.app",
+    image: "/images/linkmeup.png"
   },
   {
-    title: "CollabSpace",
-    description: "Real-time collaborative workspace with video calls, shared documents, and project management tools.",
-    tech: ["TypeScript", "WebRTC", "Socket.io", "PostgreSQL"],
-    status: "Beta",
-    link: "#"
-  },
-  {
-    title: "DevToolkit",
-    description: "Collection of developer utilities including code formatters, API testers, and productivity tools.",
-    tech: ["React", "Electron", "Tailwind", "IndexedDB"],
-    status: "Open Source",
-    link: "#"
+    title: "Savy - Budget App",
+    description: "Ongoing project focused on React Native + Supabase, structured by domain with clean service layers and React Query integration.",
+    tech: ["React Native", "Supabase", "React Query", "Zustand"],
+    status: "In Progress",
+    isExternal: false,
+    link: "#",
+    image: "/projects/savy.png"
   }
+  
 ];

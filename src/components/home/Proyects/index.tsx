@@ -18,7 +18,11 @@ export default function Proyects(): React.ReactElement {
             {projects.map((project, index) => (
               <Card key={index} className="border border-emerald-600/30 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden bg-gradient-to-br from-emerald-600 to-emerald-700">
                 <div className="h-48 bg-gradient-to-br from-emerald-700 to-emerald-800 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-black/10"></div>
+                <div
+                  className="absolute inset-0 bg-black/10"
+                  style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover' }}
+                ></div>
+
                   <div className="absolute top-4 right-4">
                     <span className="bg-emerald-100/20 backdrop-blur-sm text-emerald-100 px-3 py-1 rounded-full text-sm font-medium border border-emerald-300/20">
                       {project.status}
@@ -40,7 +44,7 @@ export default function Proyects(): React.ReactElement {
                       </span>
                     ))}
                   </div>
-                  <Button label="View Project" variant="primary" className="w-full" />
+                  <Button isExternal={project.isExternal} route={project.link} isLink={!project.isExternal} label="View Project" variant="primary" className="w-full" />
                 </CardContent>
               </Card>
             ))}
