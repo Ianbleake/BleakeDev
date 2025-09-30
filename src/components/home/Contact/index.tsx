@@ -20,21 +20,19 @@ export default function Contact(): React.ReactElement {
           <Button 
             label="Get In Touch"
             className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 shadow-lg"
-          />
-          <Button
-            label="View GitHub"
-            variant="secondary" 
+            isLink
+            route="/contact"
           />
         </div>
         
         <div className="flex justify-center space-x-6">
-          <a href="#" className="text-stone-400 hover:text-emerald-400 transition-colors">
+          <a href="https://github.com/Ianbleake" className="text-stone-400 hover:text-emerald-400 transition-colors">
             <VscGithub size={30} color={twTheme.colors.emerald[600]} />
           </a>
-          <a href="#" className="text-stone-400 hover:text-emerald-400 transition-colors">
+          <a href="https://www.linkedin.com/in/angel-ivan-rangel-8782601b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="text-stone-400 hover:text-emerald-400 transition-colors">
             <FaLinkedin size={30} color={twTheme.colors.emerald[600]} />
           </a>
-          <a href="#" className="text-stone-400 hover:text-emerald-400 transition-colors">
+          <a href="mailto:bleakedev@gmail.com" className="text-stone-400 hover:text-emerald-400 transition-colors">
             <MdEmail size={30} color={twTheme.colors.emerald[600]} />
           </a>
         </div>

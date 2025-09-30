@@ -9,6 +9,7 @@ type ButtonProps = {
   route?: string;
   variant?: "primary" | "secondary";
   className?: string;
+  isExternal?: boolean;
 }
 
 export default function Button({
@@ -18,6 +19,7 @@ export default function Button({
   route,
   variant = "primary",
   className,
+  isExternal,
 }: ButtonProps ): React.ReactElement {
 
   const baseStyle = "text-white rounded-md py-2 px-4 transition"
@@ -30,6 +32,15 @@ export default function Button({
       </Link>
     )
   }
+
+  if( route && isExternal) {
+    return(
+      <a href={route} target="_blank" className={merge(buttonStyle,className)} >
+        {label}
+      </a>
+    )
+  }
+
   return (
     <button onClick={onClick} className={merge(buttonStyle,className)} >
       {label}

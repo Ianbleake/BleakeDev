@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { MdEmail, MdPhone, MdLocationOn, MdAccessTime } from "react-icons/md";
 
 export default function Social(): React.ReactElement {
@@ -13,8 +13,8 @@ export default function Social(): React.ReactElement {
 
   const socialLinks = [
     { icon: <FaGithub size={20} />, label: "GitHub", href: "https://github.com/Ianbleake" },
-    { icon: <FaLinkedin size={20} />, label: "LinkedIn", href: "#" },
-    { icon: <FaTwitter size={20} />, label: "Twitter", href: "#" },
+    { icon: <FaLinkedin size={20} />, label: "LinkedIn", href: "https://www.linkedin.com/in/angel-ivan-rangel-8782601b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+    { icon: <FaYoutube size={20} />, label: "YouTube", href: "https://www.youtube.com/@bleakedev" },
   ];
 
 
