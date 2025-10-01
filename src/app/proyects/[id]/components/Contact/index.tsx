@@ -9,7 +9,7 @@ export default function Contact(): React.ReactElement {
   const router = useRouter();
 
   return (
-    <section className="py-20 px-6 bg-stone-800">
+    <section className="py-20 px-6 bg-gray-800">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-white mb-6">
           Interested in Working Together?
