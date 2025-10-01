@@ -104,18 +104,12 @@ export const projects: Project[] = [
       images: [
         {
           id: 1,
-          title: "Dashboard",
-          color: "from-emerald-400 to-green-500",
-          url: "/images/savySS1-landscape.png",
-        },
-        {
-          id: 2,
           title: "Product Page",
           color: "from-green-500 to-emerald-600",
           url: "/images/savySS1-left.png",
         },
         {
-          id: 3,
+          id: 2,
           title: "Analytics",
           color: "from-emerald-600 to-green-700",
           url: "/images/savySS1-portrait.png",
