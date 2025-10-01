@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.1](https://github.com/Ianbleake/BleakeDev/compare/v0.7.0...v0.7.1) (2025-10-01)
+
+
+### Bug Fixes
+
+* realese ([794ddf9](https://github.com/Ianbleake/BleakeDev/commit/794ddf9ac5b176d2b62fa1481544ea36d2c1ef2b))
+
 ## [0.7.0](https://github.com/Ianbleake/BleakeDev/compare/v0.6.0...v0.7.0) (2025-10-01)
 
 
