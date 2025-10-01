@@ -19,7 +19,7 @@ export default function Overview({
 
         <div className="grid md:grid-cols-2 gap-8">
           
-          <Card className="border border-emerald-600/30 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden bg-gradient-to-br from-emerald-600 to-emerald-700 hover:scale-105 cursor-pointer">
+          <Card className="border border-emerald-600/30 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden bg-gradient-to-br from-emerald-600 to-emerald-700 ">
             <CardHeader className="border-b border-emerald-600/30 shadow-xl py-4  bg-gradient-to-br from-emerald-600 to-emerald-700">
             <h3 className="text-xl font-bold text-white">Tech Stack</h3>
             </CardHeader>
@@ -39,7 +39,7 @@ export default function Overview({
           </Card>
 
           
-          <Card className="border border-emerald-600/30 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden bg-gradient-to-br from-emerald-600 to-emerald-700 hover:scale-105 cursor-pointer">
+          <Card className="border border-emerald-600/30 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden bg-gradient-to-br from-emerald-600 to-emerald-700 ">
             <CardHeader className="border-b border-emerald-600/30 shadow-xl py-4  bg-gradient-to-br from-emerald-600 to-emerald-700">
               <h3 className="text-xl font-bold text-white">Key Challenges</h3>
             </CardHeader>
