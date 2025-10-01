@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/Ianbleake/BleakeDev/compare/portafolio-v0.5.0...portafolio-v0.6.0) (2025-10-01)
+
+
+### Features
+
+* add single proyect page ([1f176ba](https://github.com/Ianbleake/BleakeDev/commit/1f176badea8c44b516d626852dfb1dab133fd224))
+
+
+### Bug Fixes
+
+* responsive ([cf8ef12](https://github.com/Ianbleake/BleakeDev/commit/cf8ef12f5f945610924a702eedf2d127e03a505f))
+
 ## [0.5.0](https://github.com/Ianbleake/BleakeDev/compare/portafolio-v0.4.2...portafolio-v0.5.0) (2025-09-30)
 
 
