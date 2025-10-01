@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.3](https://github.com/Ianbleake/BleakeDev/compare/v0.8.2...v0.8.3) (2025-10-01)
+
+
+### Bug Fixes
+
+* contact section bg color ([6ae14f1](https://github.com/Ianbleake/BleakeDev/commit/6ae14f1641abe01d5bad9470bd3520723852e22b))
+
 ## [0.8.2](https://github.com/Ianbleake/BleakeDev/compare/v0.8.1...v0.8.2) (2025-10-01)
 
 
