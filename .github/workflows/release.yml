@@ -24,6 +24,7 @@ jobs:
           config-file: .release-please-config.json
           manifest-file: .release-please-manifest.json
           release-type: node
+          draft: true   # crea draft release en GitHub mientras PR está pendiente
 
       - name: Auto-merge release PR
         if: steps.release.outputs.pull-request-number
@@ -31,3 +32,23 @@ jobs:
         with:
           pull-request-number: ${{ steps.release.outputs.pull-request-number }}
           merge-method: squash
+
+      - name: Publish draft release
+        if: steps.release.outputs.pull-request-number
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const release = await github.rest.repos.listReleases({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+            const draft = release.data.find(r => r.draft && r.tag_name === context.ref.replace('refs/heads/', 'v'));
+            if(draft){
+              await github.rest.repos.updateRelease({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                release_id: draft.id,
+                draft: false
+              });
+            }
