@@ -2,7 +2,25 @@
   "packages": {
     ".": {
       "release-type": "node",
-      "component": "portafolio"
+      "changelog-sections": [
+        {
+          "type": "feat",
+          "section": "Features"
+        },
+        {
+          "type": "fix",
+          "section": "Bug Fixes"
+        },
+        {
+          "type": "chore",
+          "section": "Chores"
+        },
+        {
+          "type": "docs",
+          "section": "Documentation"
+        }
+      ],
+      "bump-minor-pre-major": true
     }
   }
 }

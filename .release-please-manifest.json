@@ -1,3 +1,9 @@
 {
-  ".": "0.8.0"
+  "packages": {
+    ".": {
+      "last-release": "v0.8.0",
+      "version-file": "package.json",
+      "changelog-file": "CHANGELOG.md"
+    }
+  }
 }
