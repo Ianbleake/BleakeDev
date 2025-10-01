@@ -16,6 +16,8 @@ export default function Hero({
   project,
 }:HeroProps ): React.ReactElement {
 
+  //TODO: Conditionally render the buttons only if the links are provided in the project object and if the project status is "Completed" or other
+
   return (   
     <section className={`pt-32 pb-20 px-6 relative overflow-hidden`} style={{ backgroundImage: `url(${project.image})`, backgroundSize: "cover", }} >
 
