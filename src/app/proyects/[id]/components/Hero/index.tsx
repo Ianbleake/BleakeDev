@@ -16,8 +16,6 @@ export default function Hero({
   project,
 }:HeroProps ): React.ReactElement {
 
-  //TODO: Conditionally render the buttons only if the links are provided in the project object and if the project status is "Completed" or other than "Planned"
-
   return (   
     <section className={`pt-32 pb-20 px-6 relative overflow-hidden`} style={{ backgroundImage: `url(${project.image})`, backgroundSize: "cover", }} >
 
@@ -33,17 +31,18 @@ export default function Hero({
         </p>
 
         <div className="flex flex-wrap gap-4 mb-8">
-          <Button>
+          <Button disabled={project.status !== "Completed"} isExternal route={project.link}>
             <LuExternalLink className="mr-2 h-5 w-5" />
-            View Live Demo
+            {project.status === "Completed" ? "Visit Project" : "Coming Soon"}
           </Button>
-          <Button
-            variant="secondary"
-            className="border-white text-white hover:bg-emerald-600/10 bg-transparent"
-          >
-            <VscGithub className="mr-2 h-5 w-5" />
-            View Source Code
-          </Button>
+          {
+            project.github && (
+              <Button variant="secondary" className="text-white/90 border-white/30 hover:bg-white/10" isExternal route={project.github}>
+                <VscGithub className="mr-2 h-5 w-5" />
+                View Source Code
+              </Button>
+            )
+          }
         </div>
 
         <div className="flex flex-wrap gap-6 text-white/80">

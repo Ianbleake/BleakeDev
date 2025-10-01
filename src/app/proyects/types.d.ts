@@ -21,6 +21,7 @@ type Screenshot = {
   url: string;
 }
 type ProyectPage = {
+  galleryType: "slider" | "grid";
   images:Screenshot[];
   overview: string;
   features: {

@@ -9,7 +9,7 @@ export const projects: Project[] = [
     title: "Link Me Up",
     description:
       "Link Me Up is a PWA that allows bulk importing of contacts from Excel or CSV files, with the ability to review and edit the data before saving them to the device.",
-    tech: ["React", "Vite", "TailwindCSS", "Zustand", "TypeScript"],
+    tech: ["React", "Vite", "TailwindCSS", "Zustand", "TypeScript",],
     category: "Web Apps",
     status: "Completed",
     image: "/images/linkmeup.png",
@@ -19,6 +19,7 @@ export const projects: Project[] = [
     date: "September 2025",
     role: "Front End Developer",
     pageContent: {
+      galleryType: "grid",
       images: [
         {
           id: 1,
@@ -87,8 +88,9 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Savy - Budget App",
-    description: "Savy is a mobile app designed to help users manage their personal finances by tracking income, expenses, and budgets in an intuitive way, without the complexity of traditional financial software.",
-    tech: ["React Native", "Supabase", "React Query", "Zustand"],
+    description:
+      "Savy is a mobile app designed to help users manage their personal finances by tracking income, expenses, and budgets in an intuitive way, without the complexity of traditional financial software.",
+    tech: ["React Native", "Supabase", "React Query", "Zustand","Nativewind"],
     category: "Mobile Apps",
     status: "In Progress",
     image: "/images/savySS1.png",
@@ -98,35 +100,65 @@ export const projects: Project[] = [
     date: "June 2024",
     role: "Full Stack Developer",
     pageContent: {
+      galleryType: "slider",
       images: [
-        { id: 1, title: "Dashboard", color: "from-emerald-400 to-green-500", url: "/images/linkmeup.png" },
-        { id: 2, title: "Product Page", color: "from-green-500 to-emerald-600", url: "/images/linkmeup.png" },
-        { id: 3, title: "Analytics", color: "from-emerald-600 to-green-700", url: "/images/linkmeup.png" },
-        { id: 4, title: "Checkout", color: "from-green-700 to-emerald-800", url: "/images/linkmeup.png" }
+        {
+          id: 1,
+          title: "Dashboard",
+          color: "from-emerald-400 to-green-500",
+          url: "/images/savySS1-landscape.png",
+        },
+        {
+          id: 2,
+          title: "Product Page",
+          color: "from-green-500 to-emerald-600",
+          url: "/images/savySS1-left.png",
+        },
+        {
+          id: 3,
+          title: "Analytics",
+          color: "from-emerald-600 to-green-700",
+          url: "/images/savySS1-portrait.png",
+        },
       ],
-      overview: "Savy is a mobile application aimed at simplifying personal finance management. It allows users to easily track their income and expenses, set budgets, and gain insights into their spending habits. The app is designed with a user-friendly interface to make financial management accessible to everyone.",
+      overview:
+        "Savy is a mobile application aimed at simplifying personal finance management. It allows users to easily track their income and expenses, set budgets, and gain insights into their spending habits. The app is designed with a user-friendly interface to make financial management accessible to everyone.",
       features: [
         {
           name: "User Authentication",
-          description: "Secure sign-up and login functionality using Supabase authentication.",
+          description:
+            "Secure sign-up and login functionality using Supabase authentication.",
           icon: GoPasskeyFill,
-        }
+        },
+        {
+          name: "Expense Tracking",
+          description:
+            "Log income and expenses with categories, dates, and notes for better organization.",
+          icon: MdCloudUpload,
+        },
+        {
+          name: "Budgeting",
+          description:
+            "Set monthly budgets and monitor progress with real-time feedback on spending.",
+          icon: FaRegEdit,
+        },
       ],
       challenges: [
         "Implementing real-time data synchronization with Supabase.",
-        "Designing an intuitive user interface for mobile devices.",
-        "Ensuring data security and privacy for users."
+        "Designing an intuitive and responsive mobile UI in React Native.",
+        "Ensuring data security and privacy for users.",
       ],
       lessons: [
         "Gained experience with React Native and mobile app development.",
         "Learned how to integrate Supabase for backend services.",
-        "Improved skills in designing user-friendly interfaces."
+        "Improved skills in designing user-friendly interfaces and state management with Zustand.",
       ],
       futurePlans: [
-        "Add more advanced budgeting features.",
-        "Implement data visualization for better financial insights.",
-        "Expand to support multiple currencies and internationalization."
+        "Add advanced analytics with charts and spending insights.",
+        "Implement recurring transactions and reminders.",
+        "Expand to support multiple currencies and internationalization.",
+        "Release to App Store and Google Play.",
       ],
-    }
-  }
+    },
+  },
 ];
