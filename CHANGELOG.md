@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/Ianbleake/BleakeDev/compare/v0.7.2...v0.8.0) (2025-10-01)
+
+
+### Features
+
+* contact section on single proyect page ([08fb150](https://github.com/Ianbleake/BleakeDev/commit/08fb15060f55c411a66417b2c84660e7c90a289e))
+
 ## [0.7.2](https://github.com/Ianbleake/BleakeDev/compare/v0.7.1...v0.7.2) (2025-10-01)
 
 
