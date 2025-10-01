@@ -18,7 +18,7 @@ export default function Gallery({
         <div className="grid md:grid-cols-2 gap-6">
           {project.pageContent.images.map((screenshot) => (
             <Card key={screenshot.id} className="overflow-hidden border-stone-700 hover:border-emerald-600/50 transition-all hover:scale-105">
-              <div className={`relative h-64 bg-gradient-to-br ${screenshot.color} flex items-center justify-center`} style={{ backgroundImage: `url(${project.image})`, backgroundSize: "cover", }}>
+              <div className={`relative h-64 bg-gradient-to-br ${screenshot.color} flex items-center justify-center`} style={{ backgroundImage: `url(${screenshot.url})`, backgroundSize: "cover", }}>
                 <span className="absolute bottom-2 left-4 text-emerald-600 text-2xl font-bold">{screenshot.title}</span>
               </div>
             </Card>

@@ -1,50 +1,88 @@
 import { GoPasskeyFill } from "react-icons/go";
+import { LuFileSpreadsheet } from "react-icons/lu";
+import { FaRegEdit } from "react-icons/fa";
+import { MdCloudUpload } from "react-icons/md";
 
 export const projects: Project[] = [
   {
     id: 1,
     title: "Link Me Up",
-    description: "Link Me Up is a PWA that allows bulk importing of contacts from Excel or CSV files, with the ability to review and edit the data before saving them to the device.",
-    tech: ["React", "Vite", "TailwindCSS", "Zustand","TypeScript"],
+    description:
+      "Link Me Up is a PWA that allows bulk importing of contacts from Excel or CSV files, with the ability to review and edit the data before saving them to the device.",
+    tech: ["React", "Vite", "TailwindCSS", "Zustand", "TypeScript"],
     category: "Web Apps",
     status: "Completed",
     image: "/images/linkmeup.png",
     isExternal: true,
     link: "https://link-me-up-zeta.vercel.app",
-    github: "#",
-    date: "August 2023",
-    role: "Full Stack Developer",
+    github: null,
+    date: "September 2025",
+    role: "Front End Developer",
     pageContent: {
       images: [
-        { id: 1, title: "Dashboard", color: "from-emerald-400 to-green-500", url: "/images/linkmeup.png" },
-        { id: 2, title: "Product Page", color: "from-green-500 to-emerald-600", url: "/images/linkmeup.png" },
-        { id: 3, title: "Analytics", color: "from-emerald-600 to-green-700", url: "/images/linkmeup.png" },
-        { id: 4, title: "Checkout", color: "from-green-700 to-emerald-800", url: "/images/linkmeup.png" }
+        {
+          id: 1,
+          title: "Upload Contacts",
+          color: "from-emerald-400 to-green-500",
+          url: "/images/linkmeup.png",
+        },
+        {
+          id: 2,
+          title: "Contacts Table",
+          color: "from-green-500 to-emerald-600",
+          url: "/images/contactos.png",
+        },
+        {
+          id: 3,
+          title: "Edit Contacts",
+          color: "from-emerald-600 to-green-700",
+          url: "/images/editar.png",
+        },
+        {
+          id: 4,
+          title: "Import Preview",
+          color: "from-green-700 to-emerald-800",
+          url: "/images/importar.png",
+        },
       ],
-      overview: "Savy is a mobile application aimed at simplifying personal finance management. It allows users to easily track their income and expenses, set budgets, and gain insights into their spending habits. The app is designed with a user-friendly interface to make financial management accessible to everyone.",
+      overview:
+        "Link Me Up is a progressive web application designed to simplify bulk contact management. Users can upload Excel or CSV files, preview the data in a structured table, edit or remove contacts, and finally import them directly to their device in just a few steps.",
       features: [
         {
-          name: "User Authentication",
-          description: "Secure sign-up and login functionality using Supabase authentication.",
-          icon: GoPasskeyFill,
-        }
+          name: "Excel & CSV Upload",
+          description:
+            "Easily upload contacts from Excel (.xlsx) or CSV files and parse them into a structured format.",
+          icon: LuFileSpreadsheet,
+        },
+        {
+          name: "Contact Editing",
+          description:
+            "Edit, update, or remove contacts before finalizing the import, ensuring data accuracy.",
+          icon: FaRegEdit,
+        },
+        {
+          name: "Bulk Import",
+          description:
+            "Quickly import multiple contacts at once into the device's contact list with a single action.",
+          icon: MdCloudUpload,
+        },
       ],
       challenges: [
-        "Implementing real-time data synchronization with Supabase.",
-        "Designing an intuitive user interface for mobile devices.",
-        "Ensuring data security and privacy for users."
+        "Parsing and validating Excel and CSV files with different structures.",
+        "Building a clean and responsive UI to handle large sets of data.",
+        "Ensuring compatibility across browsers and mobile devices as a PWA.",
       ],
       lessons: [
-        "Gained experience with React Native and mobile app development.",
-        "Learned how to integrate Supabase for backend services.",
-        "Improved skills in designing user-friendly interfaces."
+        "Improved knowledge of handling file uploads and parsing with libraries like SheetJS (XLSX).",
+        "Learned state management patterns with Zustand for managing contact data.",
+        "Gained experience building a polished, responsive PWA using React and TailwindCSS.",
       ],
       futurePlans: [
-        "Add more advanced budgeting features.",
-        "Implement data visualization for better financial insights.",
-        "Expand to support multiple currencies and internationalization."
+        "Add support for Google Contacts synchronization.",
+        "Implement drag-and-drop file upload.",
+        "Allow exporting edited contacts back into Excel/CSV format.",
       ],
-    }
+    },
   },
   {
     id: 2,
@@ -56,7 +94,7 @@ export const projects: Project[] = [
     image: "/images/savySS1.png",
     isExternal: false,
     link: "#",
-    github: "#",
+    github: null,
     date: "June 2024",
     role: "Full Stack Developer",
     pageContent: {

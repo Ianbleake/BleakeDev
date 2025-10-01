@@ -8,7 +8,7 @@ type Project = {
   image: string;
   isExternal: boolean;
   link: string;
-  github: string;
+  github: string | null;
   date: string;
   role: string;
   pageContent: ProyectPage;
