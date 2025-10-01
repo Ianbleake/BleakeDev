@@ -14,8 +14,14 @@ type Project = {
   pageContent: ProyectPage;
 };
 
+type Screenshot = {
+  id: number;
+  title: string;
+  color: string;
+  url: string;
+}
 type ProyectPage = {
-  images: string[];
+  images:Screenshot[];
   overview: string;
   features: {
     name: string;
