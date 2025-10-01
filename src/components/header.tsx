@@ -38,12 +38,14 @@ export default function Header(): React.ReactElement {
       <Link href={"/"} >
         <h1 className="text-2xl font-semibold text-white">Bleake<span className="text-emerald-600">Dev</span></h1>
       </Link>
-      <nav className="none md:flex items-center gap-4">
+      <nav className="hidden md:flex items-center gap-4">
         <a href="#about" className="text-lg text-stone-300 hover:text-emerald-400 transition-colors font-medium">About Me</a>
         <a href="#work" className="text-lg text-stone-300 hover:text-emerald-400 transition-colors font-medium">My Work</a>
         <a href="#skills" className="text-lg text-stone-300 hover:text-emerald-400 transition-colors font-medium">Skills</a>
         <Button label="Get it touch" isLink={true} route="/contact"/>
       </nav>
+
+      <Button label="Get it touch" isLink={true} route="/contact" className="block md:hidden"/>
     </header>
   );
 }

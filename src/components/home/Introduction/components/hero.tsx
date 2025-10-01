@@ -5,23 +5,28 @@ export default function Hero(): React.ReactElement {
     <div className="relative w-full">
       <div className="bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800 rounded-3xl p-8 shadow-2xl border border-emerald-500/20">
         <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 text-white border border-white/10">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
             <div>
               <div className="text-3xl font-bold mb-1 text-emerald-100">10+</div>
               <div className="text-emerald-200 text-sm">Projects Delivered</div>
             </div>
+
             <div>
               <div className="text-3xl font-bold mb-1 text-emerald-100">3+</div>
               <div className="text-emerald-200 text-sm">Years Experience</div>
             </div>
+
             <div>
               <div className="text-3xl font-bold mb-1 text-emerald-100">Ecommerse & Websites</div>
               <div className="text-emerald-200 text-sm">Specialized Solutions</div>
             </div>
+
             <div>
               <div className="text-3xl font-bold mb-1 text-emerald-100">Clean Code</div>
               <div className="text-emerald-200 text-sm">and quality development</div>
             </div>
+
           </div>
         </div>
       </div>

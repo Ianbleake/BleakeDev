@@ -16,10 +16,10 @@ export default function Contact(): React.ReactElement {
           and collaborate with creative minds.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <div className="flex flex-row gap-4 justify-center mb-12">
           <Button 
             label="Get In Touch"
-            className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 shadow-lg"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 shadow-lg w-fit"
             isLink
             route="/contact"
           />

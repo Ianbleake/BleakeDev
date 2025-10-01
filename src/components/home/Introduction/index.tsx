@@ -6,15 +6,15 @@ import Hero from "./components/hero";
 
 export default function Introduction(): React.ReactElement {
   return (
-    <div className="w-full bg-gray-900 flex flex-col md:flex-row gap-2 p-8">
+    <div className="w-full bg-gray-900 flex flex-col md:flex-row gap-8 md:gap-2 p-8">
 
-      <div className="w-1/2">
+      <div className="w-full md:w-1/2">
         <ProyectsStatus />
         <InformativeTexts />
         <ActionButtons />
       </div>
 
-      <div className="w-1/2 flex items-center">
+      <div className="w-full md:w-1/2">
         <Hero/>
       </div>
 
