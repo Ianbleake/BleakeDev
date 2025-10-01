@@ -24,14 +24,16 @@ jobs:
           config-file: .release-please-config.json
           manifest-file: .release-please-manifest.json
           release-type: node
-          draft: true   # crea draft release en GitHub mientras PR está pendiente
+          draft: true 
 
-      - name: Auto-merge release PR
+      - name: Merge release PR
         if: steps.release.outputs.pull-request-number
-        uses: peter-evans/enable-pull-request-automerge@v3
+        uses: actions-ecosystem/action-pull-request@v2
         with:
-          pull-request-number: ${{ steps.release.outputs.pull-request-number }}
-          merge-method: squash
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pull_request_number: ${{ steps.release.outputs.pull-request-number }}
+          merge_method: squash
+
 
       - name: Publish draft release
         if: steps.release.outputs.pull-request-number
