@@ -26,13 +26,13 @@ jobs:
           release-type: node
           draft: true 
 
-      - name: Merge release PR
-        if: steps.release.outputs.pull-request-number
+      - name: Merge Release PR
         uses: peter-evans/merge-pull-request@v3
         with:
-          pull-request-number: ${{ steps.release.outputs.pull-request-number }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request: ${{ steps.release.outputs.pr }}
           merge-method: squash
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+
 
       - name: Publish draft release
         if: steps.release.outputs.pull-request-number
