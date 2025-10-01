@@ -4,6 +4,9 @@ import React from "react";
 import Page from "@/components/ui/page";
 import { useParams } from 'next/navigation'
 import { projects } from "@/content/proyects";
+import Hero from "./components/Hero";
+import Overview from "./components/overview";
+
 
 export default function ProyectPage(): React.ReactElement {
 
@@ -15,17 +18,10 @@ export default function ProyectPage(): React.ReactElement {
   if(project){
     return (
       <Page className="bg-gray-900">
-        <div className="">
-          <h2 >{project.title}</h2>
-        </div>
-        <div>
-          <div>
 
-          </div>
-          <div>
+          <Hero project={project}/>
+          <Overview project={project}/>
 
-          </div>
-        </div>
       </Page>
     );
   }else{

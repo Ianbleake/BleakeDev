@@ -9,16 +9,20 @@ type Project = {
   isExternal: boolean;
   link: string;
   github: string;
-  pageContent?: {
-    images: string[];
-    overview: string;
-    features: {
-      name: string;
-      description: string;
-      icon: string;
-    }[];
-    challenges: string[];
-    lessons: string[];
-    futurePlans: string[];
-  };
+  date: string;
+  role: string;
+  pageContent: ProyectPage;
+};
+
+type ProyectPage = {
+  images: string[];
+  overview: string;
+  features: {
+    name: string;
+    description: string;
+    icon: string;
+  }[];
+  challenges: string[];
+  lessons: string[];
+  futurePlans: string[];
 };

@@ -10,6 +10,34 @@ export const projects: Project[] = [
     isExternal: true,
     link: "https://link-me-up-zeta.vercel.app",
     github: "#",
+    date: "August 2023",
+    role: "Full Stack Developer",
+    pageContent: {
+      images: ["/images/savySS1-landscape.png", "/images/savySS1-left.png", "/images/savySS1-portrait.png"],
+      overview: "Savy is a mobile application aimed at simplifying personal finance management. It allows users to easily track their income and expenses, set budgets, and gain insights into their spending habits. The app is designed with a user-friendly interface to make financial management accessible to everyone.",
+      features: [
+        {
+          name: "User Authentication",
+          description: "Secure sign-up and login functionality using Supabase authentication.",
+          icon: "UserIcon",
+        }
+      ],
+      challenges: [
+        "Implementing real-time data synchronization with Supabase.",
+        "Designing an intuitive user interface for mobile devices.",
+        "Ensuring data security and privacy for users."
+      ],
+      lessons: [
+        "Gained experience with React Native and mobile app development.",
+        "Learned how to integrate Supabase for backend services.",
+        "Improved skills in designing user-friendly interfaces."
+      ],
+      futurePlans: [
+        "Add more advanced budgeting features.",
+        "Implement data visualization for better financial insights.",
+        "Expand to support multiple currencies and internationalization."
+      ],
+    }
   },
   {
     id: 2,
@@ -22,6 +50,8 @@ export const projects: Project[] = [
     isExternal: false,
     link: "#",
     github: "#",
+    date: "June 2024",
+    role: "Full Stack Developer",
     pageContent: {
       images: ["/images/savySS1-landscape.png", "/images/savySS1-left.png", "/images/savySS1-portrait.png"],
       overview: "Savy is a mobile application aimed at simplifying personal finance management. It allows users to easily track their income and expenses, set budgets, and gain insights into their spending habits. The app is designed with a user-friendly interface to make financial management accessible to everyone.",
