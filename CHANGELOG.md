@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0](https://github.com/Ianbleake/BleakeDev/compare/v0.10.0...v0.11.0) (2025-10-01)
+
+
+### Features
+
+* implement lightbox functionality for gallery images ([1b87a72](https://github.com/Ianbleake/BleakeDev/commit/1b87a7264d871054cc0b826aea88d71808f7c560))
+
 ## [0.10.0](https://github.com/Ianbleake/BleakeDev/compare/v0.9.1...v0.10.0) (2025-10-01)
 
 
