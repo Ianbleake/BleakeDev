@@ -28,13 +28,11 @@ jobs:
 
       - name: Merge release PR
         if: steps.release.outputs.pull-request-number
-        uses: devops-infra/action-pull-request-merge@v0.5.0
+        uses: peter-evans/merge-pull-request@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          pull_request_number: ${{ steps.release.outputs.pull-request-number }}
-          merge_method: squash
-
-
+          pull-request-number: ${{ steps.release.outputs.pull-request-number }}
+          merge-method: squash
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish draft release
         if: steps.release.outputs.pull-request-number
