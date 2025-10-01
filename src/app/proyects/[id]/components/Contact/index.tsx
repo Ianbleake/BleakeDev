@@ -19,7 +19,7 @@ export default function Contact(): React.ReactElement {
         </p>
         <Button
           onClick={() => router.push('/contact')}
-          className="bg-emerald-600 hover:bg-emerald-700 text-white"
+          className="bg-emerald-600 hover:bg-emerald-700 text-white cursor-pointer"
         >
           Get In Touch
         </Button>
