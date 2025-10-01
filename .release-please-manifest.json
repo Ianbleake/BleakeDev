@@ -5,6 +5,5 @@
       "version-file": "package.json",
       "changelog-file": "CHANGELOG.md"
     }
-  },
-  ".": "0.8.2"
+  }
 }
