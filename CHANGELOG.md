@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/Ianbleake/BleakeDev/compare/v0.9.1...v0.10.0) (2025-10-01)
+
+
+### Features
+
+* add slider gallery component ([deda246](https://github.com/Ianbleake/BleakeDev/commit/deda246509bf22459a752fb5b4a62342fcac84e4))
+
 ## [0.9.1](https://github.com/Ianbleake/BleakeDev/compare/v0.9.0...v0.9.1) (2025-10-01)
 
 
