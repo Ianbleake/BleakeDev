@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 import Overview from "./components/overview";
 import Features from "./components/Features";
 import Gallery from "./components/Gallery";
+import Contact from "./components/Contact";
 
 
 export default function ProyectPage(): React.ReactElement {
@@ -25,7 +26,8 @@ export default function ProyectPage(): React.ReactElement {
           <Hero project={project}/>
           <Overview project={project}/>
           <Features project={project}/>
-          <Gallery project={project}/> 
+          <Gallery project={project}/>
+          <Contact/>
       </Page>
     );
   }else{
