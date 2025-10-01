@@ -1,13 +1,9 @@
 {
-<<<<<<< HEAD
   "packages": {
     ".": {
-      "last-release": "v0.8.0",
+      "last-release": "v0.8.1",
       "version-file": "package.json",
       "changelog-file": "CHANGELOG.md"
     }
   }
-=======
-  ".": "0.8.1"
->>>>>>> e5983e9c44a5fb7ee608853f5023d7f596cec31f
 }
