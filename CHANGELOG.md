@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://github.com/Ianbleake/BleakeDev/compare/v0.8.4...v0.9.0) (2025-10-01)
+
+
+### Features
+
+* add download cv ([d2c8522](https://github.com/Ianbleake/BleakeDev/commit/d2c8522d36055f553863a2ddaa4f0a83154a93bc))
+* add savy proyect info ([9cec8ba](https://github.com/Ianbleake/BleakeDev/commit/9cec8bab0d794a42dafbd071e9cafea9d782424e))
+
+
+### Bug Fixes
+
+* buttons padding ([aee62d5](https://github.com/Ianbleake/BleakeDev/commit/aee62d5f994301d03c68b8dc073f9c308573664d))
+* gallery and linkmeup info ([8f50d76](https://github.com/Ianbleake/BleakeDev/commit/8f50d7622b105643f15c46d5ab2f0adc2c6552e0))
+
 ## [0.8.4](https://github.com/Ianbleake/BleakeDev/compare/v0.8.3...v0.8.4) (2025-10-01)
 
 
