@@ -1,3 +1,5 @@
+import { GoPasskeyFill } from "react-icons/go";
+
 export const projects: Project[] = [
   {
     id: 1,
@@ -19,7 +21,7 @@ export const projects: Project[] = [
         {
           name: "User Authentication",
           description: "Secure sign-up and login functionality using Supabase authentication.",
-          icon: "UserIcon",
+          icon: GoPasskeyFill,
         }
       ],
       challenges: [
@@ -59,7 +61,7 @@ export const projects: Project[] = [
         {
           name: "User Authentication",
           description: "Secure sign-up and login functionality using Supabase authentication.",
-          icon: "UserIcon",
+          icon: GoPasskeyFill,
         }
       ],
       challenges: [

@@ -6,6 +6,7 @@ import { useParams } from 'next/navigation'
 import { projects } from "@/content/proyects";
 import Hero from "./components/Hero";
 import Overview from "./components/overview";
+import Features from "./components/Features";
 
 
 export default function ProyectPage(): React.ReactElement {
@@ -20,6 +21,7 @@ export default function ProyectPage(): React.ReactElement {
       <Page className="bg-gray-900">
           <Hero project={project}/>
           <Overview project={project}/>
+          <Features project={project}/>
       </Page>
     );
   }else{

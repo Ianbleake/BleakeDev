@@ -20,7 +20,7 @@ type ProyectPage = {
   features: {
     name: string;
     description: string;
-    icon: string;
+    icon: IconType;
   }[];
   challenges: string[];
   lessons: string[];
