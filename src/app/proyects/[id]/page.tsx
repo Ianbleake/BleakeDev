@@ -18,10 +18,8 @@ export default function ProyectPage(): React.ReactElement {
   if(project){
     return (
       <Page className="bg-gray-900">
-
           <Hero project={project}/>
           <Overview project={project}/>
-
       </Page>
     );
   }else{
