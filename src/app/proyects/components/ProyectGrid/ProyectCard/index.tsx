@@ -73,15 +73,17 @@ export default function ProyectCard({
             disabled={proyect.status === "In Progress" || proyect.status === "Planned"}
           >
           </Button>
-          <Button
-            variant="primary"
-            className="border-emerald-300 text-emerald-100 hover:bg-emerald-800/50 hover:text-white transition-all bg-transparent"
-            label="GitHub"
-            isExternal
-            route={proyect.github}
-          >
-            <FiGithub size={20} color={twTheme.colors.emerald[100]}/>
-          </Button>
+          {proyect.github && (
+            <Button
+              variant="primary"
+              className="border-emerald-300 text-emerald-100 hover:bg-emerald-800/50 hover:text-white transition-all bg-transparent"
+              label="GitHub"
+              isExternal
+              route={proyect.github}
+            >
+              <FiGithub size={20} color={twTheme.colors.emerald[100]}/>
+            </Button>
+          )}
         </div>
       </CardContent>
     </Card>
