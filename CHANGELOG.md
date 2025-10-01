@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.1](https://github.com/Ianbleake/BleakeDev/compare/v0.8.0...v0.8.1) (2025-10-01)
+
+
+### Bug Fixes
+
+* use router import ([a413a70](https://github.com/Ianbleake/BleakeDev/commit/a413a70813098473b4d074d6ee3e9f646b042068))
+
 ## [0.8.0](https://github.com/Ianbleake/BleakeDev/compare/v0.7.2...v0.8.0) (2025-10-01)
 
 
