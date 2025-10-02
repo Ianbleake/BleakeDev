@@ -1,7 +1,11 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
+import Image from "next/image";
 import React, { useState } from "react";
+import { Card } from "@/components/ui/card";
+import { merge } from "@/utils/mergeStyles";
+import { GoChevronRight } from "react-icons/go";
+import { GoChevronLeft } from "react-icons/go";
 
 type GalleryProps = {
   project: Project;
@@ -31,7 +35,9 @@ export default function Gallery({ project }: GalleryProps): React.ReactElement {
   return (
     <section className="py-16 px-6 bg-gray-900">
       <div className="max-w-5xl mx-auto">
+
         <h2 className="text-3xl font-bold text-emerald-600 mb-6">Project Screenshots</h2>
+
         <div className="grid md:grid-cols-2 gap-6">
           {project.pageContent.images.map((screenshot, index) => (
             <Card
@@ -40,7 +46,7 @@ export default function Gallery({ project }: GalleryProps): React.ReactElement {
               onClick={() => openLightbox(index)}
             >
               <div
-                className={`relative h-64 bg-gradient-to-br ${screenshot.color} flex items-center justify-center`}
+                className={merge('relative h-64 bg-gradient-to-br flex items-center justify-center',screenshot.color)}
                 style={{ backgroundImage: `url(${screenshot.url})`, backgroundSize: "cover" }}
               >
                 <span className="absolute bottom-2 left-4 text-emerald-600 text-2xl font-bold">
@@ -51,34 +57,36 @@ export default function Gallery({ project }: GalleryProps): React.ReactElement {
           ))}
         </div>
 
-        {/* Lightbox */}
         {lightboxIndex !== null && (
           <div
-            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-emerald-500/40 backdrop-blur-sm flex items-center justify-center z-50"
             onClick={closeLightbox}
           >
             <button
-              className="absolute left-4 text-white text-3xl"
+              className="absolute left-4 text-white text-3xl cursor-pointer"
               onClick={(e) => {
                 e.stopPropagation();
                 prevImage();
               }}
             >
-              ‹
+              <GoChevronLeft size={45} />
             </button>
-            <img
+            <Image
               src={project.pageContent.images[lightboxIndex].url}
               alt={project.pageContent.images[lightboxIndex].title}
               className="max-h-[90%] max-w-[90%] rounded-md shadow-lg"
+              width={1200}
+              height={600}
+              style={{ width: 'auto', height: 'auto' }}
             />
             <button
-              className="absolute right-4 text-white text-3xl"
+              className="absolute right-4 text-white text-3xl cursor-pointer"
               onClick={(e) => {
                 e.stopPropagation();
                 nextImage();
               }}
             >
-              ›
+              <GoChevronRight size={45} />
             </button>
           </div>
         )}
