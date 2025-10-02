@@ -6,6 +6,7 @@ import Hero from "./components/hero";
 import Timeline from "./components/Timeline";
 import Education from "./components/Education";
 import Certifications from "./components/Certifications";
+import Contact from "./components/contact";
 
 export default function Experience(): React.ReactElement {
 
@@ -15,6 +16,7 @@ export default function Experience(): React.ReactElement {
       <Timeline/>
       <Education/>
       <Certifications/>
+      <Contact/>
     </Page>
   );
 }
