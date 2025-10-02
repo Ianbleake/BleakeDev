@@ -3,13 +3,14 @@
 import Page from "@/components/ui/page";
 import React from "react";
 import Hero from "./components/hero";
+import Timeline from "./components/Timeline";
 
-// TODO: Implement the Experience page
 export default function Experience(): React.ReactElement {
 
   return (
     <Page>
       <Hero/>
+      <Timeline/>
     </Page>
   );
 }
