@@ -4,6 +4,7 @@ import Page from "@/components/ui/page";
 import React from "react";
 import Hero from "./components/hero";
 import Timeline from "./components/Timeline";
+import Education from "./components/Education";
 
 export default function Experience(): React.ReactElement {
 
@@ -11,6 +12,7 @@ export default function Experience(): React.ReactElement {
     <Page>
       <Hero/>
       <Timeline/>
+      <Education/>
     </Page>
   );
 }

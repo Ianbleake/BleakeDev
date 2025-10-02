@@ -10,6 +10,7 @@ export default function Timeline(): React.ReactElement {
   return (
     <section className="py-16 px-6 bg-gray-900">
       <div className="max-w-5xl mx-auto">
+        
         <div className="flex items-center mb-12">
           <IoBriefcaseOutline className="text-emerald-400 mr-3" size={32} />
           <h2 className="text-3xl font-bold text-white">Work Experience</h2>
@@ -74,11 +75,12 @@ export default function Timeline(): React.ReactElement {
 
                   </div>
                 </div>
-                
+
               </CardContent>
             </Card>
           ))}
         </div>
+
       </div>
     </section>
   );
