@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.1](https://github.com/Ianbleake/BleakeDev/compare/v0.12.0...v0.12.1) (2025-10-02)
+
+
+### Bug Fixes
+
+* add download button to experience page ([1060eb6](https://github.com/Ianbleake/BleakeDev/commit/1060eb62058fb77d26650b3d538315f5024f912b))
+
 ## [0.12.0](https://github.com/Ianbleake/BleakeDev/compare/v0.11.1...v0.12.0) (2025-10-02)
 
 
