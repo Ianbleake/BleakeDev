@@ -1,44 +1,62 @@
-export   const workExperience = [
+export const workExperience = [
   {
-    company: "TechFlow Solutions",
-    position: "Senior Full Stack Developer",
-    location: "San Francisco, CA",
-    period: "2022 - Present",
-    description: "Leading development of cloud-native applications and mentoring junior developers. Architected microservices infrastructure serving 1M+ users.",
+    company: "Kubo Digital",
+    position: "Frontend Developer – Ecommerce Expert",
+    location: "Cuauhtémoc, CDMX",
+    period: "Feb 2024 – Now",
+    description: "Implemented and customized Shopify stores, ensuring responsive, SEO-friendly, and client-focused e-commerce solutions.",
     achievements: [
-      "Reduced API response time by 60% through optimization",
-      "Led team of 5 developers on flagship product",
-      "Implemented CI/CD pipeline reducing deployment time by 75%"
+      "Delivered multiple Shopify stores with tailored features and integrations",
+      "Optimized SEO on-page, improving visibility and accessibility",
+      "Collaborated with cross-functional teams (design, content, operations)",
+      "Maintained and refactored legacy stores to improve performance and scalability",
     ],
-    technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker"],
+    technologies: ["Shopify", "Liquid", "JavaScript", "CSS", "SEO"],
     type: "work"
   },
   {
-    company: "Digital Innovations Inc",
-    position: "Full Stack Developer",
-    location: "Remote",
-    period: "2020 - 2022",
-    description: "Developed and maintained multiple client-facing web applications. Collaborated with design team to implement pixel-perfect interfaces.",
-    achievements: [
-      "Built 15+ production-ready web applications",
-      "Improved code coverage from 45% to 85%",
-      "Mentored 3 junior developers"
-    ],
-    technologies: ["React", "TypeScript", "MongoDB", "Express", "Tailwind"],
-    type: "work"
-  },
-  {
-    company: "StartupLab",
+    company: "Subrik",
     position: "Frontend Developer",
-    location: "New York, NY",
-    period: "2019 - 2020",
-    description: "Focused on creating responsive and accessible user interfaces for early-stage products. Worked in fast-paced agile environment.",
+    location: "Remote",
+    period: "Apr 2025 – Jun 2025",
+    description: "Contributed to the development of core modules for a supply management platform, ensuring scalability and user-focused functionality.",
     achievements: [
-      "Developed reusable component library used across 10+ projects",
-      "Achieved 98% accessibility score on all delivered projects",
-      "Contributed to 50% increase in user engagement"
+      "Developed the goods entry management module with automated supplier notifications",
+      "Implemented a centralized notification system to improve visibility and efficiency",
+      "Designed and integrated supplier analytics profiles with data-driven insights",
+      "Refactored critical views applying SOLID principles and clean code practices",
     ],
-    technologies: ["React", "JavaScript", "Redux", "SASS", "Figma"],
-    type: "work"
+    technologies: ["React", "TypeScript", "Supabase", "Node.js"],
+    type: "freelance"
+  },
+  {
+    company: "Subrik",
+    position: "Mobile Developer",
+    location: "Remote",
+    period: "Jan 2025 – Apr 2025",
+    description: "Developed a cross-platform mobile app to manage suppliers, integrating authentication, state management, and API consumption.",
+    achievements: [
+      "Built authentication flows with OAuth and local session persistence using Zustand",
+      "Developed dynamic views with native navigation and REST API integration",
+      "Collaborated with product and design teams to enhance UX iteratively",
+      "Applied CI/CD practices with GitHub Actions for continuous delivery",
+    ],
+    technologies: ["React Native", "Expo", "Zustand", "REST APIs"],
+    type: "freelance"
+  },
+  {
+    company: "ESIME IPN",
+    position: "Scrum Master & Full Stack Developer (Tech Lead)",
+    location: "CDMX",
+    period: "Jan 2022 – Dec 2022",
+    description: "Led a student development team to deliver a full-stack system adopted by administrative staff, applying agile practices.",
+    achievements: [
+      "Facilitated agile ceremonies (dailys, retros, sprint planning)",
+      "Implemented backend communication layer between app and database",
+      "Delivered a fully functional system now used by administrative staff",
+      "Documented workflows to ensure scalability and maintainability",
+    ],
+    technologies: ["React", "Node.js", "Express", "MySQL"],
+    type: "Work placement"
   }
 ];

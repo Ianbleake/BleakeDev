@@ -43,6 +43,9 @@ export default function Timeline(): React.ReactElement {
                             <PiMapPinLineBold className="w-4 h-4 mr-1" />
                             {job.location}
                           </div>
+                          <Badge className="bg-emerald-400/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium border border-white/20">
+                            {job.type}
+                          </Badge>
                           <span className="md:hidden flex items-center text-sm">
                             <IoCalendarOutline className="w-4 h-4 mr-1" />
                             {job.period}
