@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.1](https://github.com/Ianbleake/BleakeDev/compare/v0.11.0...v0.11.1) (2025-10-02)
+
+
+### Bug Fixes
+
+* improve lightbox styles ([46252f8](https://github.com/Ianbleake/BleakeDev/commit/46252f8040274220a2e71cadaf8653cfb7374796))
+* responsive styles ([33ed253](https://github.com/Ianbleake/BleakeDev/commit/33ed253b962dc064f17249f1cc05744c10715ac8))
+
 ## [0.11.0](https://github.com/Ianbleake/BleakeDev/compare/v0.10.0...v0.11.0) (2025-10-01)
 
 
