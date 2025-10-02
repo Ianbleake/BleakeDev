@@ -30,7 +30,7 @@ export default function Button({
   disabled = false,
 }: ButtonProps): React.ReactElement {
   const baseStyle =
-    "inline-flex items-center gap-2 rounded-md py-2 px-4 transition font-medium";
+    "inline-flex items-center gap-2 rounded-md py-2 px-4 transition font-medium cursor-pointer";
 
   const variants: Record<string, string> = {
     primary:
