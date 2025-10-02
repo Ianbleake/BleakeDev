@@ -13,8 +13,6 @@ interface ProjectGalleryProps {
   images: Screenshot[];
 }
 
-// TODO: Improve slider styles and responsiveness
-
 export default function Slider({ images }: ProjectGalleryProps) {
   return (
     <section className="py-16 px-6 bg-gray-900">
@@ -26,14 +24,19 @@ export default function Slider({ images }: ProjectGalleryProps) {
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={50}
-          slidesPerView={2}
+          slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+          }}
         >
           {images.map((image, idx) => (
-            <SwiperSlide key={idx} >
-              <Card >
-                <div className="flex justify-center bg-gray-600/30 border border-emerald-600 shadow-md rounded-2xl py-8">
+            <SwiperSlide key={idx}>
+              <Card>
+                <div className="flex justify-center bg-gray-600/30 border border-emerald-600 shadow-md rounded-2xl py-8 h-94 md:h-auto">
                   <Image
                     src={image.url}
                     alt={image.title || `Screenshot ${idx + 1}`}
@@ -47,6 +50,7 @@ export default function Slider({ images }: ProjectGalleryProps) {
             </SwiperSlide>
           ))}
         </Swiper>
+
       </div>
     </section>
   );

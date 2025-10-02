@@ -63,13 +63,13 @@ export default function Gallery({ project }: GalleryProps): React.ReactElement {
             onClick={closeLightbox}
           >
             <button
-              className="absolute left-4 text-white text-3xl cursor-pointer"
+              className="absolute left-4 md:left-0 lg:left-4 text-white text-3xl cursor-pointer"
               onClick={(e) => {
                 e.stopPropagation();
                 prevImage();
               }}
             >
-              <GoChevronLeft size={45} />
+              <GoChevronLeft size={45} className="text-emerald-300 md:text-white" />
             </button>
             <Image
               src={project.pageContent.images[lightboxIndex].url}
@@ -80,13 +80,13 @@ export default function Gallery({ project }: GalleryProps): React.ReactElement {
               style={{ width: 'auto', height: 'auto' }}
             />
             <button
-              className="absolute right-4 text-white text-3xl cursor-pointer"
+              className="absolute right-4 md:right-0 lg:right-4 text-white text-3xl cursor-pointer"
               onClick={(e) => {
                 e.stopPropagation();
                 nextImage();
               }}
             >
-              <GoChevronRight size={45} />
+              <GoChevronRight size={45} className="text-emerald-300 md:text-white" />
             </button>
           </div>
         )}

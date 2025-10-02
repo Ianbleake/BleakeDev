@@ -15,7 +15,7 @@ export default function FeatureCard({ feature }: FeatureCardProps): React.ReactE
 
   return (
     <div className="border border-emerald-600/30 shadow-xl bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl p-3 flex items-center justify-start">
-      <div className="w-18 h-16 bg-emerald-100/20 rounded-lg flex items-center justify-center mr-4">
+      <div className="w-32 md:w-18 h-16 md:h-16 bg-emerald-100/20 rounded-lg flex items-center justify-center mr-4">
         <Icon size={35} color={twTheme.colors.white}/>
       </div>
       <div>
