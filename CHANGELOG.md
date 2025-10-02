@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.0](https://github.com/Ianbleake/BleakeDev/compare/v0.11.1...v0.12.0) (2025-10-02)
+
+
+### Features
+
+* add Certifications component on Experience page ([7d65713](https://github.com/Ianbleake/BleakeDev/commit/7d65713a2cf0c96b53e733ceb5e37fa44ea8f4e8))
+* add contact component to experience page ([a337043](https://github.com/Ianbleake/BleakeDev/commit/a337043c6e7b7995ce3cb7e6a8ddcef6f23969b6))
+* add Education component on Experience page ([ec99a40](https://github.com/Ianbleake/BleakeDev/commit/ec99a40d24ca80d24a3bdbea6df7f7ff1686d128))
+* add experience page ([0b61900](https://github.com/Ianbleake/BleakeDev/commit/0b6190095cdb2b6d3e76039438972864c1cced71))
+* add TimeLineComponent ([c86bd8d](https://github.com/Ianbleake/BleakeDev/commit/c86bd8d328c4af1f41c906762284cbedec73549e))
+
+
+### Bug Fixes
+
+* aumentar la prioridad del z-index en el encabezado ([3d87423](https://github.com/Ianbleake/BleakeDev/commit/3d87423948ef09e819b5bd2ad88f835fa266ea09))
+
 ## [0.11.1](https://github.com/Ianbleake/BleakeDev/compare/v0.11.0...v0.11.1) (2025-10-02)
 
 
