@@ -1,3 +1,11 @@
+type RootProps = {
+  children: React.ReactNode;
+}
+
+type BodyProps = {
+  children: React.ReactNode;
+}
+
 type Project = {
   id: number;
   title: string;
@@ -33,3 +41,9 @@ type ProyectPage = {
   lessons: string[];
   futurePlans: string[];
 };
+
+type Skill = {
+  name: string;
+  icon: IconType;
+  technologies: string[];
+}
