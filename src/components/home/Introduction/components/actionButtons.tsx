@@ -11,7 +11,7 @@ export default function ActionButtons(): React.ReactElement {
       <Button 
         isLink
         route="/experience"
-        className="border-stone-600 hover:border-white/30 text-stone-300 hover:text-white hover:bg-emerald-500/30 px-8 py-3 bg-transparent cursor-pointer flex items-center gap-4"
+        className="border-stone-600 hover:border-white/30 text-stone-300 hover:text-white hover:bg-emerald-500/30 p-11 py-3 bg-transparent cursor-pointer"
       >
         View Experience
       </Button>

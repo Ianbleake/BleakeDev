@@ -9,21 +9,22 @@ export default function Contact(): React.ReactElement {
         <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
           I`m always open to discussing new opportunities and interesting projects.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
           <Button 
             isLink
             route="/contact"
-            className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 shadow-lg"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 shadow-lg w-50"
           >
-            Get In Touch
+            <p className="text-center w-full">Get In Touch</p>
           </Button>
           <Button 
             variant="secondary" 
             isLink
             route="/proyects"
-            className="border-emerald-600 text-emerald-400 hover:bg-emerald-950 px-8 py-3 bg-transparent"
+            className="border-emerald-600 text-emerald-400 hover:bg-emerald-950 px-8 py-3 bg-transparent w-50"
           >
-            View My Projects
+            <p className="text-center w-full">View My Projects</p>
+            
           </Button>
         </div>
       </div>
