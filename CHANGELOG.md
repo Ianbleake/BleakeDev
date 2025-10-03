@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.1](https://github.com/Ianbleake/BleakeDev/compare/v0.13.0...v0.13.1) (2025-10-03)
+
+
+### Bug Fixes
+
+* experience page responsive styles ([110e39d](https://github.com/Ianbleake/BleakeDev/commit/110e39d236dbb4dd94cdf819620d88a7828322c3))
+* rename page components ([c927a96](https://github.com/Ianbleake/BleakeDev/commit/c927a965c109d44ef1d2cd00d75affb7ebb4e283))
+
 ## [0.13.0](https://github.com/Ianbleake/BleakeDev/compare/v0.12.1...v0.13.0) (2025-10-02)
 
 
