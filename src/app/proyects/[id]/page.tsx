@@ -8,8 +8,9 @@ import Hero from "./components/Hero";
 import Overview from "./components/overview";
 import Features from "./components/Features";
 import Gallery from "./components/Gallery";
-import Contact from "./components/Contact";
+
 import Slider from "./components/Slider";
+import ProyectContact from "./components/proyectContact";
 
 
 export default function ProyectPage(): React.ReactElement {
@@ -28,7 +29,7 @@ export default function ProyectPage(): React.ReactElement {
           {
             project.pageContent.galleryType === 'grid' ? <Gallery project={project}/> : <Slider images={project.pageContent.images}/>
           }
-          <Contact/>
+        <ProyectContact/>
       </Page>
     );
   }else{

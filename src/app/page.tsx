@@ -1,5 +1,5 @@
 import AboutMe from '@/components/home/AboutMe';
-import Contact from '@/components/home/Contact';
+import HomeContact from '@/components/home/homeContact';
 import Introduction from '@/components/home/Introduction';
 import ProjectsSection from '@/components/home/Proyects';
 import Skills from '@/components/home/Skills';
@@ -14,7 +14,7 @@ export default function HomePage(): React.ReactElement {
       <AboutMe />
       <Skills />
       <ProjectsSection/>
-      <Contact />
+      <HomeContact/>
     </Page>
   );
 }

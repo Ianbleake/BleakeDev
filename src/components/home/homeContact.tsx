@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { twTheme } from "@/utils/ThemeColors";
 
-export default function Contact(): React.ReactElement {
+export default function HomeContact(): React.ReactElement {
   return (
     <section id="contact" className="py-24 px-6 bg-gray-900">
       

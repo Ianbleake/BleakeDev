@@ -1,7 +1,7 @@
 import Button from "@/components/ui/button";
 import React from "react";
 
-export default function Contact(): React.ReactElement {
+export default function ExperienceContact(): React.ReactElement {
   return (
     <section className="py-24 px-6 bg-gradient-to-br from-gray-900 to-emerald-950">
       <div className="max-w-4xl mx-auto text-center">

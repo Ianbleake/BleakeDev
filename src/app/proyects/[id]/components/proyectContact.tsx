@@ -4,7 +4,7 @@ import Button from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import React from "react";
 
-export default function Contact(): React.ReactElement {
+export default function ProyectContact(): React.ReactElement {
 
   const router = useRouter();
 
