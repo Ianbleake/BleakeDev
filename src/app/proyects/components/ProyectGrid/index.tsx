@@ -1,7 +1,6 @@
 import React from "react";
-
-import ProyectCard from "./ProyectCard";
 import ProyectsEmpty from "../proyectsEmpty";
+import ProyectCard from "@/components/ui/ProyectCard";
 
 type ProyectsGridProps = {
   proyects: Project[];
@@ -15,7 +14,7 @@ export default function ProyectsGrid({
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {proyects.map((project, index) => (
-            <ProyectCard key={index} proyect={project} />
+            <ProyectCard key={index} project={project} />
           ))}
         </div>
 
