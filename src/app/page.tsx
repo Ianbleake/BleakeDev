@@ -7,7 +7,7 @@ import Page from '@/components/ui/page';
 import React from 'react';
 
 
-export default function Home(): React.ReactElement {
+export default function HomePage(): React.ReactElement {
   return (
     <Page>
       <Introduction />

@@ -8,7 +8,7 @@ import Education from "./components/Education";
 import Certifications from "./components/Certifications";
 import Contact from "./components/contact";
 
-export default function Experience(): React.ReactElement {
+export default function ExperiencePage(): React.ReactElement {
 
   return (
     <Page>

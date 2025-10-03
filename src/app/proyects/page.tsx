@@ -8,7 +8,7 @@ import ProyectsGrid from "./components/ProyectGrid";
 import { projects } from "@/content/proyects";
 import { categories } from "@/content/categories";
 
-export default function Proyects(): React.ReactElement {
+export default function ProyectsPage(): React.ReactElement {
 
   const [selectedCategory, setSelectedCategory] = useState("All");
   
