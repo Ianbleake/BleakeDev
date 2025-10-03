@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Page from "@/components/ui/page";
 import { MdOutlineFilterDrama } from "react-icons/md";
 import Button from "@/components/ui/button";
-import ProyectsGrid from "./components/ProyectGrid";
+import ProyectsGrid from "./components/proyectGrid";
 import { projects } from "@/content/proyects";
 import { categories } from "@/content/categories";
 

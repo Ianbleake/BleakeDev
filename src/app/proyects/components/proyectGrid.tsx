@@ -1,5 +1,5 @@
 import React from "react";
-import ProyectsEmpty from "../proyectsEmpty";
+import ProyectsEmpty from "./proyectsEmpty";
 import ProyectCard from "@/components/ui/ProyectCard";
 
 type ProyectsGridProps = {
