@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.15.0](https://github.com/Ianbleake/BleakeDev/compare/v0.14.0...v0.15.0) (2025-10-06)
+
+
+### Features
+
+* add admin page ([9752b56](https://github.com/Ianbleake/BleakeDev/commit/9752b5615599876b052e2be07a2d5bee2e7c9caa))
+
 ## [0.14.0](https://github.com/Ianbleake/BleakeDev/compare/v0.13.1...v0.14.0) (2025-10-06)
 
 
