@@ -1,9 +1,10 @@
 "use client";
 
 import Page from "@/components/ui/page";
-import Hero from "@/app/contact/components/hero";
-import ContactForm from "@/app/contact/components/contactForm";
-import Social from "@/app/contact/components/social";
+import Hero from "./components/hero";
+import ContactForm from "./components/contactForm";
+import Social from "./components/social";
+
 
 export default function ContactPage() {
 

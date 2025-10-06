@@ -1,5 +1,5 @@
 import Page from "@/components/ui/page";
-import "../styles/notFound.css";
+import "../../styles/notFound.css";
 
 export default function NotFound() {
   return (
