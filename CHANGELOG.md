@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0](https://github.com/Ianbleake/BleakeDev/compare/v0.13.1...v0.14.0) (2025-10-06)
+
+
+### Features
+
+* add projects context ([39a8189](https://github.com/Ianbleake/BleakeDev/commit/39a818971cfe2c5df46dfb1791bd4050c4710815))
+* add proyect not found component ([a9926db](https://github.com/Ianbleake/BleakeDev/commit/a9926db389787ff77b2fadeefde158b1020de1ec))
+
 ## [0.13.1](https://github.com/Ianbleake/BleakeDev/compare/v0.13.0...v0.13.1) (2025-10-03)
 
 
