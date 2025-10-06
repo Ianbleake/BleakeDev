@@ -1,7 +1,7 @@
 'use client'
 
 import React from "react";
-import Button from "./ui/button";
+import Boton from "./ui/Boton";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoMdArrowRoundBack } from "react-icons/io";
@@ -42,10 +42,10 @@ export default function Header(): React.ReactElement {
         <a href="#about" className="text-lg text-stone-300 hover:text-emerald-400 transition-colors font-medium">About Me</a>
         <a href="#work" className="text-lg text-stone-300 hover:text-emerald-400 transition-colors font-medium">My Work</a>
         <a href="#skills" className="text-lg text-stone-300 hover:text-emerald-400 transition-colors font-medium">Skills</a>
-        <Button label="Get it touch" isLink={true} route="/contact"/>
+        <Boton label="Get it touch" isLink={true} route="/contact"/>
       </nav>
 
-      <Button label="Get it touch" isLink={true} route="/contact" className="block md:hidden"/>
+      <Boton label="Get it touch" isLink={true} route="/contact" className="block md:hidden"/>
     </header>
   );
 }

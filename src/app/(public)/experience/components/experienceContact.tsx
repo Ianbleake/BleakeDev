@@ -1,4 +1,4 @@
-import Button from "@/components/ui/button";
+import Boton from "@/components/ui/Boton";
 import React from "react";
 
 export default function ExperienceContact(): React.ReactElement {
@@ -10,14 +10,14 @@ export default function ExperienceContact(): React.ReactElement {
           I`m always open to discussing new opportunities and interesting projects.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-          <Button 
+          <Boton 
             isLink
             route="/contact"
             className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 shadow-lg w-50"
           >
             <p className="text-center w-full">Get In Touch</p>
-          </Button>
-          <Button 
+          </Boton>
+          <Boton 
             variant="secondary" 
             isLink
             route="/proyects"
@@ -25,7 +25,7 @@ export default function ExperienceContact(): React.ReactElement {
           >
             <p className="text-center w-full">View My Projects</p>
             
-          </Button>
+          </Boton>
         </div>
       </div>
     </section>

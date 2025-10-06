@@ -1,4 +1,4 @@
-import Button from "@/components/ui/button";
+import Boton from "@/components/ui/Boton";
 import React from "react";
 import { LuExternalLink } from "react-icons/lu";
 import { VscGithub } from "react-icons/vsc";
@@ -31,16 +31,16 @@ export default function Hero({
         </p>
 
         <div className="flex flex-wrap gap-4 mb-8">
-          <Button disabled={project.status !== "Completed"} isExternal route={project.link}>
+          <Boton disabled={project.status !== "Completed"} isExternal route={project.link}>
             <LuExternalLink className="mr-2 h-5 w-5" />
             {project.status === "Completed" ? "Visit Project" : "Coming Soon"}
-          </Button>
+          </Boton>
           {
             project.github && (
-              <Button variant="secondary" className="text-white/90 border-white/30 hover:bg-white/10" isExternal route={project.github}>
+              <Boton variant="secondary" className="text-white/90 border-white/30 hover:bg-white/10" isExternal route={project.github}>
                 <VscGithub className="mr-2 h-5 w-5" />
                 View Source Code
-              </Button>
+              </Boton>
             )
           }
         </div>

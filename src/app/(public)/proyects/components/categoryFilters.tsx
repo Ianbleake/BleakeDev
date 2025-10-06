@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Button from "@/components/ui/button";
+import Boton from "@/components/ui/Boton";
 import { useProjectsStorage } from "@/storage/projectsStorage";
 
 
@@ -11,7 +11,7 @@ export default function CategoryFilters() {
   return (
     <div className="flex flex-wrap justify-center gap-3">
       {categories.map((category) => (
-        <Button
+        <Boton
           key={category}
           onClick={() => setSelectedCategory(category)}
           variant={selectedCategory === category ? "primary" : "secondary"}

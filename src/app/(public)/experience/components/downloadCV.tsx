@@ -1,4 +1,4 @@
-import Button from "@/components/ui/button";
+import Boton from "@/components/ui/Boton";
 import React from "react";
 import { IoCloudDownloadOutline } from "react-icons/io5";
 
@@ -14,12 +14,12 @@ export default function DownloadCv(): React.ReactElement {
   };
 
   return (
-    <Button 
+    <Boton 
       onClick={handleDownloadCV}
       className="border-stone-600 text-stone-300 hover:text-white hover:bg-emerald-500/30 px-8 py-3 bg-transparent cursor-pointer flex items-center gap-4"
     >
       Download CV
       <IoCloudDownloadOutline size={25} className="mr-2" />
-    </Button>
+    </Boton>
   );
 }

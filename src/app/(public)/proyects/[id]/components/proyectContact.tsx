@@ -1,6 +1,6 @@
 'use client'
 
-import Button from "@/components/ui/button";
+import Boton from "@/components/ui/Boton";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -17,12 +17,12 @@ export default function ProyectContact(): React.ReactElement {
         <p className="text-xl text-stone-300 mb-8">
           Let,s discuss how we can bring your ideas to life.
         </p>
-        <Button
+        <Boton
           onClick={() => router.push('/contact')}
           className="bg-emerald-600 hover:bg-emerald-700 text-white cursor-pointer"
         >
           Get In Touch
-        </Button>
+        </Boton>
       </div>
     </section>
   );

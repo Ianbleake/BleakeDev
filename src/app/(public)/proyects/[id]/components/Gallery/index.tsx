@@ -62,7 +62,7 @@ export default function Gallery({ project }: GalleryProps): React.ReactElement {
             className="fixed inset-0 bg-emerald-500/40 backdrop-blur-sm flex items-center justify-center z-50"
             onClick={closeLightbox}
           >
-            <button
+            <Boton
               className="absolute left-4 md:left-0 lg:left-4 text-white text-3xl cursor-pointer"
               onClick={(e) => {
                 e.stopPropagation();
@@ -70,7 +70,7 @@ export default function Gallery({ project }: GalleryProps): React.ReactElement {
               }}
             >
               <GoChevronLeft size={45} className="text-emerald-300 md:text-white" />
-            </button>
+            </Boton>
             <Image
               src={project.pageContent.images[lightboxIndex].url}
               alt={project.pageContent.images[lightboxIndex].title}
@@ -79,7 +79,7 @@ export default function Gallery({ project }: GalleryProps): React.ReactElement {
               height={600}
               style={{ width: 'auto', height: 'auto' }}
             />
-            <button
+            <Boton
               className="absolute right-4 md:right-0 lg:right-4 text-white text-3xl cursor-pointer"
               onClick={(e) => {
                 e.stopPropagation();
@@ -87,7 +87,7 @@ export default function Gallery({ project }: GalleryProps): React.ReactElement {
               }}
             >
               <GoChevronRight size={45} className="text-emerald-300 md:text-white" />
-            </button>
+            </Boton>
           </div>
         )}
         
