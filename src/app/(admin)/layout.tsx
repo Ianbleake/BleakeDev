@@ -1,7 +1,13 @@
+"use client";
+
 import React from "react";
 
-export default function AdminLayout(): React.ReactElement {
+export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div>AdminLayout</div>
+    <div className="flex min-h-screen bg-gray-50">
+      <div className="flex flex-col flex-1">
+        <main className="flex-1 p-6">{children}</main>
+      </div>
+    </div>
   );
 }
