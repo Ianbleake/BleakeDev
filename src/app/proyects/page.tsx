@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import Hero from "./components/hero";
+
 import Page from "@/components/ui/page";
 import ProyectsGrid from "./components/proyectGrid";
 import CategoryFilters from "./components/categoryFilters";
+import Hero from "./components/hero";
 
 export default function ProyectsPage(): React.ReactElement {
 

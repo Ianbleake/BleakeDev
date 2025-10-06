@@ -3,7 +3,6 @@
 import React from "react";
 import Page from "@/components/ui/page";
 import { useParams } from 'next/navigation'
-import { projects } from "@/content/proyects";
 import Hero from "./components/Hero";
 import Overview from "./components/overview";
 import Features from "./components/Features";
@@ -11,9 +10,14 @@ import Gallery from "./components/Gallery";
 
 import Slider from "./components/Slider";
 import ProyectContact from "./components/proyectContact";
+import { useProjectsStorage } from "@/storage/projectsStorage";
+import NotFound from "./components/notFound";
+
 
 
 export default function ProyectPage(): React.ReactElement {
+
+  const { projects } = useProjectsStorage();
 
   const params = useParams()
   const id = Number(params.id)
@@ -34,11 +38,7 @@ export default function ProyectPage(): React.ReactElement {
     );
   }else{
     return (
-      <Page>
-        <div>
-          <h2>Project Not Found</h2>
-        </div>
-      </Page>
+      <NotFound/>
     );
   }
 }
