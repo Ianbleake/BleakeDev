@@ -1,6 +1,11 @@
 import React from "react";
 
 export default function Hero(): React.ReactElement {
+
+  const startDate = new Date('2023-01-01').getFullYear();
+  const currentYear = new Date().getFullYear();
+  const yearsOfExperience = currentYear - startDate;
+
   return (
     <div className="relative w-full">
       <div className="bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800 rounded-3xl p-8 shadow-2xl border border-emerald-500/20">
@@ -13,7 +18,7 @@ export default function Hero(): React.ReactElement {
             </div>
 
             <div>
-              <div className="text-3xl font-bold mb-1 text-emerald-100">3+</div>
+              <div className="text-3xl font-bold mb-1 text-emerald-100">{yearsOfExperience}</div>
               <div className="text-emerald-200 text-sm">Years Experience</div>
             </div>
 
