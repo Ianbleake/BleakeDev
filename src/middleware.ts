@@ -29,10 +29,10 @@ export async function middleware(req: NextRequest) {
   } = await supabase.auth.getSession();
 
   const isAdminRoute = req.nextUrl.pathname.startsWith("/admin");
-  const isLoginRoute = req.nextUrl.pathname.startsWith("/admin/login");
+  const isLoginRoute = req.nextUrl.pathname.startsWith("/login");
 
   if (isAdminRoute && !isLoginRoute && !session) {
-    const loginUrl = new URL("/admin/login", req.url);
+    const loginUrl = new URL("/login", req.url);
     loginUrl.searchParams.set("redirectedFrom", req.nextUrl.pathname);
     return NextResponse.redirect(loginUrl);
   }
@@ -45,7 +45,6 @@ export async function middleware(req: NextRequest) {
   return res;
 }
 
-// Configuramos las rutas que intercepta
 export const config = {
   matcher: ["/admin/:path*"],
 };
