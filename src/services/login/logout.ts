@@ -14,4 +14,4 @@ export async function logout() {
   clearAuth();
   
   return true;
-}
+} 
