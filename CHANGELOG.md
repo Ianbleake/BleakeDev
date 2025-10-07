@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.16.0](https://github.com/Ianbleake/BleakeDev/compare/v0.15.0...v0.16.0) (2025-10-07)
+
+
+### Features
+
+* add directories groups ([11fb164](https://github.com/Ianbleake/BleakeDev/commit/11fb164af91064f79ef71e15074d0ac22335c253))
+* add loginform component ([2687cf1](https://github.com/Ianbleake/BleakeDev/commit/2687cf1aba2ad9edf20f6e16b364830bebc9db83))
+* add logout ([295973e](https://github.com/Ianbleake/BleakeDev/commit/295973ee7768b28ca088fca6df9d63e023ece121))
+* add middleware and supabase ([77272ca](https://github.com/Ianbleake/BleakeDev/commit/77272cab22b887fce14508ec6ecda223ecbe5907))
+* add ui components to admin dashboard ([1317f08](https://github.com/Ianbleake/BleakeDev/commit/1317f08d5deed29899f4b772ea309a71bc1ab38b))
+* automatize years of experience on main hero ([8ab2ea1](https://github.com/Ianbleake/BleakeDev/commit/8ab2ea1e167b60eff80354b2468c3f8fda95562c))
+* conect loginform with supabase ([9f21380](https://github.com/Ianbleake/BleakeDev/commit/9f2138022fabee66cfeb6118ffcd7edc4d219a16))
+* separate layouts ([7a40741](https://github.com/Ianbleake/BleakeDev/commit/7a407418a821131d1e56ce36df3f75034f9d8e73))
+
+
+### Bug Fixes
+
+* middleware ([eebe174](https://github.com/Ianbleake/BleakeDev/commit/eebe17496011746b8b8a687147e32211b12cc38b))
+
 ## [0.15.0](https://github.com/Ianbleake/BleakeDev/compare/v0.14.0...v0.15.0) (2025-10-06)
 
 
