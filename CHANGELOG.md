@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.16.1](https://github.com/Ianbleake/BleakeDev/compare/v0.16.0...v0.16.1) (2025-10-07)
+
+
+### Bug Fixes
+
+* gallery buttons ([04d2046](https://github.com/Ianbleake/BleakeDev/commit/04d20467c84609ed56e4460832f7740f7349fa91))
+
 ## [0.16.0](https://github.com/Ianbleake/BleakeDev/compare/v0.15.0...v0.16.0) (2025-10-07)
 
 
