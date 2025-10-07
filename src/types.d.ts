@@ -47,3 +47,8 @@ type Skill = {
   icon: IconType;
   technologies: string[];
 }
+
+type SupabaseAuthError = {
+  message: string;
+  code: string;
+}

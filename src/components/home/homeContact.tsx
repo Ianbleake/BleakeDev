@@ -1,4 +1,4 @@
-import Button from "@/components/ui/button";
+import Boton from "@/components/ui/Boton";
 import React from "react";
 import { VscGithub } from "react-icons/vsc";
 import { FaLinkedin } from "react-icons/fa";
@@ -19,7 +19,7 @@ export default function HomeContact(): React.ReactElement {
         </p>
         
         <div className="flex flex-row gap-4 justify-center mb-12">
-          <Button 
+          <Boton 
             label="Get In Touch"
             className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 shadow-lg w-fit"
             isLink

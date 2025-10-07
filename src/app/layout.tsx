@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
-import Body from "@/components/body";
+import { ReactQueryProvider } from "@/providers/ReactQueryProvider";
+import { AuthProvider } from "@/providers/AuthProvider";
 
 export const metadata: Metadata = {
   title: "BleakeDev",
@@ -10,15 +11,16 @@ export const metadata: Metadata = {
   },
 };
 
-
-
-export default function RootLayout({
-  children,
-}: RootProps ) {
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <Body>
-      {children}
-    </Body>
+    <html lang="en">
+      <body>
+        <ReactQueryProvider>
+          <AuthProvider>
+            {children}
+          </AuthProvider>
+        </ReactQueryProvider>
+      </body>
+    </html>
   );
 }

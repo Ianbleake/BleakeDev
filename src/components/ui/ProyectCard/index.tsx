@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
-import Button from "@/components/ui/button";
+import Boton from "@/components/ui/Boton";
 import { Card, CardContent } from "@/components/ui/card";
 import ProyectStatus from "./components/proyectStatus";
 import ProyectCategory from "./components/proyectCategory";
@@ -67,7 +67,7 @@ export default function ProyectCard({
 
         
         <div className="flex gap-3">
-          <Button
+          <Boton
             variant="primary"
             className="flex-1 border-emerald-300 text-emerald-100 hover:bg-emerald-800/50 hover:text-white transition-all bg-transparent"
             label={project.status === "In Progress" || project.status === "Planned" ? "Coming Soon" : "Visit project"}
@@ -75,9 +75,9 @@ export default function ProyectCard({
             route={project.link}
             disabled={project.status === "In Progress" || project.status === "Planned"}
           >
-          </Button>
+          </Boton>
           {project.github && (
-            <Button
+            <Boton
               variant="primary"
               className="border-emerald-300 text-emerald-100 hover:bg-emerald-800/50 hover:text-white transition-all bg-transparent"
               label="GitHub"
@@ -85,7 +85,7 @@ export default function ProyectCard({
               route={project.github}
             >
               <FiGithub size={20} color={twTheme.colors.emerald[100]}/>
-            </Button>
+            </Boton>
           )}
         </div>
       </CardContent>
