@@ -44,10 +44,10 @@ export default function ProfileManager(): React.ReactElement {
 
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-medium">
-                  {profile?.first_name} {profile?.last_name}
+                  { profile?.username}
                 </span>
                 <span className="text-muted-foreground truncate text-xs">
-                  {profile?.email}
+                  {profile?.first_name} {profile?.last_name}
                 </span>
               </div>
 
