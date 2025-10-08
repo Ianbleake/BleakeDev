@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/Ianbleake/BleakeDev/compare/v2.0.0...v2.1.0) (2025-10-08)
+
+
+### Features
+
+* add profile manager component ([e09a682](https://github.com/Ianbleake/BleakeDev/commit/e09a6820f58ca85dd87eb86e73d16c91c21cd712))
+* add sidebar component and navegation menu ([19d56c1](https://github.com/Ianbleake/BleakeDev/commit/19d56c139c616c4ac8e16ead635e9c5105bcb49f))
+
+
+### Bug Fixes
+
+* profile fetch and conect logout button remove test logout ([89a6aff](https://github.com/Ianbleake/BleakeDev/commit/89a6aff92c895eed49a85e47123a30d9fabe4d1a))
+
 ## [2.0.0](https://github.com/Ianbleake/BleakeDev/compare/v1.0.0...v2.0.0) (2025-10-07)
 
 

@@ -25,11 +25,18 @@ jobs:
           manifest-file: .release-please-manifest.json
           release-type: node
 
-      # Si se creó un PR de release, lo mergeamos automáticamente
-      - name: Auto-merge Release PR
-        if: steps.release.outputs.release_created == 'false'
-        uses: peter-evans/enable-pull-request-automerge@v2
+      # Si se creó un PR de release (NO un release), lo mergeamos automáticamente
+      - name: Enable auto-merge for Release PR
+        if: steps.release.outputs.pr != '' && steps.release.outputs.release_created != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr merge ${{ steps.release.outputs.pr }} --auto --squash --repo ${{ github.repository }}
+
+      # Opcional: Aprobar el PR automáticamente si tu repo requiere aprobaciones
+      - name: Auto-approve Release PR
+        if: steps.release.outputs.pr != '' && steps.release.outputs.release_created != 'true'
+        uses: hmarr/auto-approve-action@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          pull-request-number: ${{ steps.release.outputs.pr_number }}
-          merge-method: squash
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ fromJSON(steps.release.outputs.pr).number }}
