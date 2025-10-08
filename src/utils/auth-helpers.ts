@@ -1,41 +1,40 @@
 import { useAuthStore, UserProfile } from '@/storage/authStore';
 import { supabaseBrowser } from '@/supabase/client';
 
+// TODO: Refactor that as hooks and services, this file is getting too big
 
-/**
- * Obtiene el perfil del usuario desde la base de datos
- */
 export async function fetchUserProfile(userId: string): Promise<UserProfile | null> {
   try {
     const { data, error } = await supabaseBrowser
-      .from('profiles')
-      .select('*')
-      .eq('id', userId)
-      .single();
+      .from("profiles")
+      .select("*")
+      .eq("user_id", userId)
+      .maybeSingle(); // 👈 en lugar de .single()
 
     if (error) {
-      console.error('Error fetching profile:', error);
+      console.error("Error fetching profile:", error.message);
+      return null;
+    }
+
+    if (!data) {
+      console.warn(`No profile found for user_id: ${userId}`);
       return null;
     }
 
     return data;
   } catch (error) {
-    console.error('Error in fetchUserProfile:', error);
+    console.error("Error in fetchUserProfile:", error);
     return null;
   }
 }
 
-/**
- * Inicializa el auth state desde Supabase
- * Llama esto al iniciar la app o en un layout raíz
- */
+
 export async function initializeAuth() {
   const { setAuth, setIsLoading } = useAuthStore.getState();
   
   try {
     setIsLoading(true);
 
-    // Obtener sesión actual
     const { data: { session }, error: sessionError } = await supabaseBrowser.auth.getSession();
     
     if (sessionError) {
@@ -49,7 +48,6 @@ export async function initializeAuth() {
       return;
     }
 
-    // Obtener perfil
     const profile = await fetchUserProfile(session.user.id);
     
     setAuth(session.user, session, profile);
@@ -61,10 +59,6 @@ export async function initializeAuth() {
   }
 }
 
-/**
- * Sincroniza el auth state cuando cambia la sesión
- * Configura el listener de cambios de auth
- */
 export function setupAuthListener() {
   const { setAuth, clearAuth } = useAuthStore.getState();
 
@@ -87,15 +81,11 @@ export function setupAuthListener() {
     }
   );
 
-  // Retornar función de cleanup
   return () => {
     subscription.unsubscribe();
   };
 }
 
-/**
- * Hook personalizado para usar en componentes
- */
 export function useAuth() {
   const user = useAuthStore((state) => state.user);
   const session = useAuthStore((state) => state.session);
@@ -114,9 +104,6 @@ export function useAuth() {
   };
 }
 
-/**
- * Actualiza el perfil en el store y en la BD
- */
 export async function updateProfile(updates: Partial<Omit<UserProfile, 'id' | 'created_at'>>) {
   const { profile, setProfile } = useAuthStore.getState();
   

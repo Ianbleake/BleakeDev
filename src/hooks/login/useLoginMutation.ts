@@ -7,6 +7,7 @@ import { fetchUserProfile } from "@/utils/auth-helpers";
 
 
 export function useLoginMutation() {
+
   const router = useRouter();
   const setAuth = useAuthStore((state) => state.setAuth);
   
@@ -15,10 +16,9 @@ export function useLoginMutation() {
     mutationFn: ({ email, password }: { email: string; password: string }) =>
       signIn(email, password),
     onSuccess: async (data) => {
-      // Obtener el perfil del usuario
-      const profile = await fetchUserProfile(data.user.id);
       
-      // Actualizar el store de Zustand
+      const profile = await fetchUserProfile(data.user.id);
+    
       setAuth(data.user, data.session, profile);
       
       toast.success("Inicio de sesión exitoso");
