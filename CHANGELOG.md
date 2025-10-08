@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.1](https://github.com/Ianbleake/BleakeDev/compare/v2.1.0...v2.1.1) (2025-10-08)
+
+
+### Bug Fixes
+
+* perfil manager info ([8628447](https://github.com/Ianbleake/BleakeDev/commit/862844782cda8a897536b30e7c44e86f79c052a3))
+
 ## [2.1.0](https://github.com/Ianbleake/BleakeDev/compare/v2.0.0...v2.1.0) (2025-10-08)
 
 
