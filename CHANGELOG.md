@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.3](https://github.com/Ianbleake/BleakeDev/compare/v2.1.2...v2.1.3) (2025-10-08)
+
+
+### Bug Fixes
+
+* vanish pr approval ([d9c15b7](https://github.com/Ianbleake/BleakeDev/commit/d9c15b7f24f68c07c572beb8a2c5554d12b6d00f))
+* vanish pr approval ([1cce24f](https://github.com/Ianbleake/BleakeDev/commit/1cce24fa56d48f581828457ab0fa010d518c1a6b))
+
+## [2.1.2](https://github.com/Ianbleake/BleakeDev/compare/v2.1.1...v2.1.2) (2025-10-08)
+
+
+### Bug Fixes
+
+* Realeses gh action ([432f674](https://github.com/Ianbleake/BleakeDev/commit/432f674407bf95bbca2766771963a9955c229229))
+
+## [2.1.1](https://github.com/Ianbleake/BleakeDev/compare/v2.1.0...v2.1.1) (2025-10-08)
+
+
+### Bug Fixes
+
+* perfil manager info ([8628447](https://github.com/Ianbleake/BleakeDev/commit/862844782cda8a897536b30e7c44e86f79c052a3))
+
 ## [2.1.0](https://github.com/Ianbleake/BleakeDev/compare/v2.0.0...v2.1.0) (2025-10-08)
 
 
