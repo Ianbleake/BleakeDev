@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/Ianbleake/BleakeDev/compare/v1.0.0...v2.0.0) (2025-10-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* **core:** inicia la versión 1.0.0 con cambios mayores
+* **release:** se ajusta la configuración de release-please
+
+### Features
+
+* add admin page ([9752b56](https://github.com/Ianbleake/BleakeDev/commit/9752b5615599876b052e2be07a2d5bee2e7c9caa))
+* add directories groups ([11fb164](https://github.com/Ianbleake/BleakeDev/commit/11fb164af91064f79ef71e15074d0ac22335c253))
+* add loginform component ([2687cf1](https://github.com/Ianbleake/BleakeDev/commit/2687cf1aba2ad9edf20f6e16b364830bebc9db83))
+* add logout ([295973e](https://github.com/Ianbleake/BleakeDev/commit/295973ee7768b28ca088fca6df9d63e023ece121))
+* add middleware and supabase ([77272ca](https://github.com/Ianbleake/BleakeDev/commit/77272cab22b887fce14508ec6ecda223ecbe5907))
+* add ui components to admin dashboard ([1317f08](https://github.com/Ianbleake/BleakeDev/commit/1317f08d5deed29899f4b772ea309a71bc1ab38b))
+* automatize years of experience on main hero ([8ab2ea1](https://github.com/Ianbleake/BleakeDev/commit/8ab2ea1e167b60eff80354b2468c3f8fda95562c))
+* conect loginform with supabase ([9f21380](https://github.com/Ianbleake/BleakeDev/commit/9f2138022fabee66cfeb6118ffcd7edc4d219a16))
+* **core:** release v1 ([187a950](https://github.com/Ianbleake/BleakeDev/commit/187a9501d6141714b5d286cdf6b97b0bf1175a2c))
+* separate layouts ([7a40741](https://github.com/Ianbleake/BleakeDev/commit/7a407418a821131d1e56ce36df3f75034f9d8e73))
+
+
+### Bug Fixes
+
+* gallery buttons ([04d2046](https://github.com/Ianbleake/BleakeDev/commit/04d20467c84609ed56e4460832f7740f7349fa91))
+* middleware ([eebe174](https://github.com/Ianbleake/BleakeDev/commit/eebe17496011746b8b8a687147e32211b12cc38b))
+* **release:** corrige error en flujo de releases ([72c9877](https://github.com/Ianbleake/BleakeDev/commit/72c9877f5bb1b9eb29d044bb1e67b02bd0fe71d3))
+* updates ([dc3e61b](https://github.com/Ianbleake/BleakeDev/commit/dc3e61b12cd2be5fba04cedc8b3f69829164441c))
+* updates 2 ([4671abd](https://github.com/Ianbleake/BleakeDev/commit/4671abdd93c790e196f2c3f1793f16116c4d6d6e))
+
+## [1.0.0](https://github.com/Ianbleake/BleakeDev/compare/v0.16.3...v1.0.0) (2025-10-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* **core:** inicia la versión 1.0.0 con cambios mayores
+
+### Features
+
+* **core:** release v1 ([187a950](https://github.com/Ianbleake/BleakeDev/commit/187a9501d6141714b5d286cdf6b97b0bf1175a2c))
+
 ## [0.16.3](https://github.com/Ianbleake/BleakeDev/compare/v0.16.2...v0.16.3) (2025-10-07)
 
 
