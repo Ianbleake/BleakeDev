@@ -10,8 +10,6 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   const pathname = usePathname();
 
-  console.log("AdminLayout pathname:", pathname);
-
   if(pathname === "/login"){
     return(
       <div className="flex min-h-screen bg-gray-50">

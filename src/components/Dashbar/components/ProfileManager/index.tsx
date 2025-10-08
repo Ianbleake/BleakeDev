@@ -14,21 +14,20 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { useAuth } from "@/utils/auth-helpers";
 import {
   CreditCard,
   MoreVertical,
-  LogOut,
   Bell,
   UserCircle,
+  RotateCcw
 } from "lucide-react";
 import React from "react";
+import LogOutButton from "./components/logOutButton";
+import { useAuth } from "@/utils/auth-helpers";
 
 export default function ProfileManager(): React.ReactElement {
 
   const { profile } = useAuth();
-
-  console.log("profile:",profile)
   
   const { isMobile } = useSidebar();
 
@@ -36,17 +35,20 @@ export default function ProfileManager(): React.ReactElement {
     <SidebarMenu>
       <SidebarMenuItem>
         <DropdownMenu>
+
           <DropdownMenuTrigger asChild>
-            <SidebarMenuButton
-              size="lg"
-              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
-            >
+
+            <SidebarMenuButton size="lg" className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground" >
+
               <Avatar className="h-8 w-8 rounded-lg grayscale">
+
                 <AvatarImage
                   src={profile?.avatarurl || ""}
                   alt={profile?.username || "user-profile"}
                 />
-                <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+
+                <AvatarFallback className="rounded-lg">BD</AvatarFallback>
+
               </Avatar>
 
               <div className="grid flex-1 text-left text-sm leading-tight">
@@ -60,6 +62,7 @@ export default function ProfileManager(): React.ReactElement {
 
               <MoreVertical className="ml-auto size-4" />
             </SidebarMenuButton>
+
           </DropdownMenuTrigger>
 
           <DropdownMenuContent
@@ -69,6 +72,7 @@ export default function ProfileManager(): React.ReactElement {
             sideOffset={4}
           >
             <DropdownMenuLabel className="p-0 font-normal">
+
               <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                 <Avatar className="h-8 w-8 rounded-lg">
                   <AvatarImage
@@ -91,27 +95,37 @@ export default function ProfileManager(): React.ReactElement {
             <DropdownMenuSeparator />
 
             <DropdownMenuGroup>
+
               <DropdownMenuItem>
                 <UserCircle className="mr-2 h-4 w-4" />
                 Account
               </DropdownMenuItem>
+              
               <DropdownMenuItem>
                 <CreditCard className="mr-2 h-4 w-4" />
                 Billing
               </DropdownMenuItem>
+
               <DropdownMenuItem>
                 <Bell className="mr-2 h-4 w-4" />
                 Notifications
               </DropdownMenuItem>
+
             </DropdownMenuGroup>
+
+            <DropdownMenuItem>
+              <RotateCcw className="mr-2 h-4 w-4" />
+              Fetch Profile
+            </DropdownMenuItem>
 
             <DropdownMenuSeparator />
 
             <DropdownMenuItem>
-              <LogOut className="mr-2 h-4 w-4" />
-              Log out
+              <LogOutButton/>
             </DropdownMenuItem>
+
           </DropdownMenuContent>
+
         </DropdownMenu>
       </SidebarMenuItem>
     </SidebarMenu>

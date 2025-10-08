@@ -2,6 +2,7 @@ import { useAuthStore, UserProfile } from '@/storage/authStore';
 import { supabaseBrowser } from '@/supabase/client';
 
 // TODO: Refactor that as hooks and services, this file is getting too big
+// TODO: Check why profile fetch do every reload
 
 export async function fetchUserProfile(userId: string): Promise<UserProfile | null> {
   try {
@@ -9,7 +10,7 @@ export async function fetchUserProfile(userId: string): Promise<UserProfile | nu
       .from("profiles")
       .select("*")
       .eq("user_id", userId)
-      .maybeSingle(); // 👈 en lugar de .single()
+      .maybeSingle();
 
     if (error) {
       console.error("Error fetching profile:", error.message);
@@ -21,6 +22,7 @@ export async function fetchUserProfile(userId: string): Promise<UserProfile | nu
       return null;
     }
 
+    console.log("Profile data:",data);
     return data;
   } catch (error) {
     console.error("Error in fetchUserProfile:", error);
