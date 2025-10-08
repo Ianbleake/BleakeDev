@@ -10,7 +10,7 @@ interface AuthState {
   setUser: (user: User | null) => void;
   setSession: (session: Session | null) => void;
   setProfile: (profile: UserProfile | null) => void;
-  setAuth: (user: User | null, session: Session | null, profile: UserProfile | null) => void;
+  setAuth: (user: User | null, session: Session | null, profile: UserProfile | null) => void; 
   clearAuth: () => void;
   setIsLoading: (isLoading: boolean) => void;
 
