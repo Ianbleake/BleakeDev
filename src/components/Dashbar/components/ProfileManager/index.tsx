@@ -22,8 +22,9 @@ import {
 } from "lucide-react";
 import React from "react";
 import LogOutButton from "./components/logOutButton";
-import { useAuth } from "@/utils/auth-helpers";
+
 import UserImage from "@/components/ui/UserImage";
+import { useAuth } from "@/hooks/login/useAuth";
 
 export default function ProfileManager(): React.ReactElement {
 

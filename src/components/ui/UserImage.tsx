@@ -1,7 +1,8 @@
-import { useAuth } from "@/utils/auth-helpers";
+
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 import { merge } from "@/utils/mergeStyles";
+import { useAuth } from "@/hooks/login/useAuth";
 
 export default function UserImage(): React.ReactElement {
 

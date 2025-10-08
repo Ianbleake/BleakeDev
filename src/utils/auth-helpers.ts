@@ -4,6 +4,7 @@ import { supabaseBrowser } from '@/supabase/client';
 // TODO: Refactor that as hooks and services, this file is getting too big
 // TODO: Check why profile fetch do every reload
 
+//TODO: become it in a service (Maybe turn it in a hook to)
 export async function fetchUserProfile(userId: string): Promise<UserProfile | null> {
   try {
     const { data, error } = await supabaseBrowser
@@ -37,7 +38,7 @@ export async function fetchUserProfile(userId: string): Promise<UserProfile | nu
   }
 }
 
-
+//? I don't have a fuking idea why this exist, check it
 export async function initializeAuth() {
   const { setAuth, setIsLoading } = useAuthStore.getState();
   
@@ -68,6 +69,7 @@ export async function initializeAuth() {
   }
 }
 
+//? Same case as above
 export function setupAuthListener() {
   const { setAuth, clearAuth } = useAuthStore.getState();
 
@@ -94,26 +96,9 @@ export function setupAuthListener() {
     subscription.unsubscribe();
   };
 }
-
-export function useAuth() {
-  const user = useAuthStore((state) => state.user);
-  const session = useAuthStore((state) => state.session);
-  const profile = useAuthStore((state) => state.profile);
-  const isLoading = useAuthStore((state) => state.isLoading);
-  const isAuthenticated = useAuthStore((state) => state.isAuthenticated());
-  const fullName = useAuthStore((state) => state.getFullName());
-
-  return {
-    user,
-    session,
-    profile,
-    isLoading,
-    isAuthenticated,
-    fullName,
-  };
-}
-
+//TODO: become it in a service with his own hook
 export async function updateProfile(updates: Partial<Omit<UserProfile, 'id' | 'created_at'>>) {
+
   const { profile, setProfile } = useAuthStore.getState();
   
   if (!profile) {
