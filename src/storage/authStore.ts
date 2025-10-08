@@ -1,23 +1,19 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { User, Session } from '@supabase/supabase-js';
-
-// Estado del store
 interface AuthState {
   user: User | null;
   session: Session | null;
   profile: UserProfile | null;
   isLoading: boolean;
   
-  // Acciones
   setUser: (user: User | null) => void;
   setSession: (session: Session | null) => void;
   setProfile: (profile: UserProfile | null) => void;
   setAuth: (user: User | null, session: Session | null, profile: UserProfile | null) => void;
   clearAuth: () => void;
   setIsLoading: (isLoading: boolean) => void;
-  
-  // Getters computados
+
   isAuthenticated: () => boolean;
   getFullName: () => string | null;
 }
@@ -45,7 +41,6 @@ export const useAuthStore = create<AuthState>()(
       
       setIsLoading: (isLoading) => set({ isLoading }),
 
-      // Getters
       isAuthenticated: () => {
         const state = get();
         return !!state.user && !!state.session;
@@ -59,7 +54,6 @@ export const useAuthStore = create<AuthState>()(
     }),
     {
       name: 'auth-storage',
-      // Solo persistir datos básicos, no la sesión completa por seguridad
       partialize: (state) => ({
         profile: state.profile,
       }),
