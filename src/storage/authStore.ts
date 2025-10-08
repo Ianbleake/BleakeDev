@@ -2,17 +2,6 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { User, Session } from '@supabase/supabase-js';
 
-// Tipo para el perfil del usuario
-export interface UserProfile {
-  id: string;
-  first_name: string;
-  last_name: string;
-  username: string;
-  email: string | null;
-  avatarurl: string | null;
-  created_at: string | null;
-}
-
 // Estado del store
 interface AuthState {
   user: User | null;
@@ -34,6 +23,7 @@ interface AuthState {
 }
 
 export const useAuthStore = create<AuthState>()(
+
   persist(
     (set, get) => ({
       user: null,

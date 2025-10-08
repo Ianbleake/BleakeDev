@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -19,11 +19,11 @@ import {
   MoreVertical,
   Bell,
   UserCircle,
-  RotateCcw
 } from "lucide-react";
 import React from "react";
 import LogOutButton from "./components/logOutButton";
 import { useAuth } from "@/utils/auth-helpers";
+import UserImage from "@/components/ui/UserImage";
 
 export default function ProfileManager(): React.ReactElement {
 
@@ -40,16 +40,7 @@ export default function ProfileManager(): React.ReactElement {
 
             <SidebarMenuButton size="lg" className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground" >
 
-              <Avatar className="h-8 w-8 rounded-lg grayscale">
-
-                <AvatarImage
-                  src={profile?.avatarurl || ""}
-                  alt={profile?.username || "user-profile"}
-                />
-
-                <AvatarFallback className="rounded-lg">BD</AvatarFallback>
-
-              </Avatar>
+              <UserImage/>
 
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-medium">
@@ -74,13 +65,9 @@ export default function ProfileManager(): React.ReactElement {
             <DropdownMenuLabel className="p-0 font-normal">
 
               <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
-                <Avatar className="h-8 w-8 rounded-lg">
-                  <AvatarImage
-                    src={profile?.avatarurl || ""}
-                    alt={profile?.username || "user-profile"}
-                  />
-                  <AvatarFallback className="rounded-lg">CN</AvatarFallback>
-                </Avatar>
+
+                <UserImage/>
+
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">
                     {profile?.first_name} {profile?.last_name}
@@ -89,7 +76,9 @@ export default function ProfileManager(): React.ReactElement {
                     {profile?.email}
                   </span>
                 </div>
+
               </div>
+
             </DropdownMenuLabel>
 
             <DropdownMenuSeparator />
@@ -112,11 +101,6 @@ export default function ProfileManager(): React.ReactElement {
               </DropdownMenuItem>
 
             </DropdownMenuGroup>
-
-            <DropdownMenuItem>
-              <RotateCcw className="mr-2 h-4 w-4" />
-              Fetch Profile
-            </DropdownMenuItem>
 
             <DropdownMenuSeparator />
 

@@ -1,4 +1,4 @@
-import { useAuthStore, UserProfile } from '@/storage/authStore';
+import { useAuthStore } from '@/storage/authStore';
 import { supabaseBrowser } from '@/supabase/client';
 
 // TODO: Refactor that as hooks and services, this file is getting too big
@@ -22,8 +22,15 @@ export async function fetchUserProfile(userId: string): Promise<UserProfile | nu
       return null;
     }
 
-    console.log("Profile data:",data);
-    return data;
+    const userProfile = {
+      ...data,
+      initials: data.first_name.charAt(0) + data.last_name.charAt(0)
+    }
+
+    console.log("Profile data:",userProfile);
+
+    return userProfile;
+
   } catch (error) {
     console.error("Error in fetchUserProfile:", error);
     return null;
