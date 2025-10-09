@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/Ianbleake/BleakeDev/compare/v2.1.5...v2.2.0) (2025-10-09)
+
+
+### Features
+
+* add error handler util functions ([7a4d09e](https://github.com/Ianbleake/BleakeDev/commit/7a4d09eb2233f23dd7358f6efd2274c9eb3ebcda))
+
 ## [2.1.5](https://github.com/Ianbleake/BleakeDev/compare/v2.1.4...v2.1.5) (2025-10-08)
 
 
