@@ -10,13 +10,11 @@ import {
 } from "@/components/ui/dropdown-menu";
 import {
   SidebarMenu,
-  SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
 import {
   CreditCard,
-  MoreVertical,
   Bell,
   UserCircle,
 } from "lucide-react";
@@ -26,6 +24,7 @@ import LogOutButton from "./components/logOutButton";
 import UserImage from "@/components/ui/UserImage";
 import { useAuth } from "@/hooks/auth/useAuth";
 import Link from "next/link";
+import ProfileInfo from "./components/profileInfo";
 
 export default function ProfileManager(): React.ReactElement {
 
@@ -41,23 +40,7 @@ export default function ProfileManager(): React.ReactElement {
         <DropdownMenu>
 
           <DropdownMenuTrigger asChild>
-
-            <SidebarMenuButton size="lg" className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground" >
-
-              <UserImage/>
-
-              <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-medium">
-                  { profile?.username}
-                </span>
-                <span className="text-muted-foreground truncate text-xs">
-                  {profile?.first_name} {profile?.last_name}
-                </span>
-              </div>
-
-              <MoreVertical className="ml-auto size-4" />
-            </SidebarMenuButton>
-
+            <ProfileInfo/>
           </DropdownMenuTrigger>
 
           <DropdownMenuContent
