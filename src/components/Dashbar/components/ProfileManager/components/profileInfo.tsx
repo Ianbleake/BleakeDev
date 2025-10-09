@@ -4,6 +4,7 @@ import { useAuth } from "@/hooks/auth/useAuth";
 import { MoreVertical } from "lucide-react";
 import React from "react";
 import ProfileInfoSkeleton from "@/components/skeletons/profileInfoSkeleton";
+import { DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 
 export default function ProfileInfo(): React.ReactElement {
@@ -17,21 +18,23 @@ export default function ProfileInfo(): React.ReactElement {
   }
   
   return (
-    <SidebarMenuButton size="lg" className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground" >
+    <DropdownMenuTrigger asChild>
+      <SidebarMenuButton size="lg" className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground" >
 
-      <UserImage/>
+        <UserImage/>
 
-      <div className="grid flex-1 text-left text-sm leading-tight">
-        <span className="truncate font-medium">
-          { profile?.username}
-        </span>
-        <span className="text-muted-foreground truncate text-xs">
-          {profile?.first_name} {profile?.last_name}
-        </span>
-      </div>
+        <div className="grid flex-1 text-left text-sm leading-tight">
+          <span className="truncate font-medium">
+            { profile?.username}
+          </span>
+          <span className="text-muted-foreground truncate text-xs">
+            {profile?.first_name} {profile?.last_name}
+          </span>
+        </div>
 
-      <MoreVertical className="ml-auto size-4" />
-      
-    </SidebarMenuButton>
+        <MoreVertical className="ml-auto size-4" />
+        
+      </SidebarMenuButton>
+    </DropdownMenuTrigger>
   );
 }
