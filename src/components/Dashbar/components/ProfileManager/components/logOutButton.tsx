@@ -1,7 +1,7 @@
 'use client';
 
 import { Spinner } from "@/components/ui/spinner";
-import { useLogoutMutation } from "@/hooks/login/useLogoutMutation";
+import { useLogoutMutation } from "@/hooks/auth/useLogoutMutation";
 import { LogOut } from "lucide-react";
 import React from "react";
 

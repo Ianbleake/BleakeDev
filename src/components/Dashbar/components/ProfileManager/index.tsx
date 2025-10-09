@@ -24,7 +24,7 @@ import React from "react";
 import LogOutButton from "./components/logOutButton";
 
 import UserImage from "@/components/ui/UserImage";
-import { useAuth } from "@/hooks/login/useAuth";
+import { useAuth } from "@/hooks/auth/useAuth";
 
 export default function ProfileManager(): React.ReactElement {
 

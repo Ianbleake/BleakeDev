@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { RiLoginCircleFill } from "react-icons/ri";
 import { twTheme } from "@/utils/ThemeColors";
-import { useLoginMutation } from "@/hooks/login/useLoginMutation";
+import { useLoginMutation } from "@/hooks/auth/useLoginMutation";
 
 
 type LoginFormInputs = {
