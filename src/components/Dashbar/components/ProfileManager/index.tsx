@@ -25,12 +25,15 @@ import LogOutButton from "./components/logOutButton";
 
 import UserImage from "@/components/ui/UserImage";
 import { useAuth } from "@/hooks/auth/useAuth";
+import Link from "next/link";
 
 export default function ProfileManager(): React.ReactElement {
 
   const { profile } = useAuth();
   
   const { isMobile } = useSidebar();
+
+  //TODO: componetize and use useRouter on menu
 
   return (
     <SidebarMenu>
@@ -87,8 +90,10 @@ export default function ProfileManager(): React.ReactElement {
             <DropdownMenuGroup>
 
               <DropdownMenuItem>
-                <UserCircle className="mr-2 h-4 w-4" />
-                Account
+                <Link href={"/admin/account"} className="flex flex-row gap-2 items-center">
+                  <UserCircle className="mr-2 h-4 w-4" />
+                  Account
+                </Link>
               </DropdownMenuItem>
               
               <DropdownMenuItem>
