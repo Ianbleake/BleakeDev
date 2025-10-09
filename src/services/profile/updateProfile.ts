@@ -1,12 +1,13 @@
 import { useAuthStore } from '@/storage/authStore';
 import { supabaseBrowser } from '@/supabase/client';
+import { handleError } from '@/utils/errorHandler';
 
 export async function updateProfile(updates: Partial<Omit<UserProfile, 'id' | 'created_at'>>) {
 
   const { profile, setProfile } = useAuthStore.getState();
   
   if (!profile) {
-    throw new Error('No profile to update');
+    handleError({ messagge: "No profile to update." },"updateProfile")
   }
 
   try {
@@ -17,12 +18,12 @@ export async function updateProfile(updates: Partial<Omit<UserProfile, 'id' | 'c
       .select()
       .single();
 
-    if (error) throw error;
+    if (error) handleError(error,"updateProfile");
 
     setProfile(data);
     return data;
+    
   } catch (error) {
-    console.error('Error updating profile:', error);
-    throw error;
+    handleError(error,"updateProfile");
   }
 }
