@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/Ianbleake/BleakeDev/compare/v2.3.0...v2.4.0) (2025-10-09)
+
+
+### Features
+
+* add profile info component and his skeleton ([27e3688](https://github.com/Ianbleake/BleakeDev/commit/27e36881dfd6dd7947d9192e83d3ca5244413bad))
+
+
+### Bug Fixes
+
+* componetize the profile manager menu ([0e39e3c](https://github.com/Ianbleake/BleakeDev/commit/0e39e3ce8aef3e92265de10289f37f8b78badb3c))
+
 ## [2.3.0](https://github.com/Ianbleake/BleakeDev/compare/v2.2.2...v2.3.0) (2025-10-09)
 
 
