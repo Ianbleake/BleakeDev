@@ -23,8 +23,8 @@ export default function ProfileManager(): React.ReactElement {
   //TODO: componetize and use useRouter on menu
 
   return (
-    <SidebarMenu>
-      <SidebarMenuItem>
+    <SidebarMenu >
+      <SidebarMenuItem className="cursor-pointer">
         <DropdownMenu>
 
           <ProfileInfo/>

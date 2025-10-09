@@ -18,7 +18,7 @@ export default function ProfileInfo(): React.ReactElement {
   }
   
   return (
-    <DropdownMenuTrigger asChild>
+    <DropdownMenuTrigger asChild className="cursor-pointer">
       <SidebarMenuButton size="lg" className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground" >
 
         <UserImage/>
