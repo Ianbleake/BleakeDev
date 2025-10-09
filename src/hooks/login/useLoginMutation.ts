@@ -1,9 +1,9 @@
-import { signIn } from "@/services/login/singIn";
+import { signIn } from "@/services/auth/singIn";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { useAuthStore } from "@/storage/authStore";
-import { fetchUserProfile } from "@/utils/auth-helpers";
+import { fetchUserProfile } from "@/services/profile/fetchUserProfile";
 
 
 export function useLoginMutation() {

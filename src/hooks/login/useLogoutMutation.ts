@@ -1,4 +1,4 @@
-import { logout } from "@/services/login/logout";
+import { logout } from "@/services/auth/logout";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
