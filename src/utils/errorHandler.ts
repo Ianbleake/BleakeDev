@@ -1,4 +1,6 @@
 import { PostgrestError } from "@supabase/supabase-js";
+import { AuthError } from "@supabase/supabase-js";
+
 
 export type AppErrorShape = {
   code: number;
@@ -6,7 +8,6 @@ export type AppErrorShape = {
   origin: string;
 };
 
-// Códigos internos
 export const ERROR_CODES = {
   UNKNOWN: 1000,
   NETWORK: 1001,
@@ -20,13 +21,18 @@ export const ERROR_CODES = {
 };
 
 export function handleError(error: unknown, origin: string): never {
-  // 🔹 Caso 1: Error de Supabase
+
+
+  if (isAuthError(error)) {
+    const formatted = formatAuthError(error, origin);
+    throw formatted;
+  }
+
   if (isSupabaseError(error)) {
     const formatted = formatSupabaseError(error, origin);
     throw formatted;
   }
 
-  // 🔹 Caso 2: Error nativo (fetch, JS, etc.)
   if (error instanceof Error) {
     throw {
       code: ERROR_CODES.UNKNOWN,
@@ -35,7 +41,6 @@ export function handleError(error: unknown, origin: string): never {
     } satisfies AppErrorShape;
   }
 
-  // 🔹 Caso 3: Error plano con campo message
   if (isPlainErrorWithMessage(error)) {
     throw {
       code: ERROR_CODES.UNKNOWN,
@@ -44,7 +49,6 @@ export function handleError(error: unknown, origin: string): never {
     } satisfies AppErrorShape;
   }
 
-  // 🔹 Caso 4: Error totalmente inesperado
   throw {
     code: ERROR_CODES.UNKNOWN,
     message: "Ha ocurrido un error inesperado.",
@@ -52,7 +56,19 @@ export function handleError(error: unknown, origin: string): never {
   } satisfies AppErrorShape;
 }
 
-// ✅ Type guard para errores Supabase
+function isAuthError(error: unknown): error is AuthError {
+  return (
+    typeof error === "object" &&
+    error !== null &&
+    "message" in error &&
+    typeof (error as { message?: unknown }).message === "string" &&
+    "status" in error &&
+    typeof (error as { status?: unknown }).status === "number" &&
+    "name" in error &&
+    (error as { name?: unknown }).name === "AuthApiError"
+  );
+}
+
 function isSupabaseError(error: unknown): error is PostgrestError {
   return (
     typeof error === "object" &&
@@ -64,7 +80,6 @@ function isSupabaseError(error: unknown): error is PostgrestError {
   );
 }
 
-// ✅ Type guard para objetos planos con `message`
 function isPlainErrorWithMessage(error: unknown): error is { message: string } {
   return (
     typeof error === "object" &&
@@ -74,7 +89,6 @@ function isPlainErrorWithMessage(error: unknown): error is { message: string } {
   );
 }
 
-// ✅ Formateador de errores Supabase/Postgres
 function formatSupabaseError(error: PostgrestError, origin: string): AppErrorShape {
   let message = error.message;
   let code = ERROR_CODES.SUPABASE;
@@ -124,3 +138,20 @@ function formatSupabaseError(error: PostgrestError, origin: string): AppErrorSha
 
   return { code, message, origin };
 }
+
+function formatAuthError(error: AuthError, origin: string): AppErrorShape {
+  let code = ERROR_CODES.UNAUTHORIZED;
+  let message = error.message || "Error de autenticación.";
+
+  if (error.status === 400) message = "Credenciales inválidas.";
+  if (error.status === 401) message = "Sesión no autorizada o expirada.";
+  if (error.status === 403) message = "Acceso prohibido.";
+  if (error.status !== undefined && error.status >= 500) {
+    code = ERROR_CODES.INTERNAL;
+    message = "Error interno del servidor de autenticación.";
+  }
+
+  return { code, message, origin };
+}
+
+
