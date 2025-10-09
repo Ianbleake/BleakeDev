@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.2](https://github.com/Ianbleake/BleakeDev/compare/v2.2.1...v2.2.2) (2025-10-09)
+
+
+### Bug Fixes
+
+* add error handler to initializeAuth service ([4be4d12](https://github.com/Ianbleake/BleakeDev/commit/4be4d12fea1cfd42c108698f8de17804912f0a31))
+* implement error handler on logout service ([934c2dd](https://github.com/Ianbleake/BleakeDev/commit/934c2ddfa9386748c5e7592479f51a031dbe02e1))
+
 ## [2.2.1](https://github.com/Ianbleake/BleakeDev/compare/v2.2.0...v2.2.1) (2025-10-09)
 
 
