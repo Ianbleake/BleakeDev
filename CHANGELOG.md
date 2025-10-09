@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.1](https://github.com/Ianbleake/BleakeDev/compare/v2.2.0...v2.2.1) (2025-10-09)
+
+
+### Bug Fixes
+
+* error handle on singIn service ([543ee63](https://github.com/Ianbleake/BleakeDev/commit/543ee63341ec6aac55489562c53a4a452828b8a4))
+* implement handleError on updateProfile Service ([4b6e53f](https://github.com/Ianbleake/BleakeDev/commit/4b6e53fef340dcef2f6d324e26d5809d532bd84a))
+
 ## [2.2.0](https://github.com/Ianbleake/BleakeDev/compare/v2.1.5...v2.2.0) (2025-10-09)
 
 
