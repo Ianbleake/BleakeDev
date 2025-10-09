@@ -3,6 +3,7 @@ import { supabaseBrowser } from '@/supabase/client';
 import { fetchUserProfile } from '@/services/profile/fetchUserProfile';
 
 export function setupAuthListener() {
+
   const { setAuth, clearAuth } = useAuthStore.getState();
 
   const { data: { subscription } } = supabaseBrowser.auth.onAuthStateChange(
