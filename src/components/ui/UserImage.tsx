@@ -13,7 +13,7 @@ export default function UserImage(): React.ReactElement {
     <Avatar className="h-8 w-8 rounded-lg " >
 
       <AvatarImage
-        src={profile?.avatarurl || ""}
+        src={profile?.avatarurl || undefined}
         alt={profile?.username || "user-profile"}
       />
 

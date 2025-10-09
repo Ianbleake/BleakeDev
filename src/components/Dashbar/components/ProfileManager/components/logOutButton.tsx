@@ -10,7 +10,7 @@ export default function LogOutButton(): React.ReactElement {
   const { mutate: handleLogout, isPending } = useLogoutMutation();
 
   return (
-    <div className="cursor-pointer flex flex-row items-center  " onClick={() => handleLogout()} >
+    <div className="cursor-pointer flex flex-row items-center flex-1 " onClick={() => handleLogout()} >
       {
         isPending ? (<Spinner/>) : (
         <>

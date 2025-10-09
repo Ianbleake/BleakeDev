@@ -3,36 +3,35 @@ import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { useAuthStore } from "@/storage/authStore";
-import { fetchUserProfile } from "@/services/profile/fetchUserProfile";
-
+import { useProfileQuery } from "../profile/useProfileQuery";
+import { AppErrorShape } from "@/utils/errorHandler";
+import { useEffect } from "react";
 
 export function useLoginMutation() {
-
   const router = useRouter();
   const setAuth = useAuthStore((state) => state.setAuth);
-  
-  return useMutation({
+
+  const loginMutation = useMutation({
     mutationKey: ["login"],
     mutationFn: ({ email, password }: { email: string; password: string }) =>
       signIn(email, password),
-    onSuccess: async (data) => {
-      
-      const profile = await fetchUserProfile(data.user.id);
-    
-      setAuth(data.user, data.session, profile);
-      
+    onSuccess: () => {
       toast.success("Inicio de sesión exitoso");
-      
-      router.push('/admin');
+      router.push("/admin");
       router.refresh();
     },
-    onError: (error: SupabaseAuthError) => {
-      console.log(error);
-      toast.error(
-        error.code === "invalid_credentials" 
-          ? "Credenciales inválidas" 
-          : error.message || "Error al iniciar sesión"
-      );
-    }
+    onError: (error: AppErrorShape) => {
+      toast.error(error.message);
+    },
   });
+
+  const { data: profile } = useProfileQuery(loginMutation.data?.user.id || "");
+
+  useEffect(() => {
+    if (profile && loginMutation.data) {
+      setAuth(loginMutation.data.user, loginMutation.data.session, profile);
+    }
+  }, [profile, loginMutation.data, setAuth]);
+
+  return loginMutation;
 }
