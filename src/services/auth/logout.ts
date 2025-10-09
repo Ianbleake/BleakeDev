@@ -11,7 +11,7 @@ export async function logout(): Promise<boolean> {
       handleError(error, "logout"); 
     }
 
-    clearAuth(); // 🔹 limpieza local
+    clearAuth(); 
     return true;
   } catch (error) {
     handleError(error, "logout"); 

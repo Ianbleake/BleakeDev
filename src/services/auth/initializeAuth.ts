@@ -1,20 +1,18 @@
 import { useAuthStore } from '@/storage/authStore';
 import { supabaseBrowser } from '@/supabase/client';
 import { fetchUserProfile } from '../profile/fetchUserProfile';
+import { handleError } from '@/utils/errorHandler';
 
 export async function initializeAuth() {
-
   const { setAuth, setIsLoading } = useAuthStore.getState();
-  
+
   try {
     setIsLoading(true);
 
     const { data: { session }, error: sessionError } = await supabaseBrowser.auth.getSession();
     
     if (sessionError) {
-      console.error('Error getting session:', sessionError);
-      setAuth(null, null, null);
-      return;
+      handleError(sessionError, "initializeAuth");
     }
 
     if (!session) {
@@ -22,11 +20,17 @@ export async function initializeAuth() {
       return;
     }
 
-    const profile = await fetchUserProfile(session.user.id);
-    
+    let profile = null;
+    try {
+      profile = await fetchUserProfile(session.user.id);
+    } catch (error) {
+      handleError(error, "initializeAuth:fetchUserProfile");
+    }
+
     setAuth(session.user, session, profile);
+
   } catch (error) {
-    console.error('Error initializing auth:', error);
+    handleError(error, "initializeAuth");
     setAuth(null, null, null);
   } finally {
     setIsLoading(false);
