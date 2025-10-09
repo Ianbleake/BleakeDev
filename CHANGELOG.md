@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/Ianbleake/BleakeDev/compare/v2.2.2...v2.3.0) (2025-10-09)
+
+
+### Features
+
+* add account page ([9a5b81b](https://github.com/Ianbleake/BleakeDev/commit/9a5b81b6eed7b2223c6bf8e5013a9c89510e1fe8))
+
 ## [2.2.2](https://github.com/Ianbleake/BleakeDev/compare/v2.2.1...v2.2.2) (2025-10-09)
 
 
