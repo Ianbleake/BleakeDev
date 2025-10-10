@@ -18,7 +18,6 @@ type LoginFormInputs = {
 };
 
 export default function LoginForm(): React.ReactElement {
-
   
   const {
     register, 
