@@ -1,4 +1,4 @@
-import { strict } from "assert";
+
 
 type RootProps = {
   children: React.ReactNode;
@@ -68,13 +68,15 @@ type UserProfile = {
 }
 
 type Degree = {
-  institution: string,
-  degree: string,
+  id: string;
+  institution: string;
+  degree: string;
   location: string;
   period: string;
-  description: strict,
-  achievements: [],
-  type: string,
+  description: strict;
+  achievements: [];
+  type: string;
+  pageContent: undefined;
 }  
 
 type certification = {

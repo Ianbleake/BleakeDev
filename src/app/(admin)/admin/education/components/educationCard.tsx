@@ -1,6 +1,5 @@
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Degree } from "@/types";
 import { twTheme } from "@/utils/ThemeColors";
 
 import { Dot } from "lucide-react";

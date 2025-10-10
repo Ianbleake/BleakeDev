@@ -1,8 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { twTheme } from "@/utils/ThemeColors";
-import { Dot } from "lucide-react";
 import React from "react";
 import { IoSchoolSharp } from "react-icons/io5";
 
