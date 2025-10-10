@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.3](https://github.com/Ianbleake/BleakeDev/compare/v2.4.2...v2.4.3) (2025-10-10)
+
+
+### Bug Fixes
+
+* refetch of profile ([9b84900](https://github.com/Ianbleake/BleakeDev/commit/9b84900cdd60ddf2ace7e666ff65339c252a9248))
+* remove unuseful options on menu ([e0aec2c](https://github.com/Ianbleake/BleakeDev/commit/e0aec2c6bf11001de96f5b121484542a353aece3))
+
 ## [2.4.2](https://github.com/Ianbleake/BleakeDev/compare/v2.4.1...v2.4.2) (2025-10-10)
 
 
