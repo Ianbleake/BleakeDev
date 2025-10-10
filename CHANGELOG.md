@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.6.0](https://github.com/Ianbleake/BleakeDev/compare/v2.5.0...v2.6.0) (2025-10-10)
+
+
+### Features
+
+* add educations certifications hooks and services ([245ebae](https://github.com/Ianbleake/BleakeDev/commit/245ebae33f25f7c90f8111f5aa3ddef30d5304ed))
+* implement useEducation on educationPage ([e2b6c94](https://github.com/Ianbleake/BleakeDev/commit/e2b6c94998b0d1dc341ce2c71c1f008188db27ae))
+
 ## [2.5.0](https://github.com/Ianbleake/BleakeDev/compare/v2.4.3...v2.5.0) (2025-10-10)
 
 
