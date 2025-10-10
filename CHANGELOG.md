@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.2](https://github.com/Ianbleake/BleakeDev/compare/v2.4.1...v2.4.2) (2025-10-10)
+
+
+### Bug Fixes
+
+* add fetchprofile to singin service and restructure the login mutation to simplify ([e4abac5](https://github.com/Ianbleake/BleakeDev/commit/e4abac5828b057d2f53a71c3dae1f9f65f765e57))
+* reestructure initializeAuth.ts and remove useProfileQuery ([b2db19c](https://github.com/Ianbleake/BleakeDev/commit/b2db19c060beae4c41e86dc33822ef955e823ff4))
+
 ## [2.4.1](https://github.com/Ianbleake/BleakeDev/compare/v2.4.0...v2.4.1) (2025-10-09)
 
 
