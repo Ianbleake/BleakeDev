@@ -79,7 +79,7 @@ type Degree = {
   pageContent: undefined;
 }  
 
-type certification = {
+type Certification = {
   title: string,
   issuer: string,
   date: string,

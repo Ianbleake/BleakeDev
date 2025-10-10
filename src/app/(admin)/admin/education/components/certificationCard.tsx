@@ -1,0 +1,29 @@
+import { Card } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { twTheme } from "@/utils/ThemeColors";
+import { Dot } from "lucide-react";
+import React from "react";
+import { PiMedalFill } from "react-icons/pi";
+
+type CertificationCardProps = {
+  certification: Certification;
+}
+
+export default function CertificationCard({
+  certification,
+}: CertificationCardProps ): React.ReactElement {
+  return (
+    <Card className="h-16 flex flex-row gap-4 items-center justify-start p-4 py-12 hover:bg-emerald-50 cursor-pointer transition-colors">
+      <PiMedalFill size={35} color={twTheme.colors.emerald[500]} />
+      <div className="flex flex-1 flex-col gap-1 space-y-1">
+        <h3>{certification.title}</h3>
+        <Separator/>
+        <div className="w-full flex flex-row items-center justify-start gap-1">
+          <p>{certification.issuer}</p>
+          <Dot/>
+          <p>{certification.date}</p>
+        </div>
+      </div>
+    </Card>
+  );
+}
