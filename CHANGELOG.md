@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.1](https://github.com/Ianbleake/BleakeDev/compare/v2.4.0...v2.4.1) (2025-10-09)
+
+
+### Bug Fixes
+
+* update useLoginMutation with useProfileQuery to take care of refetch of profile ([3e39ab0](https://github.com/Ianbleake/BleakeDev/commit/3e39ab05d1e9268383a035784e2392e17cf23860))
+
 ## [2.4.0](https://github.com/Ianbleake/BleakeDev/compare/v2.3.0...v2.4.0) (2025-10-09)
 
 
