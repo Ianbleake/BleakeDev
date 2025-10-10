@@ -1,3 +1,5 @@
+import { strict } from "assert";
+
 type RootProps = {
   children: React.ReactNode;
 }
@@ -63,4 +65,21 @@ type UserProfile = {
   avatarurl: string | null;
   created_at: string | null;
   initials: string | null;
+}
+
+type Degree = {
+  institution: string,
+  degree: string,
+  location: string;
+  period: string;
+  description: strict,
+  achievements: [],
+  type: string,
+}  
+
+type certification = {
+  title: string,
+  issuer: string,
+  date: string,
+  credential: string,
 }
