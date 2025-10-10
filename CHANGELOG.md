@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.5.0](https://github.com/Ianbleake/BleakeDev/compare/v2.4.3...v2.5.0) (2025-10-10)
+
+
+### Features
+
+* add educationCard ([ce1edb1](https://github.com/Ianbleake/BleakeDev/commit/ce1edb125d1f2f72baac4d4d7692ebafb8673895))
+* add the sadh card component and fix the style errors ([fe0c14f](https://github.com/Ianbleake/BleakeDev/commit/fe0c14f369275a5053e1a7037a5d6d91e07eac3e))
+
 ## [2.4.3](https://github.com/Ianbleake/BleakeDev/compare/v2.4.2...v2.4.3) (2025-10-10)
 
 
