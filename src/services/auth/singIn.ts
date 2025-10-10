@@ -12,8 +12,7 @@ type singInResponse =  {
 export async function signIn(email: string, password: string): Promise<singInResponse> {
 
   try{
-    
-    console.log("Iniciando login")
+  
     let profile = undefined;
 
     const { data, error } = await supabaseBrowser.auth.signInWithPassword({ email, password, });
@@ -21,27 +20,16 @@ export async function signIn(email: string, password: string): Promise<singInRes
     if (error) handleError(error,"signIn");
 
     if(data){
-      console.log("Login ✅")
-      console.log("Obteniendo profile")
       profile = await fetchUserProfile(data.user.id) as UserProfile;
-      if(profile){
-        console.log("Profile ✅")
-      }
     }
 
-    console.log("Auth data:", data)
-    console.log("Cleaning data")
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { weakPassword, ...cleanData } = data;
 
-    console.log("Data cleaned ✅:",cleanData)
-    console.log("Adding profile")
     const userInfo = {
       ...cleanData,
       profile,
     };
-
-    console.log("Profile added ✅", userInfo)
 
     return userInfo;
 

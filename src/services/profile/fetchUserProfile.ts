@@ -2,6 +2,7 @@ import { supabaseBrowser } from '@/supabase/client';
 import { handleError } from '@/utils/errorHandler';
 
 export async function fetchUserProfile(userId: string): Promise<UserProfile | null> {
+  
   try {
     const { data, error } = await supabaseBrowser
       .from("profiles")
