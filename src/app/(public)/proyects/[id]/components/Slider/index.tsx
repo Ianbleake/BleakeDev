@@ -35,7 +35,7 @@ export default function Slider({ images }: ProjectGalleryProps) {
         >
           {images.map((image, idx) => (
             <SwiperSlide key={idx}>
-              <Card>
+              <Card className="bg-transparent border-none">
                 <div className="flex justify-center bg-gray-600/30 border border-emerald-600 shadow-md rounded-2xl py-8 h-94 md:h-auto">
                   <Image
                     src={image.url}

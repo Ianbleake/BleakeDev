@@ -16,7 +16,7 @@ export default function Education(): React.ReactElement {
 
         <div className="space-y-8">
           {education.map((edu, index) => (
-            <Card key={index} className="border border-emerald-600/30 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden bg-gray-900">
+            <Card key={index} className="border border-emerald-600/30 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden bg-gray-900 p-0">
               <CardContent className="p-0">
                 <div className="md:flex">
                   <div className="hidden md:flex md:w-32 bg-gradient-to-br from-emerald-600 to-emerald-700 flex-col items-center justify-center p-6">

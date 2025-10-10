@@ -15,7 +15,7 @@ export default function Certifications(): React.ReactElement {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
-            <Card key={index} className="border border-emerald-600/30 shadow-xl hover:shadow-2xl transition-all duration-300 group bg-gray-800 hover:bg-gray-800/80">
+            <Card key={index} className="border border-emerald-600/30 shadow-xl hover:shadow-2xl transition-all duration-300 group bg-gray-800 hover:bg-gray-800/80 p-0">
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-emerald-600/20 rounded-lg flex items-center justify-center mb-4 border border-emerald-500/30">
                   <FaAward className="text-emerald-400" size={24} />

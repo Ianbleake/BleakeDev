@@ -18,7 +18,8 @@ export default function Timeline(): React.ReactElement {
 
         <div className="space-y-8">
           {workExperience.map((job, index) => (
-            <Card key={index} className="border border-emerald-600/30 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden bg-gray-800">
+            <Card key={index} className="border border-emerald-600/30 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden bg-gray-800 p-0">
+
               <CardContent className="p-0">
 
                 <div className="md:flex">
@@ -80,6 +81,7 @@ export default function Timeline(): React.ReactElement {
                 </div>
 
               </CardContent>
+
             </Card>
           ))}
         </div>
