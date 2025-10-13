@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.8.0](https://github.com/Ianbleake/BleakeDev/compare/v2.7.0...v2.8.0) (2025-10-13)
+
+
+### Features
+
+* add grade page ([b4fc982](https://github.com/Ianbleake/BleakeDev/commit/b4fc982dd9d150c3e25d5e0eb827e8e30151b1c0))
+
+
+### Bug Fixes
+
+* optimize the grade page code ([639282d](https://github.com/Ianbleake/BleakeDev/commit/639282d49a178be4e2f78f93eda3092a6b5a608f))
+* refactor components directory ([5f3058a](https://github.com/Ianbleake/BleakeDev/commit/5f3058a1fe612cf836abaaa9b9018e59e36733f2))
+
 ## [2.7.0](https://github.com/Ianbleake/BleakeDev/compare/v2.6.0...v2.7.0) (2025-10-13)
 
 
