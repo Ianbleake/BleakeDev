@@ -19,7 +19,7 @@ export default function Degrees(): React.ReactElement {
 
         <div className="flex flex-row items-center justify-start gap-6">
 
-          <div className="border border-gray-200 p-3 rounded-md shadow-sm bg-emerald-100 ">
+          <div className="border border-gray-200 p-3 rounded-md shadow-sm bg-green-50 ">
             <IoSchoolOutline size={30} color={twTheme.colors.emerald[700]} />
           </div>
 

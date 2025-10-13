@@ -73,8 +73,8 @@ type Degree = {
   degree: string;
   location: string;
   period: string;
-  description: strict;
-  achievements: [];
+  description: string;
+  achievements: string[];
   type: string;
   pageContent: undefined;
 }  
@@ -85,4 +85,7 @@ type Certification = {
   issuer: string,
   date: string,
   credential: string,
+  achievements: [];
+  description: string;
+  pageContent: undefined;
 }
