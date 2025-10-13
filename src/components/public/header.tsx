@@ -1,7 +1,7 @@
 'use client'
 
 import React from "react";
-import Boton from "./ui/Boton";
+import Boton  from "@/components/ui/Boton";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoMdArrowRoundBack } from "react-icons/io";

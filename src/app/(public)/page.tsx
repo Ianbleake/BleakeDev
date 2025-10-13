@@ -1,8 +1,8 @@
-import AboutMe from '@/components/home/AboutMe';
-import HomeContact from '@/components/home/homeContact';
-import Introduction from '@/components/home/Introduction';
-import ProjectsSection from '@/components/home/Proyects';
-import Skills from '@/components/home/Skills';
+import AboutMe from '@/components/public/home/AboutMe';
+import HomeContact from '@/components/public/home/homeContact';
+import Introduction from '@/components/public/home/Introduction';
+import ProjectsSection from '@/components/public/home/Proyects';
+import Skills from '@/components/public/home/Skills';
 import Page from '@/components/ui/page';
 import React from 'react';
 

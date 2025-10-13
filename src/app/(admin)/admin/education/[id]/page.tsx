@@ -17,7 +17,8 @@ import { GoTrophy } from "react-icons/go";
 import { TbLicense, TbTrophyOff } from "react-icons/tb";
 import { useCertification } from "@/hooks/education/useCertification";
 import GradePageSkeleton from "@/components/skeletons/gradePageSkeleton";
-import NoData from "@/components/NoData";
+import NoData from "@/components/admin/NoData";
+
 
 export default function GradePage(): React.ReactElement {
 
@@ -137,7 +138,7 @@ export default function GradePage(): React.ReactElement {
                 <p className="text-gray-400 text-sm font-normal">{achievement}</p>
               </Card>
             ))
-            
+
           ) : (
 
             <div className="flex flex-col gap-3 items-center justify-center col-span-2">

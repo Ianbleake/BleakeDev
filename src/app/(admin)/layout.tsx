@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { AppToaster } from "@/components/appToaster";
+import { AppToaster } from "@/components/admin/appToaster";
 import { usePathname } from "next/navigation";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import Dashbar from "@/components/Dashbar";
+import Dashbar from "@/components/admin/Dashbar";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
 

@@ -3,8 +3,8 @@
 import React, { useEffect } from "react";
 import { useProjectsStorage } from "@/storage/projectsStorage";
 import { projects as projectsData } from "@/content/proyects";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import Header from "@/components/public/header";
+import Footer from "@/components/public/footer";
 
 export default function PublicLayout({ children }: { children: React.ReactNode }) {
   const { setProjects } = useProjectsStorage();
