@@ -14,6 +14,7 @@ export default function Degrees(): React.ReactElement {
   return (
 
     <Card className="px-4">
+      
       <div className="border-b border-gray-200 pb-4 flex flex-raw items-center justify-between">
 
         <div className="flex flex-row items-center justify-start gap-6">

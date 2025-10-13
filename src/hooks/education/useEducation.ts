@@ -24,6 +24,10 @@ export function useEducation() {
     gcTime: 1000 * 60 * 30,
   })
 
+  if(certificationsQuery.isError){
+    toast.error(certificationsQuery.error.message)
+  }
+
   return {
     degreesQuery,
     degrees: degreesQuery.data,

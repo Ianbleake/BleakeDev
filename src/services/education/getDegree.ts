@@ -1,17 +1,19 @@
 import { supabaseBrowser } from "@/supabase/client";
 import { handleError } from "@/utils/errorHandler";
 
-
-export async function getDegrees() {
+export async function getDegree(Id: string): Promise<Degree | undefined> {
+  
   try{
-    
+
     const { data } = await supabaseBrowser
       .from("education")
-      .select("*");
+      .select("*")
+      .eq("id",Id)
+      .single();
 
-    return data;
+      return data;
 
   }catch(error){
-    handleError(error,"getDegrees")
+    handleError(error,"getDegree")
   }
 }
