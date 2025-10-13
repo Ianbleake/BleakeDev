@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.7.0](https://github.com/Ianbleake/BleakeDev/compare/v2.6.0...v2.7.0) (2025-10-13)
+
+
+### Features
+
+* add education skeleton ([3111fd3](https://github.com/Ianbleake/BleakeDev/commit/3111fd38a50e86690fd668ad3277357bf32ed6b1))
+* add single certification and degree services ([5f0ea7f](https://github.com/Ianbleake/BleakeDev/commit/5f0ea7f03cb485b6a180e7f564f47d70fba929bf))
+
 ## [2.6.0](https://github.com/Ianbleake/BleakeDev/compare/v2.5.0...v2.6.0) (2025-10-10)
 
 
