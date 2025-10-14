@@ -88,5 +88,4 @@ type Certification = {
   achievements: [];
   description: string;
   pageContent: undefined;
-  type: string;
 }

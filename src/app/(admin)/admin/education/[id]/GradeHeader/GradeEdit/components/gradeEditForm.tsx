@@ -48,8 +48,26 @@ grade,
   });
 
   const onSubmit = (data: GradeEditFormInputs) => {
+
     console.log("Form data submitted:", data);
-    // TODO: Handle form submission logic here
+
+    const formattedData = grade.type === "degree" ? {
+      institution: data.institution,
+      degree: data.title,
+      location: data.location,
+      period: data.period,
+      description: data.description,
+    } : {
+      title: data.title,
+      issuer: data.institution,
+      date: data.date,
+      credential: data.credential,
+      description: data.description,
+    }
+    
+    console.log("Formatted data for submission:", formattedData);
+
+    // TODO: Create the Service and tbe Hook to update the grade
   }
 
   return (
@@ -238,7 +256,7 @@ grade,
         }
 
         <div className="flex flex-row items-center justify-end gap-3">
-          
+
           <SheetClose asChild>
             <Button variant={"outline"} className="shadow-emerald-500 cursor-pointer" >
               Cancel
