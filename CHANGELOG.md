@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.8.2](https://github.com/Ianbleake/BleakeDev/compare/v2.8.1...v2.8.2) (2025-10-14)
+
+
+### Bug Fixes
+
+* componetize grade header add edit component ([89d9804](https://github.com/Ianbleake/BleakeDev/commit/89d98043a1e9c5e5dcaf49b1821010ce04e34e4a))
+* componetize grade page add gradeAchivements component with his how header component and card ([861f2cf](https://github.com/Ianbleake/BleakeDev/commit/861f2cf3434251fd6731c6b194acce50980e9afd))
+
 ## [2.8.1](https://github.com/Ianbleake/BleakeDev/compare/v2.8.0...v2.8.1) (2025-10-14)
 
 
