@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.8.4](https://github.com/Ianbleake/BleakeDev/compare/v2.8.3...v2.8.4) (2025-10-14)
+
+
+### Bug Fixes
+
+* add error management on form ([32becd7](https://github.com/Ianbleake/BleakeDev/commit/32becd70a83c196d9c25b3176304b9253b425613))
+* change certification date input to date picker ([9e359c3](https://github.com/Ianbleake/BleakeDev/commit/9e359c317780aea07ab48fab85102aaf9591d347))
+
 ## [2.8.3](https://github.com/Ianbleake/BleakeDev/compare/v2.8.2...v2.8.3) (2025-10-14)
 
 
