@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { periodToString } from "@/utils/periodToString";
 import { twTheme } from "@/utils/ThemeColors";
 
 import { Dot } from "lucide-react";
@@ -27,7 +28,7 @@ export default function EducationCard({
         <div className="w-full flex flex-row items-center justify-start gap-1">
           <p>{degree.institution}</p>
           <Dot/>
-          <p>{degree.period}</p>
+          <p>{periodToString(degree.period)}</p>
         </div>
       </div>
 

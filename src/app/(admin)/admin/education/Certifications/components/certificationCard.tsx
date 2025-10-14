@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { twTheme } from "@/utils/ThemeColors";
 import { Dot } from "lucide-react";
+import moment from "moment";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { PiMedalFill } from "react-icons/pi";
@@ -25,7 +26,7 @@ export default function CertificationCard({
         <div className="w-full flex flex-row items-center justify-start gap-1">
           <p>{certification.issuer}</p>
           <Dot/>
-          <p>{certification.date}</p>
+          <p>{moment(certification.date).format("MMM Do YY")}</p>
         </div>
       </div>
     </Card>
