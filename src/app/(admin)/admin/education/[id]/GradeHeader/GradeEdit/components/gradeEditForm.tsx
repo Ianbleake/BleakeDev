@@ -9,6 +9,7 @@ import { Controller, useForm } from "react-hook-form";
 import moment from "moment";
 import { Calendar } from "@/components/ui/calendar";
 import { periodToString } from "@/utils/periodToString";
+import { SheetClose } from "@/components/ui/sheet";
 
 
 type GradeEditFormProps = {
@@ -103,10 +104,6 @@ grade,
             )
           }
         </div>
-
-        {
-          // TODO: Change inpiut to date picker and conditionally render if type is degree or certification
-        }
 
         {
           grade.type === "degree" ? (
@@ -241,12 +238,12 @@ grade,
         }
 
         <div className="flex flex-row items-center justify-end gap-3">
-          {
-            // TODO: Check how to handle cancel button to close modal
-          }
-          <Button variant={"outline"} className="shadow-emerald-500 cursor-pointer" >
-            Cancel
-          </Button>
+          
+          <SheetClose asChild>
+            <Button variant={"outline"} className="shadow-emerald-500 cursor-pointer" >
+              Cancel
+            </Button>
+          </SheetClose>
           
           <Button type="submit" disabled={isSubmitting} className="shadow-gray-500 shadow-sm cursor-pointer">
             {isSubmitting ? "Saving..." : "Save"}

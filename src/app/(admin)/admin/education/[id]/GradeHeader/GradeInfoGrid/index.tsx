@@ -6,6 +6,7 @@ import { HiOutlineBuildingLibrary } from "react-icons/hi2";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { TbLicense } from "react-icons/tb";
 import InfoCard from "./components/infoCard";
+import moment from "moment";
 
 type GradeInfoGridProps = {
   grade: GradeData;
@@ -36,7 +37,7 @@ export default function GradeInfoGrid({
           <InfoCard text={ grade.credential } icon={TbLicense} />
         )}
 
-        <InfoCard text={ grade.date } icon={BsCalendarDate} />
+        <InfoCard text={ grade.type === "degree" ? grade.date : moment(grade.date).format("MMM Do YY") } icon={BsCalendarDate} />
 
         <InfoCard text={ grade.description } icon={GrTextAlignFull} />
         
