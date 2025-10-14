@@ -7,4 +7,5 @@ type GradeData = {
   date: string;
   location?: string;
   credential?: string;
+  type: string;
 }

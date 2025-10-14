@@ -35,6 +35,7 @@ export default function GradePage(): React.ReactElement {
     institution: degree?.institution || "-",
     date: degree?.period || "-",
     location: degree?.location || "-",
+    type: type,
   } : {
     id: certification?.id || "",
     icon: PiCertificate,
@@ -43,6 +44,7 @@ export default function GradePage(): React.ReactElement {
     institution: certification?.issuer || "-",
     date: certification?.date || "-",
     credential: certification?.credential || "-",
+    type: type,
   };
 
   if (isLoading) {
