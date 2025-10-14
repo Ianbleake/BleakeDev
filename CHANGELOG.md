@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.8.5](https://github.com/Ianbleake/BleakeDev/compare/v2.8.4...v2.8.5) (2025-10-14)
+
+
+### Bug Fixes
+
+* change of format on period ([4afb78e](https://github.com/Ianbleake/BleakeDev/commit/4afb78ef991c26b742940df13af905243d50a77d))
+* show dates with format ([55d135d](https://github.com/Ianbleake/BleakeDev/commit/55d135daaa5de41867f41c16378cd9bccba85883))
+
 ## [2.8.4](https://github.com/Ianbleake/BleakeDev/compare/v2.8.3...v2.8.4) (2025-10-14)
 
 
