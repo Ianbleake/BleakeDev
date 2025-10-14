@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.8.1](https://github.com/Ianbleake/BleakeDev/compare/v2.8.0...v2.8.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* componetize gradeheader info ([62ba3f7](https://github.com/Ianbleake/BleakeDev/commit/62ba3f7dd4852b237a74bebaf1f36fe0fe8ebd90))
+* componetize gradePage header ([9f055d2](https://github.com/Ianbleake/BleakeDev/commit/9f055d20bbcbca65da52767cd181013d4c3e543b))
+
 ## [2.8.0](https://github.com/Ianbleake/BleakeDev/compare/v2.7.0...v2.8.0) (2025-10-13)
 
 
