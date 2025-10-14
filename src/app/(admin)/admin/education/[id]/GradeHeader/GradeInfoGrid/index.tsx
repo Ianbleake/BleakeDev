@@ -1,0 +1,45 @@
+import { Separator } from "@/components/ui/separator";
+import React from "react";
+import { BsCalendarDate } from "react-icons/bs";
+import { GrTextAlignFull } from "react-icons/gr";
+import { HiOutlineBuildingLibrary } from "react-icons/hi2";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { TbLicense } from "react-icons/tb";
+import InfoCard from "./components/infoCard";
+
+type GradeInfoGridProps = {
+  grade: GradeData;
+}
+
+export default function GradeInfoGrid({
+  grade,
+}:GradeInfoGridProps ): React.ReactElement {
+  return (
+    <div className="flex flex-1 flex-col gap-2">
+
+      <h2 className="text-gray-900 font-semibold text-xl">
+        { grade.name }
+      </h2>
+
+      <Separator />
+
+      <div className="grid grid-cols-3 gap-4 my-2">
+
+        <InfoCard text={ grade.institution } icon={HiOutlineBuildingLibrary}/>
+
+        { grade.location && (
+          <InfoCard text={ grade.location } icon={MdOutlineLocationOn} />
+        )}
+
+        { grade.credential && (
+          <InfoCard text={ grade.credential } icon={TbLicense} />
+        )}
+
+        <InfoCard text={ grade.date } icon={BsCalendarDate} />
+
+        <InfoCard text={ grade.description } icon={GrTextAlignFull} />
+        
+      </div>
+    </div>
+  );
+}
