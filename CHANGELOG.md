@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.8.3](https://github.com/Ianbleake/BleakeDev/compare/v2.8.2...v2.8.3) (2025-10-14)
+
+
+### Bug Fixes
+
+* add edit edit side sheet component ([044b2a2](https://github.com/Ianbleake/BleakeDev/commit/044b2a24756d1b12603cd3c2cae4553351debea7))
+* add header component on achievements ([defd7fc](https://github.com/Ianbleake/BleakeDev/commit/defd7fc23cc3ed923fd0e5e1362028e5b5ba9f70))
+
 ## [2.8.2](https://github.com/Ianbleake/BleakeDev/compare/v2.8.1...v2.8.2) (2025-10-14)
 
 
