@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.8.6](https://github.com/Ianbleake/BleakeDev/compare/v2.8.5...v2.8.6) (2025-10-14)
+
+
+### Bug Fixes
+
+* add close sheet to cancel button on gradeEditForm and fix certification date format ([702a27a](https://github.com/Ianbleake/BleakeDev/commit/702a27a156c617591519424fda8f58561973cdb6))
+* period picker ([d50fe51](https://github.com/Ianbleake/BleakeDev/commit/d50fe51602562b6e76ac6301fa35c0bf0414f544))
+
 ## [2.8.5](https://github.com/Ianbleake/BleakeDev/compare/v2.8.4...v2.8.5) (2025-10-14)
 
 
