@@ -1,24 +1,22 @@
 'use client'
 
 import React from "react";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useDegree } from "@/hooks/education/useDegree";
-import { twTheme } from "@/utils/ThemeColors";
-import { useParams } from "next/navigation";
-import { IoSchoolOutline } from "react-icons/io5";
-import { PiCertificate } from "react-icons/pi";
-import { MdModeEdit, MdOutlineLocationOn } from "react-icons/md";
-import { Separator } from "@/components/ui/separator";
-import { HiOutlineBuildingLibrary } from "react-icons/hi2";
-import { GrTextAlignFull } from "react-icons/gr";
-import { BsCalendarDate } from "react-icons/bs";
 import { GoTrophy } from "react-icons/go";
-import { TbLicense, TbTrophyOff } from "react-icons/tb";
+import { Card } from "@/components/ui/card";
+import { useParams } from "next/navigation";
+import { twTheme } from "@/utils/ThemeColors";
+import { PiCertificate } from "react-icons/pi";
+import NoData from "@/components/admin/NoData";
+import { Button } from "@/components/ui/button";
+import { IoSchoolOutline } from "react-icons/io5";
+import { Separator } from "@/components/ui/separator";
+import { useDegree } from "@/hooks/education/useDegree";
 import { useCertification } from "@/hooks/education/useCertification";
 import GradePageSkeleton from "@/components/skeletons/gradePageSkeleton";
-import NoData from "@/components/admin/NoData";
+import GradeHeader from "./GradeHeader";
+import { TbTrophyOff } from "react-icons/tb";
 
+//TODO: refactor and componentize this page
 
 export default function GradePage(): React.ReactElement {
 
@@ -36,6 +34,21 @@ export default function GradePage(): React.ReactElement {
   const hasNoData = !degree && !certification && !isLoading;
   const achievements = (isDegree ? degree?.achievements : certification?.achievements) ?? [];
 
+  const gradeData = isDegree ? {
+    icon: IoSchoolOutline,
+    name: degree?.degree || "No grade title",
+    description: degree?.description || "No description",
+    institution: degree?.institution || "-",
+    date: degree?.period || "-",
+    location: degree?.location || "-",
+  } : {
+    icon: PiCertificate,
+    name: certification?.title || "No grade title",
+    description: certification?.description || "No description",
+    institution: certification?.issuer || "-",
+    date: certification?.date || "-",
+    credential: certification?.credential || "-",
+  };
 
   if (isLoading) {
     return <GradePageSkeleton />;
@@ -46,72 +59,13 @@ export default function GradePage(): React.ReactElement {
   }
 
   return (
+
     <div className="flex flex-col gap-4">
-      <Card className="px-4 border-b border-gray-200 pb-4 flex flex-row items-center justify-between">
-        <div className="border border-gray-200 p-3 rounded-md shadow-sm bg-green-50 ">
-          {isDegree ? (
-            <IoSchoolOutline size={30} color={twTheme.colors.emerald[700]} />
-          ) : (
-            <PiCertificate size={30} color={twTheme.colors.emerald[700]} />
-          )}
-        </div>
 
-        <div className="flex flex-1 flex-col gap-2">
-          <h2 className="text-gray-900 font-semibold text-xl">
-            {isDegree ? degree?.degree : certification?.title || "No title"}
-          </h2>
-
-          <Separator />
-
-          <div className="grid grid-cols-3 gap-4 my-2">
-            <div className="flex flex-row gap-2 items-center">
-              <HiOutlineBuildingLibrary size={25} color={twTheme.colors.emerald[600]} />
-              <p className="text-gray-400 text-md font-normal">
-                {isDegree ? degree?.institution : certification?.issuer || "-"}
-              </p>
-            </div>
-
-            {isDegree && (
-              <div className="flex flex-row gap-2 items-center">
-                <MdOutlineLocationOn size={25} color={twTheme.colors.emerald[600]} />
-                <p className="text-gray-400 text-sm font-normal">{degree?.location}</p>
-              </div>
-            )}
-
-            {isCertification && (
-              <div className="flex flex-row gap-2 items-center">
-                <TbLicense size={25} color={twTheme.colors.emerald[600]} />
-                <p className="text-gray-400 text-sm font-normal">
-                  {certification?.credential || "-"}
-                </p>
-              </div>
-            )}
-
-            <div className="flex flex-row gap-2 items-center">
-              <BsCalendarDate size={25} color={twTheme.colors.emerald[600]} />
-              <p className="text-gray-400 text-sm font-normal">
-                {isDegree ? degree?.period : certification?.date || "-"}
-              </p>
-            </div>
-
-            <div className="flex flex-row gap-2 items-center col-span-3">
-              <GrTextAlignFull size={20} color={twTheme.colors.emerald[600]} />
-              <p className="text-gray-400 text-sm font-normal">
-                {isDegree
-                  ? degree?.description
-                  : certification?.description || "No description"}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <Button className="text-lg font-normal cursor-pointer select-none">
-          <MdModeEdit />
-          Edit
-        </Button>
-      </Card>
+      <GradeHeader grade={gradeData} />
 
       <Card className="px-4">
+
         <div className="flex flex-row items-center justify-between gap-6 border-b border-gray-200 pb-4">
           <div className="border border-gray-200 p-3 rounded-md shadow-sm bg-green-50 ">
             <GoTrophy size={30} color={twTheme.colors.emerald[700]} />
@@ -149,6 +103,7 @@ export default function GradePage(): React.ReactElement {
 
           )}
         </div>
+
       </Card>
     </div>
   );
