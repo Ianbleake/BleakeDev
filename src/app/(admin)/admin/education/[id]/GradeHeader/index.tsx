@@ -1,9 +1,8 @@
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { twTheme } from "@/utils/ThemeColors";
 import React from "react";
-import { MdModeEdit } from "react-icons/md";
 import GradeInfoGrid from "./GradeInfoGrid";
+import GradeEdit from "./GradeEdit";
 
 type GradeHeaderProps = {
   grade: GradeData;
@@ -24,10 +23,7 @@ export default function GradeHeader({
 
       <GradeInfoGrid grade={grade} />
 
-      <Button className="text-lg font-normal cursor-pointer select-none">
-        <MdModeEdit />
-        Edit
-      </Button>
+      <GradeEdit />
 
     </Card>
   );
