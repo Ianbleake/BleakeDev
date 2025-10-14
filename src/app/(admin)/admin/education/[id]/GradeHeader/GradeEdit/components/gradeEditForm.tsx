@@ -18,7 +18,7 @@ type GradeEditFormInputs = {
   title: string;
   description: string;
   institution: string;
-  date: string;
+  date: Date | Period | string;
   location?: string;
   credential?: string;
 }
@@ -123,7 +123,7 @@ grade,
                           className="justify-between font-normal"
                         >
                           {field.value
-                            ? moment(field.value).format("MMM Do YY")
+                            ? moment(String(field.value)).format("MMM Do YY")
                             : "Seleccionar fecha"}
                           <ChevronDownIcon />
                         </Button>
@@ -131,7 +131,7 @@ grade,
                       <PopoverContent align="start" className="p-0">
                         <Calendar
                           mode="single"
-                          selected={field.value ? new Date(field.value) : undefined}
+                          selected={field.value ? new Date(String(field.value)) : undefined}
                           onSelect={(date) => field.onChange(date?.toISOString() ?? "")}
                           captionLayout="dropdown"
                         />

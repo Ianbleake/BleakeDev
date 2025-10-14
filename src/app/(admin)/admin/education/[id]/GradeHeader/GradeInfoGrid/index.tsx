@@ -14,6 +14,7 @@ type GradeInfoGridProps = {
 export default function GradeInfoGrid({
   grade,
 }:GradeInfoGridProps ): React.ReactElement {
+
   return (
     <div className="flex flex-1 flex-col gap-2">
 

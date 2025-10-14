@@ -10,6 +10,7 @@ import { useCertification } from "@/hooks/education/useCertification";
 import GradePageSkeleton from "@/components/skeletons/gradePageSkeleton";
 import GradeHeader from "./GradeHeader";
 import GradeAchivements from "./GradeAchivements";
+import { periodToString } from "@/utils/periodToString";
 
 export default function GradePage(): React.ReactElement {
 
@@ -27,13 +28,16 @@ export default function GradePage(): React.ReactElement {
   const hasNoData = !degree && !certification && !isLoading;
   const achievements = (isDegree ? degree?.achievements : certification?.achievements) ?? [];
 
+  const period = degree?.period && periodToString(degree?.period);
+
   const gradeData = isDegree ? {
     id: degree?.id || "",
     icon: IoSchoolOutline,
     name: degree?.degree || "No grade title",
     description: degree?.description || "No description",
     institution: degree?.institution || "-",
-    date: degree?.period || "-",
+    date: period || "-",
+    period: degree?.period,
     location: degree?.location || "-",
     type: type,
   } : {

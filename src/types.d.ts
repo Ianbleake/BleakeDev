@@ -72,7 +72,7 @@ type Degree = {
   institution: string;
   degree: string;
   location: string;
-  period: string;
+  period: Period;
   description: string;
   achievements: string[];
   type: string;
