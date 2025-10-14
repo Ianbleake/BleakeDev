@@ -11,8 +11,6 @@ import GradePageSkeleton from "@/components/skeletons/gradePageSkeleton";
 import GradeHeader from "./GradeHeader";
 import GradeAchivements from "./GradeAchivements";
 
-//TODO: refactor and componentize this page
-
 export default function GradePage(): React.ReactElement {
 
   const params = useParams();
@@ -30,6 +28,7 @@ export default function GradePage(): React.ReactElement {
   const achievements = (isDegree ? degree?.achievements : certification?.achievements) ?? [];
 
   const gradeData = isDegree ? {
+    id: degree?.id || "",
     icon: IoSchoolOutline,
     name: degree?.degree || "No grade title",
     description: degree?.description || "No description",
@@ -37,6 +36,7 @@ export default function GradePage(): React.ReactElement {
     date: degree?.period || "-",
     location: degree?.location || "-",
   } : {
+    id: certification?.id || "",
     icon: PiCertificate,
     name: certification?.title || "No grade title",
     description: certification?.description || "No description",

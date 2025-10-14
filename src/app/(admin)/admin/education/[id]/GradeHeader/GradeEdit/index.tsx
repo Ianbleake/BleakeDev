@@ -1,14 +1,32 @@
-import { Button } from "@/components/ui/button";
 import React from "react";
-import { MdModeEdit } from "react-icons/md";
+import {
+  Sheet,
+  SheetContent,
+} from "@/components/ui/sheet"
+import GradeEditTrigger from "./components/gradeEditTrigger";
+import GradeEditHeader from "./components/gradeEditHeader";
+import GradeEditForm from "./components/gradeEditForm";
 
-export default function GradeEdit(): React.ReactElement {
+type GradeEditProps = {
+  grade: GradeData;
+}
+
+export default function GradeEdit({
+  grade,
+}:GradeEditProps ): React.ReactElement {
+
   return (
-    <>
-      <Button className="text-lg font-normal cursor-pointer select-none">
-        <MdModeEdit />
-        Edit
-      </Button>
-    </>
+    <Sheet>
+
+      <GradeEditTrigger/>
+
+      <SheetContent>
+        
+        <GradeEditHeader/>
+
+        <GradeEditForm grade={grade}/>
+
+      </SheetContent>
+    </Sheet>
   );
 }

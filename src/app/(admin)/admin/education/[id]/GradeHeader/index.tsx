@@ -23,7 +23,7 @@ export default function GradeHeader({
 
       <GradeInfoGrid grade={grade} />
 
-      <GradeEdit />
+      <GradeEdit grade={grade} />
 
     </Card>
   );
