@@ -8,6 +8,7 @@ import React from "react";
 import { Controller, useForm } from "react-hook-form";
 import moment from "moment";
 import { Calendar } from "@/components/ui/calendar";
+import { periodToString } from "@/utils/periodToString";
 
 
 type GradeEditFormProps = {
@@ -18,7 +19,8 @@ type GradeEditFormInputs = {
   title: string;
   description: string;
   institution: string;
-  date: Date | Period | string;
+  date: Date | string;
+  period?: Period | string; 
   location?: string;
   credential?: string;
 }
@@ -38,6 +40,7 @@ grade,
       description: grade.description,
       institution: grade.institution,
       date: grade.date,
+      period: 'period' in grade ? grade.period : undefined,
       location: 'location' in grade ? grade.location : undefined,
       credential: 'credential' in grade ? grade.credential : undefined,
     },
@@ -106,7 +109,55 @@ grade,
         }
 
         {
-          grade.type === "degree" ? (<></>) : (
+          grade.type === "degree" ? (
+          
+          <Controller
+            name="period"
+            control={control}
+            rules={{ required: "El periodo es obligatorio" }}
+            render={({ field }) => (
+              <div className="flex flex-col gap-3">
+                <Label>Periodo:</Label>
+                <Popover>
+
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      id="date"
+                      className="justify-between font-normal"
+                    >
+                      {field.value
+                        ? periodToString(field.value as Period)
+                        : "Seleccionar fecha"}
+                      <ChevronDownIcon />
+                    </Button>
+                  </PopoverTrigger>
+
+                  <PopoverContent align="start" className="p-0">
+                    <Calendar
+                      mode="range"
+                      selected={field.value ? {
+                        from: new Date(String((field.value as Period).from)),
+                        to: new Date(String((field.value as Period).to)),
+                      } : undefined}
+                      onSelect={(date) => field.onChange(date ? {
+                        from: date.from?.toISOString() ?? "",
+                        to: date.to?.toISOString() ?? "",
+                      } : undefined)}
+                      captionLayout="dropdown"
+                    />
+                  </PopoverContent>
+
+                </Popover>
+                
+                {errors.period && (
+                  <span className="text-red-600 text-sm">{errors.period.message}</span>
+                )}
+              </div>
+            )}
+          />
+
+          ) : (
     
               <Controller
                 name="date"
