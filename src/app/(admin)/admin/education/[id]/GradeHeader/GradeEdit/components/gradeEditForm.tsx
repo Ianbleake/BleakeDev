@@ -1,8 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Textarea } from "@/components/ui/textarea";
+import { ChevronDownIcon } from "lucide-react";
 import React from "react";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
+import moment from "moment";
+import { Calendar } from "@/components/ui/calendar";
+
 
 type GradeEditFormProps = {
   grade: GradeData;
@@ -22,6 +28,7 @@ grade,
 }:GradeEditFormProps ): React.ReactElement {
 
   const {
+    control,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
@@ -60,13 +67,11 @@ grade,
             </span>
           )}
         </div>
-        {
-          // TODO: Change inpiut to textarea
-        }
+
         <div className="flex flex-col gap-3">
           <Label>Descripcion:</Label>
-          <Input
-            type="text"
+          <Textarea
+            rows={4}
             { ...register("description",{
               required: "La descripcion es obligatoria",
               maxLength: { value: 500, message: "La descripcion es muy larga" },
@@ -100,15 +105,47 @@ grade,
           // TODO: Change inpiut to date picker and conditionally render if type is degree or certification
         }
 
-        <div className="flex flex-col gap-3">
-          <Label>Fecha:</Label>
-          <Input
-            type="text"
-            { ...register("date",{
-              required: "La fecha es obligatoria",
-            })}
-          />
-        </div>
+        {
+          grade.type === "degree" ? (<></>) : (
+    
+              <Controller
+                name="date"
+                control={control}
+                rules={{ required: "La fecha es obligatoria" }}
+                render={({ field }) => (
+                  <div className="flex flex-col gap-3">
+                    <Label>Fecha de término:</Label>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant="outline"
+                          id="date"
+                          className="justify-between font-normal"
+                        >
+                          {field.value
+                            ? moment(field.value).format("MMM Do YY")
+                            : "Seleccionar fecha"}
+                          <ChevronDownIcon />
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent align="start" className="p-0">
+                        <Calendar
+                          mode="single"
+                          selected={field.value ? new Date(field.value) : undefined}
+                          onSelect={(date) => field.onChange(date?.toISOString() ?? "")}
+                          captionLayout="dropdown"
+                        />
+                      </PopoverContent>
+                    </Popover>
+                    {errors.date && (
+                      <span className="text-red-600 text-sm">{errors.date.message}</span>
+                    )}
+                  </div>
+                )}
+              />
+            
+          )
+        }
 
         {
           grade.type === "degree" && (
