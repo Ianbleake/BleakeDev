@@ -10,7 +10,8 @@ import moment from "moment";
 import { Calendar } from "@/components/ui/calendar";
 import { periodToString } from "@/utils/periodToString";
 import { SheetClose } from "@/components/ui/sheet";
-import useUpdateGradeInfo from "@/hooks/education/useUpdateDegreeInfo";
+import useUpdateGradeInfo from "@/hooks/education/useUpdateGradeInfo";
+
 
 
 type GradeEditFormProps = {
