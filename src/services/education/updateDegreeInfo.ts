@@ -5,14 +5,16 @@ export async function updateDegreeInfo(updatedDegreeInfo: DegreeInfo){
 
   try{
 
-    const { data:UpdatedDegree } = await supabaseBrowser
+    const { data:UpdatedDegree, error } = await supabaseBrowser
       .from('education')
       .update(updatedDegreeInfo)
       .eq('id', updatedDegreeInfo.id)
       .select()
       .single()
 
-      return UpdatedDegree as Degree
+    if (error) throw error;
+
+    return UpdatedDegree as Degree
 
   }catch(error){
     handleError(error,"updateDegreeInfo")

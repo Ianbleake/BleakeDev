@@ -91,3 +91,5 @@ type Certification = {
   description: string;
   pageContent: undefined;
 }
+
+type CertificationInfo = Omit<Certification, "achievements" | "pageContent">

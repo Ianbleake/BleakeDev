@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Sheet,
   SheetContent,
@@ -15,8 +15,10 @@ export default function GradeEdit({
   grade,
 }:GradeEditProps ): React.ReactElement {
 
+  const [open, setOpen] = useState(false);
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
 
       <GradeEditTrigger/>
 
@@ -24,7 +26,7 @@ export default function GradeEdit({
         
         <GradeEditHeader/>
 
-        <GradeEditForm grade={grade}/>
+        <GradeEditForm grade={grade} onClose={() => setOpen(false)}/>
 
       </SheetContent>
     </Sheet>

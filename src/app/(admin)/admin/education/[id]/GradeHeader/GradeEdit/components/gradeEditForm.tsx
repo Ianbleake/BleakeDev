@@ -10,10 +10,12 @@ import moment from "moment";
 import { Calendar } from "@/components/ui/calendar";
 import { periodToString } from "@/utils/periodToString";
 import { SheetClose } from "@/components/ui/sheet";
+import useUpdateGradeInfo from "@/hooks/education/useUpdateDegreeInfo";
 
 
 type GradeEditFormProps = {
   grade: GradeData;
+  onClose: () => void;
 }
 
 type GradeEditFormInputs = {
@@ -27,7 +29,8 @@ type GradeEditFormInputs = {
 }
 
 export default function GradeEditForm({
-grade,
+  grade,
+  onClose
 }:GradeEditFormProps ): React.ReactElement {
 
   const {
@@ -47,9 +50,9 @@ grade,
     },
   });
 
-  const onSubmit = (data: GradeEditFormInputs) => {
+  const { mutate, isPending } = useUpdateGradeInfo(grade.type);
 
-    console.log("Form data submitted:", data);
+  const onSubmit = (data: GradeEditFormInputs) => {
 
     const formattedData = grade.type === "degree" ? {
       id: grade.id,
@@ -66,10 +69,11 @@ grade,
       credential: data.credential,
       description: data.description,
     }
-    
-    console.log("Formatted data for submission:", formattedData);
 
-    // TODO: Create the Service and tbe Hook to update the grade
+    mutate(formattedData as DegreeInfo | CertificationInfo);
+
+    onClose();
+  
   }
 
   return (
@@ -265,7 +269,7 @@ grade,
             </Button>
           </SheetClose>
           
-          <Button type="submit" disabled={isSubmitting} className="shadow-gray-500 shadow-sm cursor-pointer">
+          <Button type="submit" disabled={isSubmitting || isPending } className="shadow-gray-500 shadow-sm cursor-pointer">
             {isSubmitting ? "Saving..." : "Save"}
           </Button>
         </div>
