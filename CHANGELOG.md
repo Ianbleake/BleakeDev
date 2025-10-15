@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.10.0](https://github.com/Ianbleake/BleakeDev/compare/v2.9.0...v2.10.0) (2025-10-15)
+
+
+### Features
+
+* add update certifications service and implement this on edit grade form ([a6eb208](https://github.com/Ianbleake/BleakeDev/commit/a6eb208fc664c1d2830c55df7f4a15ef5b2ea60d))
+
+
+### Bug Fixes
+
+* grade header description ([01690c2](https://github.com/Ianbleake/BleakeDev/commit/01690c28994bd76ae0cdecee4d36c58528cc49ff))
+
 ## [2.9.0](https://github.com/Ianbleake/BleakeDev/compare/v2.8.6...v2.9.0) (2025-10-15)
 
 
