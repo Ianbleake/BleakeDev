@@ -1,5 +1,6 @@
 
 type GradeData = {
+  id: string;
   icon: IconType;
   name: string;
   description: string;

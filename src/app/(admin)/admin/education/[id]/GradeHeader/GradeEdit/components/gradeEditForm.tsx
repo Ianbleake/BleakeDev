@@ -52,12 +52,14 @@ grade,
     console.log("Form data submitted:", data);
 
     const formattedData = grade.type === "degree" ? {
+      id: grade.id,
       institution: data.institution,
       degree: data.title,
       location: data.location,
       period: data.period,
       description: data.description,
     } : {
+      id: grade.id,
       title: data.title,
       issuer: data.institution,
       date: data.date,

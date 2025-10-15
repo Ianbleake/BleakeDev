@@ -79,6 +79,8 @@ type Degree = {
   pageContent: undefined;
 }  
 
+type DegreeInfo = Omit<Degree,"achievements" |"pageContent" | "type">
+
 type Certification = {
   id: string,
   title: string,

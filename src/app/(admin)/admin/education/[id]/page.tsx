@@ -21,6 +21,7 @@ export default function GradePage(): React.ReactElement {
   const isDegree = type === "degree";
   const isCertification = type === "certification";
 
+  //TODO: homologate this on just one hook
   const { degree, degreeLoading } = useDegree(gradeId, isDegree);
   const { certification, certificationLoading } = useCertification(gradeId, isCertification);
 
