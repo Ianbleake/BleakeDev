@@ -1,4 +1,4 @@
-import { useAuthStore } from '@/storage/authStore';
+import { useAuthStore } from '@/storage/Admin/authStore';
 
 export function useAuth() {
   const user = useAuthStore((state) => state.user);

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { useProjectsStorage } from "@/storage/projectsStorage";
+import { useProjectsStorage } from "@/storage/Public/projectsStorage";
 import { projects as projectsData } from "@/content/proyects";
 import Header from "@/components/public/header";
 import Footer from "@/components/public/footer";

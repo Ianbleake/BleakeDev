@@ -3,7 +3,7 @@
 import React from "react";
 import ProyectsEmpty from "./proyectsEmpty";
 import ProyectCard from "@/components/ui/ProyectCard";
-import { useProjectsStorage } from "@/storage/projectsStorage";
+import { useProjectsStorage } from "@/storage/Public/projectsStorage";
 
 
 export default function ProyectsGrid(): React.ReactElement {

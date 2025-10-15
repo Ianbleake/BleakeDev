@@ -47,7 +47,7 @@ export const useAuthStore = create<AuthState>()(
     }),
     {
       name: 'auth-storage',
-      partialize: (state) => ({ profile: state.profile }), // Persistimos solo el perfil
+      partialize: (state) => ({ profile: state.profile }),
     }
   )
 );

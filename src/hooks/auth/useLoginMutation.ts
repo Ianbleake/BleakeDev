@@ -2,7 +2,7 @@ import { signIn } from "@/services/auth/singIn";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import { useAuthStore } from "@/storage/authStore";
+import { useAuthStore } from "@/storage/Admin/authStore";
 import { AppErrorShape } from "@/utils/errorHandler";
 
 

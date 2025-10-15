@@ -10,7 +10,7 @@ import Gallery from "./components/Gallery";
 
 import Slider from "./components/Slider";
 import ProyectContact from "./components/proyectContact";
-import { useProjectsStorage } from "@/storage/projectsStorage";
+import { useProjectsStorage } from "@/storage/Public/projectsStorage";
 import NotFound from "./components/notFound";
 
 

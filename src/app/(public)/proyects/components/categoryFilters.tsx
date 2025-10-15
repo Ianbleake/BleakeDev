@@ -2,7 +2,7 @@
 
 import React from "react";
 import Boton from "@/components/ui/Boton";
-import { useProjectsStorage } from "@/storage/projectsStorage";
+import { useProjectsStorage } from "@/storage/Public/projectsStorage";
 
 
 export default function CategoryFilters() {

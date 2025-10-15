@@ -1,4 +1,4 @@
-import { useAuthStore } from '@/storage/authStore';
+import { useAuthStore } from '@/storage/Admin/authStore';
 import { supabaseBrowser } from '@/supabase/client';
 import { fetchUserProfile } from '@/services/profile/fetchUserProfile';
 

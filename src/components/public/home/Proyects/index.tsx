@@ -2,7 +2,7 @@
 
 import React from "react";
 import ProyectCard from "@/components/ui/ProyectCard";
-import { useProjectsStorage } from "@/storage/projectsStorage";
+import { useProjectsStorage } from "@/storage/Public/projectsStorage";
 
 export default function ProjectsSection(): React.ReactElement {
 
