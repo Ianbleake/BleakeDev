@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.9.0](https://github.com/Ianbleake/BleakeDev/compare/v2.8.6...v2.9.0) (2025-10-15)
+
+
+### Features
+
+* add Degree service and updateGrade hook ([87bb16d](https://github.com/Ianbleake/BleakeDev/commit/87bb16d1b9bc332d910577e0c154c7f44598bfb0))
+
+
+### Bug Fixes
+
+* base types ([4500f53](https://github.com/Ianbleake/BleakeDev/commit/4500f53d889a97bd0bc3b53b26f53ae1c586a636))
+
 ## [2.8.6](https://github.com/Ianbleake/BleakeDev/compare/v2.8.5...v2.8.6) (2025-10-14)
 
 
