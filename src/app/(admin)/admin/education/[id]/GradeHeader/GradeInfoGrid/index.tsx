@@ -16,6 +16,8 @@ export default function GradeInfoGrid({
   grade,
 }:GradeInfoGridProps ): React.ReactElement {
 
+  const hasDescription = Boolean(grade.description && grade.description !== "No description");
+
   return (
     <div className="flex flex-1 flex-col gap-2">
 
@@ -39,7 +41,7 @@ export default function GradeInfoGrid({
 
         <InfoCard text={ grade.type === "degree" ? grade.date : moment(grade.date).format("MMM Do YY") } icon={BsCalendarDate} />
 
-        <InfoCard text={ grade.description } icon={GrTextAlignFull} />
+        <InfoCard text={ grade.description } icon={GrTextAlignFull} className=" col-span-3 text-justify" iconSize={hasDescription ? 45 : 25} />
         
       </div>
     </div>
