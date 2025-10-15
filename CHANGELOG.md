@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.10.1](https://github.com/Ianbleake/BleakeDev/compare/v2.10.0...v2.10.1) (2025-10-15)
+
+
+### Bug Fixes
+
+* update grade info hook name ([39858d8](https://github.com/Ianbleake/BleakeDev/commit/39858d8c3f9775198dff8f2a8a988547224fec62))
+
 ## [2.10.0](https://github.com/Ianbleake/BleakeDev/compare/v2.9.0...v2.10.0) (2025-10-15)
 
 
