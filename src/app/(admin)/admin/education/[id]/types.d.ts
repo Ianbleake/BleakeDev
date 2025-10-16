@@ -12,4 +12,3 @@ type GradeData = {
   type: string;
 }
 
-type Period = { from: Date; to: Date };

@@ -1,11 +1,12 @@
 import { create } from "zustand";
 
-type Grade = Certification | Degree;
+
 
 type GradeState = {
   grade: Grade | null;
   type: string;
 
+  setGradeData: ( type: string, grade: Grade | null ) => void;
   setGrade: ( grade: Grade | null ) => void;
   setType: ( type: string ) => void;
   updateGrade: ( grade: Partial<Grade> ) => void;
@@ -17,6 +18,7 @@ export const useGradeStorage = create<GradeState>(( set ) => ({
   grade: null,
   type: "",
 
+  setGradeData: (type, grade) => set({ type, grade }),
   setGrade: (grade) => set({ grade }),
   setType: (type) => set({ type }),
   updateGrade: (grade) => set((state) => ({ grade: { ...state.grade, ...grade } as Grade })),

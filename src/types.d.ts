@@ -67,6 +67,8 @@ type UserProfile = {
   initials: string | null;
 }
 
+type Period = { from: Date; to: Date };
+
 type Degree = {
   id: string;
   institution: string;
@@ -87,9 +89,11 @@ type Certification = {
   issuer: string,
   date: string,
   credential: string,
-  achievements: [];
+  achievements: string[];
   description: string;
   pageContent: undefined;
 }
 
 type CertificationInfo = Omit<Certification, "achievements" | "pageContent">
+
+type Grade = Record<Degree | Certification>;

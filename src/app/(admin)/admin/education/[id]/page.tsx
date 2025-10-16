@@ -1,56 +1,53 @@
 'use client'
 
 import React from "react";
-import { useParams } from "next/navigation";
-import { PiCertificate } from "react-icons/pi";
-import NoData from "@/components/admin/NoData";
-import { IoSchoolOutline } from "react-icons/io5";
-import { useDegree } from "@/hooks/education/useDegree";
-import { useCertification } from "@/hooks/education/useCertification";
-import GradePageSkeleton from "@/components/skeletons/gradePageSkeleton";
 import GradeHeader from "./GradeHeader";
+import { useParams } from "next/navigation";
+import NoData from "@/components/admin/NoData";
+import { PiCertificate } from "react-icons/pi";
+import { IoSchoolOutline } from "react-icons/io5";
 import GradeAchivements from "./GradeAchivements";
+import useGrade from "@/hooks/education/useGrade";
 import { periodToString } from "@/utils/periodToString";
+import { useGradeStorage } from "@/storage/Admin/gradeStorage";
+import GradePageSkeleton from "@/components/skeletons/gradePageSkeleton";
 
 export default function GradePage(): React.ReactElement {
 
   const params = useParams();
-  const id = params.id as string;
-  const [type, gradeId] = id?.split("_") ?? [];
+  const path = params.id as string;
 
-  const isDegree = type === "degree";
-  const isCertification = type === "certification";
+  const { isLoading } = useGrade(path);
+  const { grade, type } = useGradeStorage();
 
-  //TODO: homologate this on just one hook
-  const { degree, degreeLoading } = useDegree(gradeId, isDegree);
-  const { certification, certificationLoading } = useCertification(gradeId, isCertification);
+  const hasNoData = grade === null;
 
-  const isLoading = degreeLoading || certificationLoading;
-  const hasNoData = !degree && !certification && !isLoading;
-  const achievements = (isDegree ? degree?.achievements : certification?.achievements) ?? [];
+  console.log(grade);
+  const achievements = grade ? grade?.achievements : [];
 
-  const period = degree?.period && periodToString(degree?.period);
-
-  const gradeData = isDegree ? {
-    id: degree?.id || "",
-    icon: IoSchoolOutline,
-    name: degree?.degree || "No grade title",
-    description: degree?.description || "No description",
-    institution: degree?.institution || "-",
-    date: period || "-",
-    period: degree?.period,
-    location: degree?.location || "-",
-    type: type,
-  } : {
-    id: certification?.id || "",
-    icon: PiCertificate,
-    name: certification?.title || "No grade title",
-    description: certification?.description || "No description",
-    institution: certification?.issuer || "-",
-    date: certification?.date || "-",
-    credential: certification?.credential || "-",
-    type: type,
-  };
+  const gradeData =
+  type === "degree"
+    ? {
+        id: grade?.id ?? "",
+        icon: IoSchoolOutline,
+        name: grade?.degree ?? "No grade title",
+        description: grade?.description ?? "No description",
+        institution: grade?.institution ?? "-",
+        date: grade?.period ? periodToString(grade.period) : "-",
+        period: grade?.period,
+        location: grade?.location ?? "-",
+        type,
+      }
+    : {
+        id: grade?.id ?? "",
+        icon: PiCertificate,
+        name: grade?.title ?? "No grade title",
+        description: grade?.description ?? "No description",
+        institution: grade?.issuer ?? "-",
+        date: grade?.date ?? "-",
+        credential: grade?.credential ?? "-",
+        type,
+      };
 
   if (isLoading) {
     return <GradePageSkeleton />;
