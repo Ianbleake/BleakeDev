@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.14.0](https://github.com/Ianbleake/BleakeDev/compare/v2.13.0...v2.14.0) (2025-10-16)
+
+
+### Features
+
+* add getAchievement service and update getGrade services ([df25101](https://github.com/Ianbleake/BleakeDev/commit/df25101e3507a472143177757dfe61ed9692cb62))
+
+
+### Bug Fixes
+
+* use the gradeStorage on the achivements component ([e59037c](https://github.com/Ianbleake/BleakeDev/commit/e59037c8b3d1768365d49a1faf7b0f8681b90db1))
+
 ## [2.13.0](https://github.com/Ianbleake/BleakeDev/compare/v2.12.0...v2.13.0) (2025-10-16)
 
 
