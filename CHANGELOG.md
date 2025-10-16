@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.13.0](https://github.com/Ianbleake/BleakeDev/compare/v2.12.0...v2.13.0) (2025-10-16)
+
+
+### Features
+
+* extend Grade Storage to have separate the achivements and the grade info ([34e40e1](https://github.com/Ianbleake/BleakeDev/commit/34e40e108c051bffb4ae3a359cd20bb8b545903c))
+* update Grade State ([365de55](https://github.com/Ianbleake/BleakeDev/commit/365de558afa2080fcd4e336dc477acd7d290c324))
+
 ## [2.12.0](https://github.com/Ianbleake/BleakeDev/compare/v2.11.0...v2.12.0) (2025-10-16)
 
 
