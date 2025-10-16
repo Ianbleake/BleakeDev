@@ -69,6 +69,13 @@ type UserProfile = {
 
 type Period = { from: Date; to: Date };
 
+type Achievement = {
+  id: string;
+  grade_id: string; 
+  grade_type: 'education' | 'certification';
+  description: string;
+}
+
 type Degree = {
   id: string;
   institution: string;
@@ -76,7 +83,7 @@ type Degree = {
   location: string;
   period: Period;
   description: string;
-  achievements: string[];
+  achievements: Achievement[];
   type: string;
   pageContent: undefined;
 }  
@@ -89,7 +96,7 @@ type Certification = {
   issuer: string,
   date: string,
   credential: string,
-  achievements: string[];
+  achievements: Achievement[];
   description: string;
   pageContent: undefined;
 }

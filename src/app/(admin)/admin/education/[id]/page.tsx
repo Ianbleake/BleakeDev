@@ -18,8 +18,7 @@ export default function GradePage(): React.ReactElement {
 
   const { isLoading } = useGrade(path);
 
-  // TODO: Acchivements can be called on his own component 
-  const { type, gradeInfo, achievements } = useGradeStorage();
+  const { type, gradeInfo } = useGradeStorage();
 
   const hasNoData = gradeInfo === null;
 

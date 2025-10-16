@@ -1,17 +1,31 @@
 import { supabaseBrowser } from "@/supabase/client";
 import { handleError } from "@/utils/errorHandler";
+import { getAchievements } from "./getAchievements";
 
 export async function getCertification(Id: string): Promise<Certification | undefined> {
 
   try{
+
+    let achievements = undefined;
     
-    const { data } = await supabaseBrowser
+    const { data, error } = await supabaseBrowser
       .from("certifications")
       .select("*")
       .eq("id",Id)
       .single();
 
-      return data;
+    if(error) throw error;
+
+    if(data){
+      achievements = await getAchievements(data.id) as Achievement[];
+    }
+
+    const Certification = {
+      ...data,
+      achievements: achievements || [],
+    }
+
+    return Certification as Certification;
 
   }catch(error){
     handleError(error,"getCertification");
