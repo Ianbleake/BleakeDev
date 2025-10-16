@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { SheetClose } from "@/components/ui/sheet";
 import { Textarea } from "@/components/ui/textarea";
+import useCreateAchievement from "@/hooks/education/useCreateAchievement";
+import { useGradeStorage } from "@/storage/Admin/gradeStorage";
 import React from "react";
 import { useForm } from "react-hook-form";
 
@@ -17,6 +19,9 @@ export default function AchievementAddForm({
   onClose,
 }: AchievementAddFormProps ): React.ReactElement {
 
+  const { gradeInfo } = useGradeStorage();
+  const { mutate, isPending } = useCreateAchievement();
+
   const {
     register,
     handleSubmit,
@@ -28,16 +33,25 @@ export default function AchievementAddForm({
   });
 
   const onSubmit = (data: AchievementAddFormInputs) => {
-    console.log(data);
+    
+    const newAchievement = {
+      grade_id: gradeInfo.id,
+      grade_type: gradeInfo.type,
+      description: data.description,
+    }
+
+    mutate(newAchievement);
+
     onClose();
   }
 
   return (
     <div className="px-4">
+      
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
 
         <div className="flex flex-col gap-3">
-          
+
           <Label>Description</Label>
           <Textarea
             rows={4}
@@ -63,8 +77,8 @@ export default function AchievementAddForm({
             </Button>
           </SheetClose>
           
-          <Button type="submit" disabled={isSubmitting} className="shadow-gray-500 shadow-sm cursor-pointer">
-            {isSubmitting ? "Saving..." : "Save"}
+          <Button type="submit" disabled={isSubmitting ||  isPending} className="shadow-gray-500 shadow-sm cursor-pointer">
+            {isSubmitting ||  isPending ? "Saving..." : "Save"}
           </Button>
         </div>
 
