@@ -48,7 +48,7 @@ export default function GradePage(): React.ReactElement {
 
       <GradeHeader grade={gradeData} />
 
-      <GradeAchivements achievements={achievements} /> 
+      <GradeAchivements/> 
 
     </div>
   );

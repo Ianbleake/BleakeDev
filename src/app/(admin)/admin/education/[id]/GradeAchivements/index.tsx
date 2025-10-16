@@ -3,14 +3,11 @@ import { Card } from "@/components/ui/card";
 import AchievementCard from "./components/achievementCard";
 import EmptyAchievements from "./components/emptyAchievements";
 import AchievementHeader from "./AchivementHeader";
+import { useGradeStorage } from "@/storage/Admin/gradeStorage";
 
-type GradeAchivementsProps = {
-  achievements: string[];
-}
+export default function GradeAchivements(): React.ReactElement {
 
-export default function GradeAchivements({
-  achievements,
-}:GradeAchivementsProps ): React.ReactElement {
+  const { achievements } = useGradeStorage();
   return (
     <Card className="px-4">
 
