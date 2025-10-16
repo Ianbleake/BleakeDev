@@ -1,9 +1,10 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
-import AchievementCard from "./components/achievementCard";
+
 import EmptyAchievements from "./components/emptyAchievements";
 import AchievementHeader from "./AchivementHeader";
 import { useGradeStorage } from "@/storage/Admin/gradeStorage";
+import AchievementCard from "./AchievementCard";
 
 export default function GradeAchivements(): React.ReactElement {
 

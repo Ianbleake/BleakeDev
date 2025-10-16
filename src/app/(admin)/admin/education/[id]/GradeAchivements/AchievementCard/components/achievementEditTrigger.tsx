@@ -3,13 +3,7 @@ import { twTheme } from "@/utils/ThemeColors";
 import React from "react";
 import { GoTrophy } from "react-icons/go";
 
-type AchievementCardProps = {
-  achievement: Achievement;
-}
-
-export default function AchievementCard({
-  achievement,
-}:AchievementCardProps ): React.ReactElement {
+export default function AchievementEditTrigger(): React.ReactElement {
   return (
     <Card className="flex flex-row gap-4 items-center px-4 hover:bg-green-50 cursor-pointer">
       <GoTrophy size={30} color={twTheme.colors.emerald[600]} />
