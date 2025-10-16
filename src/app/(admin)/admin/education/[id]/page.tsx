@@ -8,7 +8,6 @@ import { PiCertificate } from "react-icons/pi";
 import { IoSchoolOutline } from "react-icons/io5";
 import GradeAchivements from "./GradeAchivements";
 import useGrade from "@/hooks/education/useGrade";
-import { periodToString } from "@/utils/periodToString";
 import { useGradeStorage } from "@/storage/Admin/gradeStorage";
 import GradePageSkeleton from "@/components/skeletons/gradePageSkeleton";
 
@@ -18,34 +17,21 @@ export default function GradePage(): React.ReactElement {
   const path = params.id as string;
 
   const { isLoading } = useGrade(path);
-  const { grade, type } = useGradeStorage();
 
-  const hasNoData = grade === null;
-  const achievements = grade ? grade?.achievements : [];
+  // TODO: Acchivements can be called on his own component 
+  const { type, gradeInfo, achievements } = useGradeStorage();
 
-  const gradeData =
-  type === "degree"? 
+  const hasNoData = gradeInfo === null;
+
+  const gradeData = type === "degree" ?  
       {
-        id: grade?.id ?? "",
+        ...gradeInfo,
         icon: IoSchoolOutline,
-        name: grade?.degree ?? "No grade title",
-        description: grade?.description ?? "No description",
-        institution: grade?.institution ?? "-",
-        date: grade?.period ? periodToString(grade.period) : "-",
-        period: grade?.period,
-        location: grade?.location ?? "-",
-        type,
       }
     : 
       {
-        id: grade?.id ?? "",
+        ...gradeInfo,
         icon: PiCertificate,
-        name: grade?.title ?? "No grade title",
-        description: grade?.description ?? "No description",
-        institution: grade?.issuer ?? "-",
-        date: grade?.date ?? "-",
-        credential: grade?.credential ?? "-",
-        type,
       };
 
   if (isLoading) {

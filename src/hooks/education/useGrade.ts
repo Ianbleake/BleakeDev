@@ -1,6 +1,7 @@
 import { getCertification } from "@/services/education/getCertification";
 import { getDegree } from "@/services/education/getDegree";
 import { useGradeStorage } from "@/storage/Admin/gradeStorage";
+import { periodToString } from "@/utils/periodToString";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { toast } from "sonner";
@@ -40,12 +41,39 @@ export default function useGrade(path: string) {
   }, [degreeQuery.isError, certificationQuery.isError]);
 
   useEffect(() => {
-    if (isDegree && degreeQuery.data) {
-      setGradeData(type,degreeQuery.data);
+
+    const grade: Grade = isDegree ? degreeQuery.data : certificationQuery.data;
+
+    if (isDegree && degreeQuery.data ) {
+
+      const gradeInfo = isDegree && {
+        id: grade?.id ?? "",
+        name: grade?.degree ?? "No grade title",
+        description: grade?.description ?? "No description",
+        institution: grade?.institution ?? "-",
+        date: grade?.period ? periodToString(grade.period) : "-",
+        period: grade?.period,
+        location: grade?.location ?? "-",
+        type,
+      }
+
+      setGradeData(type,grade,gradeInfo,grade.achievements);
+
     }
 
-    if (isCertification && certificationQuery.data) {
-      setGradeData(type,certificationQuery.data);
+    if (isCertification && grade) {
+
+      const gradeInfo = isCertification && {
+        id: grade?.id ?? "",
+        name: grade?.title ?? "No grade title",
+        description: grade?.description ?? "No description",
+        institution: grade?.issuer ?? "-",
+        date: grade?.date ?? "-",
+        credential: grade?.credential ?? "-",
+        type,
+      }
+
+      setGradeData(type,grade,gradeInfo,grade.achievements);
     }
   }, [isDegree, isCertification, degreeQuery.data, certificationQuery.data, setGradeData, type]);
 

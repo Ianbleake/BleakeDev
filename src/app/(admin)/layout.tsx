@@ -24,7 +24,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   <SidebarProvider>
     <AppToaster/>
     <Dashbar/>
-    <main className="w-full p-5">
+    <main className="w-full p-5 bg-gray-50">
       {children}
     </main>
   </SidebarProvider>

@@ -96,4 +96,7 @@ type Certification = {
 
 type CertificationInfo = Omit<Certification, "achievements" | "pageContent">
 
+//TODO: Fix this types
+type GradeInfo = Record<DegreeInfo | CertificationInfo>;
+
 type Grade = Record<Degree | Certification>;

@@ -1,12 +1,12 @@
 import { create } from "zustand";
 
-
-
 type GradeState = {
   grade: Grade | null;
   type: string;
+  gradeInfo: GradeInfo | null;
+  achievements: string[];
 
-  setGradeData: ( type: string, grade: Grade | null ) => void;
+  setGradeData: ( type: string, grade: Grade | null, gradeInfo: GradeInfo, achievements:string[] ) => void;
   setGrade: ( grade: Grade | null ) => void;
   setType: ( type: string ) => void;
   updateGrade: ( grade: Partial<Grade> ) => void;
@@ -17,8 +17,10 @@ export const useGradeStorage = create<GradeState>(( set ) => ({
 
   grade: null,
   type: "",
+  gradeInfo: null,
+  achievements: [],
 
-  setGradeData: (type, grade) => set({ type, grade }),
+  setGradeData: (type, grade, gradeInfo,achievements) => set({ type, grade, gradeInfo, achievements }),
   setGrade: (grade) => set({ grade }),
   setType: (type) => set({ type }),
   updateGrade: (grade) => set((state) => ({ grade: { ...state.grade, ...grade } as Grade })),
