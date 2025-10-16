@@ -11,6 +11,7 @@ type GradeState = {
   setType: ( type: string ) => void;
   updateGrade: ( grade: Partial<Grade> ) => void;
   clearGrade: () => void;
+  addAchievemnent: ( achievement: Achievement ) => void;
 }
 
 export const useGradeStorage = create<GradeState>(( set ) => ({
@@ -25,5 +26,6 @@ export const useGradeStorage = create<GradeState>(( set ) => ({
   setType: (type) => set({ type }),
   updateGrade: (grade) => set((state) => ({ grade: { ...state.grade, ...grade } as Grade })),
   clearGrade: () => set({ grade: null, type: "" }),
+  addAchievemnent: (achievement:Achievement) => set((state) => ({ achievements: [...state.achievements, achievement] })),
   
 }) )

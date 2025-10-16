@@ -76,6 +76,12 @@ type Achievement = {
   description: string;
 }
 
+type AddAchievementPayload = {
+  grade_id: string; 
+  grade_type: 'education' | 'certification';
+  description: string;
+}
+
 type Degree = {
   id: string;
   institution: string;
