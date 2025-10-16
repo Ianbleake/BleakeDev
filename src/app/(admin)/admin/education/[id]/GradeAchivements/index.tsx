@@ -17,7 +17,7 @@ export default function GradeAchivements({
       <AchievementHeader/>
 
       <div className="grid grid-cols-2 gap-6">
-        {achievements.length > 0 ? (
+        {  ( achievements && achievements.length > 0) ? (
 
           achievements.map((achievement, index) => (
             <AchievementCard achievement={achievement} key={index} />
