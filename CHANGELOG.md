@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.16.0](https://github.com/Ianbleake/BleakeDev/compare/v2.15.0...v2.16.0) (2025-10-16)
+
+
+### Features
+
+* add createAchievement service and hook ([1ffb6b8](https://github.com/Ianbleake/BleakeDev/commit/1ffb6b82aff15e8ac47f7d2041f76d2ad96a0b51))
+* implement the create achievement service on the form ([4ce7372](https://github.com/Ianbleake/BleakeDev/commit/4ce73728b974db49570dd0e277f1032fba0b8b91))
+
 ## [2.15.0](https://github.com/Ianbleake/BleakeDev/compare/v2.14.0...v2.15.0) (2025-10-16)
 
 
