@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.11.0](https://github.com/Ianbleake/BleakeDev/compare/v2.10.1...v2.11.0) (2025-10-15)
+
+
+### Features
+
+* add gradeStorage ([088a0fa](https://github.com/Ianbleake/BleakeDev/commit/088a0fa8105d58fb031552386e8394019876c73b))
+
 ## [2.10.1](https://github.com/Ianbleake/BleakeDev/compare/v2.10.0...v2.10.1) (2025-10-15)
 
 
