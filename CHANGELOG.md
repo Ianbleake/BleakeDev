@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.12.0](https://github.com/Ianbleake/BleakeDev/compare/v2.11.0...v2.12.0) (2025-10-16)
+
+
+### Features
+
+* add grade hook and implement in Grade page ([536d968](https://github.com/Ianbleake/BleakeDev/commit/536d968c2c495d4cb8ae3d22aa82617fcb07395d))
+
+
+### Bug Fixes
+
+* achivements null case ([2d646d3](https://github.com/Ianbleake/BleakeDev/commit/2d646d3410026e7d1586f441c2d738b636f33b49))
+
 ## [2.11.0](https://github.com/Ianbleake/BleakeDev/compare/v2.10.1...v2.11.0) (2025-10-15)
 
 
