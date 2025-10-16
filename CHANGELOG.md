@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.15.0](https://github.com/Ianbleake/BleakeDev/compare/v2.14.0...v2.15.0) (2025-10-16)
+
+
+### Features
+
+* add achievement add form ui ([8f9f894](https://github.com/Ianbleake/BleakeDev/commit/8f9f89480ccf15fef00df1f55e7b164881a83d61))
+
+
+### Bug Fixes
+
+* fix achievement card ([9666d67](https://github.com/Ianbleake/BleakeDev/commit/9666d677c10324cb5dc6316d9d44c52f22b433f2))
+
 ## [2.14.0](https://github.com/Ianbleake/BleakeDev/compare/v2.13.0...v2.14.0) (2025-10-16)
 
 
