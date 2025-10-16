@@ -3,8 +3,11 @@ import { toast } from "sonner";
 import { updateCertificationInfo } from "@/services/education/updateCertificationInfo";
 import { updateDegreeInfo } from "@/services/education/updateDegreeInfo";
 import { AppErrorShape } from "@/utils/errorHandler";
+import { useGradeStorage } from "@/storage/Admin/gradeStorage";
 
 export default function useUpdateGradeInfo( type: string ) {
+
+  const { updateGrade } = useGradeStorage();
 
   return useMutation({
     mutationKey: ["updateGradeInfo", type],
@@ -14,7 +17,8 @@ export default function useUpdateGradeInfo( type: string ) {
       }
       return updateCertificationInfo(updatedInfo as CertificationInfo);
     },
-    onSuccess: () => {
+    onSuccess: (updatedData) => {
+      updateGrade(updatedData);
       toast.success("Información actualizada");
     },
     onError: (error: AppErrorShape) => {

@@ -21,13 +21,11 @@ export default function GradePage(): React.ReactElement {
   const { grade, type } = useGradeStorage();
 
   const hasNoData = grade === null;
-
-  console.log(grade);
   const achievements = grade ? grade?.achievements : [];
 
   const gradeData =
-  type === "degree"
-    ? {
+  type === "degree"? 
+      {
         id: grade?.id ?? "",
         icon: IoSchoolOutline,
         name: grade?.degree ?? "No grade title",
@@ -38,7 +36,8 @@ export default function GradePage(): React.ReactElement {
         location: grade?.location ?? "-",
         type,
       }
-    : {
+    : 
+      {
         id: grade?.id ?? "",
         icon: PiCertificate,
         name: grade?.title ?? "No grade title",
