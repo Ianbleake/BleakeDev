@@ -4,7 +4,7 @@ import React from "react";
 import { GoTrophy } from "react-icons/go";
 
 type AchievementCardProps = {
-  achievement: string;
+  achievement: Achievement;
 }
 
 export default function AchievementCard({
@@ -13,7 +13,7 @@ export default function AchievementCard({
   return (
     <Card className="flex flex-row gap-4 items-center px-4 hover:bg-green-50 cursor-pointer">
       <GoTrophy size={30} color={twTheme.colors.emerald[600]} />
-      <p className="text-gray-400 text-sm font-normal">{achievement}</p>
+      <p className="text-gray-400 text-sm font-normal">{achievement.description}</p>
     </Card>
   );
 }

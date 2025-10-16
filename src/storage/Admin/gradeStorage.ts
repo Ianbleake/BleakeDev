@@ -4,9 +4,9 @@ type GradeState = {
   grade: Grade | null;
   type: string;
   gradeInfo: GradeInfo | null;
-  achievements: string[];
+  achievements: Achievement[];
 
-  setGradeData: ( type: string, grade: Grade | null, gradeInfo: GradeInfo, achievements:string[] ) => void;
+  setGradeData: ( type: string, grade: Grade | null, gradeInfo: GradeInfo, achievements:Achievement[] ) => void;
   setGrade: ( grade: Grade | null ) => void;
   setType: ( type: string ) => void;
   updateGrade: ( grade: Partial<Grade> ) => void;
