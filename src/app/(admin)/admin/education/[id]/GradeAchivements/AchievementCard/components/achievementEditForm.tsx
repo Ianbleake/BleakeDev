@@ -5,9 +5,12 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { RxUpdate } from "react-icons/rx";
+import useDeleteAchievement from "@/hooks/education/useDeleteAchievement";
+import useUpdateAchievement from "@/hooks/education/useUpdateAchievement";
 
 type AchievementEditFormProps = {
   achievement: Achievement;
+  onClose: () => void;
 };
 
 type EditAchievementInput = {
@@ -16,14 +19,25 @@ type EditAchievementInput = {
 
 export default function AchievementEditForm({
   achievement,
+  onClose,
 }:AchievementEditFormProps ): React.ReactElement {
 
   const { register, handleSubmit, formState: { errors, isSubmitting }} = useForm<EditAchievementInput>({defaultValues: {
     description: achievement.description,
   }});
 
+  const { mutate:deleteMutation } = useDeleteAchievement();
+  const { mutate:updateMutation } = useUpdateAchievement();
+
   const onSubmit = ( data: EditAchievementInput ) => {
-    console.log(data);
+    
+    const updatedAchievement = {
+      ...achievement,
+      description: data.description,
+    }
+    updateMutation(updatedAchievement);
+
+    onClose();
   }
 
   return (
@@ -50,7 +64,7 @@ export default function AchievementEditForm({
 
         <div className="flex flex-row items-center justify-end gap-3">
 
-          <Button variant={"destructive"} className="shadow-red-500 cursor-pointer" >
+          <Button variant={"destructive"} className="shadow-red-500 cursor-pointer" onClick={()=>deleteMutation(achievement.id)} >
             <FaRegTrashAlt />
             Delete
           </Button>

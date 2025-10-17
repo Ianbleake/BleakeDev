@@ -27,7 +27,7 @@ export default function AchievementCard({
 
         <AchievementEditHeader/>
 
-        <AchievementEditForm achievement={achievement}/>
+        <AchievementEditForm achievement={achievement} onClose={()=>setOpen(false)}/>
 
       </SheetContent>
 
