@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.19.0](https://github.com/Ianbleake/BleakeDev/compare/v2.18.0...v2.19.0) (2025-10-17)
+
+
+### Features
+
+* implement update and remove hooks in adit achievement form ([6052495](https://github.com/Ianbleake/BleakeDev/commit/60524955c2264461aaed4633138ee0e893c26593))
+
+
+### Bug Fixes
+
+* update the achievements upodate and delete hooks with the storage metods ([ee25038](https://github.com/Ianbleake/BleakeDev/commit/ee25038ecf614d2b0a60355839bf831d01c63f24))
+
 ## [2.18.0](https://github.com/Ianbleake/BleakeDev/compare/v2.17.0...v2.18.0) (2025-10-17)
 
 
