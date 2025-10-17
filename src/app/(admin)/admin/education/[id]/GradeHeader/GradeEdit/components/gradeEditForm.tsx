@@ -11,6 +11,8 @@ import { Calendar } from "@/components/ui/calendar";
 import { periodToString } from "@/utils/periodToString";
 import { SheetClose } from "@/components/ui/sheet";
 import useUpdateGradeInfo from "@/hooks/education/useUpdateGradeInfo";
+import { RxUpdate } from "react-icons/rx";
+import { RiArrowGoBackFill } from "react-icons/ri";
 
 
 
@@ -266,12 +268,14 @@ export default function GradeEditForm({
 
           <SheetClose asChild>
             <Button variant={"outline"} className="shadow-emerald-500 cursor-pointer" >
+              <RiArrowGoBackFill />
               Cancel
             </Button>
           </SheetClose>
           
           <Button type="submit" disabled={isSubmitting || isPending } className="shadow-gray-500 shadow-sm cursor-pointer">
-            {isSubmitting ? "Saving..." : "Save"}
+            <RxUpdate />
+            { isSubmitting ? "Saving..." : "Uptdate"}
           </Button>
         </div>
 

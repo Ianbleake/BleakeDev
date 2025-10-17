@@ -3,6 +3,7 @@ import { Sheet, SheetContent } from "@/components/ui/sheet";
 import React, { useState } from "react";
 import AchievementEditTriggerCard from "./components/achievementEditTriggerCard";
 import AchievementEditHeader from "./components/achievementEditHeader";
+import AchievementEditForm from "./components/achievementEditForm";
 
 
 
@@ -26,7 +27,7 @@ export default function AchievementCard({
 
         <AchievementEditHeader/>
 
-        {/* <AchievementAddForm onClose={() => setOpen(false)}/> */}
+        <AchievementEditForm achievement={achievement}/>
 
       </SheetContent>
 

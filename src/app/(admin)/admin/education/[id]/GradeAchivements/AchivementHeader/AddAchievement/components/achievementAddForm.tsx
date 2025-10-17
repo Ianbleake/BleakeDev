@@ -6,6 +6,8 @@ import useCreateAchievement from "@/hooks/education/useCreateAchievement";
 import { useGradeStorage } from "@/storage/Admin/gradeStorage";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { FiSave } from "react-icons/fi";
+import { RiArrowGoBackFill } from "react-icons/ri";
 
 type AchievementAddFormProps = {
   onClose: () => void;
@@ -73,11 +75,13 @@ export default function AchievementAddForm({
 
           <SheetClose asChild>
             <Button variant={"outline"} className="shadow-emerald-500 cursor-pointer" >
+              <RiArrowGoBackFill />
               Cancel
             </Button>
           </SheetClose>
           
           <Button type="submit" disabled={isSubmitting ||  isPending} className="shadow-gray-500 shadow-sm cursor-pointer">
+            <FiSave />
             {isSubmitting ||  isPending ? "Saving..." : "Save"}
           </Button>
         </div>
