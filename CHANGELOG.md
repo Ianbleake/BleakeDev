@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.17.0](https://github.com/Ianbleake/BleakeDev/compare/v2.16.0...v2.17.0) (2025-10-17)
+
+
+### Features
+
+* edit achievement ([9711c72](https://github.com/Ianbleake/BleakeDev/commit/9711c7212390c30995064c606f66c48e6df95dd0))
+
+
+### Bug Fixes
+
+* transform the achievement card on achievement card trigger to the edit sheet form ([f2264d5](https://github.com/Ianbleake/BleakeDev/commit/f2264d5cff5af76b999849c4558fae3112bbbd6c))
+
 ## [2.16.0](https://github.com/Ianbleake/BleakeDev/compare/v2.15.0...v2.16.0) (2025-10-16)
 
 
