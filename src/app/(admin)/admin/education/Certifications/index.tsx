@@ -7,10 +7,13 @@ import { twTheme } from "@/utils/ThemeColors";
 import { PiCertificate } from "react-icons/pi";
 import CertificationCard from "./components/certificationCard";
 import EducationCardSkeleton from "@/components/skeletons/educationCardSkeleton";
+import { useRouter } from "next/navigation";
 
 export default function Certifications(): React.ReactElement {
 
   const { certifications, certificationsLoading  } = useEducation();
+
+  const router = useRouter();
 
   return (
     <Card className="px-4">
@@ -31,7 +34,7 @@ export default function Certifications(): React.ReactElement {
           
         </div>
 
-        <Button className="text-lg font-normal">
+        <Button className="text-lg font-normal cursor-pointer" onClick={()=>router.push("/admin/education/add/certification")}>
           Add Certification
           <PiMedalFill />
         </Button>

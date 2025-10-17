@@ -10,6 +10,7 @@ import GradeAchivements from "./GradeAchivements";
 import useGrade from "@/hooks/education/useGrade";
 import { useGradeStorage } from "@/storage/Admin/gradeStorage";
 import GradePageSkeleton from "@/components/skeletons/gradePageSkeleton";
+import GradePageContent from "./GradePageContent";
 
 export default function GradePage(): React.ReactElement {
 
@@ -47,7 +48,9 @@ export default function GradePage(): React.ReactElement {
 
       <GradeHeader grade={gradeData} />
 
-      <GradeAchivements/> 
+      <GradeAchivements/>
+
+      <GradePageContent />
 
     </div>
   );

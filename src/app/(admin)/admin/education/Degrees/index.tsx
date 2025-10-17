@@ -6,10 +6,13 @@ import { IoSchoolOutline, IoSchoolSharp } from "react-icons/io5";
 import EducationCard from "./components/educationCard";
 import { useEducation } from "@/hooks/education/useEducation";
 import EducationCardSkeleton from "@/components/skeletons/educationCardSkeleton";
+import { useRouter } from "next/navigation";
 
 export default function Degrees(): React.ReactElement {
 
   const { degrees, degreesLoading } = useEducation();
+
+  const router = useRouter();
 
   return (
 
@@ -31,7 +34,7 @@ export default function Degrees(): React.ReactElement {
           </div>
         </div>
 
-        <Button className="text-lg font-normal">
+        <Button className="text-lg font-normal cursor-pointer" onClick={()=>router.push("/admin/education/add/degree")}>
           Add education
           <IoSchoolSharp />
         </Button>
