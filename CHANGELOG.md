@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.20.0](https://github.com/Ianbleake/BleakeDev/compare/v2.19.0...v2.20.0) (2025-10-17)
+
+
+### Features
+
+* add grade Header component ([14073fe](https://github.com/Ianbleake/BleakeDev/commit/14073fe34e7690488f2124710ccc7ddac4e96c4c))
+* add grade page content static component ([6c37b20](https://github.com/Ianbleake/BleakeDev/commit/6c37b2012877b4b3542870a479c50c3c17e30c4f))
+
 ## [2.19.0](https://github.com/Ianbleake/BleakeDev/compare/v2.18.0...v2.19.0) (2025-10-17)
 
 
