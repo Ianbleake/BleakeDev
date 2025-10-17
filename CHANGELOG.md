@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.18.0](https://github.com/Ianbleake/BleakeDev/compare/v2.17.0...v2.18.0) (2025-10-17)
+
+
+### Features
+
+* add delete and update achievement services and hooks ([a3cb2c9](https://github.com/Ianbleake/BleakeDev/commit/a3cb2c98e4670c6a1fb681b65fa2fba28343ddc1))
+* add edit achievement edit form ui ([5651b85](https://github.com/Ianbleake/BleakeDev/commit/5651b85c2e10018f0f250caad8c165a6b50aad68))
+
 ## [2.17.0](https://github.com/Ianbleake/BleakeDev/compare/v2.16.0...v2.17.0) (2025-10-17)
 
 
