@@ -26,7 +26,6 @@ export default function AchievementEditForm({
     console.log(data);
   }
 
-
   return (
     <div className="px-4" >
       <form className="flex flex-col gap-6" onSubmit={handleSubmit(onSubmit)}>
