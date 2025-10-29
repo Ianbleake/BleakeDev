@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { useParams } from "next/navigation";
 import React from "react";
 import AddGradeHeader from "./components/addGradeHeader";
+import AddDegreeForm from "./components/AddDegreeForm";
+import AddCertificationForm from "./components/AddCertificationForm";
 
 export default function AddGradePage(): React.ReactElement {
 
@@ -15,6 +17,14 @@ export default function AddGradePage(): React.ReactElement {
   return (
     <Card className="px-4">
       <AddGradeHeader isDeegree={isDegree} />
+
+      {
+        isDegree ? (
+          <AddDegreeForm/>
+        ) : (
+          <AddCertificationForm/>
+        )
+      }
     </Card>
   );
 }
