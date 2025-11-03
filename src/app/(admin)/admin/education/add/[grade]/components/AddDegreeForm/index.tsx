@@ -22,6 +22,7 @@ import { periodToString } from "@/utils/periodToString";
 import { ChevronDownIcon } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
 import AddAchivement from "./AddAchivement";
+import AchievementsGrid from "../AchievementsGrid";
 
 type AddDegreeData = Omit<Degree, 'pageContent' | 'id'>
 
@@ -53,7 +54,7 @@ export default function AddDegreeForm(): React.ReactElement {
       ...data,
       achievements: achievements,
     }
-    
+
     console.log('FormData:',newDegreeData)
   };
 
@@ -282,22 +283,7 @@ export default function AddDegreeForm(): React.ReactElement {
 
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
-          {
-            achievements ? (
-              achievements.map((achievement, index) => {
-                return(
-                  <Card key={index} className="flex flex-row gap-4 items-center px-4 hover:bg-green-50 cursor-pointer" >
-                    <GoTrophy size={30} color={twTheme.colors.emerald[600]} />
-                    <p className="text-gray-400 text-sm font-normal">{achievement.description}</p>
-                  </Card>
-                )
-              })
-            ) : (
-              <></>
-            )
-          }
-        </div>
+        <AchievementsGrid achievements={achievements} />
 
       </Card>
 
