@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.21.0](https://github.com/Ianbleake/BleakeDev/compare/v2.20.0...v2.21.0) (2025-11-03)
+
+
+### Features
+
+* add achievements form ([2bc58ab](https://github.com/Ianbleake/BleakeDev/commit/2bc58ab98b6228a79ad628dcfda6890c8df2ae58))
+* add degree info form and inputs ([0a92ab8](https://github.com/Ianbleake/BleakeDev/commit/0a92ab8b8ce7877360b027730d50914dcb26b250))
+
 ## [2.20.0](https://github.com/Ianbleake/BleakeDev/compare/v2.19.0...v2.20.0) (2025-10-17)
 
 
