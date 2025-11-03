@@ -48,6 +48,16 @@ export default function AddDegreeForm(): React.ReactElement {
     setAchievements(prev => [...prev, achievement]);
   };
 
+  const deleteAchievement = (index: number) => {
+    setAchievements((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const editAchievement = (index: number, updatedData: Partial<Achievement>) => {
+    setAchievements((prev) =>
+      prev.map((a, i) => (i === index ? { ...a, ...updatedData } : a))
+    );
+  };
+
   const onSubmit = (data:AddDegreeData)=> {
 
     const newDegreeData = {

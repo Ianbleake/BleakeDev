@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { twTheme } from "@/utils/ThemeColors";
+import { Info, Pencil, Trash } from "lucide-react";
 import React from "react";
 import { GoTrophy } from "react-icons/go";
 
@@ -15,7 +16,9 @@ export default function AchievementCardMenu({
   index,
 }:AchievementCardMenuProps ): React.ReactElement {
   return (
-    <DropdownMenu>
+    <DropdownMenu
+      
+    >
       <DropdownMenuTrigger asChild>
         <Card className="flex flex-row gap-4 items-center px-4 hover:bg-green-50 cursor-pointer">
           <GoTrophy size={30} color={twTheme.colors.emerald[600]} />
@@ -23,11 +26,30 @@ export default function AchievementCardMenu({
         </Card>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent>
-        <DropdownMenuLabel>Actions</DropdownMenuLabel>
+      <DropdownMenuContent
+        className="w-[--radix-dropdown-menu-trigger-width] rounded-lg"
+        align="end"
+        sideOffset={5}
+      >
+
+
+        <DropdownMenuLabel className="flex flex-row items-center gap-2">
+          Actions
+          <Info className="mr-2 h-4 w-4"/>
+        </DropdownMenuLabel>
+
         <DropdownMenuSeparator />
-        <DropdownMenuItem>Edit</DropdownMenuItem>
-        <DropdownMenuItem>Delete</DropdownMenuItem>
+
+        <DropdownMenuItem>
+          <Pencil className="mr-2 h-4 w-4"/>
+          Edit
+        </DropdownMenuItem>
+
+        <DropdownMenuItem >
+          <Trash className="mr-2 h-4 w-4" color={twTheme.colors.red[500]}/>
+          <span className="text-red-500">Delete</span>
+        </DropdownMenuItem>
+
       </DropdownMenuContent>
     </DropdownMenu>
   );
