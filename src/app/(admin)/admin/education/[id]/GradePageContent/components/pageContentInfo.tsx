@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegClock } from "react-icons/fa"; // puedes usar cualquier ícono de react-icons
+import { FaRegClock } from "react-icons/fa";
 
 export default function PageContentInfo(): React.ReactElement {
   return (
