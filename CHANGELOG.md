@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.22.0](https://github.com/Ianbleake/BleakeDev/compare/v2.21.0...v2.22.0) (2025-11-03)
+
+
+### Features
+
+* add empty component ([077c556](https://github.com/Ianbleake/BleakeDev/commit/077c556df2e65561119bc35d1ffc1127f82aadfd))
+
+
+### Bug Fixes
+
+* transform the achievement grid in component ([ad42fd5](https://github.com/Ianbleake/BleakeDev/commit/ad42fd5275ee101c5744f3a77c0bb7c2b9cc95e8))
+
 ## [2.21.0](https://github.com/Ianbleake/BleakeDev/compare/v2.20.0...v2.21.0) (2025-11-03)
 
 
