@@ -21,7 +21,10 @@ export default function InfoCard({
 
   return (
     <div className={merge("flex flex-row gap-2 items-center",className)}>
-      <Icon size={iconSize} color={twTheme.colors.emerald[600]} />
+      <div className="h-7 w-7">
+        <Icon size={iconSize} color={twTheme.colors.emerald[600]} />
+      </div>
+
       <p className="text-gray-400 text-sm font-normal">
         { text }
       </p>

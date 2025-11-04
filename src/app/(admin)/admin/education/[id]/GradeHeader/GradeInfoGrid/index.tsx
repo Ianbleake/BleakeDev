@@ -7,6 +7,9 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import { TbLicense } from "react-icons/tb";
 import InfoCard from "./components/infoCard";
 import moment from "moment";
+import { IoChevronBack } from "react-icons/io5";
+import { useRouter } from "next/navigation";
+import { twTheme } from "@/utils/ThemeColors";
 
 type GradeInfoGridProps = {
   grade: GradeData;
@@ -16,14 +19,19 @@ export default function GradeInfoGrid({
   grade,
 }:GradeInfoGridProps ): React.ReactElement {
 
-  const hasDescription = Boolean(grade.description && grade.description !== "No description");
+  const router = useRouter();
 
   return (
     <div className="flex flex-1 flex-col gap-2">
 
-      <h2 className="text-gray-900 font-semibold text-xl">
-        { grade.name }
-      </h2>
+      <div className="flex flex-row items-center justify-start gap-2">
+        <div onClick={router.back} className="cursor-pointer">
+          <IoChevronBack size={30} color={twTheme.colors.emerald[600]} />
+        </div>
+        <h2 className="text-gray-900 font-semibold text-xl">
+          { grade.name }
+        </h2>
+      </div>
 
       <Separator />
 
@@ -41,7 +49,7 @@ export default function GradeInfoGrid({
 
         <InfoCard text={ grade.type === "degree" ? grade.date : moment(grade.date).format("MMM Do YY") } icon={BsCalendarDate} />
 
-        <InfoCard text={ grade.description } icon={GrTextAlignFull} className=" col-span-3 text-justify" iconSize={hasDescription ? 45 : 25} />
+        <InfoCard text={ grade.description } icon={GrTextAlignFull} className="col-span-3 text-justify" />
         
       </div>
     </div>
