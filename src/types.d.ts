@@ -92,7 +92,9 @@ type Degree = {
   achievements: Achievement[];
   type: string;
   pageContent: undefined;
-}  
+}
+
+type NewDegree = Omit<Degree, 'pageContent' | 'id'>
 
 type DegreeInfo = Omit<Degree,"achievements" |"pageContent" | "type">
 
@@ -106,6 +108,8 @@ type Certification = {
   description: string;
   pageContent: undefined;
 }
+
+type newCertification = Omit<Certification, 'pageContent' | 'id'>
 
 type CertificationInfo = Omit<Certification, "achievements" | "pageContent">
 

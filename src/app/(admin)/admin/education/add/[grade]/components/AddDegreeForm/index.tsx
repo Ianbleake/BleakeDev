@@ -21,7 +21,7 @@ import { ChevronDownIcon } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
 import AchievementsGrid from "../AchievementsGrid";
 
-type AddDegreeData = Omit<Degree, 'pageContent' | 'id'>
+type AddDegreeData = NewDegree;
 
 export default function AddDegreeForm(): React.ReactElement {
 
