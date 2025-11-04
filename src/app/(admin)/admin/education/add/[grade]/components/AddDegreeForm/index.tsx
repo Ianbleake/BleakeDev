@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { FiSave } from "react-icons/fi";
 import { RiArrowGoBackFill } from "react-icons/ri";
-import { GoTrophy } from "react-icons/go";
 import { twTheme } from "@/utils/ThemeColors";
 import { IoDocumentTextOutline, IoSchoolOutline } from "react-icons/io5";
 import { Separator } from "@/components/ui/separator";
@@ -21,7 +20,6 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { periodToString } from "@/utils/periodToString";
 import { ChevronDownIcon } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
-import AddAchivement from "./AddAchivement";
 import AchievementsGrid from "../AchievementsGrid";
 
 type AddDegreeData = Omit<Degree, 'pageContent' | 'id'>
@@ -273,29 +271,7 @@ export default function AddDegreeForm(): React.ReactElement {
 
       </Card>
 
-      <Card className="px-4 flex flex-col gap-8">
-
-        <div className="flex flex-row items-center justify-between border-b border-gray-200 pb-4">
-
-          <div className="flex flex-row items-center gap-6 flex-1">
-            <div className="border border-gray-200 p-3 rounded-md shadow-sm bg-green-50 ">
-              <GoTrophy size={30} color={twTheme.colors.emerald[600]} />
-            </div>
-
-            <div className="flex flex-col gap-2 flex-1 pr-8">
-              <h2 className="text-gray-900 font-semibold text-xl" >Achievements</h2>
-              <Separator/>
-              <p className="text-gray-400 text-sm font-normal" >Before to save the degree set the achievements</p>
-            </div>
-          </div>
-          
-          <AddAchivement addAchievement={addAchievement} />
-
-        </div>
-
-        <AchievementsGrid achievements={achievements} removeAchievement={deleteAchievement} editAchievement={editAchievement}  />
-
-      </Card>
+      <AchievementsGrid achievements={achievements} removeAchievement={deleteAchievement} editAchievement={editAchievement} addAchievement={addAchievement}  />      
 
       <div className="flex flex-raw items-center justify-end gap-4">
 

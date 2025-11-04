@@ -2,34 +2,61 @@ import Empty from "@/components/admin/empty";
 import React from "react";
 import { GoTrophy } from "react-icons/go";
 import AchievementCardMenu from "./components/AchievementCardMenu";
+import { Card } from "@/components/ui/card";
+import { twTheme } from "@/utils/ThemeColors";
+import { Separator } from "@/components/ui/separator";
+import AddAchivement from "./components/AddAchivement";
 
 
 type AchievementsGridProps = {
   achievements: Omit<Achievement, "id" | "grade_id" | "grade_type">[];
+  addAchievement: (achievement: Omit<Achievement, "id" | "grade_id" | "grade_type">)=>void;
   removeAchievement: (index: number) => void;
   editAchievement: (index: number, updatedData: Partial<Achievement>) => void
 }
 
 export default function AchievementsGrid({
   achievements,
+  addAchievement,
   removeAchievement,
   editAchievement,
 }:AchievementsGridProps ): React.ReactElement {
   return (
-    <div className="grid grid-cols-2 items-center gap-4">
-      {
-        achievements.length > 0 ? (
-          achievements.map((achievement, index) => {
-            return(
-              <AchievementCardMenu achievement={achievement} removeAchievement={removeAchievement} editAchievement={editAchievement} index={index} key={index} />
-            )
-          })
-        ) : (
-          <div className="col-span-2">
-            <Empty icon={GoTrophy} title="No Achievements" description="Add new achievements with the button on the header of this card" />
+    <Card className="px-4 flex flex-col gap-8">
+
+      <div className="flex flex-row items-center justify-between border-b border-gray-200 pb-4">
+
+        <div className="flex flex-row items-center gap-6 flex-1">
+          <div className="border border-gray-200 p-3 rounded-md shadow-sm bg-green-50 ">
+            <GoTrophy size={30} color={twTheme.colors.emerald[600]} />
           </div>
-        )
-      }
-    </div>
+
+          <div className="flex flex-col gap-2 flex-1 pr-8">
+            <h2 className="text-gray-900 font-semibold text-xl" >Achievements</h2>
+            <Separator/>
+            <p className="text-gray-400 text-sm font-normal" >Before to save the degree set the achievements</p>
+          </div>
+        </div>
+
+        <AddAchivement addAchievement={addAchievement} />
+
+      </div>
+
+      <div className="grid grid-cols-2 items-center gap-4">
+        {
+          achievements.length > 0 ? (
+            achievements.map((achievement, index) => {
+              return(
+                <AchievementCardMenu achievement={achievement} removeAchievement={removeAchievement} editAchievement={editAchievement} index={index} key={index} />
+              )
+            })
+          ) : (
+            <div className="col-span-2">
+              <Empty icon={GoTrophy} title="No Achievements" description="Add new achievements with the button on the header of this card" />
+            </div>
+          )
+        }
+      </div>
+    </Card>
   );
 }
