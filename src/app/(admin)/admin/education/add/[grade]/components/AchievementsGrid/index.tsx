@@ -9,8 +9,8 @@ import AddAchivement from "./components/AddAchivement";
 
 
 type AchievementsGridProps = {
-  achievements: Omit<Achievement, "id" | "grade_id" | "grade_type">[];
-  addAchievement: (achievement: Omit<Achievement, "id" | "grade_id" | "grade_type">)=>void;
+  achievements: NewAchievement[];
+  addAchievement: (achievement: NewAchievement)=>void;
   removeAchievement: (index: number) => void;
   editAchievement: (index: number, updatedData: Partial<Achievement>) => void
 }

@@ -15,7 +15,7 @@ import { CiMenuKebab } from "react-icons/ci";
 import EditAchievement from "../EditAchievement";
 
 type AchievementCardMenuProps = {
-  achievement: Omit<Achievement, "id" | "grade_id" | "grade_type">;
+  achievement: NewAchievement;
   index: number;
   removeAchievement: (index: number) => void;
   editAchievement: (index: number, updatedData: Partial<Achievement>) => void

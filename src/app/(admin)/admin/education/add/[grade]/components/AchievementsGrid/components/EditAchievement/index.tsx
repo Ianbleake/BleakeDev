@@ -6,7 +6,7 @@ import EditAchievementForm from "./components/editAchievementForm";
 
 type EditAchievementProps = {
   editAchievement: (index: number, updatedData: Partial<Achievement>) => void
-  achievement: Omit<Achievement, "id" | "grade_id" | "grade_type">;
+  achievement: NewAchievement;
   index: number;
 }
 

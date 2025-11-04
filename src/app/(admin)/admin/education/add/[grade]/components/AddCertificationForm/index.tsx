@@ -21,12 +21,13 @@ import { ChevronDownIcon } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
 import moment from "moment";
 import { PiCertificate } from "react-icons/pi";
+import useCreateGrade from "@/hooks/education/useCreateGrade";
 
-type AddCertificationData = Omit<Certification, 'pageContent' | 'id'>
+type AddCertificationData = NewCertification;
 
 export default function AddCertificationForm(): React.ReactElement {
 
-  const [ achievements, setAchievements ] = useState<Omit<Achievement, "id" | "grade_id" | "grade_type" >[]>([])
+  const [ achievements, setAchievements ] = useState<NewAchievement[]>([])
 
   const router = useRouter();
 
@@ -40,9 +41,11 @@ export default function AddCertificationForm(): React.ReactElement {
     }
   });
 
+  const { mutate: createGrade, isPending } = useCreateGrade("certification");
+
   //TODO: Move and make reusables this functions on Achievements grid, send the state and the seter.
 
-  const addAchievement = (achievement: Omit<Achievement, "id" | "grade_id" | "grade_type" >) => {
+  const addAchievement = (achievement: NewAchievement ) => {
     setAchievements(prev => [...prev, achievement]);
   };
 
@@ -58,12 +61,13 @@ export default function AddCertificationForm(): React.ReactElement {
 
   const onSubmit = (data:AddCertificationData)=> {
 
-    const newDegreeData = {
+    const newCertificationData = {
       ...data,
       achievements: achievements,
     }
 
-    console.log('FormData:',newDegreeData)
+    createGrade(newCertificationData);
+  
   };
 
   return (
@@ -248,7 +252,7 @@ export default function AddCertificationForm(): React.ReactElement {
           Cancel
         </Button>
 
-        <Button type="submit" disabled={isSubmitting}>
+        <Button type="submit" disabled={ isSubmitting || isPending }>
           <FiSave />
           Save
         </Button>

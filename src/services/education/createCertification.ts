@@ -6,7 +6,7 @@ export async function createCertification(newCertification: CertificationInfo): 
   try {
     
     const { data, error } = await supabaseBrowser
-    .from("certification")
+    .from("certifications")
     .insert(newCertification)
     .select()
     .single();

@@ -76,6 +76,8 @@ type Achievement = {
   description: string;
 }
 
+type NewAchievement = Omit<Achievement, "id" | "grade_id" | "grade_type">;
+
 type AddAchievementPayload = {
   grade_id: string; 
   grade_type: 'education' | 'certification';
@@ -94,9 +96,11 @@ type Degree = {
   pageContent: undefined;
 }
 
-type NewDegree = Omit<Degree, 'pageContent' | 'id'>
+type NewDegree = Omit<Degree, "pageContent" | "id" | "achievements"> & {
+  achievements: NewAchievement[];
+};
 
-type DegreeInfo = Omit<Degree,"achievements" |"pageContent" | "type">
+type DegreeInfo = Omit<Degree, "achievements" | "pageContent" | "type" >
 
 type Certification = {
   id: string,
@@ -109,7 +113,9 @@ type Certification = {
   pageContent: undefined;
 }
 
-type newCertification = Omit<Certification, 'pageContent' | 'id'>
+type NewCertification = Omit<Certification, 'pageContent' | 'id' | "achievements"> & {
+  achievements: NewAchievement[];
+};
 
 type CertificationInfo = Omit<Certification, "achievements" | "pageContent">
 

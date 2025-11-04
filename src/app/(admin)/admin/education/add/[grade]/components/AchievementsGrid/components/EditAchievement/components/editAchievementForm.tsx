@@ -8,7 +8,7 @@ import { RxUpdate } from "react-icons/rx";
 
 type EditAchievementFormProps = {
   editAchievement: (index: number, updatedData: Partial<Achievement>) => void;
-  achievement: Omit<Achievement, "id" | "grade_id" | "grade_type">;
+  achievement: NewAchievement;
   onClose: ()=>void;
   index: number;
 }
@@ -26,7 +26,7 @@ export default function EditAchievementForm({
     }
   });
 
-  const onSubmit = (data: Omit<Achievement, "id" | "grade_id" | "grade_type">  ) => {
+  const onSubmit = (data: NewAchievement  ) => {
     editAchievement(index, data)
     onClose();
   }

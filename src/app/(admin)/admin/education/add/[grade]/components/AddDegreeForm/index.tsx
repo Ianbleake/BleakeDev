@@ -20,12 +20,13 @@ import { periodToString } from "@/utils/periodToString";
 import { ChevronDownIcon } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
 import AchievementsGrid from "../AchievementsGrid";
+import useCreateGrade from "@/hooks/education/useCreateGrade";
 
 type AddDegreeData = NewDegree;
 
 export default function AddDegreeForm(): React.ReactElement {
 
-  const [ achievements, setAchievements ] = useState<Omit<Achievement, "id" | "grade_id" | "grade_type" >[]>([])
+  const [ achievements, setAchievements ] = useState<NewAchievement[]>([])
 
   const router = useRouter();
 
@@ -40,7 +41,9 @@ export default function AddDegreeForm(): React.ReactElement {
     }
   });
 
-  const addAchievement = (achievement: Omit<Achievement, "id" | "grade_id" | "grade_type" >) => {
+  const { mutate: createGrade, isPending } = useCreateGrade("degree");
+
+  const addAchievement = (achievement: NewAchievement) => {
     setAchievements(prev => [...prev, achievement]);
   };
 
@@ -62,7 +65,8 @@ export default function AddDegreeForm(): React.ReactElement {
       type: 'education'
     }
 
-    console.log('FormData:',newDegreeData)
+    createGrade(newDegreeData);
+
   };
 
   return (
@@ -258,7 +262,7 @@ export default function AddDegreeForm(): React.ReactElement {
           Cancel
         </Button>
 
-        <Button type="submit" disabled={isSubmitting}>
+        <Button type="submit" disabled={isSubmitting || isPending }>
           <FiSave />
           Save
         </Button>
