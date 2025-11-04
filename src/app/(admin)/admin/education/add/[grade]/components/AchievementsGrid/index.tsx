@@ -6,10 +6,12 @@ import AchievementCardMenu from "./components/AchievementCardMenu";
 
 type AchievementsGridProps = {
   achievements: Omit<Achievement, "id" | "grade_id" | "grade_type">[];
+  removeAchievement: (index: number) => void;
 }
 
 export default function AchievementsGrid({
   achievements,
+  removeAchievement,
 }:AchievementsGridProps ): React.ReactElement {
   return (
     <div className="grid grid-cols-2 items-center gap-4">
@@ -17,7 +19,7 @@ export default function AchievementsGrid({
         achievements.length > 0 ? (
           achievements.map((achievement, index) => {
             return(
-              <AchievementCardMenu achievement={achievement} index={index} key={index} />
+              <AchievementCardMenu achievement={achievement} removeAchievement={removeAchievement} index={index} key={index} />
             )
           })
         ) : (
