@@ -293,7 +293,7 @@ export default function AddDegreeForm(): React.ReactElement {
 
         </div>
 
-        <AchievementsGrid achievements={achievements} removeAchievement={deleteAchievement} />
+        <AchievementsGrid achievements={achievements} removeAchievement={deleteAchievement} editAchievement={editAchievement}  />
 
       </Card>
 
