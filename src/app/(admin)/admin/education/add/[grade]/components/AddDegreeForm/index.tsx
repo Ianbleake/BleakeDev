@@ -14,7 +14,6 @@ import { HiOutlineBuildingLibrary } from "react-icons/hi2";
 import { BsCalendarDate } from "react-icons/bs";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { GrTextAlignFull } from "react-icons/gr";
-import { TbLicense } from "react-icons/tb";
 import { Textarea } from "@/components/ui/textarea";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { periodToString } from "@/utils/periodToString";
@@ -38,7 +37,6 @@ export default function AddDegreeForm(): React.ReactElement {
       period: undefined,
       description: '',
       achievements: [],
-      type: '',
     }
   });
 
@@ -61,6 +59,7 @@ export default function AddDegreeForm(): React.ReactElement {
     const newDegreeData = {
       ...data,
       achievements: achievements,
+      type: 'education'
     }
 
     console.log('FormData:',newDegreeData)
@@ -217,7 +216,7 @@ export default function AddDegreeForm(): React.ReactElement {
 
           </div>
 
-          <div className="flex flex-row items-center gap-3">
+          <div className="flex flex-row items-center gap-3 col-span-2">
 
             <div className="flex items-center justify-center p-2 border border-gray-200 rounded-lg shadow-md">
               <GrTextAlignFull size={40} color={twTheme.colors.emerald[600]} />
@@ -236,31 +235,6 @@ export default function AddDegreeForm(): React.ReactElement {
               {errors.description && (
                 <span className="text-red-600 text-sm">
                   {errors.description.message}
-                </span>
-              )}
-            </div>
-
-          </div>
-
-          <div className="flex flex-row items-center gap-3">
-
-            <div className="flex items-center justify-center p-2 border border-gray-200 rounded-lg shadow-md">
-              <TbLicense size={40} color={twTheme.colors.emerald[600]} />
-            </div>
-
-            <div className="flex flex-col gap-3 flex-1">
-              <Label>Type</Label>
-              <Input
-                type="text"
-                {
-                  ...register('type',{
-                    required: "The type is required",
-                  })
-                }
-              />
-              {errors.type && (
-                <span className="text-red-600 text-sm">
-                  {errors.type.message}
                 </span>
               )}
             </div>
