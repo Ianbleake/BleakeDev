@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.24.0](https://github.com/Ianbleake/BleakeDev/compare/v2.23.0...v2.24.0) (2025-11-04)
+
+
+### Features
+
+* implement the create grade hook on forms ([749a075](https://github.com/Ianbleake/BleakeDev/commit/749a07526db05a9b135d24cb07a775e9e602ef69))
+
 ## [2.23.0](https://github.com/Ianbleake/BleakeDev/compare/v2.22.0...v2.23.0) (2025-11-04)
 
 
