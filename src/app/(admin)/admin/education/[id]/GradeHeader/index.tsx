@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { twTheme } from "@/utils/ThemeColors";
 import React from "react";
 import GradeInfoGrid from "./GradeInfoGrid";
-import GradeEdit from "./GradeEdit";
+import GradeActions from "./GradeActions";
 
 type GradeHeaderProps = {
   grade: GradeData;
@@ -23,7 +23,7 @@ export default function GradeHeader({
 
       <GradeInfoGrid grade={grade} />
 
-      <GradeEdit grade={grade} />
+      <GradeActions grade={grade} />
 
     </Card>
   );
