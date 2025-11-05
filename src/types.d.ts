@@ -100,7 +100,7 @@ type NewDegree = Omit<Degree, "pageContent" | "id" | "achievements"> & {
   achievements: NewAchievement[];
 };
 
-type DegreeInfo = Omit<Degree, "achievements" | "pageContent" | "type" >
+type DegreeInfo = Omit<Degree, "achievements" | "pageContent" >
 
 type Certification = {
   id: string,
@@ -120,34 +120,35 @@ type NewCertification = Omit<Certification, 'pageContent' | 'id' | "achievements
 type CertificationInfo = Omit<Certification, "achievements" | "pageContent">
 
 //TODO: Fix this types
+type GradeInfo = Record<DegreeInfo | CertificationInfo>;
 
+type Grade = Record<Degree | Certification>;
 
+// type Grade = {
+//   id: string;
+//   description: string;
+//   achievements: Achievement[];
+//   pageContent: undefined;
+//   degree?: string;
+//   institution?: string;
+//   location?: string;
+//   period?: Period;
+//   type?: string;
+//   title?: string;
+//   issuer?: string;
+//   date?: string;
+//   credential?: string;
+// }
 
-type Grade = {
-  id: string;
-  description: string;
-  achievements: Achievement[];
-  pageContent: undefined;
-  degree?: string;
-  institution?: string;
-  location?: string;
-  period?: Period;
-  type?: string;
-  title?: string;
-  issuer?: string;
-  date?: string;
-  credential?: string;
-}
-
-type GradeInfo = {
-  id: string;
-  description: string;
-  degree?: string;
-  institution?: string;
-  location?: string;
-  period?: Period;
-  title?: string;
-  issuer?: string;
-  date?: string;
-  credential?: string;
-}
+// type GradeInfo = {
+//   id: string;
+//   description: string;
+//   degree?: string;
+//   institution?: string;
+//   location?: string;
+//   period?: Period;
+//   title?: string;
+//   issuer?: string;
+//   date?: string;
+//   credential?: string;
+// }

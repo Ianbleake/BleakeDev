@@ -2,7 +2,7 @@ import { supabaseBrowser } from "@/supabase/client";
 import { handleError } from "@/utils/errorHandler";
 import { getAchievements } from "./getAchievements";
 
-export async function getDegree(Id: string): Promise<Degree | undefined> {
+export async function getDegree(Id: string): Promise<DegreeInfo | undefined> {
   
   try{
 

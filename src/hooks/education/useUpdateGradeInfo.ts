@@ -20,7 +20,7 @@ export default function useUpdateGradeInfo( type: string ) {
       }
       return updateCertificationInfo(updatedInfo as CertificationInfo);
     },
-    onSuccess: (updatedData) => {
+    onSuccess: (updatedData: GradeInfo ) => {
 
       let formatedData = null;
 
