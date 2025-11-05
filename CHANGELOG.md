@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.25.1](https://github.com/Ianbleake/BleakeDev/compare/v2.25.0...v2.25.1) (2025-11-05)
+
+
+### Bug Fixes
+
+* editGrade Info ([4ad9067](https://github.com/Ianbleake/BleakeDev/commit/4ad9067c3b1ad25342d128c5b9454e5c0148061f))
+
 ## [2.25.0](https://github.com/Ianbleake/BleakeDev/compare/v2.24.0...v2.25.0) (2025-11-05)
 
 
