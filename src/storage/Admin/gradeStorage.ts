@@ -7,9 +7,7 @@ type GradeState = {
   achievements: Achievement[];
 
   setGradeData: ( type: string, grade: Grade | null, gradeInfo: GradeInfo, achievements:Achievement[] ) => void;
-  setGrade: ( grade: Grade | null ) => void;
-  setType: ( type: string ) => void;
-  updateGrade: ( grade: Partial<Grade> ) => void;
+  updateGradeInfo: (updatedGradeInfo: GradeInfo) => void,
   clearGrade: () => void;
   addAchievemnent: ( achievement: Achievement ) => void;
   removeAchievement: ( achievementId: string ) => void;
@@ -18,15 +16,13 @@ type GradeState = {
 
 export const useGradeStorage = create<GradeState>(( set ) => ({
 
-  grade: null,
   type: "",
+  grade: null,
   gradeInfo: null,
   achievements: [],
 
   setGradeData: (type, grade, gradeInfo,achievements) => set({ type, grade, gradeInfo, achievements }),
-  setGrade: (grade) => set({ grade }),
-  setType: (type) => set({ type }),
-  updateGrade: (grade) => set((state) => ({ grade: { ...state.grade, ...grade } as Grade })),
+  updateGradeInfo: (updatedGradeInfo: GradeInfo) => set((state) => ({ gradeInfo: { ...state.gradeInfo, ...updatedGradeInfo } as GradeInfo })),
   clearGrade: () => set({ grade: null, type: "", gradeInfo: null, achievements: [] }),
   addAchievemnent: (achievement:Achievement) => set((state) => ({ achievements: [...state.achievements, achievement] })),
   removeAchievement: (achievementId:string) => set((state) => ({ achievements: state.achievements.filter(a => a.id !== achievementId)})),

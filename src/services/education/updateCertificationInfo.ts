@@ -16,7 +16,7 @@ export async function updateCertificationInfo(UpdatedCertificationInfo:Certifica
     // TODO: Add this throw error on every service to handle the errors properly
     if (error) throw error;
 
-    return UpdatedCertification as Certification
+    return UpdatedCertification as CertificationInfo
 
   }catch(error){
     handleError(error,"updateCertificationInfo")

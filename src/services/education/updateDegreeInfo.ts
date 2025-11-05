@@ -14,7 +14,7 @@ export async function updateDegreeInfo(updatedDegreeInfo: DegreeInfo){
 
     if (error) throw error;
 
-    return UpdatedDegree as Degree
+    return UpdatedDegree as DegreeInfo
 
   }catch(error){
     handleError(error,"updateDegreeInfo")

@@ -4,10 +4,13 @@ import { updateCertificationInfo } from "@/services/education/updateCertificatio
 import { updateDegreeInfo } from "@/services/education/updateDegreeInfo";
 import { AppErrorShape } from "@/utils/errorHandler";
 import { useGradeStorage } from "@/storage/Admin/gradeStorage";
+import { periodToString } from "@/utils/periodToString";
 
 export default function useUpdateGradeInfo( type: string ) {
 
-  const { updateGrade } = useGradeStorage();
+  const { updateGradeInfo } = useGradeStorage();
+
+  const isDegree = type === "degree";
 
   return useMutation({
     mutationKey: ["updateGradeInfo", type],
@@ -18,7 +21,31 @@ export default function useUpdateGradeInfo( type: string ) {
       return updateCertificationInfo(updatedInfo as CertificationInfo);
     },
     onSuccess: (updatedData) => {
-      updateGrade(updatedData);
+
+      let formatedData = null;
+
+      if(isDegree){
+        formatedData = {
+          id: updatedData.id,
+          name: updatedData.degree,
+          description: updatedData.description,
+          institution: updatedData.institution,
+          date: updatedData?.period ? periodToString(updatedData.period) : "-",
+          period: updatedData.period,
+          location: updatedData.location,
+        }
+      }else{
+        formatedData = {
+          id: updatedData.id,
+          name: updatedData.title,
+          description: updatedData.description,
+          institution: updatedData.issuer,
+          date: updatedData.date,     
+          credential: updatedData.credential,
+        }
+      }
+      
+      updateGradeInfo(formatedData);
       toast.success("Información actualizada");
     },
     onError: (error: AppErrorShape) => {
