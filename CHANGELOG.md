@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.26.0](https://github.com/Ianbleake/BleakeDev/compare/v2.25.1...v2.26.0) (2025-11-05)
+
+
+### Features
+
+* add grade actions menu ([180918a](https://github.com/Ianbleake/BleakeDev/commit/180918a5ec8167e8e53770633079cab9c053612f))
+
+
+### Bug Fixes
+
+* types ([8665144](https://github.com/Ianbleake/BleakeDev/commit/866514463f889a2f3a6d17ddb475997d0857a4a1))
+
 ## [2.25.1](https://github.com/Ianbleake/BleakeDev/compare/v2.25.0...v2.25.1) (2025-11-05)
 
 
