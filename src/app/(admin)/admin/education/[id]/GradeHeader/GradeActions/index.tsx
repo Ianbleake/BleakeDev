@@ -5,6 +5,7 @@ import { HiOutlineMenu } from "react-icons/hi";
 import { twTheme } from "@/utils/ThemeColors";
 import { Info, Trash } from "lucide-react";
 import useDeleteGrade from "@/hooks/education/useDeleteGrade";
+import RemoveGrade from "./components/removeGrade";
 
 type GradeActionsProps = {
   grade: GradeData;
@@ -42,16 +43,10 @@ export default function GradeActions({
 
         <DropdownMenuSeparator />
 
-        
         <GradeEdit grade={grade} />
         
-
-        <DropdownMenuItem onClick={handleDelete}>
-          <Trash className="mr-2 h-4 w-4" color={twTheme.colors.red[500]} />
-          <span className="text-red-500">Delete</span>
-        </DropdownMenuItem>
-
-
+        <RemoveGrade action={handleDelete} />
+        
       </DropdownMenuContent>
     </DropdownMenu>
   );
