@@ -43,22 +43,6 @@ export default function AddCertificationForm(): React.ReactElement {
 
   const { mutate: createGrade, isPending } = useCreateGrade("certification");
 
-  //TODO: Move and make reusables this functions on Achievements grid, send the state and the seter.
-
-  const addAchievement = (achievement: NewAchievement ) => {
-    setAchievements(prev => [...prev, achievement]);
-  };
-
-  const deleteAchievement = (index: number) => {
-    setAchievements((prev) => prev.filter((_, i) => i !== index));
-  };
-
-  const editAchievement = (index: number, updatedData: Partial<Achievement>) => {
-    setAchievements((prev) =>
-      prev.map((a, i) => (i === index ? { ...a, ...updatedData } : a))
-    );
-  };
-
   const onSubmit = (data:AddCertificationData)=> {
 
     const newCertificationData = {
@@ -239,7 +223,7 @@ export default function AddCertificationForm(): React.ReactElement {
 
       </Card>
 
-      <AchievementsGrid achievements={achievements} removeAchievement={deleteAchievement} editAchievement={editAchievement} addAchievement={addAchievement} />      
+      <AchievementsGrid achievements={achievements} setAchievements={setAchievements} />      
 
       <div className="flex flex-raw items-center justify-end gap-4">
 

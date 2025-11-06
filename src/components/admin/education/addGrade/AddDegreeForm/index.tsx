@@ -19,8 +19,9 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { periodToString } from "@/utils/periodToString";
 import { ChevronDownIcon } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
-import AchievementsGrid from "../AchievementsGrid";
+
 import useCreateGrade from "@/hooks/education/useCreateGrade";
+import AchievementsGrid from "../AchievementsGrid";
 
 type AddDegreeData = NewDegree;
 
@@ -42,20 +43,6 @@ export default function AddDegreeForm(): React.ReactElement {
   });
 
   const { mutate: createGrade, isPending } = useCreateGrade("degree");
-
-  const addAchievement = (achievement: NewAchievement) => {
-    setAchievements(prev => [...prev, achievement]);
-  };
-
-  const deleteAchievement = (index: number) => {
-    setAchievements((prev) => prev.filter((_, i) => i !== index));
-  };
-
-  const editAchievement = (index: number, updatedData: Partial<Achievement>) => {
-    setAchievements((prev) =>
-      prev.map((a, i) => (i === index ? { ...a, ...updatedData } : a))
-    );
-  };
 
   const onSubmit = (data:AddDegreeData)=> {
 
@@ -249,7 +236,7 @@ export default function AddDegreeForm(): React.ReactElement {
 
       </Card>
 
-      <AchievementsGrid achievements={achievements} removeAchievement={deleteAchievement} editAchievement={editAchievement} addAchievement={addAchievement}  />      
+      <AchievementsGrid achievements={achievements} setAchievements={setAchievements} />      
 
       <div className="flex flex-raw items-center justify-end gap-4">
 

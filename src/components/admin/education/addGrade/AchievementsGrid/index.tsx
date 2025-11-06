@@ -10,17 +10,28 @@ import AddAchivement from "./components/AddAchivement";
 
 type AchievementsGridProps = {
   achievements: NewAchievement[];
-  addAchievement: (achievement: NewAchievement)=>void;
-  removeAchievement: (index: number) => void;
-  editAchievement: (index: number, updatedData: Partial<Achievement>) => void
+  setAchievements: React.Dispatch<React.SetStateAction<NewAchievement[]>>;
 }
 
 export default function AchievementsGrid({
   achievements,
-  addAchievement,
-  removeAchievement,
-  editAchievement,
+  setAchievements,
 }:AchievementsGridProps ): React.ReactElement {
+
+  const addAchievement = (achievement: NewAchievement ) => {
+    setAchievements(prev => [...prev, achievement]);
+  };
+
+  const deleteAchievement = (index: number) => {
+    setAchievements((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const editAchievement = (index: number, updatedData: Partial<Achievement>) => {
+    setAchievements((prev) =>
+      prev.map((a, i) => (i === index ? { ...a, ...updatedData } : a))
+    );
+  };
+
   return (
     <Card className="px-4 flex flex-col gap-8">
 
@@ -47,7 +58,7 @@ export default function AchievementsGrid({
           achievements.length > 0 ? (
             achievements.map((achievement, index) => {
               return(
-                <AchievementCardMenu achievement={achievement} removeAchievement={removeAchievement} editAchievement={editAchievement} index={index} key={index} />
+                <AchievementCardMenu achievement={achievement} removeAchievement={deleteAchievement} editAchievement={editAchievement} index={index} key={index} />
               )
             })
           ) : (
