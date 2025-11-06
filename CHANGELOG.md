@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.27.0](https://github.com/Ianbleake/BleakeDev/compare/v2.26.0...v2.27.0) (2025-11-06)
+
+
+### Features
+
+* add alert dialog on delete ([ef92d9e](https://github.com/Ianbleake/BleakeDev/commit/ef92d9e3f242eaf4116af32f20c726af59d44640))
+
+
+### Bug Fixes
+
+* services handling errors ([53d304b](https://github.com/Ianbleake/BleakeDev/commit/53d304b6b17edf4b2e5e23e202b88e1c9eaa344b))
+
 ## [2.26.0](https://github.com/Ianbleake/BleakeDev/compare/v2.25.1...v2.26.0) (2025-11-05)
 
 
