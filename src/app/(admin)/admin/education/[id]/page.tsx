@@ -1,16 +1,16 @@
 'use client'
 
 import React from "react";
-import GradeHeader from "./GradeHeader";
+import GradeHeader from "../../../../../components/admin/education/grade/GradeHeader";
 import { useParams } from "next/navigation";
 import NoData from "@/components/admin/NoData";
 import { PiCertificate } from "react-icons/pi";
 import { IoSchoolOutline } from "react-icons/io5";
-import GradeAchivements from "./GradeAchivements";
+import GradeAchivements from "../../../../../components/admin/education/grade/GradeAchivements";
 import useGrade from "@/hooks/education/useGrade";
 import { useGradeStorage } from "@/storage/Admin/gradeStorage";
 import GradePageSkeleton from "@/components/skeletons/gradePageSkeleton";
-import GradePageContent from "./GradePageContent";
+import GradePageContent from "../../../../../components/admin/education/grade/GradePageContent";
 
 export default function GradePage(): React.ReactElement {
 

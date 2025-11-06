@@ -5,10 +5,10 @@ import moment from "moment";
 import { useRouter } from "next/navigation";
 import { PiMedalFill } from "react-icons/pi";
 import { PiCertificate } from "react-icons/pi";
-import GradesGrid from "./components/GradesGrid";
 import { periodToString } from "@/utils/periodToString";
 import { useEducation } from "@/hooks/education/useEducation";
 import { IoSchoolOutline, IoSchoolSharp } from "react-icons/io5";
+import GradesGrid from "@/components/admin/education/GradesGrid";
 
 export default function EducationPage(): React.ReactElement {
 

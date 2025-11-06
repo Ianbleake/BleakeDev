@@ -1,11 +1,12 @@
 'use client'
 
+import React from "react";
 import { Card } from "@/components/ui/card";
 import { useParams } from "next/navigation";
-import React from "react";
-import AddGradeHeader from "./components/addGradeHeader";
-import AddDegreeForm from "./components/AddDegreeForm";
-import AddCertificationForm from "./components/AddCertificationForm";
+import AddDegreeForm from "@/components/admin/education/addGrade/AddDegreeForm";
+import AddGradeHeader from "@/components/admin/education/addGrade/addGradeHeader";
+import AddCertificationForm from "@/components/admin/education/addGrade/AddCertificationForm";
+
 
 export default function AddGradePage(): React.ReactElement {
 

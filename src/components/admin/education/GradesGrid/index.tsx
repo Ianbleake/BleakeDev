@@ -26,7 +26,6 @@ export default function GradesGrid({
       
       <GradeGridHeader headerInfo={infoHeader} />
 
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {
           gradesData.isLoading ? (
