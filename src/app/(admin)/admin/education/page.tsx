@@ -24,6 +24,7 @@ export default function EducationPage(): React.ReactElement {
         name: degree.degree,
         institution: degree.institution,
         date: periodToString(degree.period),
+        type: "degree",
       }
     )
   })
@@ -36,6 +37,7 @@ export default function EducationPage(): React.ReactElement {
         name: certification.title,
         institution: certification.issuer,
         date: moment(certification.date).format("MMM Do YY"),
+        type: "certification"
       }
     )
   })

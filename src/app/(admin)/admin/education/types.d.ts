@@ -17,4 +17,5 @@ type GradeCardData = {
   name: string;
   institution: string;
   date: string;
+  type: string;
 }
