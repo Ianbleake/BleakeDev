@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.27.1](https://github.com/Ianbleake/BleakeDev/compare/v2.27.0...v2.27.1) (2025-11-06)
+
+
+### Bug Fixes
+
+* grade card action ([249b24e](https://github.com/Ianbleake/BleakeDev/commit/249b24e8abf211fa577fd2dcc96994b870819de2))
+
 ## [2.27.0](https://github.com/Ianbleake/BleakeDev/compare/v2.26.0...v2.27.0) (2025-11-06)
 
 
