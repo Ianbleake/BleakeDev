@@ -32,7 +32,7 @@ export default function RemoveGrade({
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction className="bg-red-500" onClick={action} >Delete</AlertDialogAction>
+          <AlertDialogAction className="bg-red-500 hover:bg-red-600" onClick={action} >Delete</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
       

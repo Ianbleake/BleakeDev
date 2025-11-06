@@ -4,6 +4,8 @@ import { handleError } from "@/utils/errorHandler";
 
 export async function deleteDegree ( gradeId: string ) {
 
+  //TODO: When the grade are deleted, must delate his achievements to.
+
   try{
 
     const { data, error } = await supabaseBrowser
