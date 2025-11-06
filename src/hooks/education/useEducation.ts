@@ -3,6 +3,7 @@ import { getDegrees } from "@/services/education/getDegrees";
 import { useQuery } from "@tanstack/react-query";
 import { toast } from "sonner";
 
+//TODO: Type this hook and check the other hooks
 
 export function useEducation() {
 

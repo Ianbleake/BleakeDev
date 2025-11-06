@@ -34,8 +34,8 @@ export default function Degrees(): React.ReactElement {
           </div>
         </div>
 
-        <Button className="text-lg font-normal cursor-pointer" onClick={()=>router.push("/admin/education/add/degree")}>
-          Add education
+          <Button className="text-lg font-normal cursor-pointer" onClick={()=>router.push("/admin/education/add/degree")}>
+            Add education
           <IoSchoolSharp />
         </Button>
       </div>

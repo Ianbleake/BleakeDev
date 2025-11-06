@@ -34,8 +34,8 @@ export default function Certifications(): React.ReactElement {
           
         </div>
 
-        <Button className="text-lg font-normal cursor-pointer" onClick={()=>router.push("/admin/education/add/certification")}>
-          Add Certification
+          <Button className="text-lg font-normal cursor-pointer" onClick={()=>router.push("/admin/education/add/certification")}>
+            Add Certification
           <PiMedalFill />
         </Button>
 
