@@ -1,16 +1,14 @@
 'use client'
 
 import React from "react";
-import Degrees from "./Degrees";
+import moment from "moment";
 import { useRouter } from "next/navigation";
 import { PiMedalFill } from "react-icons/pi";
-import Certifications from "./Certifications";
 import { PiCertificate } from "react-icons/pi";
+import GradesGrid from "./components/GradesGrid";
+import { periodToString } from "@/utils/periodToString";
 import { useEducation } from "@/hooks/education/useEducation";
 import { IoSchoolOutline, IoSchoolSharp } from "react-icons/io5";
-import moment from "moment";
-import { periodToString } from "@/utils/periodToString";
-import GradesGrid from "./components/GradesGrid";
 
 export default function EducationPage(): React.ReactElement {
 
@@ -21,6 +19,7 @@ export default function EducationPage(): React.ReactElement {
   const formattedDegreess = degrees?.map((degree) => {
     return(
       {
+        id: degree.id,
         icon: IoSchoolSharp,
         name: degree.degree,
         institution: degree.institution,
@@ -32,6 +31,7 @@ export default function EducationPage(): React.ReactElement {
   const formattedCertifications = certifications?.map((certification) => {
     return(
       {
+        id: certification.id,
         icon: PiMedalFill,
         name: certification.title,
         institution: certification.issuer,
@@ -70,10 +70,6 @@ export default function EducationPage(): React.ReactElement {
       <GradesGrid gradesData={degreesData} />
 
       <GradesGrid gradesData={certificationsData} />
-
-      <Degrees/>
-
-      <Certifications/>
 
     </div>
   );
