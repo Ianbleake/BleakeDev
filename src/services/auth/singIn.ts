@@ -17,7 +17,7 @@ export async function signIn(email: string, password: string): Promise<singInRes
 
     const { data, error } = await supabaseBrowser.auth.signInWithPassword({ email, password, });
 
-    if (error) handleError(error,"signIn");
+    if (error) throw error;
 
     if(data){
       profile = await fetchUserProfile(data.user.id) as UserProfile;

@@ -20,8 +20,6 @@ export default function ProfileManager(): React.ReactElement {
   
   const { isMobile } = useSidebar();
 
-  //TODO: componetize and use useRouter on menu
-
   return (
     <SidebarMenu >
       <SidebarMenuItem className="cursor-pointer">

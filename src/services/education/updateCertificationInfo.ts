@@ -12,8 +12,7 @@ export async function updateCertificationInfo(UpdatedCertificationInfo:Certifica
       .eq('id', UpdatedCertificationInfo.id)
       .select()
       .single()
-    
-    // TODO: Add this throw error on every service to handle the errors properly
+  
     if (error) throw error;
 
     return UpdatedCertification as CertificationInfo

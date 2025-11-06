@@ -1,9 +1,9 @@
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import React from "react";
 import GradeEdit from "../GradeEdit";
 import { HiOutlineMenu } from "react-icons/hi";
 import { twTheme } from "@/utils/ThemeColors";
-import { Info, Trash } from "lucide-react";
+import { Info } from "lucide-react";
 import useDeleteGrade from "@/hooks/education/useDeleteGrade";
 import RemoveGrade from "./components/removeGrade";
 

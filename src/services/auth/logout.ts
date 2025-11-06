@@ -7,9 +7,8 @@ export async function logout(): Promise<boolean> {
     const clearAuth = useAuthStore.getState().clearAuth;
 
     const { error } = await supabaseBrowser.auth.signOut();
-    if (error) {
-      handleError(error, "logout"); 
-    }
+
+    if (error) throw error; 
 
     clearAuth(); 
     return true;

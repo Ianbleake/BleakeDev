@@ -10,10 +10,7 @@ export async function fetchUserProfile(userId: string): Promise<UserProfile | nu
       .eq("user_id", userId)
       .maybeSingle();
 
-    if (error) {
-      handleError(error,"fetchUserProfile");
-      return null;
-    }
+    if(error) throw error;
 
     if (!data) {
       handleError({message: "No profile finded"},"fetchUserProfile");

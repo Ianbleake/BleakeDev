@@ -4,9 +4,11 @@ import { handleError } from "@/utils/errorHandler";
 
 export async function getCertifications() {
   try{
-    const { data } = await supabaseBrowser
+    const { data, error } = await supabaseBrowser
       .from("certifications")
       .select("*");
+
+    if(error) throw error;
 
     return data;
 

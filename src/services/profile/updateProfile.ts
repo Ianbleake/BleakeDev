@@ -18,7 +18,7 @@ export async function updateProfile(updates: Partial<Omit<UserProfile, 'id' | 'c
       .select()
       .single();
 
-    if (error) handleError(error,"updateProfile");
+    if(error) throw error;
 
     setProfile(data);
     return data;

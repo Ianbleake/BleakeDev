@@ -11,7 +11,8 @@ export async function initializeAuth() {
     setIsLoading(true);
 
     const { data: { session }, error } = await supabaseBrowser.auth.getSession();
-    if (error) handleError(error, "initializeAuth");
+
+    if (error) throw error;
 
     if (!session) {
       setAuth(null, null, null);
