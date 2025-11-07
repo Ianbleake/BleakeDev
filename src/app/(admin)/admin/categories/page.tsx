@@ -1,14 +1,14 @@
 import PageCard from "@/components/admin/PageCard";
+import { Copy } from "lucide-react";
 import React from "react";
-import { BiCategory } from "react-icons/bi";
+
 
 export default function CategoriesPage(): React.ReactElement {
 
   const categoriesData = {
-    icon: BiCategory,
+    icon: Copy,
     title: "Categories",
     description: "Here can you handle the projects categories.",
-    
   }
 
   return (
