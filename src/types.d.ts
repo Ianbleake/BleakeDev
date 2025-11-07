@@ -66,6 +66,7 @@ type SupabaseAuthError = {
 type UserProfile = {
   id: string;
   color: string;
+  name: string;
   first_name: string;
   last_name: string;
   username: string;
@@ -73,6 +74,7 @@ type UserProfile = {
   avatarurl: string | null;
   created_at: string | null;
   initials: string | null;
+  banner: string | null;
 }
 
 type Period = { from: Date; to: Date };
