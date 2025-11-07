@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.28.0](https://github.com/Ianbleake/BleakeDev/compare/v2.27.2...v2.28.0) (2025-11-07)
+
+
+### Features
+
+* add pageCard component ([21b779e](https://github.com/Ianbleake/BleakeDev/commit/21b779e3374667a3641d8a97597ffcd61c02cdfb))
+* add pages main content ([112ee1a](https://github.com/Ianbleake/BleakeDev/commit/112ee1a165e355e2341dee52f60d95ea7b1edd65))
+
 ## [2.27.2](https://github.com/Ianbleake/BleakeDev/compare/v2.27.1...v2.27.2) (2025-11-07)
 
 
