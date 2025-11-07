@@ -6,6 +6,7 @@ import { twTheme } from "@/utils/ThemeColors";
 import { Info } from "lucide-react";
 import useDeleteGrade from "@/hooks/education/useDeleteGrade";
 import RemoveGrade from "./components/removeGrade";
+import { useGradeStorage } from "@/storage/Admin/gradeStorage";
 
 type GradeActionsProps = {
   grade: GradeData;
@@ -16,11 +17,22 @@ export default function GradeActions({
 
   const { mutate } = useDeleteGrade();
 
+  const { achievements } = useGradeStorage();
+
+  const achievementsIds = achievements.map((achievement)=>{
+    return(
+      {
+        id: achievement.id
+      }
+    )
+  })
+
   const handleDelete = () => {
 
     const deleteGradeData = {
       gradeId: grade.id,
       type: grade.type,
+      achievements: achievementsIds,
     }
 
     mutate(deleteGradeData)

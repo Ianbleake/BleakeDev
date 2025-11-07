@@ -11,6 +11,7 @@ type RemoveGradeProps = {
 export default function RemoveGrade({
   action,
 }: RemoveGradeProps ): React.ReactElement {
+
   return (
 
     <AlertDialog>
