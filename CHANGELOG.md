@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.27.2](https://github.com/Ianbleake/BleakeDev/compare/v2.27.1...v2.27.2) (2025-11-07)
+
+
+### Bug Fixes
+
+* grade action delete hover button ([b54f79d](https://github.com/Ianbleake/BleakeDev/commit/b54f79d614558525f1da6ac8c5c43f106ad1c009))
+* when delete an grade delete his achievement to ([06470b7](https://github.com/Ianbleake/BleakeDev/commit/06470b7917aa5cd631f3af39a1bb7e5deaf03f4b))
+
 ## [2.27.1](https://github.com/Ianbleake/BleakeDev/compare/v2.27.0...v2.27.1) (2025-11-06)
 
 
