@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuth } from "@/hooks/auth/useAuth";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { twTheme } from "@/utils/ThemeColors";
 
 export default function EditProfileAvatar(): React.ReactElement {
 
@@ -14,15 +15,28 @@ export default function EditProfileAvatar(): React.ReactElement {
   const { register, handleSubmit, formState:{ errors, isSubmitting }} = useForm();
 
   const [ open, setOpen ] = useState(false);
-  const [ avatar, setAvatar ] = useState(profile?.avatarurl)
+  const [ avatar, setAvatar ] = useState(profile?.avatarurl);
+  const [ color, setColor ] = useState(profile?.color);
 
   const handleClose = () => {
     setOpen(false);
-    setAvatar(profile?.avatarurl)
+    setAvatar(profile?.avatarurl);
+    setColor(profile?.color);
+  }
+
+  const onSubmit = () => {
+
+    const avatarData = {
+      avatar: avatar,
+      color: color,
+    }
+
+    console.log("FormData",avatarData);
+    
   }
 
   return (
-    <div className="absolute right-0 bottom-0 ">
+    <form className="absolute right-0 bottom-0" onSubmit={handleSubmit(onSubmit)}>
       <Dialog open={open} onOpenChange={handleClose}>
 
         
@@ -55,7 +69,7 @@ export default function EditProfileAvatar(): React.ReactElement {
                   <div className="flex items-center justify-center w-1/2">
                     <Avatar className="h-40 w-40 border-4 border-white shadow-md rounded-full">
                       <AvatarImage src={avatar || undefined } />
-                      <AvatarFallback style={{ backgroundColor: profile?.color || "#d1fae5" }} >{profile?.initials}</AvatarFallback>
+                      <AvatarFallback className="text-5xl font-medium text-white" style={{ backgroundColor: profile?.color || "#d1fae5" }} >{profile?.initials}</AvatarFallback>
                     </Avatar>
                   </div>
 
@@ -78,7 +92,6 @@ export default function EditProfileAvatar(): React.ReactElement {
                       
                       <div className="text-sm text-gray-500 group-hover:text-gray-700 flex flex-col items-center">
                         <LuImageUp className="h-10 w-10 mb-1" />
-  
                       </div>
         
                     </label>
@@ -87,9 +100,47 @@ export default function EditProfileAvatar(): React.ReactElement {
                 </div>
               </TabsContent>
 
-              <TabsContent value="color">
+              <TabsContent value="color" className="border border-gray-200 shadow-md rounded-md px-4 py-6 bg-gray-50" >
+                <div className="flex flex-row gap-2">
 
+                  <div className="flex items-center justify-center w-1/2">
+                    <Avatar className="h-40 w-40 border-4 border-white shadow-md rounded-full">
+                      <AvatarFallback className="text-5xl font-medium text-white" style={{ backgroundColor: color }}>
+                        {profile?.initials}
+                      </AvatarFallback>
+                    </Avatar>
+                  </div>
+                  
+                  <div className="flex items-center justify-center w-1/2 relative">
+                    <div className="grid grid-cols-4 gap-2 max-h-64 overflow-y-auto p-1">
+                      {Object.entries(twTheme.colors)
+                        .filter(([name]) =>
+                          typeof twTheme.colors[name as keyof typeof twTheme.colors] === "object"
+                        )
+                        .map(([name, shades]) => {
+                          const base =
+                            (shades as Record<string, string>)[
+                              "500"
+                            ] || (shades as Record<string, string>)[Object.keys(shades)[5]];
+                          return (
+                            <button
+                              key={name}
+                              type="button"
+                              className={`h-8 w-8 rounded-full border-2 transition 
+                                ${avatar === base ? "border-black scale-110" : "border-transparent hover:scale-105"}
+                              `}
+                              style={{ backgroundColor: base }}
+                              onClick={() => setColor(base)}
+                            />
+                          );
+                      })}
+                    </div>
+                  </div>
+
+
+                </div>
               </TabsContent>
+
 
             </Tabs>
           </div>
@@ -100,7 +151,7 @@ export default function EditProfileAvatar(): React.ReactElement {
               Cancel
             </Button>
 
-            <Button type="submit">
+            <Button type="submit" disabled={isSubmitting}>
               Update
             </Button>
 
@@ -109,6 +160,6 @@ export default function EditProfileAvatar(): React.ReactElement {
         </DialogContent>
 
       </Dialog>
-    </div>
+    </form>
   );
 }

@@ -14,7 +14,7 @@ export default function ProfileAvatar(): React.ReactElement {
 
         <Avatar className="h-30 w-30 border-4 border-white shadow-md rounded-full">
           <AvatarImage src={ profile?.avatarurl || undefined } />
-          <AvatarFallback className="text-5xl font-medium" style={{ backgroundColor: profile?.color }}>
+          <AvatarFallback className="text-5xl font-medium text-white" style={{ backgroundColor: profile?.color }}>
             {profile?.initials}
           </AvatarFallback>
         </Avatar>
