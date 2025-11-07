@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Card } from "@/components/ui/card";
-import AccountHeader from "@/components/admin/account/accountHeader";
+import AccountHeader from "@/components/admin/account/AccountHeader";
 
 export default function AccountPage(): React.ReactElement {
 
