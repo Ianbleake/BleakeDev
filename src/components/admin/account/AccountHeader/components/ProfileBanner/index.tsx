@@ -1,7 +1,7 @@
 import { useAuth } from "@/hooks/auth/useAuth";
 import React from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import EditProfileBanner from "./components/editProfileBanner";
 
 export default function ProfileBanner(): React.ReactElement {
 
@@ -23,9 +23,7 @@ export default function ProfileBanner(): React.ReactElement {
         ) : <></>
       }
 
-      <Button className="absolute right-4 bottom-4" size={"sm"} variant={"outline"}>
-        Edit Banner
-      </Button>
+      <EditProfileBanner/>
 
     </div>
   );

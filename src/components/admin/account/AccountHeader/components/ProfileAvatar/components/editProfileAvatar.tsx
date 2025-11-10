@@ -91,14 +91,14 @@ export default function EditProfileAvatar(): React.ReactElement {
                           validate: {
                             validType: (files) => {
                               const file = files?.[0];
-                              if (!file) return true; // opcional
+                              if (!file) return true; 
                               const validTypes = ["image/png", "image/jpeg", "image/jpg"];
                               return validTypes.includes(file.type) || "Solo se permiten imágenes PNG o JPG";
                             },
                             validSize: (files) => {
                               const file = files?.[0];
                               if (!file) return true;
-                              const maxSize = 3 * 1024 * 1024; // 3MB
+                              const maxSize = 3 * 1024 * 1024;
                               return file.size <= maxSize || "La imagen no debe superar los 3MB";
                             },
                           },
