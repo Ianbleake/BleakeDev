@@ -3,11 +3,20 @@ import { Separator } from "@/components/ui/separator";
 import { useAuth } from "@/hooks/auth/useAuth";
 import { twTheme } from "@/utils/ThemeColors";
 import { Dot } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
+import EditProfileInfo from "./components/editProfileInfo";
 
 export default function ProfileInfo(): React.ReactElement {
 
   const { profile } = useAuth();
+
+  const [ isEditing, setEdititing ] = useState(false);
+
+  if(isEditing){
+    return(
+      <EditProfileInfo setEdit={setEdititing} />
+    )
+  }
   
   return (
     <div className="pt-16 pb-6 px-6 bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800">
@@ -37,7 +46,7 @@ export default function ProfileInfo(): React.ReactElement {
 
         </div>
 
-        <Button className="mt-4 sm:mt-0" variant="outline">
+        <Button className="mt-4 sm:mt-0" variant="outline" onClick={()=>setEdititing(true)}>
           Edit Profile
         </Button>
         

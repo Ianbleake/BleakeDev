@@ -12,6 +12,8 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import { LuImageUp } from "react-icons/lu";
+import { RiArrowGoBackFill } from "react-icons/ri";
+import { RxUpdate } from "react-icons/rx";
 
 type FormValues = {
   banner: FileList;
@@ -95,7 +97,7 @@ export default function EditProfileBanner(): React.ReactElement {
                       validSize: (files) => {
                         const file = files?.[0];
                         if (!file) return true;
-                        const maxSize = 5 * 1024 * 1024; // 5MB
+                        const maxSize = 5 * 1024 * 1024;
                         return file.size <= maxSize || "La imagen no debe superar los 5 MB";
                       },
                     },
@@ -125,11 +127,14 @@ export default function EditProfileBanner(): React.ReactElement {
 
           <DialogFooter>
             <Button type="button" variant="outline" onClick={handleClose}>
+              <RiArrowGoBackFill />
               Cancel
             </Button>
             <Button type="submit" disabled={isSubmitting}>
+              <RxUpdate />
               Update
             </Button>
+            
           </DialogFooter>
         </DialogContent>
       </Dialog>

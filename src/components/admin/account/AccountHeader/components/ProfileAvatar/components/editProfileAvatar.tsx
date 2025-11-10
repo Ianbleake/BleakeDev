@@ -8,6 +8,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuth } from "@/hooks/auth/useAuth";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { twTheme } from "@/utils/ThemeColors";
+import { RiArrowGoBackFill } from "react-icons/ri";
+import { RxUpdate } from "react-icons/rx";
 
 type FormValues = {
   avatar: FileList;
@@ -174,10 +176,12 @@ export default function EditProfileAvatar(): React.ReactElement {
           <DialogFooter>
 
             <Button type="button" variant={"outline"} onClick={handleClose}>
+              <RiArrowGoBackFill />
               Cancel
             </Button>
 
             <Button type="submit" disabled={isSubmitting}>
+              <RxUpdate />
               Update
             </Button>
 

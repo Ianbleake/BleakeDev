@@ -275,7 +275,7 @@ export default function GradeEditForm({
           
           <Button type="submit" disabled={isSubmitting || isPending } className="shadow-gray-500 shadow-sm cursor-pointer">
             <RxUpdate />
-            { isSubmitting ? "Saving..." : "Uptdate"}
+            { isSubmitting ? "Saving..." : "Update"}
           </Button>
         </div>
 

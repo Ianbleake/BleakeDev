@@ -61,7 +61,7 @@ export default function EditAchievementForm({
 
         <Button type="button" onClick={handleSubmit(onSubmit)} disabled={isSubmitting} className="shadow-gray-500 shadow-sm cursor-pointer">
           <RxUpdate />
-          { isSubmitting ? "Saving..." : "Uptdate"}
+          { isSubmitting ? "Saving..." : "Update"}
         </Button>
 
       </div>
