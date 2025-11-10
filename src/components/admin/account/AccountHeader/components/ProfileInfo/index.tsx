@@ -10,6 +10,7 @@ export default function ProfileInfo(): React.ReactElement {
 
   const { profile } = useAuth();
 
+
   const [ isEditing, setEdititing ] = useState(false);
 
   if(isEditing){

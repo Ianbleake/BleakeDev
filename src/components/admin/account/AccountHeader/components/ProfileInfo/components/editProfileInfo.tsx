@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { useAuth } from "@/hooks/auth/useAuth";
+import { useAuthStore } from "@/storage/Admin/authStore";
 import { twTheme } from "@/utils/ThemeColors";
 import { Dot } from "lucide-react";
 import React from "react";
@@ -26,6 +27,7 @@ export default function EditProfileInfo({
 }:EditProfileInfoProps): React.ReactElement {
 
   const { profile } = useAuth();
+  const { setProfile } = useAuthStore()
 
   const { register, handleSubmit, formState: { isSubmitting } } = useForm<ProfileInputsData>({
     defaultValues: {
@@ -37,7 +39,18 @@ export default function EditProfileInfo({
   });
 
   const onSubmit = (data: ProfileInputsData) => {
-    console.log("profile data:",data);
+
+    const updatedData = {
+      ...profile,
+      first_name: data.firstName,
+      last_name: data.lastName,
+      username: data.username,
+      email: data.email,
+      name: `${data.firstName} ${data.lastName}`
+    }
+
+    setProfile(updatedData as UserProfile );
+    setEdit(false);
   }
 
   const onError = (errors: FieldErrors<ProfileInputsData>) => {
