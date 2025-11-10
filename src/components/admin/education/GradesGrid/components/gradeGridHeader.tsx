@@ -23,9 +23,9 @@ export default function GradeGridHeader({
         </div>
 
         <div className="flex flex-col gap-2">
-          <h2 className="text-gray-900 font-semibold text-xl">Education </h2> 
+          <h2 className="text-gray-900 font-semibold text-xl">{ headerInfo.title } </h2> 
           <p className="text-gray-400 text-sm font-normal"> 
-            Here is the education mayors what is showed on the front-page
+            { headerInfo.description }
           </p>
         </div>
       </div>
