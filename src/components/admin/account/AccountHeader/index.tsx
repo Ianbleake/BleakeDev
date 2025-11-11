@@ -3,6 +3,7 @@ import ProfileBanner from "./components/ProfileBanner";
 import ProfileAvatar from "./components/ProfileAvatar";
 import ProfileInfo from "./components/ProfileInfo";
 import { useAuth } from "@/hooks/auth/useAuth";
+import NoData from "../../NoData";
 
 export default function AccountHeader(): React.ReactElement {
 
@@ -10,7 +11,7 @@ export default function AccountHeader(): React.ReactElement {
 
   if(!profile){
     return(
-      <></>
+      <NoData/>
     )
   }
   
