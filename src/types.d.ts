@@ -162,3 +162,10 @@ type Grade = Record<Degree | Certification>;
 //   date?: string;
 //   credential?: string;
 // }
+
+type AvatarData = {
+  id: string;
+  avatar: string | null;   
+  newAvatar: string | File | null;
+  color?: string | null;
+}

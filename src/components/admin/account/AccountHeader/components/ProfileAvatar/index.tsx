@@ -7,6 +7,8 @@ import EditProfileAvatar from "./components/editProfileAvatar";
 export default function ProfileAvatar(): React.ReactElement {
 
   const { profile } = useAuth();
+
+  console.log("urlAvatar",profile?.avatarurl);
   
   return (
     <div className="absolute left-4 md:left-8 bottom-2/5 md:bottom-1/3">
