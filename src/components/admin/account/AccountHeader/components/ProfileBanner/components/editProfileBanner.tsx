@@ -20,7 +20,9 @@ type FormValues = {
 };
 
 export default function EditProfileBanner(): React.ReactElement {
+
   const { profile } = useAuth();
+  
   const {
     register,
     handleSubmit,

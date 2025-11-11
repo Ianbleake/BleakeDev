@@ -19,7 +19,6 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs";
-import { useAuth } from "@/hooks/auth/useAuth";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { twTheme } from "@/utils/ThemeColors";
 import useUpdateAvatar from "@/hooks/profile/useUpdateAvatar";
@@ -28,22 +27,28 @@ type FormValues = {
   avatar: FileList;
 };
 
-export default function EditProfileAvatar(): React.ReactElement {
-  const { profile } = useAuth();
+type EditProfileAvatarProps = {
+  profile: UserProfile;
+}
+
+export default function EditProfileAvatar({
+  profile,
+}:EditProfileAvatarProps ): React.ReactElement {
+
   const { register, handleSubmit, formState, reset } = useForm<FormValues>();
   const { errors, isSubmitting } = formState;
 
   const { mutate, isPending } = useUpdateAvatar();
 
   const [open, setOpen] = useState(false);
-  const [avatar, setAvatar] = useState(profile?.avatarurl ?? "");
+  const [avatar, setAvatar] = useState(profile?.avatarurl);
   const [color, setColor] = useState(profile?.color);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   const handleDialogChange = (value: boolean) => {
     setOpen(value);
     if (!value) {
-      setAvatar(profile?.avatarurl ?? "");
+      setAvatar(profile?.avatarurl);
       setColor(profile?.color);
       setSelectedFile(null);
       reset();
