@@ -65,16 +65,16 @@ type SupabaseAuthError = {
 
 type UserProfile = {
   id: string;
-  color: string;
-  name: string;
   first_name: string;
   last_name: string;
   username: string;
   email: string | null;
   avatarurl: string | null;
   created_at: string | null;
-  initials: string | null;
+  color: string;
   banner: string | null;
+  name: string;
+  initials: string | null;
 }
 
 type Period = { from: Date; to: Date };

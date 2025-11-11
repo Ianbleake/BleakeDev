@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { useAuth } from "@/hooks/auth/useAuth";
-import { useAuthStore } from "@/storage/Admin/authStore";
+import useUpdateProfileInfo from "@/hooks/profile/useUpdateProfileInfo";
 import { twTheme } from "@/utils/ThemeColors";
 import { Dot } from "lucide-react";
 import React from "react";
@@ -27,7 +27,7 @@ export default function EditProfileInfo({
 }:EditProfileInfoProps): React.ReactElement {
 
   const { profile } = useAuth();
-  const { setProfile } = useAuthStore()
+  const { mutate, isPending } = useUpdateProfileInfo();
 
   const { register, handleSubmit, formState: { isSubmitting } } = useForm<ProfileInputsData>({
     defaultValues: {
@@ -39,7 +39,6 @@ export default function EditProfileInfo({
   });
 
   const onSubmit = (data: ProfileInputsData) => {
-
     const updatedData = {
       ...profile,
       first_name: data.firstName,
@@ -49,7 +48,7 @@ export default function EditProfileInfo({
       name: `${data.firstName} ${data.lastName}`
     }
 
-    setProfile(updatedData as UserProfile );
+    mutate(updatedData as UserProfile);
     setEdit(false);
   }
 
@@ -126,12 +125,12 @@ export default function EditProfileInfo({
 
         <div className="flex flex-col gap-2">
 
-          <Button type="button" className="mt-4 sm:mt-0" variant="outline" onClick={()=>setEdit(false)} disabled={isSubmitting}>
+          <Button type="button" className="mt-4 sm:mt-0" variant="outline" onClick={()=>setEdit(false)} disabled={isSubmitting || isPending}>
             <RiArrowGoBackFill />
             Cancel
           </Button>
 
-          <Button type="submit" className="mt-4 sm:mt-0" disabled={isSubmitting} >
+          <Button type="submit" className="mt-4 sm:mt-0" disabled={isSubmitting || isPending} >
             <FiSave />
             Save
           </Button>
