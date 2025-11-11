@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.29.1](https://github.com/Ianbleake/BleakeDev/compare/v2.29.0...v2.29.1) (2025-11-11)
+
+
+### Bug Fixes
+
+* provide profile to avatar component to props ([b15ff6c](https://github.com/Ianbleake/BleakeDev/commit/b15ff6c0ae80b216b7e9abb0a10a12f0f688673d))
+
 ## [2.29.0](https://github.com/Ianbleake/BleakeDev/compare/v2.28.0...v2.29.0) (2025-11-10)
 
 
