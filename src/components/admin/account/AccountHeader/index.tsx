@@ -18,7 +18,7 @@ export default function AccountHeader(): React.ReactElement {
   return (
     <div className="relative flex flex-col w-full rounded-2xl overflow-hidden shadow-sm border-b border-gray-200">
           
-      <ProfileBanner/>
+      <ProfileBanner profile={profile}/>
 
       <ProfileAvatar profile={profile} />
 

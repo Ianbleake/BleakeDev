@@ -1,11 +1,14 @@
-import { useAuth } from "@/hooks/auth/useAuth";
 import React from "react";
 import Image from "next/image";
 import EditProfileBanner from "./components/editProfileBanner";
 
-export default function ProfileBanner(): React.ReactElement {
+type ProfileBannerProps = {
+  profile: UserProfile;
+}
 
-  const { profile } = useAuth();
+export default function ProfileBanner({
+  profile,
+}:ProfileBannerProps ): React.ReactElement {
   
   return (
     <div className="relative h-40 w-full bg-gradient-to-r from-emerald-300 to-emerald-500">
@@ -23,7 +26,7 @@ export default function ProfileBanner(): React.ReactElement {
         ) : <></>
       }
 
-      <EditProfileBanner/>
+      <EditProfileBanner profile={profile}/>
 
     </div>
   );

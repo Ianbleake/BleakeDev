@@ -7,7 +7,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { useAuth } from "@/hooks/auth/useAuth";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
@@ -19,9 +18,13 @@ type FormValues = {
   banner: FileList;
 };
 
-export default function EditProfileBanner(): React.ReactElement {
+type EditProfileBannerProps = {
+  profile: UserProfile;
+}
 
-  const { profile } = useAuth();
+export default function EditProfileBanner({
+  profile,
+}:EditProfileBannerProps ): React.ReactElement {
   
   const {
     register,
