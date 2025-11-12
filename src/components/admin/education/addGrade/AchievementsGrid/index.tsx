@@ -1,4 +1,4 @@
-import Empty from "@/components/admin/empty";
+import Empty from "@/components/admin/ui/empty";
 import React from "react";
 import { GoTrophy } from "react-icons/go";
 import AchievementCardMenu from "./components/AchievementCardMenu";

@@ -1,4 +1,4 @@
-import PageCard from "@/components/admin/PageCard";
+import PageCard from "@/components/admin/ui/PageCard";
 import { BriefcaseBusiness } from "lucide-react";
 import React from "react";
 

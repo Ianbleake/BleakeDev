@@ -1,6 +1,6 @@
 'use client';
 
-import PageCard from "@/components/admin/PageCard";
+import PageCard from "@/components/admin/ui/PageCard";
 import { AppWindow } from "lucide-react";
 import React from "react";
 

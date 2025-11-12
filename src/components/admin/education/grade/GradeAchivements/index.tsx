@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import AchievementHeader from "./AchivementHeader";
 import { useGradeStorage } from "@/storage/Admin/gradeStorage";
 import AchievementCard from "./AchievementCard";
-import Empty from "@/components/admin/empty";
+import Empty from "@/components/admin/ui/empty";
 import { GoTrophy } from "react-icons/go";
 
 export default function GradeAchivements(): React.ReactElement {

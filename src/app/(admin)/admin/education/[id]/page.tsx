@@ -3,7 +3,7 @@
 import React from "react";
 import GradeHeader from "../../../../../components/admin/education/grade/GradeHeader";
 import { useParams } from "next/navigation";
-import NoData from "@/components/admin/NoData";
+import NoData from "@/components/admin/ui/NoData";
 import { PiCertificate } from "react-icons/pi";
 import { IoSchoolOutline } from "react-icons/io5";
 import GradeAchivements from "../../../../../components/admin/education/grade/GradeAchivements";

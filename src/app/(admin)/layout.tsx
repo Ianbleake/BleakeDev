@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { AppToaster } from "@/components/admin/appToaster";
+import { AppToaster } from "@/components/admin/ui/appToaster";
 import { usePathname } from "next/navigation";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import Dashbar from "@/components/admin/Dashbar";
