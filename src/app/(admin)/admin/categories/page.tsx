@@ -1,3 +1,5 @@
+'use client'
+
 import CategoriesGrid from "@/components/admin/categories/CategoriesGrid";
 import EditCategory from "@/components/admin/categories/EditCategory";
 import PageCard from "@/components/admin/ui/PageCard";
