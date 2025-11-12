@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.29.4](https://github.com/Ianbleake/BleakeDev/compare/v2.29.3...v2.29.4) (2025-11-12)
+
+
+### Bug Fixes
+
+* page card action ([ce02467](https://github.com/Ianbleake/BleakeDev/commit/ce0246753bbbb129d208e5f814a138dc6fd54872))
+* sidebar avatar fallback color ([1b41b15](https://github.com/Ianbleake/BleakeDev/commit/1b41b1541c0b70e09a1830d8b0a27d8cd3e4fc87))
+
 ## [2.29.3](https://github.com/Ianbleake/BleakeDev/compare/v2.29.2...v2.29.3) (2025-11-12)
 
 
