@@ -1,7 +1,7 @@
 import { supabaseBrowser } from "@/supabase/client";
 import { handleError } from "@/utils/errorHandler";
 
-export default async function updateBanner (bannerData: BannerData): Promise<string | undefined> {
+export default async function updateBanner (bannerData: BannerData): Promise<string> {
 
   const { id, banner, newBanner } = bannerData;
 
@@ -9,11 +9,11 @@ export default async function updateBanner (bannerData: BannerData): Promise<str
     
     if(!id) throw new Error("ID profile is missing.");
 
-   
+    
+    let publicUrl: string | null = "";
 
     if(newBanner instanceof File){
 
-      let publicUrl: string | null = null;
 
       const fileExt = newBanner.name.split(".").pop();
       const filePath = `${id}/${Date.now()}.${fileExt}`;
@@ -49,9 +49,9 @@ export default async function updateBanner (bannerData: BannerData): Promise<str
     
       if (updateError) throw new Error(updateError.message);
 
-      return publicUrl;
-
     }
+
+    return publicUrl;
 
   }catch(error){
     handleError(error,"updateBanner")
