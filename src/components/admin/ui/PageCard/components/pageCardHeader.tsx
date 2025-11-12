@@ -32,13 +32,15 @@ export default function PageCardHeader({
         </div>
       </div>
 
-      {typeof headerData.action === "function" ? (
-        <Button className="text-lg font-normal cursor-pointer" onClick={headerData.action}>
-          Add education
-          <ActionIcon />
-        </Button>
-      ) : (
-        headerData.action
+      {headerData.action && (
+        typeof headerData.action === "function" ? (
+          <Button className="text-lg font-normal cursor-pointer" onClick={headerData.action}>
+            Add education
+            {ActionIcon && <ActionIcon />}
+          </Button>
+        ) : (
+          headerData.action
+        )
       )}
 
     </div>
