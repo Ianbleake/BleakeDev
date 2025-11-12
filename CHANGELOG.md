@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.29.2](https://github.com/Ianbleake/BleakeDev/compare/v2.29.1...v2.29.2) (2025-11-11)
+
+
+### Bug Fixes
+
+* define no profile ui ([186421f](https://github.com/Ianbleake/BleakeDev/commit/186421f66953e91f0e495a8d824cd0f19fb20d89))
+* pasar perfil como prop a los componentes de banner y avatar ([dfe2956](https://github.com/Ianbleake/BleakeDev/commit/dfe29567fa96eed61053c6ef297953ef54717c4f))
+
 ## [2.29.1](https://github.com/Ianbleake/BleakeDev/compare/v2.29.0...v2.29.1) (2025-11-11)
 
 
