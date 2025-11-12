@@ -175,3 +175,10 @@ type BannerData = {
   banner: string | null;
   newBanner: string | File | null;
 }
+
+type Category = {
+  id: string;
+  name: string;
+  color: string | null;
+  iconurl: string | null;
+}
