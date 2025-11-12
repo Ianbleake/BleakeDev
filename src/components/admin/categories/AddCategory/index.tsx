@@ -5,7 +5,7 @@ import { Copy } from "lucide-react";
 import EditCategoryHeader from "./components/editCategoryHeader";
 import EditCategoryForm from "./components/editCategoryForm";
 
-export default function EditCategory(): React.ReactElement {
+export default function AddCategory(): React.ReactElement {
 
   const [ open, setOpen ] = useState(false);
 

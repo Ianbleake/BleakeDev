@@ -8,7 +8,7 @@ export default function CategoryCard({
   category,
 }:CategoryCardProps ): React.ReactElement {
   return (
-    <div className="flex flex-row items-center gap-4 rounded-md border border-gray-200 shadow-md">
+    <div className="flex flex-row items-center gap-4 rounded-md border border-gray-200 shadow-md p-4">
 
       <div className="">
 
