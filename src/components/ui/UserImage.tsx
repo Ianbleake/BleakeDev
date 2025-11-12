@@ -1,7 +1,6 @@
 
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
-import { merge } from "@/utils/mergeStyles";
 import { useAuth } from "@/hooks/auth/useAuth";
 
 export default function UserImage(): React.ReactElement {
@@ -17,7 +16,7 @@ export default function UserImage(): React.ReactElement {
         alt={profile?.username || "user-profile"}
       />
 
-      <AvatarFallback className={merge(baseStyle,profile?.color || "")}>{ profile?.initials || "BD"}</AvatarFallback>
+      <AvatarFallback className={baseStyle} style={{ backgroundColor: profile?.color }}>{ profile?.initials || "BD"}</AvatarFallback>
 
     </Avatar>
   );
