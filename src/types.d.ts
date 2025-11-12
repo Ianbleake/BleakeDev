@@ -169,3 +169,9 @@ type AvatarData = {
   newAvatar: string | File | null;
   color?: string | null;
 }
+
+type BannerData = {
+  id: string;
+  banner: string | null;
+  newBanner: string | File | null;
+}

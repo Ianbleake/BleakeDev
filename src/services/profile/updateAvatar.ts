@@ -9,6 +9,7 @@ export default async function updateAvatar(avatarData: AvatarData) {
 
   // 🧩 Si hay un archivo nuevo, lo subimos
   if (newAvatar instanceof File) {
+    
     const fileExt = newAvatar.name.split(".").pop();
     const filePath = `${id}/${Date.now()}.${fileExt}`; // ✅ carpeta por usuario
 
