@@ -17,6 +17,7 @@ export default function PageCard({
       <PageCardHeader headerData={data}/>
 
       { children }
+      
     </Card>
   );
 }

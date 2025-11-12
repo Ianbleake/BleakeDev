@@ -2,6 +2,7 @@
 
 import AddCategory from "@/components/admin/categories/AddCategory";
 import CategoriesGrid from "@/components/admin/categories/CategoriesGrid";
+import NoData from "@/components/admin/ui/NoData";
 
 import PageCard from "@/components/admin/ui/PageCard";
 import PageCardSkeleton from "@/components/skeletons/pageCardSkeleton";
@@ -39,7 +40,7 @@ export default function CategoriesPage(): React.ReactElement {
   }
 
   if(hasNoData) {
-    return <></>;
+    return <NoData/>;
   }
 
   return (
