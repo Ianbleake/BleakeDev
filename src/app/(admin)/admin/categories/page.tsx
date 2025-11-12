@@ -33,7 +33,7 @@ export default function CategoriesPage(): React.ReactElement {
       <div className="flex flex-1 flex-col gap-6">
         <PageCardSkeleton>
           <div className="grid grid-cols-4 gap-4">
-            {Array.from({ length: 7 }).map((_, i) => (
+            {Array.from({ length: 4 }).map((_, i) => (
               <CategoryCardSkeleton key={i} />
             ))}
           </div>
