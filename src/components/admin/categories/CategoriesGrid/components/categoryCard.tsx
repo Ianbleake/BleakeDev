@@ -11,7 +11,7 @@ export default function CategoryCard({
   category,
 }: CategoryCardProps): React.ReactElement {
   return (
-    <div className="flex flex-row items-center gap-4 rounded-md border border-gray-200 shadow-sm p-2 hover:shadow-md transition-shadow">
+    <div className="flex flex-row items-center gap-4 rounded-md border border-gray-200 shadow-sm p-2 hover:shadow-md hover:bg-green-50 transition-shadow cursor-pointer">
       <div
         className="h-10 w-10 flex items-center justify-center rounded-md border border-gray-200 shadow-md bg-green-50"
       >

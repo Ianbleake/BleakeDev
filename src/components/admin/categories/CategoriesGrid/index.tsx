@@ -1,5 +1,5 @@
 import React from "react";
-import CategoryCard from "./components/categoryCard";
+import EditCategory from "./components/EditCategory";
 
 type CategoriesGridProps = {
   categories: Category[];
@@ -13,7 +13,7 @@ export default function CategoriesGrid({
       {
         categories.map((category)=>{
           return(
-            <CategoryCard category={category} key={category.id} />
+            <EditCategory category={category} key={category.id} />
           )
         })
       }

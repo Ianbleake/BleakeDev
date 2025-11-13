@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import React, { useState } from "react";
 import { Copy } from "lucide-react";
-import EditCategoryHeader from "./components/editCategoryHeader";
-import EditCategoryForm from "./components/editCategoryForm";
+import EditCategoryHeader from "./components/addCategoryHeader";
+import EditCategoryForm from "./components/addCategoryForm";
 
 export default function AddCategory(): React.ReactElement {
 
-  const [ open, setOpen ] = useState(false);
+  const [ open, setOpen ] = useState<boolean>(false);
 
   return (
     <Sheet open={open} onOpenChange={setOpen} >
@@ -20,7 +20,7 @@ export default function AddCategory(): React.ReactElement {
       <SheetContent>
         <EditCategoryHeader/>
 
-        <EditCategoryForm/>
+        <EditCategoryForm setClose={setOpen}/>
       </SheetContent>
     </Sheet>
   );

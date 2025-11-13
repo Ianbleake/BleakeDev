@@ -1,12 +1,12 @@
 import React from "react";
 import { SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 
-export default function EditCategoryHeader(): React.ReactElement {
+export default function AddCategoryHeader(): React.ReactElement {
   return (
     <SheetHeader>
             
       <SheetTitle>
-        Edit Category
+        Add Category
       </SheetTitle>
 
       <SheetDescription>
