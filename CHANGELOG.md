@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.30.1](https://github.com/Ianbleake/BleakeDev/compare/v2.30.0...v2.30.1) (2025-11-13)
+
+
+### Bug Fixes
+
+* add close sheet action on create category mutation success ([a3c282d](https://github.com/Ianbleake/BleakeDev/commit/a3c282d2864ee4b706e946b83ead67dd65c9cb36))
+
 ## [2.30.0](https://github.com/Ianbleake/BleakeDev/compare/v2.29.4...v2.30.0) (2025-11-13)
 
 
