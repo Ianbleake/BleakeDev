@@ -179,5 +179,4 @@ type BannerData = {
 type Category = {
   id: string;
   name: string;
-  iconurl?: string;
 }
