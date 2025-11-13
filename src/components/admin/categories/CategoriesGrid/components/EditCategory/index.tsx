@@ -1,6 +1,8 @@
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import React from "react";
-import CategoryCard from "../categoryCard";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import React, { useState } from "react";
+import EditCategoryTrigger from "./components/editCategoryTrigger";
+import EditCategoryHeader from "./components/editCategoryHeader";
+import EditCategoryForm from "./components/editCategoryForm";
 
 type EditCategoryProps = {
   category: Category;
@@ -9,26 +11,19 @@ type EditCategoryProps = {
 export default function EditCategory({
   category,
 }:EditCategoryProps): React.ReactElement {
-  return (
-    <Sheet>
 
-      <SheetTrigger>
-        <CategoryCard category={category}/>
-      </SheetTrigger>
+  const [ open, setOpen ] = useState(false);
+
+  return (
+    <Sheet open={open} onOpenChange={setOpen}>
+
+      <EditCategoryTrigger category={category} />
 
       <SheetContent>
-        <SheetHeader>
-          <SheetTitle>
-            Edit Category
-          </SheetTitle>
-          <SheetDescription>
-            Remember save your changes
-          </SheetDescription>
-        </SheetHeader>
 
-        <div className="px-4">
-          Edit Category
-        </div>
+        <EditCategoryHeader/>
+
+        <EditCategoryForm category={category} setClose={()=>setOpen(false)} />
 
       </SheetContent>
       
