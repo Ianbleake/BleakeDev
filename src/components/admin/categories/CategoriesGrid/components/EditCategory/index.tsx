@@ -1,4 +1,4 @@
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
 import React, { useState } from "react";
 import EditCategoryTrigger from "./components/editCategoryTrigger";
 import EditCategoryHeader from "./components/editCategoryHeader";

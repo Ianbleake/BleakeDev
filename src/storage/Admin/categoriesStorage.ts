@@ -5,7 +5,7 @@ type CategoriesState = {
   setCategories: (categories: Category[] | null) => void;
   addCategory: (category: Category) => void;
   removeCategory: (id: string) => void;
-  updateCategory: (id: string, updatedData: Partial<Category>) => void;
+  updateCategory: (updatedDate: Category) => void;
   clearCategories: () => void;
 };
 
@@ -27,11 +27,11 @@ export const useCategoriesStorage = create<CategoriesState>((set) => ({
         : null,
     })),
 
-  updateCategory: (id, updatedData) =>
+  updateCategory: (updatedData) =>
     set((state) => ({
       categories: state.categories
         ? state.categories.map((cat) =>
-            cat.id === id ? { ...cat, ...updatedData } : cat
+            cat.id === updatedData.id ? { ...cat, ...updatedData } : cat
           )
         : null,
     })),

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import useUpdateCategory from "@/hooks/categories/useUpdateCategory";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { RiArrowGoBackFill } from "react-icons/ri";
@@ -8,7 +9,7 @@ import { RxUpdate } from "react-icons/rx";
 
 type EditCategoryFormProps = {
   category: Category;
-  setClose?: ()=>void;
+  setClose: ()=>void;
 };
 
 type EditCategoryFormData = {
@@ -26,8 +27,20 @@ export default function EditCategoryForm({
     }
   });
 
+  const { mutate } = useUpdateCategory();
+
   const onSubmit = (data: EditCategoryFormData ) => {
 
+    const updatedData = {
+      ...category,
+      name: data.name,
+    };
+
+    mutate(updatedData as Category,{
+      onSuccess: () => {
+        setClose();
+      }
+    })
   }
 
   return (
@@ -58,7 +71,7 @@ export default function EditCategoryForm({
 
         <Button type="submit" disabled={isSubmitting}>
           <RxUpdate />
-          {isSubmitting ? "Adding..." : "Add Category"}
+          {isSubmitting ? "Adding..." : "Update Category"}
         </Button>
       </div>
     </form>
