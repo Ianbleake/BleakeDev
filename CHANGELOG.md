@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.31.0](https://github.com/Ianbleake/BleakeDev/compare/v2.30.1...v2.31.0) (2025-11-13)
+
+
+### Features
+
+* add edit category ui ([cf417f5](https://github.com/Ianbleake/BleakeDev/commit/cf417f586616b2f0d3cce79cdb68592f822ad8f0))
+
+
+### Bug Fixes
+
+* skeleton icon size ([579cc25](https://github.com/Ianbleake/BleakeDev/commit/579cc25d42c178bb39601262dd70f9d6c65c2b87))
+
 ## [2.30.1](https://github.com/Ianbleake/BleakeDev/compare/v2.30.0...v2.30.1) (2025-11-13)
 
 
