@@ -17,7 +17,7 @@ export default function PageCardSkeleton({
 
         <div className="flex flex-row items-center justify-start gap-6 flex-1">
 
-          <Skeleton className="border border-gray-200 rounded-md shadow-sm bg-green-50 h-16 w-16"/>
+          <Skeleton className="border border-gray-200 rounded-md shadow-sm bg-green-50 h-14 w-14"/>
 
           <div className="flex flex-col gap-2 flex-1">
             <Skeleton className="p-3 w-1/5"/>
