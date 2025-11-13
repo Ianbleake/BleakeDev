@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.30.0](https://github.com/Ianbleake/BleakeDev/compare/v2.29.4...v2.30.0) (2025-11-13)
+
+
+### Features
+
+* add categories page ui ([8c041e5](https://github.com/Ianbleake/BleakeDev/commit/8c041e5e8852f1056a733cac33def9fb01d4c668))
+
 ## [2.29.4](https://github.com/Ianbleake/BleakeDev/compare/v2.29.3...v2.29.4) (2025-11-12)
 
 
