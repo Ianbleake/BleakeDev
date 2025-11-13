@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.31.1](https://github.com/Ianbleake/BleakeDev/compare/v2.31.0...v2.31.1) (2025-11-13)
+
+
+### Bug Fixes
+
+* updateProfile service unused vars and categoryCard unused category property ([ffa97e4](https://github.com/Ianbleake/BleakeDev/commit/ffa97e42812c17f7358623ca69d879e72b6930ea))
+
 ## [2.31.0](https://github.com/Ianbleake/BleakeDev/compare/v2.30.1...v2.31.0) (2025-11-13)
 
 
