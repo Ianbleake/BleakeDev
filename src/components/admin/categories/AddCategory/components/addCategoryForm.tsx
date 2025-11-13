@@ -32,7 +32,11 @@ export default function AddCategoryForm({
   const { mutate } = useCreateCategory();
 
   const onSubmit = (data: addCategoryFormData) => {
-   mutate(data);
+   mutate(data,{
+      onSuccess: () => {
+        setClose(false);
+      }
+   });
   };
 
 
