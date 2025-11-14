@@ -4,6 +4,7 @@ import React from "react";
 import CategoryCard from "../categoryCard";
 import { Info } from "lucide-react";
 import EditCategory from "../EditCategory";
+import RemoveCategory from "./removeCategory";
 
 type CategoryActionsProps = {
   category: Category;
@@ -29,6 +30,8 @@ export default function CategoryActions({
         <DropdownMenuSeparator />
 
         <EditCategory category={category}/>
+
+        <RemoveCategory action={() => console.log('Remove category')} />
 
       </DropdownMenuContent>
 
