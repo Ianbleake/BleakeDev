@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.33.0](https://github.com/Ianbleake/BleakeDev/compare/v2.32.0...v2.33.0) (2025-11-14)
+
+
+### Features
+
+* add pageItem component ([433b09f](https://github.com/Ianbleake/BleakeDev/commit/433b09f7b6b81f1ce893ecb36704163805f65e79))
+
 ## [2.32.0](https://github.com/Ianbleake/BleakeDev/compare/v2.31.1...v2.32.0) (2025-11-14)
 
 
