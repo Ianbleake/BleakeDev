@@ -17,7 +17,7 @@ export default function EditCategory({
   return (
     <Sheet open={open} onOpenChange={setOpen}>
 
-      <EditCategoryTrigger category={category} />
+      <EditCategoryTrigger />
 
       <SheetContent>
 

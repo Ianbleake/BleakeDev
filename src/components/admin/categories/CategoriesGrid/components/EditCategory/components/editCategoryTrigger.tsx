@@ -1,17 +1,18 @@
+import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { SheetTrigger } from "@/components/ui/sheet";
+import { Pencil } from "lucide-react";
 import React from "react";
-import CategoryCard from "../../categoryCard";
 
-type EditCategoryTriggerProps = {
-  category: Category;
-}
 
-export default function EditCategoryTrigger({
-  category,
-}:EditCategoryTriggerProps): React.ReactElement {
+export default function EditCategoryTrigger(): React.ReactElement {
   return (
-    <SheetTrigger>
-      <CategoryCard category={category}/>
+    <SheetTrigger asChild>
+      <DropdownMenuItem
+        onSelect={(e) => e.preventDefault()}
+      >
+        <Pencil className="mr-2 h-4 w-4" />
+        Edit
+      </DropdownMenuItem>
     </SheetTrigger>
   );
 }
