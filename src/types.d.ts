@@ -188,3 +188,22 @@ type Category = {
   id: string;
   name: string;
 }
+
+type Experience = {
+  id: string;
+  company: string;
+  position: string;
+  location: string;
+  period: Period;
+  description: string;
+  achievements: Achievement[];
+  type: string;
+  tecnologies: technology[];
+  pageContent: undefined;
+}
+
+type technology = {
+  id: string;
+  name: string;
+  color: string;
+ }
