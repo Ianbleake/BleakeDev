@@ -1,4 +1,4 @@
-import { createAchievement } from "@/services/education/createAchievement";
+import { createAchievement } from "@/services/achievements/createAchievement";
 import { createCertification } from "@/services/education/createCertification";
 import { createDegree } from "@/services/education/createDegree";
 import { AppErrorShape } from "@/utils/errorHandler";

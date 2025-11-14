@@ -16,7 +16,6 @@ export default function AdminPage(): React.ReactElement {
     <div className="flex flex-1 flex-col gap-6">
       <PageCard data={pagesData}>
         <div>
-
         </div>
       </PageCard>  
     </div>

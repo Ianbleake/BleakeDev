@@ -1,4 +1,4 @@
-import { deleteAchievement } from "@/services/education/deleteAchievement";
+import { deleteAchievement } from "@/services/achievements/deleteAchievement";
 import deleteCertification from "@/services/education/deleteCertification";
 import { deleteDegree } from "@/services/education/deleteDegree";
 import { AppErrorShape } from "@/utils/errorHandler";

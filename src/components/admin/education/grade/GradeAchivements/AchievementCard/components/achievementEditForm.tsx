@@ -5,8 +5,8 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { RxUpdate } from "react-icons/rx";
-import useDeleteAchievement from "@/hooks/education/useDeleteAchievement";
-import useUpdateAchievement from "@/hooks/education/useUpdateAchievement";
+import useDeleteAchievement from "@/hooks/achievements/useDeleteAchievement";
+import useUpdateAchievement from "@/hooks/achievements/useUpdateAchievement";
 
 type AchievementEditFormProps = {
   achievement: Achievement;

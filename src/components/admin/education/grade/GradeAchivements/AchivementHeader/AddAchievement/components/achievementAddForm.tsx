@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { SheetClose } from "@/components/ui/sheet";
 import { Textarea } from "@/components/ui/textarea";
-import useCreateAchievement from "@/hooks/education/useCreateAchievement";
+import useCreateAchievement from "@/hooks/achievements/useCreateAchievement";
 import { useGradeStorage } from "@/storage/Admin/gradeStorage";
 import React from "react";
 import { useForm } from "react-hook-form";

@@ -1,4 +1,4 @@
-import { deleteAchievement } from "@/services/education/deleteAchievement";
+import { deleteAchievement } from "@/services/achievements/deleteAchievement";
 import { useGradeStorage } from "@/storage/Admin/gradeStorage";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";

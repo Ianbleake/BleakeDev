@@ -1,6 +1,6 @@
 import { supabaseBrowser } from "@/supabase/client";
 import { handleError } from "@/utils/errorHandler";
-import { getAchievements } from "./getAchievements";
+import { getAchievements } from "../achievements/getAchievements";
 
 export async function getCertification(Id: string): Promise<CertificationInfo | undefined> {
 
