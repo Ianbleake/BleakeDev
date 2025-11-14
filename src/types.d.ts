@@ -8,6 +8,14 @@ type BodyProps = {
   children: React.ReactNode;
 }
 
+type PageItem = {
+  icon: IconType;
+  name: string;
+  valueOne: string;
+  valueTwo?: string;
+  action: () => void;
+};
+
 type PageCardHeaderData = {
   icon: IconType;
   actionIcon?: IconType;
