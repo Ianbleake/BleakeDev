@@ -4,6 +4,7 @@ import { twTheme } from '@/utils/ThemeColors';
 import DetailInfoGrid from './DetailInfoGrid';
 import { IoChevronBack } from 'react-icons/io5';
 import { useRouter } from 'next/navigation';
+import DetailInfoActions from './DetailInfoActions';
 
 type DetailInfoCardProps = {
   detailData: DetailInfoCardData;
@@ -42,6 +43,8 @@ export default function DetailInfoCard({
       }
 
       <DetailInfoGrid title={detailData.title} infoItems={detailData.infoItems}/>
+
+      <DetailInfoActions actions={detailData.actions}/>
 
     </Card>
   );

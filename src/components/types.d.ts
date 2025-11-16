@@ -4,15 +4,15 @@ type InfoItem = {
   className?: string;
 }
 
-type InfoActions = {
+type InfoAction = {
   icon: IconType;
   label: string;
-  action: () => void;
+  action: () => void | React.ReactElement;
 }
 
 type DetailInfoCardData = {
   icon: IconType | undefined;
   title: string;
   infoItems: InfoItem[];
-  actions: InfoActions[];
+  actions: InfoAction[];
 }
