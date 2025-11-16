@@ -31,7 +31,7 @@ export default function GradeGridHeader({
       </div>
 
       <Button className="text-lg font-normal cursor-pointer" onClick={ headerInfo.action }>
-        Add education
+        { headerInfo.actionLabel }
         <ActionIcon />
       </Button>
     </div>

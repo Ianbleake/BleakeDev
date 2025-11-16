@@ -50,10 +50,11 @@ export default function EducationPage(): React.ReactElement {
     isLoading: degreesLoading,
     icon: IoSchoolOutline,
     actionIcon: IoSchoolSharp,
-    title: "Education",
+    title: "Degrees",
     description: "Here is the education mayors what is showed on the front-page",
     action: degreeAction,
     grades: formattedDegreess,
+    actionLabel: "Add Degree"
   }
 
   const certificationsData: educationData = {
@@ -64,6 +65,7 @@ export default function EducationPage(): React.ReactElement {
     description: "Here is the certifications mayors what is showed on the front-page",
     action: certificationAction,
     grades: formattedCertifications,
+    actionLabel: "Add Certification"
   }
 
   return (

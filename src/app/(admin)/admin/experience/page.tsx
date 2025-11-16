@@ -8,7 +8,9 @@ import PageCardSkeleton from "@/components/skeletons/pageCardSkeleton";
 import useExperience from "@/hooks/experience/useExperience";
 import { useExperienceStorage } from "@/storage/Admin/experienceStorage";
 import { BriefcaseBusiness } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React from "react";
+import { FaBriefcase } from "react-icons/fa";
 
 export default function ExperiencePage(): React.ReactElement {
 
@@ -18,10 +20,15 @@ export default function ExperiencePage(): React.ReactElement {
 
   const hasNoData = experiences === null;
 
+  const router = useRouter();
+
   const experienceData = {
     icon: BriefcaseBusiness,
     title: "Experience",
     description: "Here can you handle the profecional experience.",
+    action: () => router.push('/admin/experience/add'),
+    actionLabel: "Add Experience",
+    actionIcon: FaBriefcase,
   }
 
   if(isLoading) {

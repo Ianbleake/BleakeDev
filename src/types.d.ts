@@ -22,6 +22,7 @@ type PageCardHeaderData = {
   title: string;
   description: string;
   action?: (() => void) | React.ReactElement;
+  actionLabel?: string;
 };
 
 type Project = {

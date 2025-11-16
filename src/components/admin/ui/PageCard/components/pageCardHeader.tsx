@@ -36,7 +36,7 @@ export default function PageCardHeader({
       {headerData.action && (
         typeof headerData.action === "function" ? (
           <Button className="text-lg font-normal cursor-pointer" onClick={headerData.action}>
-            Add education
+            {headerData.actionLabel}
             {ActionIcon && <ActionIcon />}
           </Button>
         ) : (

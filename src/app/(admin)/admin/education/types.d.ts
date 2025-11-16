@@ -5,6 +5,7 @@ type educationData = {
   actionIcon: IconType;
   title: string;
   description: string;
+  actionLabel: string;
   action: () => void;
   grades: gradeCardData[] | undefined;
 }

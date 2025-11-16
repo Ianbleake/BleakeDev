@@ -18,6 +18,7 @@ export default function GradesGrid({
     title: gradesData.title,
     description: gradesData.description,
     action: gradesData.action,
+    actionLabel: gradesData.actionLabel,
   }
 
   return (
