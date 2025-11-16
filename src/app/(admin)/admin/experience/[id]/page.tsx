@@ -1,18 +1,65 @@
 'use client';
 
+import Achievements from '@/components/admin/ui/Achievements';
 import DetailInfoCard from '@/components/admin/ui/DetailInfoCard';
+import NoData from '@/components/admin/ui/NoData';
+import GradePageSkeleton from '@/components/skeletons/gradePageSkeleton';
+import useExperienceDetail from '@/hooks/experience/useExperienceDetail';
+import { useDetailExperienceStorage } from '@/storage/Admin/detailExperienceStorage';
+import { BsBriefcase } from "react-icons/bs";
 import { useParams } from 'next/navigation';
 import React from 'react';
+import { FaRegBuilding } from "react-icons/fa";
+import { MdOutlineComputer } from "react-icons/md";
+import { BsCalendarDate } from "react-icons/bs";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { GrTextAlignFull } from "react-icons/gr";
+import { HiPencil } from "react-icons/hi";
+import { BiTrashAlt } from "react-icons/bi";
 
 export default function ExperienceDetailPage(): React.ReactElement {
 
   const params = useParams();
-  const experienceId = params.id;
+  const experienceId = params.id as string;
+
+  const { isLoading } = useExperienceDetail(experienceId);
+  const { detailInfo } = useDetailExperienceStorage();
+
+  const hasNoData = detailInfo === null;
+
+  if(isLoading){
+    return <GradePageSkeleton />;
+  }
+
+  if(hasNoData){
+    return <NoData/>
+  }
+
+  const experienceInfo = {
+    icon: BsBriefcase,
+    title: detailInfo.company,
+    infoItems: [
+      { icon: FaRegBuilding, info: detailInfo.company },
+      { icon: MdOutlineComputer, info: detailInfo.position },
+      { icon: BsCalendarDate, info: String(detailInfo.period)}, //TODO: format date and use period to string
+      { icon: MdOutlineLocationOn, info: detailInfo.location },
+      { icon: BsBriefcase, info: detailInfo.type },
+      { icon: GrTextAlignFull, info: detailInfo.description, className: "col-span-3" },
+    ],
+    actions: [
+      { icon: HiPencil, label: "Edit", action: () => {} },
+      { icon: BiTrashAlt, label: "Delete", action: () => {} },
+    ]
+  }
+
+  //TODO: Finish to work with achievements
 
   return (
     <div className="flex flex-col gap-4">
 
+      <DetailInfoCard detailData={experienceInfo}/>
 
+      <Achievements achievements={detailInfo.achievements}/> 
 
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import PageItem from "../../ui/pageItem";
-import { MdOutlineWorkOutline } from "react-icons/md";
+import { BriefcaseBusiness } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 type ExperienceGridProps = {
@@ -16,7 +16,7 @@ export default function ExperienceGrid({
   const experiencesItems = experiences.map((experience) => {
     return(
       {
-        icon: MdOutlineWorkOutline,
+        icon: BriefcaseBusiness,
         name: experience.company,
         valueOne: experience.position,
         action: () => router.push(`/admin/experience/${experience.id}`),

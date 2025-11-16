@@ -25,7 +25,7 @@ export async function getDegree(Id: string): Promise<DegreeInfo | undefined> {
       achievements: achievements || [],
     }
 
-      return Degree as Degree;
+    return Degree as Degree;
 
   }catch(error){
     handleError(error,"getDegree")
