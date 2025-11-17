@@ -1,8 +1,5 @@
 import { Separator } from '@/components/ui/separator';
-import { twTheme } from '@/utils/ThemeColors';
-import { useRouter } from 'next/navigation';
 import React from 'react';
-import { IoChevronBack } from 'react-icons/io5';
 import DetailInfoItem from './components/detailInfoItem';
 
 type DetailInfoGridProps = {
@@ -14,8 +11,6 @@ export default function DetailInfoGrid({
   title,
   infoItems,
 }:DetailInfoGridProps ): React.ReactElement {
-
-    const router = useRouter();
     
   return (
     <div className="flex flex-1 flex-col gap-2">

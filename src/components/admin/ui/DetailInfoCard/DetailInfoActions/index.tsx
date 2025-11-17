@@ -8,6 +8,7 @@ type DetailInfoActionsProps = {
   actions: InfoAction[];
 };
 
+// TODO: Implement actions items in the dropdown
 
 export default function DetailInfoActions({
   actions,
