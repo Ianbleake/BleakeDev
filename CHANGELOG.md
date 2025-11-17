@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.35.0](https://github.com/Ianbleake/BleakeDev/compare/v2.34.1...v2.35.0) (2025-11-17)
+
+
+### Features
+
+* add experience detail page ([8adcf02](https://github.com/Ianbleake/BleakeDev/commit/8adcf02db58c868a22ea89e92316a5bdf5fe2641))
+
+
+### Bug Fixes
+
+* achievements component ([966ae0b](https://github.com/Ianbleake/BleakeDev/commit/966ae0be17dc517788610b6a27182a6e736f7084))
+
 ## [2.34.1](https://github.com/Ianbleake/BleakeDev/compare/v2.34.0...v2.34.1) (2025-11-16)
 
 
