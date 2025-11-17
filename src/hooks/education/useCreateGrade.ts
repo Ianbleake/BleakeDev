@@ -22,8 +22,8 @@ export default function useCreateGrade( type: string) {
 
         const newAchievements = achievements.map((achievement: NewAchievement) => ({
           description: achievement.description,
-          grade_id: newGrade.id,
-          grade_type: type,
+          element_id: newGrade.id,
+          type: type,
         }));
 
         const createdAchievements = await Promise.all(

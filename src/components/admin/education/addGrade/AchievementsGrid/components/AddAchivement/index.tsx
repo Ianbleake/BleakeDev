@@ -5,7 +5,7 @@ import AddAchievementHeader from "./components/addAchievementHeader";
 import AddAchievementForm from "./components/addAchievementForm";
 
 type AddAchievementProps = {
-  addAchievement: (achievement: Omit<Achievement, "id" | "grade_id" | "grade_type" >) => void;
+  addAchievement: (achievement: Omit<Achievement, "id" | "element_id" | "type" >) => void;
 }
 
 export default function AddAchivement({

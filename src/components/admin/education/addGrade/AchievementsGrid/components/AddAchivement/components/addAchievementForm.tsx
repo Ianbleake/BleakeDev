@@ -8,7 +8,7 @@ import { RiArrowGoBackFill } from "react-icons/ri";
 
 type AddAchievementFormProps = {
   onClose: () => void;
-  addAchievement: (achievement: Omit<Achievement, "id" | "grade_id" | "grade_type" >) => void;
+  addAchievement: (achievement: Omit<Achievement, "id" | "element_id" | "type" >) => void;
 }
 
 type AchievementAddFormInputs = {
