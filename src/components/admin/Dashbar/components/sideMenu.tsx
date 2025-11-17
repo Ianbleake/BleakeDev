@@ -6,6 +6,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { items } from "@/content/dashMenu";
+import { Home } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -20,6 +21,18 @@ export default function SideMenu(): React.ReactElement {
     <SidebarGroup>
       <SidebarGroupContent>
         <SidebarMenu>
+
+            <SidebarMenuItem>
+              <SidebarMenuButton
+                asChild
+              >
+                <Link href={"/"}>
+                  <Home/>
+                  <span>Front Page</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+
           {items.map((item) => {
 
             const itemSlug = item.url.split("/")[2];
