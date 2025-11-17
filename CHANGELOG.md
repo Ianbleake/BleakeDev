@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.35.1](https://github.com/Ianbleake/BleakeDev/compare/v2.35.0...v2.35.1) (2025-11-17)
+
+
+### Bug Fixes
+
+* add page content general component ([843660e](https://github.com/Ianbleake/BleakeDev/commit/843660ecc37a6f9f1254d0270cc6eb41eadfa53e))
+
 ## [2.35.0](https://github.com/Ianbleake/BleakeDev/compare/v2.34.1...v2.35.0) (2025-11-17)
 
 
