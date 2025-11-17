@@ -23,7 +23,7 @@ export default function ExperienceDetailPage(): React.ReactElement {
   const experienceId = params.id as string;
 
   const { isLoading } = useExperienceDetail(experienceId);
-  const { detailInfo } = useDetailExperienceStorage();
+  const { detailInfo, achievements } = useDetailExperienceStorage();
 
   const hasNoData = detailInfo === null;
 
@@ -52,14 +52,12 @@ export default function ExperienceDetailPage(): React.ReactElement {
     ]
   }
 
-  //TODO: Finish to work with achievements
-
   return (
     <div className="flex flex-col gap-4">
 
       <DetailInfoCard detailData={experienceInfo}/>
 
-      <Achievements achievements={detailInfo.achievements}/> 
+      <Achievements type='experience' achievements={achievements}/> 
 
     </div>
   );

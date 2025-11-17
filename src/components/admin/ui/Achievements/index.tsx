@@ -7,16 +7,18 @@ import Empty from "../empty";
 import { GoTrophy } from "react-icons/go";
 
 type AchievementsProps = {
+  type: string;
   achievements: Achievement[];
 }
-//TODO: Finish to generalize this component
+
 export default function Achievements({
+  type,
   achievements,
 }:AchievementsProps ): React.ReactElement {
   return (
     <Card className="px-4">
 
-      <AchievementsHeader/>
+      <AchievementsHeader type={type}/>
 
       <div className="grid grid-cols-2 gap-6">
         {  ( achievements && achievements.length > 0) ? (

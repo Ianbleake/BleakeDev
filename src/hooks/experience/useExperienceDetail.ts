@@ -6,7 +6,7 @@ import { toast } from "sonner";
 
 export default function useExperienceDetail(experienceId: string) {
 
-    const { setDetailInfo } = useDetailExperienceStorage();
+    const { setDetailExperienceData } = useDetailExperienceStorage();
 
     const experienceDetailQuery = useQuery({
         queryKey: ["experienceDetail"],
@@ -24,7 +24,7 @@ export default function useExperienceDetail(experienceId: string) {
 
     useEffect(() => {
         if(experienceDetailQuery.data){
-            setDetailInfo(experienceDetailQuery.data)
+            setDetailExperienceData( experienceDetailQuery.data, experienceDetailQuery.data.achievements );
         }
     },[experienceDetailQuery.data]);
 

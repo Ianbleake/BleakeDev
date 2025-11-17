@@ -4,7 +4,13 @@ import AchievementAddTrigger from "./components/achievementAddTrigger";
 import AchievementAddHeader from "./components/achievementAddHeader";
 import AchievementAddForm from "./components/achievementAddForm";
 
-export default function AddAchivement(): React.ReactElement {
+type AddAchievementProps = {
+  type: string;
+}
+
+export default function AddAchivement({
+  type,
+}: AddAchievementProps ): React.ReactElement {
 
   const [ open, setOpen ] = useState(false);
 
@@ -17,7 +23,7 @@ export default function AddAchivement(): React.ReactElement {
 
         <AchievementAddHeader/>
 
-        <AchievementAddForm onClose={() => setOpen(false)}/>
+        <AchievementAddForm type={type} onClose={() => setOpen(false)}/>
 
       </SheetContent>
 

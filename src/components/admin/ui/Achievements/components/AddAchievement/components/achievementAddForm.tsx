@@ -4,6 +4,7 @@ import { SheetClose } from "@/components/ui/sheet";
 import { Textarea } from "@/components/ui/textarea";
 import useCreateAchievement from "@/hooks/achievements/useCreateAchievement";
 import { useGradeStorage } from "@/storage/Admin/gradeStorage";
+import { useParams } from "next/navigation";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { FiSave } from "react-icons/fi";
@@ -11,6 +12,7 @@ import { RiArrowGoBackFill } from "react-icons/ri";
 
 type AchievementAddFormProps = {
   onClose: () => void;
+  type: string;
 }
 
 type AchievementAddFormInputs = {
@@ -18,11 +20,15 @@ type AchievementAddFormInputs = {
 }
 
 export default function AchievementAddForm({
+  type,
   onClose,
 }: AchievementAddFormProps ): React.ReactElement {
 
-  const { gradeInfo } = useGradeStorage();
+  const params = useParams();
+  const elementId = params.id as string;
   const { mutate, isPending } = useCreateAchievement();
+
+  console.log("Element ID:", elementId);
 
   const {
     register,
@@ -37,8 +43,8 @@ export default function AchievementAddForm({
   const onSubmit = (data: AchievementAddFormInputs) => {
     
     const newAchievement = {
-      grade_id: gradeInfo.id,
-      grade_type: gradeInfo.type,
+      element_id: elementId,
+      type: type,
       description: data.description,
     }
 

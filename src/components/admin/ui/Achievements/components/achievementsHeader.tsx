@@ -4,7 +4,13 @@ import React from "react";
 import { GoTrophy } from "react-icons/go";
 import AddAchivement from "./AddAchievement";
 
-export default function AchievementsHeader(): React.ReactElement {
+type AchievementsHeaderProps = {
+  type: string;
+}
+
+export default function AchievementsHeader({
+  type,
+}: AchievementsHeaderProps): React.ReactElement {
   return (
     <div className="flex flex-row items-center justify-between gap-6 border-b border-gray-200 pb-4">
 
@@ -18,7 +24,7 @@ export default function AchievementsHeader(): React.ReactElement {
         <p className="text-gray-400 text-sm font-normal">Click on the cards to edit</p>
       </div>
 
-      <AddAchivement/>
+      <AddAchivement type={type}/>
       
     </div>
   );

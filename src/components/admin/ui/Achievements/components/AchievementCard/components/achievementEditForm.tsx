@@ -64,7 +64,7 @@ export default function AchievementEditForm({
 
         <div className="flex flex-row items-center justify-end gap-3">
 
-          <Button variant={"destructive"} className="shadow-red-500 cursor-pointer" onClick={()=>deleteMutation(achievement.id)} >
+          <Button type="button" variant={"destructive"} className="shadow-red-500 cursor-pointer" onClick={()=>deleteMutation(achievement.id)} >
             <FaRegTrashAlt />
             Delete
           </Button>

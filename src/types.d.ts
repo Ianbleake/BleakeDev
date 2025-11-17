@@ -90,16 +90,16 @@ type Period = { from: Date; to: Date };
 
 type Achievement = {
   id: string;
-  grade_id: string; 
-  grade_type: 'education' | 'certification';
+  element_id: string; 
+  type: string;
   description: string;
 }
 
-type NewAchievement = Omit<Achievement, "id" | "grade_id" | "grade_type">;
+type NewAchievement = Omit<Achievement, "id" | "element_id" | "type">;
 
 type AddAchievementPayload = {
-  grade_id: string; 
-  grade_type: 'education' | 'certification';
+  element_id: string; 
+  type: string;
   description: string;
 }
 
