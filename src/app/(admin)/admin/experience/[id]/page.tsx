@@ -16,6 +16,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import { GrTextAlignFull } from "react-icons/gr";
 import { HiPencil } from "react-icons/hi";
 import { BiTrashAlt } from "react-icons/bi";
+import PageContent from '@/components/admin/ui/PageContent';
 
 export default function ExperienceDetailPage(): React.ReactElement {
 
@@ -58,6 +59,8 @@ export default function ExperienceDetailPage(): React.ReactElement {
       <DetailInfoCard detailData={experienceInfo}/>
 
       <Achievements type='experience' achievements={achievements}/> 
+      
+      <PageContent/>
 
     </div>
   );

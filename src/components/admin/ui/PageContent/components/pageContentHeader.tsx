@@ -1,18 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import { twTheme } from "@/utils/ThemeColors";
-import React from "react";
-import { RiPagesLine } from "react-icons/ri";
-import { MdAutoFixHigh } from "react-icons/md";
-import { useParams, useRouter } from "next/navigation";
+import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
+import { twTheme } from '@/utils/ThemeColors';
+import React from 'react';
+import { MdAutoFixHigh } from 'react-icons/md';
+import { RiPagesLine } from 'react-icons/ri';
 
 export default function PageContentHeader(): React.ReactElement {
-
-  const params = useParams();
-  const id = params.id as string;
-
-  const router = useRouter();
-
   return (
     <div className="flex flex-row items-center justify-between gap-6 border-b border-gray-200 pb-4">
 
@@ -27,7 +20,7 @@ export default function PageContentHeader(): React.ReactElement {
       </div>
 
       
-      <Button className="cursor-pointer" onClick={()=>router.push(`/admin/education/${id}/editPageContent`)} >
+      <Button className="cursor-pointer" >
         <MdAutoFixHigh />
         Manage Content
       </Button>

@@ -6,12 +6,11 @@ import { useParams } from "next/navigation";
 import NoData from "@/components/admin/ui/NoData";
 import { PiCertificate } from "react-icons/pi";
 import { IoSchoolOutline } from "react-icons/io5";
-import GradeAchivements from "../../../../../components/admin/education/grade/GradeAchivements";
 import useGrade from "@/hooks/education/useGrade";
 import { useGradeStorage } from "@/storage/Admin/gradeStorage";
 import GradePageSkeleton from "@/components/skeletons/gradePageSkeleton";
-import GradePageContent from "../../../../../components/admin/education/grade/GradePageContent";
 import Achievements from "@/components/admin/ui/Achievements";
+import PageContent from "@/components/admin/ui/PageContent";
 
 export default function GradePage(): React.ReactElement {
 
@@ -51,7 +50,7 @@ export default function GradePage(): React.ReactElement {
 
       <Achievements type={type} achievements={achievements} />
 
-      <GradePageContent />
+      <PageContent/>
 
     </div>
   );
