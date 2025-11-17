@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.35.3](https://github.com/Ianbleake/BleakeDev/compare/v2.35.2...v2.35.3) (2025-11-17)
+
+
+### Bug Fixes
+
+* dash menu option ([d386650](https://github.com/Ianbleake/BleakeDev/commit/d386650faf9029754d95171ca8b98192dda8387b))
+* dashbar selected style ([4b705f6](https://github.com/Ianbleake/BleakeDev/commit/4b705f6dce6469cc8829cddee600ab8d837a7c82))
+
 ## [2.35.2](https://github.com/Ianbleake/BleakeDev/compare/v2.35.1...v2.35.2) (2025-11-17)
 
 
