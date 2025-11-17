@@ -11,6 +11,7 @@ import useGrade from "@/hooks/education/useGrade";
 import { useGradeStorage } from "@/storage/Admin/gradeStorage";
 import GradePageSkeleton from "@/components/skeletons/gradePageSkeleton";
 import GradePageContent from "../../../../../components/admin/education/grade/GradePageContent";
+import Achievements from "@/components/admin/ui/Achievements";
 
 export default function GradePage(): React.ReactElement {
 
@@ -19,7 +20,7 @@ export default function GradePage(): React.ReactElement {
 
   const { isLoading } = useGrade(path);
 
-  const { type, gradeInfo } = useGradeStorage();
+  const { type, gradeInfo, achievements } = useGradeStorage();
 
   const hasNoData = gradeInfo === null;
 
@@ -48,7 +49,7 @@ export default function GradePage(): React.ReactElement {
 
       <GradeHeader grade={gradeData} />
 
-      <GradeAchivements/>
+      <Achievements type={type} achievements={achievements} />
 
       <GradePageContent />
 
