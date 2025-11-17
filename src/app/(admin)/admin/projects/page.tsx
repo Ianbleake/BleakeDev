@@ -1,3 +1,4 @@
+import ProjectsGrid from "@/components/admin/projects/ProjectsGrid";
 import PageCard from "@/components/admin/ui/PageCard";
 import { SquareCode } from "lucide-react";
 import React from "react";
@@ -14,7 +15,7 @@ export default function ProjectsPage(): React.ReactElement {
     <div className="flex flex-1 flex-col gap-6">
       <PageCard data={projectsData}>
         <div>
-
+          <ProjectsGrid/>
         </div>
       </PageCard>  
     </div>
