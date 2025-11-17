@@ -14,12 +14,16 @@ export default function SideMenu(): React.ReactElement {
 
   const pathname = usePathname();
 
+  const featureSlug = pathname.split("/")[2];
+
   return (
     <SidebarGroup>
       <SidebarGroupContent>
         <SidebarMenu>
           {items.map((item) => {
-            const isActive = pathname === item.url;
+
+            const itemSlug = item.url.split("/")[2];
+            const isActive = featureSlug === itemSlug;
 
             return (
               <SidebarMenuItem key={item.title}>
