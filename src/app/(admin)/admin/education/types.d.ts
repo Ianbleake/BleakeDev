@@ -1,13 +1,7 @@
 
-type educationData = {
+type EducationData = {
   isLoading: boolean;
-  icon: IconType;
-  actionIcon: IconType;
-  title: string;
-  description: string;
-  actionLabel: string;
-  action: () => void;
-  grades: gradeCardData[] | undefined;
+  grades: GradeCardData[] | undefined;
 }
 
 type GradeHeaderData = Omit<educationData, "isLoading" | "grades" >

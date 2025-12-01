@@ -1,31 +1,18 @@
 import React from "react";
-import { Card } from "@/components/ui/card";
 import GradeCard from "./components/gradeCard";
-import GradeGridHeader from "./components/gradeGridHeader";
 import EducationCardSkeleton from "@/components/skeletons/educationCardSkeleton";
 
 type GradesGridProps = {
-  gradesData: educationData;
+  gradesData: EducationData;
 }
 
 export default function GradesGrid({
   gradesData,
 }: GradesGridProps ): React.ReactElement {
 
-  const infoHeader = {
-    icon: gradesData.icon,
-    actionIcon: gradesData.actionIcon,
-    title: gradesData.title,
-    description: gradesData.description,
-    action: gradesData.action,
-    actionLabel: gradesData.actionLabel,
-  }
-
   return (
     
-    <Card className="px-4">
-      
-      <GradeGridHeader headerInfo={infoHeader} />
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {
@@ -41,6 +28,5 @@ export default function GradesGrid({
         }
       </div>
 
-    </Card>
   );
 }

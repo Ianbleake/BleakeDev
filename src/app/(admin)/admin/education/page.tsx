@@ -9,6 +9,7 @@ import { periodToString } from "@/utils/periodToString";
 import { useEducation } from "@/hooks/education/useEducation";
 import { IoSchoolOutline, IoSchoolSharp } from "react-icons/io5";
 import GradesGrid from "@/components/admin/education/GradesGrid";
+import PageCard from "@/components/admin/ui/PageCard";
 
 export default function EducationPage(): React.ReactElement {
 
@@ -46,35 +47,45 @@ export default function EducationPage(): React.ReactElement {
 
   const certificationAction = ()=>router.push("/admin/education/add/certification");
 
-  const degreesData: educationData = {
+  const degreesData: EducationData = {
     isLoading: degreesLoading,
+    grades: formattedDegreess,
+  }
+
+  const certificationsData: EducationData = {
+    isLoading: certificationsLoading,
+    grades: formattedCertifications,
+  }
+
+  const degreesHeaderData = {
     icon: IoSchoolOutline,
-    actionIcon: IoSchoolSharp,
     title: "Degrees",
     description: "Here is the education mayors what is showed on the front-page",
     action: degreeAction,
-    grades: formattedDegreess,
-    actionLabel: "Add Degree"
+    actionLabel: "Add Degree",
+    actionIcon: IoSchoolSharp,
   }
 
-  const certificationsData: educationData = {
-    isLoading: certificationsLoading,
-    icon: PiCertificate,
-    actionIcon: PiMedalFill,
-    title: "Certifications",
-    description: "Here is the certifications mayors what is showed on the front-page",
-    action: certificationAction,
-    grades: formattedCertifications,
-    actionLabel: "Add Certification"
+  const certificationsHeaderData = {
+      icon: PiCertificate,
+      title: "Certifications",
+      description: "Here is the certifications mayors what is showed on the front-page",
+      action: certificationAction,
+      actionLabel: "Add Certification",
+      actionIcon: PiMedalFill,
   }
 
   //TODO: refactor to use general components
   return (
     <div className="flex flex-1 flex-col gap-6">
 
-      <GradesGrid gradesData={degreesData} />
+      <PageCard data={degreesHeaderData}>
+        <GradesGrid gradesData={degreesData} />
+      </PageCard>
 
-      <GradesGrid gradesData={certificationsData} />
+      <PageCard data={certificationsHeaderData}>
+        <GradesGrid gradesData={certificationsData} />
+      </PageCard>
 
     </div>
   );
