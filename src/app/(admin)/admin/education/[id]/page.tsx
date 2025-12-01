@@ -72,8 +72,8 @@ export default function GradePage(): React.ReactElement {
     title: gradeInfo?.name || "",
     infoItems: type === "degree" ? degreeInfoItems : certificateInfoItems,
     actions: [
-      <GradeEdit grade={gradeInfo} />,
-      <RemoveGrade action={handleDelete} />,
+      <GradeEdit grade={gradeInfo} key="editGrade" />,
+      <RemoveGrade action={handleDelete} key="removeGrade" />,
     ]
   }
 

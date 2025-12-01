@@ -3,8 +3,6 @@
 import ExperienceGrid from "@/components/admin/experience/experienceGrid";
 import NoData from "@/components/admin/ui/NoData";
 import PageCard from "@/components/admin/ui/PageCard";
-import PageItemSkeleton from "@/components/skeletons/pageItemSkeleton";
-import PageCardSkeleton from "@/components/skeletons/pageCardSkeleton";
 import useExperience from "@/hooks/experience/useExperience";
 import { useExperienceStorage } from "@/storage/Admin/experienceStorage";
 import { BriefcaseBusiness } from "lucide-react";

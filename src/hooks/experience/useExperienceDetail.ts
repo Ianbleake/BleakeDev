@@ -20,12 +20,14 @@ export default function useExperienceDetail(experienceId: string) {
         if(experienceDetailQuery.isError){
             toast.error(experienceDetailQuery.error.message);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[experienceDetailQuery.isError])
 
     useEffect(() => {
         if(experienceDetailQuery.data){
             setDetailExperienceData( experienceDetailQuery.data, experienceDetailQuery.data.achievements );
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[experienceDetailQuery.data]);
 
     return {
