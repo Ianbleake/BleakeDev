@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.36.0](https://github.com/Ianbleake/BleakeDev/compare/v2.35.3...v2.36.0) (2025-12-01)
+
+
+### Features
+
+* refactor grade detail page ([e084ca1](https://github.com/Ianbleake/BleakeDev/commit/e084ca1597a4325e442fa0b51aa9043b31e87a03))
+
+
+### Bug Fixes
+
+* page detail ([475224f](https://github.com/Ianbleake/BleakeDev/commit/475224fa1281c0eee583a990358aba126b17ba76))
+
 ## [2.35.3](https://github.com/Ianbleake/BleakeDev/compare/v2.35.2...v2.35.3) (2025-11-17)
 
 
