@@ -5,22 +5,17 @@ import React from 'react';
 import { HiOutlineMenu } from 'react-icons/hi';
 
 type DetailInfoActionsProps = {
-  actions: InfoAction[];
+  actions: React.ReactElement[];
 };
 
-// TODO: Implement actions items in the dropdown
-
-export default function DetailInfoActions({
-  actions,
-}:DetailInfoActionsProps ): React.ReactElement {
+export default function DetailInfoActions({ actions }: DetailInfoActionsProps): React.ReactElement {
   return (
     <DropdownMenu>
-
       <DropdownMenuTrigger className="h-9 w-20 flex items-center justify-center cursor-pointer">
         <HiOutlineMenu size={30} color={twTheme.colors.emerald[600]} />
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent>
+      <DropdownMenuContent className="flex flex-col gap-1 p-2">
 
         <DropdownMenuLabel className="flex flex-row items-center justify-center gap-2">
           Actions
@@ -29,8 +24,13 @@ export default function DetailInfoActions({
 
         <DropdownMenuSeparator />
 
+        {actions.map((ActionEl, idx) => (
+          <div key={idx} className="px-1 py-1">
+            {ActionEl}
+          </div>
+        ))}
+
       </DropdownMenuContent>
-      
     </DropdownMenu>
   );
 }

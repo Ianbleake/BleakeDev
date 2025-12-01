@@ -68,6 +68,7 @@ export default function EducationPage(): React.ReactElement {
     actionLabel: "Add Certification"
   }
 
+  //TODO: refactor to use general components
   return (
     <div className="flex flex-1 flex-col gap-6">
 
