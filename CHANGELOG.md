@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.36.1](https://github.com/Ianbleake/BleakeDev/compare/v2.36.0...v2.36.1) (2025-12-01)
+
+
+### Bug Fixes
+
+* add id use client ([9a1a2f6](https://github.com/Ianbleake/BleakeDev/commit/9a1a2f623f887af58e45bf42a9a99a6e719ffda0))
+* refactor aeducation page ([ca616ea](https://github.com/Ianbleake/BleakeDev/commit/ca616ea62b6938c691c3f5115d938d510a121cd6))
+
 ## [2.36.0](https://github.com/Ianbleake/BleakeDev/compare/v2.35.3...v2.36.0) (2025-12-01)
 
 
