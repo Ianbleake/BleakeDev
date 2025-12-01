@@ -52,9 +52,7 @@ export default function ExperiencePage(): React.ReactElement {
   return (
     <div className="flex flex-1 flex-col gap-6">
       <PageCard data={experienceData}>
-        <div>
           <ExperienceGrid experiences={experiences} />
-        </div>
       </PageCard>  
     </div>
   );
