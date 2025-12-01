@@ -3,7 +3,7 @@
 import ExperienceGrid from "@/components/admin/experience/experienceGrid";
 import NoData from "@/components/admin/ui/NoData";
 import PageCard from "@/components/admin/ui/PageCard";
-import EducationCardSkeleton from "@/components/skeletons/educationCardSkeleton";
+import PageItemSkeleton from "@/components/skeletons/pageItemSkeleton";
 import PageCardSkeleton from "@/components/skeletons/pageCardSkeleton";
 import useExperience from "@/hooks/experience/useExperience";
 import { useExperienceStorage } from "@/storage/Admin/experienceStorage";
@@ -11,6 +11,7 @@ import { BriefcaseBusiness } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { FaBriefcase } from "react-icons/fa";
+import { ExperiencePageSkeleton } from "@/components/skeletons/experiencePageSkeleton";
 
 export default function ExperiencePage(): React.ReactElement {
 
@@ -33,15 +34,7 @@ export default function ExperiencePage(): React.ReactElement {
 
   if(isLoading) {
     return (
-      <div className="flex flex-1 flex-col gap-6">
-        <PageCardSkeleton>
-          <div className="grid grid-cols-2 gap-4">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <EducationCardSkeleton key={i} />
-            ))}
-          </div>
-        </PageCardSkeleton>
-      </div>
+      <ExperiencePageSkeleton/>
     );
   }
 

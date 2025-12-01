@@ -5,7 +5,7 @@ import { Dot } from "lucide-react";
 import { Separator } from "../ui/separator";
 import { twTheme } from "@/utils/ThemeColors";
 
-export default function EducationCardSkeleton(): React.ReactElement {
+export default function PageItemSkeleton(): React.ReactElement {
   return (
     <Card className="h-16 flex flex-row gap-4 items-center justify-start p-4 py-12 hover:bg-emerald-50 cursor-pointer transition-colors">
       <Skeleton className="h-12 w-12 rounded-md"/>

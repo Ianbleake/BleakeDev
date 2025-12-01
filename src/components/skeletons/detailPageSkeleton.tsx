@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
 import { Separator } from "@/components/ui/separator"
 
-export default function GradePageSkeleton() {
+export default function DetailPageSkeleton() {
   return (
     <div className="flex flex-col gap-4">
 

@@ -10,6 +10,8 @@ import { useEducation } from "@/hooks/education/useEducation";
 import { IoSchoolOutline, IoSchoolSharp } from "react-icons/io5";
 import GradesGrid from "@/components/admin/education/GradesGrid";
 import PageCard from "@/components/admin/ui/PageCard";
+import Empty from "@/components/admin/ui/empty";
+import { EducationPageSkeleton } from "@/components/skeletons/educationPageSkeleton";
 
 export default function EducationPage(): React.ReactElement {
 
@@ -43,19 +45,11 @@ export default function EducationPage(): React.ReactElement {
     )
   })
 
+  const isLoading = certificationsLoading || degreesLoading;
+
   const degreeAction = ()=>router.push("/admin/education/add/degree")
 
   const certificationAction = ()=>router.push("/admin/education/add/certification");
-
-  const degreesData: EducationData = {
-    isLoading: degreesLoading,
-    grades: formattedDegreess,
-  }
-
-  const certificationsData: EducationData = {
-    isLoading: certificationsLoading,
-    grades: formattedCertifications,
-  }
 
   const degreesHeaderData = {
     icon: IoSchoolOutline,
@@ -75,16 +69,33 @@ export default function EducationPage(): React.ReactElement {
       actionIcon: PiMedalFill,
   }
 
-  //TODO: refactor to use general components
+  if(isLoading) {
+    return (
+      <EducationPageSkeleton/>
+    );
+  }
+
   return (
     <div className="flex flex-1 flex-col gap-6">
 
       <PageCard data={degreesHeaderData}>
-        <GradesGrid gradesData={degreesData} />
+        {
+          formattedDegreess ? (
+            <GradesGrid gradesData={formattedDegreess} />
+          ) : (
+            <Empty icon={IoSchoolOutline} title="No Degrees" description="Add new degree with the button on the header of this card"  />
+          )
+        }
       </PageCard>
 
       <PageCard data={certificationsHeaderData}>
-        <GradesGrid gradesData={certificationsData} />
+        {
+          formattedCertifications ? (
+            <GradesGrid gradesData={formattedCertifications} />
+          ) : (
+            <Empty icon={PiCertificate} title="No Certifications" description="Add new certification with the button on the header of this card"  />
+          )
+        }
       </PageCard>
 
     </div>

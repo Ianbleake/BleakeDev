@@ -7,7 +7,7 @@ import { PiCertificate } from "react-icons/pi";
 import { IoSchoolOutline } from "react-icons/io5";
 import useGrade from "@/hooks/education/useGrade";
 import { useGradeStorage } from "@/storage/Admin/gradeStorage";
-import GradePageSkeleton from "@/components/skeletons/gradePageSkeleton";
+import DetailPageSkeleton from "@/components/skeletons/detailPageSkeleton";
 import Achievements from "@/components/admin/ui/Achievements";
 import PageContent from "@/components/admin/ui/PageContent";
 import DetailInfoCard from "@/components/admin/ui/DetailInfoCard";
@@ -78,7 +78,7 @@ export default function GradePage(): React.ReactElement {
   }
 
   if (isLoading) {
-    return <GradePageSkeleton />;
+    return <DetailPageSkeleton />;
   }
 
   if (hasNoData) {

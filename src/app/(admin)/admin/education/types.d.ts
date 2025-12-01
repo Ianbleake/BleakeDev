@@ -1,8 +1,6 @@
 
-type EducationData = {
-  isLoading: boolean;
-  grades: GradeCardData[] | undefined;
-}
+type EducationData = GradeCardData[];
+
 
 type GradeHeaderData = Omit<educationData, "isLoading" | "grades" >
 

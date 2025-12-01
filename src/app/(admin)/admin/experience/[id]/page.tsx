@@ -3,7 +3,7 @@
 import Achievements from '@/components/admin/ui/Achievements';
 import DetailInfoCard from '@/components/admin/ui/DetailInfoCard';
 import NoData from '@/components/admin/ui/NoData';
-import GradePageSkeleton from '@/components/skeletons/gradePageSkeleton';
+import DetailPageSkeleton from '@/components/skeletons/detailPageSkeleton';
 import useExperienceDetail from '@/hooks/experience/useExperienceDetail';
 import { useDetailExperienceStorage } from '@/storage/Admin/detailExperienceStorage';
 import { BsBriefcase } from "react-icons/bs";
@@ -29,7 +29,7 @@ export default function ExperienceDetailPage(): React.ReactElement {
   const hasNoData = detailInfo === null;
 
   if(isLoading){
-    return <GradePageSkeleton />;
+    return <DetailPageSkeleton />;
   }
 
   if(hasNoData){
@@ -48,8 +48,8 @@ export default function ExperienceDetailPage(): React.ReactElement {
       { icon: GrTextAlignFull, info: detailInfo.description, className: "col-span-3" },
     ],
     actions: [
-      { icon: HiPencil, label: "Edit", action: () => {} },
-      { icon: BiTrashAlt, label: "Delete", action: () => {} },
+      <></>,
+      <></>,
     ]
   }
 
