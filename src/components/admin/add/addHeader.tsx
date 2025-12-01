@@ -1,28 +1,38 @@
 import { Separator } from "@/components/ui/separator";
 import { twTheme } from "@/utils/ThemeColors";
 import React from "react";
+import { IconType } from "react-icons";
 import { IoSchoolOutline } from "react-icons/io5";
 import { PiCertificate } from "react-icons/pi";
 
+
+type addHeaderConfig = {
+  icon: IconType;
+  title: string;
+  description: string;
+}
 type AddGradeHeaderProps = {
-  isDeegree: boolean;
+  config: addHeaderConfig;
 };
 
-export default function AddGradeHeader({
-  isDeegree,
+export default function AddHeader({
+  config,
 }:AddGradeHeaderProps ): React.ReactElement {
+
+  const Icon = config.icon;
+
   return (
     <div className="border-b border-gray-200 pb-4 flex flex-row items-center justify-start gap-6">
 
         <div className="border border-gray-200 p-3 rounded-md shadow-sm bg-green-50 ">
-          { isDeegree ? <IoSchoolOutline size={30} color={twTheme.colors.emerald[700]} /> : <PiCertificate size={30} color={twTheme.colors.emerald[700]} />}
+          <Icon size={30} color={twTheme.colors.emerald[700]} />
         </div>
 
         <div className="flex flex-col gap-2 flex-1">
-          <h2 className="text-gray-900 font-semibold text-xl">Create a new { isDeegree ? "Degree" : "Certification"} </h2>
+          <h2 className="text-gray-900 font-semibold text-xl">{ config.title }</h2>
           <Separator/>
           <p className="text-gray-400 text-sm font-normal"> 
-            Remember save your changes.
+            { config.description }
           </p>
         </div>
 

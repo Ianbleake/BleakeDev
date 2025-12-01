@@ -47,9 +47,9 @@ export default function EducationPage(): React.ReactElement {
 
   const isLoading = certificationsLoading || degreesLoading;
 
-  const degreeAction = ()=>router.push("/admin/education/add/degree")
+  const degreeAction = ()=>router.push("/admin/add/degree")
 
-  const certificationAction = ()=>router.push("/admin/education/add/certification");
+  const certificationAction = ()=>router.push("/admin/add/certification");
 
   const degreesHeaderData = {
     icon: IoSchoolOutline,

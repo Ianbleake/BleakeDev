@@ -25,7 +25,7 @@ export default function ExperiencePage(): React.ReactElement {
     icon: BriefcaseBusiness,
     title: "Experience",
     description: "Here can you handle the profecional experience.",
-    action: () => router.push('/admin/experience/add'),
+    action: () => router.push('/admin/add/experience'),
     actionLabel: "Add Experience",
     actionIcon: FaBriefcase,
   }
