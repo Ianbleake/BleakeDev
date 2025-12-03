@@ -5,60 +5,59 @@ import React, { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { FiSave } from "react-icons/fi";
 import { RiArrowGoBackFill } from "react-icons/ri";
-import { twTheme } from "@/utils/ThemeColors";
-import { IoDocumentTextOutline, IoSchoolOutline } from "react-icons/io5";
+import { IoDocumentTextOutline } from "react-icons/io5";
 import { Separator } from "@/components/ui/separator";
+import { twTheme } from "@/utils/ThemeColors";
+import { HiOutlineBuildingLibrary } from "react-icons/hi2";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { HiOutlineBuildingLibrary } from "react-icons/hi2";
 import { BsCalendarDate } from "react-icons/bs";
-import { MdOutlineLocationOn } from "react-icons/md";
 import { GrTextAlignFull } from "react-icons/gr";
 import { Textarea } from "@/components/ui/textarea";
+import { TbLicense } from "react-icons/tb";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { periodToString } from "@/utils/periodToString";
 import { ChevronDownIcon } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
-
+import moment from "moment";
+import { PiCertificate } from "react-icons/pi";
 import useCreateGrade from "@/hooks/education/useCreateGrade";
-import AchievementsGrid from "../AchievementsGrid";
+import AchievementsGrid from "./AchievementsGrid";
 
-type AddDegreeData = NewDegree;
 
-export default function AddDegreeForm(): React.ReactElement {
+type AddCertificationData = NewCertification;
+
+export default function AddCertificationForm(): React.ReactElement {
 
   const [ achievements, setAchievements ] = useState<NewAchievement[]>([])
 
   const router = useRouter();
 
-  const { control ,register, handleSubmit, formState: { errors, isSubmitting} } = useForm<AddDegreeData>({
+  const { control ,register, handleSubmit, formState: { errors, isSubmitting} } = useForm<AddCertificationData>({
     defaultValues: {
-      institution: '',
-      degree: '',
-      location: '',
-      period: undefined,
+      title: '',
+      issuer: '',
+      date: '',
+      credential: '',
       description: '',
-      achievements: [],
     }
   });
 
-  const { mutate: createGrade, isPending } = useCreateGrade("degree");
+  const { mutate: createGrade, isPending } = useCreateGrade("certification");
 
-  const onSubmit = (data:AddDegreeData)=> {
+  const onSubmit = (data:AddCertificationData)=> {
 
-    const newDegreeData = {
+    const newCertificationData = {
       ...data,
       achievements: achievements,
-      type: 'education'
     }
 
-    createGrade(newDegreeData);
-
+    createGrade(newCertificationData);
+  
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-8">
-      
+
       <Card className="px-4 flex flex-col gap-8">
 
         <div className="flex flex-row items-center gap-6 flex-1 justify-between border-b border-gray-200 pb-4">
@@ -70,7 +69,7 @@ export default function AddDegreeForm(): React.ReactElement {
             <div className="flex flex-col gap-2 flex-1">
               <h2 className="text-gray-900 font-semibold text-xl" >Degree Info</h2>
               <Separator/>
-              <p className="text-gray-400 text-sm font-normal" >The page content will be configurated after the degree were created.</p>
+              <p className="text-gray-400 text-sm font-normal" >The page content will be configurated after the certification were created.</p>
             </div>
 
         </div>
@@ -84,17 +83,17 @@ export default function AddDegreeForm(): React.ReactElement {
             </div>
 
             <div className="flex flex-col gap-3 flex-1">
-              <Label>Institution</Label>
+              <Label>Issuer</Label>
               <Input
                 type="text"
-                { ...register("institution",{
-                  required: "The institution is required.",
+                { ...register("issuer",{
+                  required: "The issuer is required.",
                   maxLength: { value: 100, message: "El titulo es muy largo" },
                 })}
               />
-              {errors.institution && (
+              {errors.issuer && (
                 <span className="text-red-600 text-sm">
-                  {errors.institution.message}
+                  {errors.issuer.message}
                 </span>
               )}
             </div>
@@ -104,47 +103,22 @@ export default function AddDegreeForm(): React.ReactElement {
           <div className="flex flex-row items-center gap-3">
 
             <div className="flex items-center justify-center p-2 border border-gray-200 rounded-lg shadow-md">
-              <IoSchoolOutline size={40} color={twTheme.colors.emerald[600]} />
+              <PiCertificate size={40} color={twTheme.colors.emerald[600]} />
             </div>
 
             <div className="flex flex-col gap-3 flex-1">
-              <Label>Degree</Label>
+              <Label>Title</Label>
               <Input
                 type="text"
                 {
-                  ...register("degree",{
-                    required: "The degree name is required."
+                  ...register("title",{
+                    required: "The title name is required."
                   })
                 }
               />
-              {errors.degree && (
+              {errors.title && (
                 <span className="text-red-600 text-sm">
-                  {errors.degree.message}
-                </span>
-              )}
-            </div>
-
-          </div>
-
-          <div className="flex flex-row items-center gap-3">
-
-            <div className="flex items-center justify-center p-2 border border-gray-200 rounded-lg shadow-md">
-              <MdOutlineLocationOn size={40} color={twTheme.colors.emerald[600]} />
-            </div>
-
-            <div className="flex flex-col gap-3 flex-1">
-              <Label>Location</Label>
-              <Input
-                type="text"
-                {
-                  ...register("location",{
-                    required: "The location is required."
-                  })
-                }
-              />
-              {errors.location && (
-                <span className="text-red-600 text-sm">
-                  {errors.location.message}
+                  {errors.title.message}
                 </span>
               )}
             </div>
@@ -159,14 +133,13 @@ export default function AddDegreeForm(): React.ReactElement {
 
             <div className="flex flex-col gap-3 flex-1">
               <Controller
-                name="period"
+                name="date"
                 control={control}
-                rules={{ required: "El periodo es obligatorio" }}
+                rules={{ required: "La fecha es obligatoria" }}
                 render={({ field }) => (
                   <div className="flex flex-col gap-3">
-                    <Label>Periodo:</Label>
+                    <Label>Date:</Label>
                     <Popover>
-
                       <PopoverTrigger asChild>
                         <Button
                           variant="outline"
@@ -174,35 +147,50 @@ export default function AddDegreeForm(): React.ReactElement {
                           className="justify-between font-normal"
                         >
                           {field.value
-                            ? periodToString(field.value as Period)
+                            ? moment(String(field.value)).format("MMM Do YY")
                             : "Seleccionar fecha"}
                           <ChevronDownIcon />
                         </Button>
                       </PopoverTrigger>
-
                       <PopoverContent align="start" className="p-0">
                         <Calendar
-                          mode="range"
-                          selected={field.value ? {
-                            from: new Date(String((field.value as Period).from)),
-                            to: new Date(String((field.value as Period).to)),
-                          } : undefined}
-                          onSelect={(date) => field.onChange(date ? {
-                            from: date.from?.toISOString() ?? "",
-                            to: date.to?.toISOString() ?? "",
-                          } : undefined)}
+                          mode="single"
+                          selected={field.value ? new Date(String(field.value)) : undefined}
+                          onSelect={(date) => field.onChange(date?.toISOString() ?? "")}
                           captionLayout="dropdown"
                         />
                       </PopoverContent>
-
                     </Popover>
-                    
-                    {errors.period && (
-                      <span className="text-red-600 text-sm">{errors.period.message}</span>
+                    {errors.date && (
+                      <span className="text-red-600 text-sm">{errors.date.message}</span>
                     )}
                   </div>
                 )}
               />
+            </div>
+
+          </div>
+
+          <div className="flex flex-row items-center gap-3">
+
+            <div className="flex items-center justify-center p-2 border border-gray-200 rounded-lg shadow-md">
+              <TbLicense size={40} color={twTheme.colors.emerald[600]} />
+            </div>
+
+            <div className="flex flex-col gap-3 flex-1">
+              <Label>Credential</Label>
+              <Input
+                type="text"
+                {
+                  ...register('credential',{
+                  })
+                }
+              />
+              {errors.credential && (
+                <span className="text-red-600 text-sm">
+                  {errors.credential.message}
+                </span>
+              )}
             </div>
 
           </div>
@@ -249,7 +237,7 @@ export default function AddDegreeForm(): React.ReactElement {
           Cancel
         </Button>
 
-        <Button type="submit" disabled={isSubmitting || isPending }>
+        <Button type="submit" disabled={ isSubmitting || isPending }>
           <FiSave />
           Save
         </Button>

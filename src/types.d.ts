@@ -203,6 +203,10 @@ type Experience = {
   pageContent: undefined;
 }
 
+type NewExperience = Omit<Experience, "pageContent" | "id" | "achievements"> & {
+  achievements: NewAchievement[];
+};
+
 type technology = {
   id: string;
   name: string;

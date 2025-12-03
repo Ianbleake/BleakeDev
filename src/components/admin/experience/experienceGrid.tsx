@@ -1,5 +1,5 @@
 import React from "react";
-import PageItem from "../../ui/pageItem";
+import PageItem from "../ui/pageItem";
 import { BriefcaseBusiness } from "lucide-react";
 import { useRouter } from "next/navigation";
 

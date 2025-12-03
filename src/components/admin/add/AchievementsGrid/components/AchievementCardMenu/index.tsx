@@ -34,7 +34,7 @@ export default function AchievementCardMenu({
           <div className="flex flex-row gap-4 items-center">
             <GoTrophy size={30} color={twTheme.colors.emerald[600]} />
             <p className="text-gray-400 text-sm font-normal">
-              {achievement.description} - {index}
+              {achievement.description}
             </p>
           </div>
           <CiMenuKebab size={30} color={twTheme.colors.emerald[600]} />

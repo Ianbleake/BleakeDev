@@ -1,7 +1,8 @@
 'use client';
 
-import AddCertificationForm from '@/components/admin/add/AddCertificationForm';
-import AddDegreeForm from '@/components/admin/add/AddDegreeForm';
+import AddCertificationForm from '@/components/admin/add/addCertificationForm';
+import AddDegreeForm from '@/components/admin/add/addDegreeForm';
+import AddExperienceForm from '@/components/admin/add/addExperienceForm';
 import AddHeader from '@/components/admin/add/addHeader';
 import { Card } from '@/components/ui/card';
 import { BriefcaseBusiness } from 'lucide-react';
@@ -49,7 +50,7 @@ export default function AddPage(): React.ReactElement {
           <AddCertificationForm/>
         ):
         id === 'experience' ? (
-          <div>Experience Form Coming Soon...</div>
+          <AddExperienceForm/>
         ) : <></>
       }
     </Card>
