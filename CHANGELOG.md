@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.38.0](https://github.com/Ianbleake/BleakeDev/compare/v2.37.0...v2.38.0) (2025-12-03)
+
+
+### Features
+
+* add create experienceForm ([285f700](https://github.com/Ianbleake/BleakeDev/commit/285f70081b008e6d0e5d6bec7ba9a2466f789a68))
+* refactor add page ([1261d73](https://github.com/Ianbleake/BleakeDev/commit/1261d7391fbc88ad502f8660cd492c7783d691c2))
+
 ## [2.37.0](https://github.com/Ianbleake/BleakeDev/compare/v2.36.1...v2.37.0) (2025-12-01)
 
 
