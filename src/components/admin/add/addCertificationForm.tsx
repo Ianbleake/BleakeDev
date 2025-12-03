@@ -1,12 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { FiSave } from "react-icons/fi";
 import { RiArrowGoBackFill } from "react-icons/ri";
-import { IoDocumentTextOutline } from "react-icons/io5";
-import { Separator } from "@/components/ui/separator";
 import { twTheme } from "@/utils/ThemeColors";
 import { HiOutlineBuildingLibrary } from "react-icons/hi2";
 import { Label } from "@/components/ui/label";
@@ -22,6 +19,7 @@ import moment from "moment";
 import { PiCertificate } from "react-icons/pi";
 import useCreateGrade from "@/hooks/education/useCreateGrade";
 import AchievementsGrid from "./AchievementsGrid";
+import AddInfoCard from "./addInfoCard";
 
 
 type AddCertificationData = NewCertification;
@@ -58,22 +56,7 @@ export default function AddCertificationForm(): React.ReactElement {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-8">
 
-      <Card className="px-4 flex flex-col gap-8">
-
-        <div className="flex flex-row items-center gap-6 flex-1 justify-between border-b border-gray-200 pb-4">
-
-            <div className="border border-gray-200 p-3 justify-center items-center rounded-md shadow-sm bg-green-50 ">
-              <IoDocumentTextOutline size={30} color={twTheme.colors.emerald[600]} />
-            </div>
-
-            <div className="flex flex-col gap-2 flex-1">
-              <h2 className="text-gray-900 font-semibold text-xl" >Degree Info</h2>
-              <Separator/>
-              <p className="text-gray-400 text-sm font-normal" >The page content will be configurated after the certification were created.</p>
-            </div>
-
-        </div>
-
+      <AddInfoCard title="Certification Info">
         <div className="grid grid-cols-2 gap-8">
 
           <div className="flex flex-row items-center gap-3">
@@ -221,8 +204,7 @@ export default function AddCertificationForm(): React.ReactElement {
           </div>
 
         </div>
-
-      </Card>
+      </AddInfoCard>
 
       <AchievementsGrid achievements={achievements} setAchievements={setAchievements} />      
 
