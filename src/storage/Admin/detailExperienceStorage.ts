@@ -1,11 +1,11 @@
 import { create } from "zustand";
 
 type DetailExperienceState = {
-    detailInfo: Experience | null;
+    detailInfo: ExperienceInfo | null;
     achievements: Achievement[];
     technologies: Technology[];
 
-    setDetailExperienceData: ( detailInfo: Experience | null, achievements: Achievement[], technologies: Technology[] ) => void;
+    setDetailExperienceData: ( detailInfo: ExperienceInfo | null, achievements: Achievement[], technologies: Technology[] ) => void;
     setDetailInfo: (experience: Experience | null ) => void;
 
     addAchievement: (achievement: Achievement) => void;

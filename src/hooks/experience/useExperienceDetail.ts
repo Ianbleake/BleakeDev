@@ -25,7 +25,18 @@ export default function useExperienceDetail(experienceId: string) {
 
     useEffect(() => {
         if(experienceDetailQuery.data){
-            setDetailExperienceData( experienceDetailQuery.data, experienceDetailQuery.data.achievements, experienceDetailQuery.data.tecnologies );
+
+            const experienceDetailInfo = {
+                id: experienceDetailQuery.data.id,
+                company: experienceDetailQuery.data.company,
+                position: experienceDetailQuery.data.position,
+                location: experienceDetailQuery.data.location,
+                period: experienceDetailQuery.data.period,
+                description: experienceDetailQuery.data.description,
+                type: experienceDetailQuery.data.type,
+            }
+
+            setDetailExperienceData( experienceDetailInfo, experienceDetailQuery.data.achievements, experienceDetailQuery.data.technologies );
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[experienceDetailQuery.data]);

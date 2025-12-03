@@ -15,8 +15,12 @@ import { BsCalendarDate } from "react-icons/bs";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { GrTextAlignFull } from "react-icons/gr";
 import PageContent from '@/components/admin/ui/PageContent';
+import { periodToString } from '@/utils/periodToString';
+import Technologies from '@/components/admin/experience/Technologies';
 
 export default function ExperienceDetailPage(): React.ReactElement {
+
+  //TODO: The detail data doesn't load when change between experiences, fix it.
 
   const params = useParams();
   const experienceId = params.id as string;
@@ -40,7 +44,7 @@ export default function ExperienceDetailPage(): React.ReactElement {
     infoItems: [
       { icon: FaRegBuilding, info: detailInfo.company },
       { icon: MdOutlineComputer, info: detailInfo.position },
-      { icon: BsCalendarDate, info: String(detailInfo.period)}, //TODO: format date and use period to string
+      { icon: BsCalendarDate, info: periodToString(detailInfo.period)},
       { icon: MdOutlineLocationOn, info: detailInfo.location },
       { icon: BsBriefcase, info: detailInfo.type },
       { icon: GrTextAlignFull, info: detailInfo.description, className: "col-span-3" },
@@ -51,10 +55,16 @@ export default function ExperienceDetailPage(): React.ReactElement {
     ]
   }
 
+  console.log('technologies', technologies);
+  console.log('achievements', achievements);
+  console.log('detailInfo', detailInfo);
+
   return (
     <div className="flex flex-col gap-4">
 
       <DetailInfoCard detailData={experienceInfo}/>
+
+      <Technologies technologies={technologies}/>
 
       <Achievements type='experience' achievements={achievements}/> 
       

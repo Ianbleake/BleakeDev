@@ -197,11 +197,13 @@ type Experience = {
   location: string;
   period: Period;
   description: string;
-  achievements: Achievement[];
   type: string;
-  tecnologies: Technology[];
+  achievements: Achievement[];
+  technologies: Technology[];
   pageContent: undefined;
 }
+
+type ExperienceInfo = Omit<Experience, "achievements" | "pageContent" | "technologies" >
 
 type NewExperience = Omit<Experience, "pageContent" | "id" | "achievements"> & {
   achievements: NewAchievement[];
