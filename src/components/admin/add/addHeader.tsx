@@ -3,8 +3,7 @@ import { twTheme } from "@/utils/ThemeColors";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { IconType } from "react-icons";
-import { IoChevronBack, IoSchoolOutline } from "react-icons/io5";
-import { PiCertificate } from "react-icons/pi";
+import { IoChevronBack } from "react-icons/io5";
 
 
 type addHeaderConfig = {

@@ -3,8 +3,9 @@ import { create } from "zustand";
 type DetailExperienceState = {
     detailInfo: Experience | null;
     achievements: Achievement[];
+    technologies: Technology[];
 
-    setDetailExperienceData: ( detailInfo: Experience | null, achievements: Achievement[] ) => void;
+    setDetailExperienceData: ( detailInfo: Experience | null, achievements: Achievement[], technologies: Technology[] ) => void;
     setDetailInfo: (experience: Experience | null ) => void;
 
     addAchievement: (achievement: Achievement) => void;
@@ -16,8 +17,9 @@ export const useDetailExperienceStorage = create<DetailExperienceState>((set) =>
 
     detailInfo: null,
     achievements: [],
+    technologies: [],
 
-    setDetailExperienceData: ( detailInfo, achievements) => set({ detailInfo, achievements }),
+    setDetailExperienceData: ( detailInfo, achievements, technologies ) => set({ detailInfo, achievements, technologies }),
 
     addAchievement: (achievement) => set((state) => ({ achievements: [ ...state.achievements, achievement ] })),
     updateAchievement: (achievement) => set((state) => ({

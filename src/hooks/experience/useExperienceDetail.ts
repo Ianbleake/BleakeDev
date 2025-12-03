@@ -25,7 +25,7 @@ export default function useExperienceDetail(experienceId: string) {
 
     useEffect(() => {
         if(experienceDetailQuery.data){
-            setDetailExperienceData( experienceDetailQuery.data, experienceDetailQuery.data.achievements );
+            setDetailExperienceData( experienceDetailQuery.data, experienceDetailQuery.data.achievements, experienceDetailQuery.data.tecnologies );
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[experienceDetailQuery.data]);

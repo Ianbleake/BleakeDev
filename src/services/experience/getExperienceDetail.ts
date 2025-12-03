@@ -1,12 +1,15 @@
 import { supabaseBrowser } from "@/supabase/client";
 import { handleError } from "@/utils/errorHandler";
 import { getAchievements } from "../achievements/getAchievements";
+import { getTechnology } from "../technologies/getTechnology";
+
 
 export default async function getExperienceDetail(experienceId: string): Promise<Experience> {
-
+    
     try{
 
         let achievements = undefined;
+        let technologies = undefined;
         
         const { data, error } = await supabaseBrowser
             .from("experience")
@@ -20,11 +23,18 @@ export default async function getExperienceDetail(experienceId: string): Promise
             achievements = await getAchievements(data.id) as Achievement[];
         }
 
-        const experience = {
-        ...data,
-        achievements: achievements || [],
+        if(data){
+            technologies = await getTechnology(data.technologyids);
         }
 
+        const { technologyids, ...rest } = data;
+
+        const experience = {
+          ...rest,              
+          achievements: achievements || [],
+          technologies: technologies || [],
+        };
+        
         return experience as Experience;
         
     } catch(error){

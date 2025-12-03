@@ -199,7 +199,7 @@ type Experience = {
   description: string;
   achievements: Achievement[];
   type: string;
-  tecnologies: technology[];
+  tecnologies: Technology[];
   pageContent: undefined;
 }
 
@@ -207,7 +207,7 @@ type NewExperience = Omit<Experience, "pageContent" | "id" | "achievements"> & {
   achievements: NewAchievement[];
 };
 
-type technology = {
+type Technology = {
   id: string;
   name: string;
   color: string;

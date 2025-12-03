@@ -22,7 +22,7 @@ export default function ExperienceDetailPage(): React.ReactElement {
   const experienceId = params.id as string;
 
   const { isLoading } = useExperienceDetail(experienceId);
-  const { detailInfo, achievements } = useDetailExperienceStorage();
+  const { detailInfo, achievements, technologies } = useDetailExperienceStorage();
 
   const hasNoData = detailInfo === null;
 
