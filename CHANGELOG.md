@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.39.1](https://github.com/Ianbleake/BleakeDev/compare/v2.39.0...v2.39.1) (2025-12-03)
+
+
+### Bug Fixes
+
+* add header ([205334e](https://github.com/Ianbleake/BleakeDev/commit/205334ef2f99028c16b90519e3474b55cc85e47d))
+* create achievements on experiences ([ac36778](https://github.com/Ianbleake/BleakeDev/commit/ac367782b97f9efe1b14c0fb5a0930b8d6cf3164))
+
 ## [2.39.0](https://github.com/Ianbleake/BleakeDev/compare/v2.38.0...v2.39.0) (2025-12-03)
 
 
