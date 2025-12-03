@@ -19,6 +19,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { GrTextAlignFull } from "react-icons/gr";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
+import useCreateExperience from "@/hooks/experience/useCreateExperience";
 
 type AddExperienceData = NewExperience;
 
@@ -40,6 +41,8 @@ export default function AddExperienceForm(): React.ReactElement {
     }
   });
 
+  const { mutate:createExperience, isPending } = useCreateExperience();
+
   const onSubmit = (data:AddExperienceData)=> {
 
     const newDegreeData = {
@@ -47,7 +50,7 @@ export default function AddExperienceForm(): React.ReactElement {
       achievements: achievements,
     }
 
-    console.log(newDegreeData);
+    createExperience(newDegreeData);
 
   };
 
@@ -275,7 +278,7 @@ export default function AddExperienceForm(): React.ReactElement {
           Cancel
         </Button>
 
-        <Button type="submit" disabled={isSubmitting }>
+        <Button type="submit" disabled={ isSubmitting || isPending }>
           <FiSave />
           Save
         </Button>
