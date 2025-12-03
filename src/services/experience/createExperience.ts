@@ -1,7 +1,7 @@
 import { supabaseBrowser } from "@/supabase/client";
 import { handleError } from "@/utils/errorHandler";
 
-export default async function createExperience (newExperience: NewExperience) {
+export default async function createExperience (newExperience: Omit<NewExperience, 'achievements'>): Promise<Experience | undefined> {
 
   try{
     const { data, error } = await supabaseBrowser
