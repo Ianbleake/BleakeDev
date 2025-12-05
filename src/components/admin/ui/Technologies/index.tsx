@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import React from "react";
 import TechHeader from "./components/techHeader";
 import TechGrid from "./components/techGrid";
-import Empty from "../../ui/empty";
+import Empty from "../empty";
 import { TbDeviceDesktopCancel } from "react-icons/tb";
 
 type TechnologiesProps = {

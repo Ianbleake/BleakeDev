@@ -16,7 +16,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import { GrTextAlignFull } from "react-icons/gr";
 import PageContent from '@/components/admin/ui/PageContent';
 import { periodToString } from '@/utils/periodToString';
-import Technologies from '@/components/admin/experience/Technologies';
+import Technologies from '@/components/admin/ui/Technologies';
 
 export default function ExperienceDetailPage(): React.ReactElement {
 
@@ -54,9 +54,7 @@ export default function ExperienceDetailPage(): React.ReactElement {
       <></>,
     ]
   }
-
-  console.log('technologies', technologies);
-  console.log('achievements', achievements);
+  
   console.log('detailInfo', detailInfo);
 
   return (

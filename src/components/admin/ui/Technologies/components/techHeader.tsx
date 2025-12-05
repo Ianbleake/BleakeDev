@@ -3,6 +3,8 @@ import { twTheme } from "@/utils/ThemeColors";
 import React from "react";
 import { TbDeviceImacCode } from "react-icons/tb";
 
+//TODO: Improve this component with add technologie action
+
 export default function TechHeader(): React.ReactElement {
   return (
     <div className="flex flex-row items-center justify-between gap-6 border-b border-gray-200 pb-4">
