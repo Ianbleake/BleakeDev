@@ -20,8 +20,6 @@ import Technologies from '@/components/admin/ui/Technologies';
 
 export default function ExperienceDetailPage(): React.ReactElement {
 
-  //TODO: The detail data doesn't load when change between experiences, fix it.
-
   const params = useParams();
   const experienceId = params.id as string;
 
@@ -54,8 +52,6 @@ export default function ExperienceDetailPage(): React.ReactElement {
       <></>,
     ]
   }
-  
-  console.log('detailInfo', detailInfo);
 
   return (
     <div className="flex flex-col gap-4">

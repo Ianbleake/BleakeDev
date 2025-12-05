@@ -5,9 +5,9 @@ import { getTechnology } from "../technologies/getTechnology";
 
 
 export default async function getExperienceDetail(experienceId: string): Promise<Experience> {
-    
+    console.log("ID:", experienceId)
     try{
-
+        console.log("Launch getExperienceDetail with this ID:", experienceId)
         let achievements = undefined;
         let technologies = undefined;
         
