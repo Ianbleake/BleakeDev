@@ -17,6 +17,7 @@ import { GrTextAlignFull } from "react-icons/gr";
 import PageContent from '@/components/admin/ui/PageContent';
 import { periodToString } from '@/utils/periodToString';
 import Technologies from '@/components/admin/ui/Technologies';
+import RemoveExperience from '@/components/admin/experience/experienceActions/removeExperience';
 
 export default function ExperienceDetailPage(): React.ReactElement {
 
@@ -49,7 +50,7 @@ export default function ExperienceDetailPage(): React.ReactElement {
     ],
     actions: [
       <></>,
-      <></>,
+      <RemoveExperience key={"removeExperience"}/>,
     ]
   }
 
