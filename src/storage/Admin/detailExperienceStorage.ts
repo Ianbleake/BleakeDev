@@ -1,33 +1,66 @@
 import { create } from "zustand";
 
 type DetailExperienceState = {
-    detailInfo: ExperienceInfo | null;
-    achievements: Achievement[];
-    technologies: Technology[];
+  detailInfo: ExperienceInfo | null;
+  achievements: Achievement[];
+  technologies: Technology[];
 
-    setDetailExperienceData: ( detailInfo: ExperienceInfo | null, achievements: Achievement[], technologies: Technology[] ) => void;
-    setDetailInfo: (experience: Experience | null ) => void;
+  setDetailExperienceData: (
+    detailInfo: ExperienceInfo | null,
+    achievements: Achievement[],
+    technologies: Technology[]
+  ) => void;
 
-    addAchievement: (achievement: Achievement) => void;
-    updateAchievement: (achievement: Achievement) => void;
-    removeAchievement: (achievementId: string) => void;
-}
+  setDetailInfo: (info: ExperienceInfo | null) => void;
+  updateDetailInfo: (newInfo: Partial<ExperienceInfo>) => void;
 
-export const useDetailExperienceStorage = create<DetailExperienceState>((set) => ({
+  addAchievement: (achievement: Achievement) => void;
+  updateAchievement: (achievement: Achievement) => void;
+  removeAchievement: (achievementId: string) => void;
+};
 
-    detailInfo: null,
-    achievements: [],
-    technologies: [],
+export const useDetailExperienceStorage = create<DetailExperienceState>((set ) => ({
+  detailInfo: null,
+  achievements: [],
+  technologies: [],
 
-    setDetailExperienceData: ( detailInfo, achievements, technologies ) => set({ detailInfo, achievements, technologies }),
+  setDetailExperienceData: (detailInfo, achievements, technologies) =>
+    set({ detailInfo, achievements, technologies }),
 
-    addAchievement: (achievement) => set((state) => ({ achievements: [ ...state.achievements, achievement ] })),
-    updateAchievement: (achievement) => set((state) => ({
-        achievements: state.achievements.map((a) => a.id === achievement.id ? achievement : a)
+  setDetailInfo: (info) => set({ detailInfo: info }),
+
+  updateDetailInfo: (newInfo) =>
+    set((state) => {
+      if (!state.detailInfo) return state; // nada que actualizar
+      return {
+        detailInfo: {
+          ...state.detailInfo,
+          ...newInfo,
+        },
+      };
+    }),
+
+  addAchievement: (achievement) =>
+    set((state) => {
+      // evita duplicados si ya existe el achievement
+      if (state.achievements.some((a) => a.id === achievement.id)) {
+        return state;
+      }
+
+      return {
+        achievements: [...state.achievements, achievement],
+      };
+    }),
+
+  updateAchievement: (achievement) =>
+    set((state) => ({
+      achievements: state.achievements.map((a) =>
+        a.id === achievement.id ? achievement : a
+      ),
     })),
-    removeAchievement: (achievementId) => set((state) => ({
-        achievements: state.achievements.filter((a) => a.id !== achievementId)
+
+  removeAchievement: (achievementId) =>
+    set((state) => ({
+      achievements: state.achievements.filter((a) => a.id !== achievementId),
     })),
-    
-    setDetailInfo: (experience) => set({ detailInfo: experience }),
-}))
+}));

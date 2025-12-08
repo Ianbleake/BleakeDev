@@ -6,6 +6,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { SheetClose } from "@/components/ui/sheet";
 import { Textarea } from "@/components/ui/textarea";
+import useUpdateExperience from "@/hooks/experience/useUpdateExperience";
 import { periodToString } from "@/utils/periodToString";
 import { ChevronDownIcon } from "lucide-react";
 import React from "react";
@@ -33,14 +34,21 @@ export default function ExperienceEditForm({
       type: experience.type,
     }
   });
-
-  console.log("Period:",experience.period)
+  
+  const { mutate:updateExperience } = useUpdateExperience();
 
   const onSubmit = (data: ExperienceInfo) => {
 
-    console.log("EditFormData:",data);
+    const formattedData = {
+      ...data,           
+      id: experience.id   
+    };
+  
+    updateExperience(formattedData);
     onClose();
-  }
+
+  };
+  
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6 px-4 overflow-auto pb-3">
@@ -182,25 +190,6 @@ export default function ExperienceEditForm({
           </div>
         )}
       />
-
-      <div className="flex flex-col gap-3">
-        <Label>Location</Label>
-        <Input
-          type="text"
-          { ...register("location",{
-            required: "La ubicacion es obligatoria",
-          })}
-        />
-        {
-          errors.location && (
-            <span className="text-red-600 text-sm">
-              {errors.location.message}
-            </span>
-          )
-        }
-      </div>
-
-
 
       <div className="flex flex-col gap-3">
         <Label>Descripcion:</Label>

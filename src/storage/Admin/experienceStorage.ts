@@ -6,7 +6,7 @@ type ExperienceState = {
   setExperiences: (experiences: Experience[] | null) => void;
   addExperience: (experience: Experience) => void;
   removeExperience: (id: string) => void;
-  updateExperience: (updatedData: Experience) => void;
+  updateExperience: (updatedData: ExperienceInfo) => void;
   clearExperiences: () => void;
 };
 
@@ -38,17 +38,26 @@ export const useExperienceStorage = create<ExperienceState>()(
         });
       },
 
-      updateExperience: (updatedData) => {
+      updateExperience: (updatedInfo) => {
         const current = get().experiences;
-
+        if (!current) return;
+      
         set({
-          experiences: current
-            ? current.map((exp) =>
-                exp.id === updatedData.id ? { ...exp, ...updatedData } : exp
-              )
-            : null,
+          experiences: current.map((exp) => {
+            if (exp.id !== updatedInfo.id) return exp;
+            
+            return {
+              ...exp,
+              company: updatedInfo.company ?? exp.company,
+              position: updatedInfo.position ?? exp.position,
+              location: updatedInfo.location ?? exp.location,
+              period: updatedInfo.period ?? exp.period,
+              description: updatedInfo.description ?? exp.description,
+              type: updatedInfo.type ?? exp.type,
+            };
+          }),
         });
-      },
+      },      
 
       clearExperiences: () => set({ experiences: null }),
     }),
