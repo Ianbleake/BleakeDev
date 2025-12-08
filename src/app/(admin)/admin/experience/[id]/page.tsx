@@ -30,8 +30,6 @@ export default function ExperienceDetailPage(): React.ReactElement {
   const { detailInfo, achievements, technologies } = useDetailExperienceStorage();
   const { mutate:deleteExperience } = useRemoveExperience();
 
-  console.log("DetailPage:",detailInfo);
-
   const hasNoData = detailInfo === null;
 
   if(isLoading){

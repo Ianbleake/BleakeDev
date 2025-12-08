@@ -43,8 +43,6 @@ export default function ExperienceEditForm({
       ...data,           
       id: experience.id   
     };
-
-    console.log("formatedData:",formattedData)
   
     updateExperience(formattedData);
     onClose();
