@@ -4,11 +4,14 @@ import { twTheme } from "@/utils/ThemeColors";
 import { Trash } from "lucide-react";
 import React from "react";
 
-export default function RemoveExperience(): React.ReactElement {
 
-  const handleDelete = () => {
+type RemoveExperienceProps = {
+  action: () => void;
+}
 
-  }
+export default function RemoveExperience({
+  action,
+}: RemoveExperienceProps ): React.ReactElement {
 
   return (
     <AlertDialog>
@@ -32,7 +35,7 @@ export default function RemoveExperience(): React.ReactElement {
         
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction className="bg-red-500 hover:bg-red-600" onClick={handleDelete} >Delete</AlertDialogAction>
+          <AlertDialogAction className="bg-red-500 hover:bg-red-600" onClick={action} >Delete</AlertDialogAction>
         </AlertDialogFooter>
         
       </AlertDialogContent>

@@ -18,6 +18,7 @@ import PageContent from '@/components/admin/ui/PageContent';
 import { periodToString } from '@/utils/periodToString';
 import Technologies from '@/components/admin/ui/Technologies';
 import RemoveExperience from '@/components/admin/experience/experienceActions/removeExperience';
+import useRemoveExperience from '@/hooks/experience/useRemoveExperience';
 
 export default function ExperienceDetailPage(): React.ReactElement {
 
@@ -26,6 +27,7 @@ export default function ExperienceDetailPage(): React.ReactElement {
 
   const { isLoading } = useExperienceDetail(experienceId);
   const { detailInfo, achievements, technologies } = useDetailExperienceStorage();
+  const { mutate:deleteExperience } = useRemoveExperience();
 
   const hasNoData = detailInfo === null;
 
@@ -35,6 +37,25 @@ export default function ExperienceDetailPage(): React.ReactElement {
 
   if(hasNoData){
     return <NoData/>
+  }
+
+  const achievementsIds = achievements.map((achievement)=>{
+    return(
+      {
+        id: achievement.id
+      }
+    )
+  })
+
+  const handleDelete = () => {
+
+    const deletedExperienceData = {
+      experienceId: detailInfo.id,
+      achievements: achievementsIds,
+    }
+
+    deleteExperience(deletedExperienceData);
+    
   }
 
   const experienceInfo = {
@@ -50,7 +71,7 @@ export default function ExperienceDetailPage(): React.ReactElement {
     ],
     actions: [
       <></>,
-      <RemoveExperience key={"removeExperience"}/>,
+      <RemoveExperience action={handleDelete} key={"removeExperience"}/>,
     ]
   }
 

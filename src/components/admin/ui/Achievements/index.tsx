@@ -11,6 +11,9 @@ type AchievementsProps = {
   achievements: Achievement[];
 }
 
+
+//TODO: the storage management have a data delay fix it
+
 export default function Achievements({
   type,
   achievements,

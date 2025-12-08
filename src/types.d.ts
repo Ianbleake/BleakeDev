@@ -209,6 +209,11 @@ type NewExperience = Omit<Experience, "pageContent" | "id" | "achievements"> & {
   achievements: NewAchievement[];
 };
 
+type deleteExperiencePayload = {
+  experienceId: string,
+  achievements: { id: string }[],
+}
+
 type Technology = {
   id: string;
   name: string;

@@ -1,4 +1,4 @@
-import ProjectsGrid from "@/components/admin/projects/ProjectsGrid";
+import ProjectsGrid from "@/components/admin/projects/projectsGrid";
 import PageCard from "@/components/admin/ui/PageCard";
 import { SquareCode } from "lucide-react";
 import React from "react";
