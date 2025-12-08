@@ -6,12 +6,12 @@ import { toast } from "sonner";
 
 export default function useExperienceDetail(experienceId: string) {
 
-    const { setDetailExperienceData } = useDetailExperienceStorage();
+    const { setDetailExperienceData, detailInfo } = useDetailExperienceStorage();
 
     const experienceDetailQuery = useQuery({
         queryKey: ["experienceDetail",experienceId],
         queryFn: () => getExperienceDetail(experienceId),
-        enabled: !!experienceId,
+        enabled: !!experienceId && detailInfo === null,
         staleTime: 1000 * 60 * 30,
         gcTime: 1000 * 60 * 30,
     });
@@ -24,7 +24,7 @@ export default function useExperienceDetail(experienceId: string) {
     },[experienceDetailQuery.isError])
 
     useEffect(() => {
-        if(experienceDetailQuery.data){
+        if(experienceDetailQuery.data && detailInfo === null){
 
             const experienceDetailInfo = {
                 id: experienceDetailQuery.data.id,
