@@ -19,6 +19,7 @@ import { periodToString } from '@/utils/periodToString';
 import Technologies from '@/components/admin/ui/Technologies';
 import RemoveExperience from '@/components/admin/experience/experienceActions/removeExperience';
 import useRemoveExperience from '@/hooks/experience/useRemoveExperience';
+import ExperienceEdit from '@/components/admin/experience/experienceActions/ExperienceEdit';
 
 export default function ExperienceDetailPage(): React.ReactElement {
 
@@ -64,13 +65,13 @@ export default function ExperienceDetailPage(): React.ReactElement {
     infoItems: [
       { icon: FaRegBuilding, info: detailInfo.company },
       { icon: MdOutlineComputer, info: detailInfo.position },
-      { icon: BsCalendarDate, info: periodToString(detailInfo.period)},
+      { icon: BsCalendarDate, info: detailInfo.period ? periodToString(detailInfo.period) : "-"},
       { icon: MdOutlineLocationOn, info: detailInfo.location },
       { icon: BsBriefcase, info: detailInfo.type },
       { icon: GrTextAlignFull, info: detailInfo.description, className: "col-span-3" },
     ],
     actions: [
-      <></>,
+      <ExperienceEdit experience={detailInfo} key={"editExperience"}/>,
       <RemoveExperience action={handleDelete} key={"removeExperience"}/>,
     ]
   }

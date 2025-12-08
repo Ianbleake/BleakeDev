@@ -79,6 +79,8 @@ export default function GradeEditForm({
   
   }
 
+  console.log("period:",grade.period)
+
   return (
     <div className="px-4">
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6" >
