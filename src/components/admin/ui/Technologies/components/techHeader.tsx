@@ -5,7 +5,13 @@ import { TbDeviceImacCode } from "react-icons/tb";
 
 //TODO: Improve this component with add technologie action
 
-export default function TechHeader(): React.ReactElement {
+type TechHeaderProps = {
+  children: React.ReactElement;
+}
+
+export default function TechHeader({
+  children,
+}:TechHeaderProps ): React.ReactElement {
   return (
     <div className="flex flex-row items-center justify-between gap-6 border-b border-gray-200 pb-4">
 
@@ -17,6 +23,10 @@ export default function TechHeader(): React.ReactElement {
         <h2 className="text-gray-900 font-semibold text-xl">Technologies</h2>
         <Separator />
         <p className="text-gray-400 text-sm font-normal">Click on the cards to edit</p>
+      </div>
+
+      <div>
+        {children}
       </div>
       
     </div>

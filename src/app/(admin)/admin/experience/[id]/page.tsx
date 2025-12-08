@@ -81,7 +81,7 @@ export default function ExperienceDetailPage(): React.ReactElement {
 
       <DetailInfoCard detailData={experienceInfo}/>
 
-      <Technologies technologies={technologies}/>
+      <Technologies ownerId={detailInfo.id} technologies={technologies}/>
 
       <Achievements type='experience' achievements={achievements}/> 
       
