@@ -204,7 +204,7 @@ type Experience = {
   pageContent: undefined;
 }
 
-type ExperienceInfo = Omit<Experience, "achievements" | "pageContent" | "technologies" >
+type ExperienceInfo = Omit<Experience, "achievements" | "pageContent" | "technologies" | "technologyids" >
 
 type NewExperience = Omit<Experience, "pageContent" | "id" | "achievements"> & {
   achievements: NewAchievement[];
