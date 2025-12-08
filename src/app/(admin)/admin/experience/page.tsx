@@ -17,8 +17,6 @@ export default function ExperiencePage(): React.ReactElement {
 
   const { experiences } = useExperienceStorage();
 
-  console.log("Experiences:",experiences)
-
   const hasNoData = experiences === null;
 
   const router = useRouter();

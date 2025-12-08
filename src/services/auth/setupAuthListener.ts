@@ -7,7 +7,6 @@ export function setupAuthListener() {
 
   const { data: { subscription } } = supabaseBrowser.auth.onAuthStateChange(
     async (event, session) => {
-      console.log('Auth state changed:', event);
 
       const eventsNeedingProfile = [ 'TOKEN_REFRESHED', 'USER_UPDATED', ];
 

@@ -27,8 +27,6 @@ export default function AchievementAddForm({
   const elementId = params.id as string;
   const { mutate, isPending } = useCreateAchievement();
 
-  console.log("Element ID:", elementId);
-
   const {
     register,
     handleSubmit,
