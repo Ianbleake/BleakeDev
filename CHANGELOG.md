@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.39.3](https://github.com/Ianbleake/BleakeDev/compare/v2.39.2...v2.39.3) (2025-12-08)
+
+
+### Bug Fixes
+
+* remove experience ([3f223c1](https://github.com/Ianbleake/BleakeDev/commit/3f223c17e51ffb24a3ed984f6dad3ff20c08a952))
+
 ## [2.39.2](https://github.com/Ianbleake/BleakeDev/compare/v2.39.1...v2.39.2) (2025-12-05)
 
 
