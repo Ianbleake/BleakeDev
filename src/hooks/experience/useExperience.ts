@@ -6,11 +6,12 @@ import { toast } from "sonner";
 
 export default function useExperience() {
 
-  const { setExperiences } = useExperienceStorage();
+  const { setExperiences, experiences } = useExperienceStorage();
 
   const experienceQuery = useQuery({
     queryKey: ["getExperience"],
     queryFn: getExperience,
+    enabled: experiences === null,
     staleTime: 1000 * 60 * 30,
     gcTime: 1000 * 60 * 30,
   })
@@ -23,11 +24,12 @@ export default function useExperience() {
   },[experienceQuery.isError])
 
   useEffect(() => {
-    if(experienceQuery.data){
+    if (experienceQuery.data && experiences === null) {
       setExperiences(experienceQuery.data);
-    }    
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[experienceQuery.data])
+  }, [experienceQuery.data]);
+  
 
   return {
     query: experienceQuery,
