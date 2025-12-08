@@ -6,8 +6,6 @@ import { toast } from "sonner";
 
 export default function useExperienceDetail(experienceId: string) {
 
-    console.log("hook Id:",experienceId);
-
     const { setDetailExperienceData } = useDetailExperienceStorage();
 
     const experienceDetailQuery = useQuery({

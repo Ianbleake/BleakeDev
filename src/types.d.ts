@@ -199,6 +199,7 @@ type Experience = {
   description: string;
   type: string;
   achievements: Achievement[];
+  technologyids: string[];
   technologies: Technology[];
   pageContent: undefined;
 }
