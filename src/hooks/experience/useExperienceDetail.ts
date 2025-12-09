@@ -6,15 +6,15 @@ import { toast } from "sonner";
 
 export default function useExperienceDetail(experienceId: string) {
 
-    const { setDetailExperienceData } = useDetailExperienceStorage();
+    const { setDetailExperienceData, detailInfo } = useDetailExperienceStorage();
     const [ isError, setError ] = useState<boolean>(false);
+
+    const isSameId = detailInfo?.id === experienceId;
 
     const experienceDetailQuery = useQuery({
         queryKey: ["experienceDetail",experienceId],
         queryFn: () => getExperienceDetail(experienceId),
         enabled: !!experienceId,
-        staleTime: 1000 * 60 * 30,
-        gcTime: 1000 * 60 * 30,
     });
 
     useEffect(() => {
@@ -26,7 +26,7 @@ export default function useExperienceDetail(experienceId: string) {
     },[experienceDetailQuery.isError])
 
     useEffect(() => {
-        if(experienceDetailQuery.data){
+        if(experienceDetailQuery.data && !isSameId){
             setError(false);
             const experienceDetailInfo = {
                 id: experienceDetailQuery.data.id,
