@@ -1,17 +1,18 @@
 import getExperienceDetail from "@/services/experience/getExperienceDetail";
 import { useDetailExperienceStorage } from "@/storage/Admin/detailExperienceStorage";
 import { useQuery } from "@tanstack/react-query";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
 export default function useExperienceDetail(experienceId: string) {
 
-    const { setDetailExperienceData, detailInfo } = useDetailExperienceStorage();
+    const { setDetailExperienceData } = useDetailExperienceStorage();
+    const [ isError, setError ] = useState<boolean>(false);
 
     const experienceDetailQuery = useQuery({
         queryKey: ["experienceDetail",experienceId],
         queryFn: () => getExperienceDetail(experienceId),
-        enabled: !!experienceId && detailInfo === null,
+        enabled: !!experienceId,
         staleTime: 1000 * 60 * 30,
         gcTime: 1000 * 60 * 30,
     });
@@ -19,13 +20,14 @@ export default function useExperienceDetail(experienceId: string) {
     useEffect(() => {
         if(experienceDetailQuery.isError){
             toast.error(experienceDetailQuery.error.message);
+            setError(true)
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[experienceDetailQuery.isError])
 
     useEffect(() => {
-        if(experienceDetailQuery.data && detailInfo === null){
-
+        if(experienceDetailQuery.data){
+            setError(false);
             const experienceDetailInfo = {
                 id: experienceDetailQuery.data.id,
                 company: experienceDetailQuery.data.company,
@@ -43,5 +45,6 @@ export default function useExperienceDetail(experienceId: string) {
 
     return {
         isLoading: experienceDetailQuery.isLoading,
+        error: isError
     }
 }

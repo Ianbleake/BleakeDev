@@ -26,7 +26,7 @@ export default function ExperienceDetailPage(): React.ReactElement {
   const params = useParams();
   const experienceId = params.id as string;
 
-  const { isLoading } = useExperienceDetail(experienceId);
+  const { isLoading, error } = useExperienceDetail(experienceId);
   const { detailInfo, achievements, technologies } = useDetailExperienceStorage();
   const { mutate:deleteExperience } = useRemoveExperience();
 
@@ -36,7 +36,7 @@ export default function ExperienceDetailPage(): React.ReactElement {
     return <DetailPageSkeleton />;
   }
 
-  if(hasNoData){
+  if( hasNoData || error ){
     return <NoData/>
   }
 
@@ -65,7 +65,7 @@ export default function ExperienceDetailPage(): React.ReactElement {
     infoItems: [
       { icon: FaRegBuilding, info: detailInfo.company },
       { icon: MdOutlineComputer, info: detailInfo.position },
-      { icon: BsCalendarDate, info: detailInfo.period ? periodToString(detailInfo.period) : "-"},
+      { icon: BsCalendarDate, info: periodToString(detailInfo.period)},
       { icon: MdOutlineLocationOn, info: detailInfo.location },
       { icon: BsBriefcase, info: detailInfo.type },
       { icon: GrTextAlignFull, info: detailInfo.description, className: "col-span-3" },

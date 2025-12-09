@@ -29,7 +29,7 @@ export default function ExperienceEditForm({
       company: experience.company,
       position: experience.position,
       location: experience.location,
-      period: experience.period ? experience.period : {},
+      period: experience.period ?? undefined,
       description: experience.description,
       type: experience.type,
     }
@@ -99,60 +99,55 @@ export default function ExperienceEditForm({
       </div>     
 
       <Controller
-        name="period"
-        control={control}
-        rules={{ required: "El periodo es obligatorio" }}
-        render={({ field }) => (
-          <div className="flex flex-col gap-3">
-            <Label>Periodo:</Label>
-            <Popover>
+            name="period"
+            control={control}
+            rules={{ required: "El periodo es obligatorio" }}
+            render={({ field }) => (
+              <div className="flex flex-col gap-3">
+                <Label>Periodo:</Label>
+                <Popover>
 
-              <PopoverTrigger asChild>
-                <Button
-                  variant="outline"
-                  id="date"
-                  className="justify-between font-normal"
-                >
-                  {field.value
-                    ? periodToString(field.value as Period)
-                    : "Seleccionar fecha"}
-                  <ChevronDownIcon />
-                </Button>
-              </PopoverTrigger>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      id="date"
+                      className="justify-between font-normal"
+                    >
+                      { field.value?.from && field.value?.to
+                        ? periodToString(field.value as Period)
+                        : "Seleccionar fecha" }
 
-              <PopoverContent align="start" className="p-0">
-                <Calendar
-                  mode="range"
-                  selected={
-                    field.value?.from && field.value?.to
-                      ? {
-                          from: new Date(field.value.from),
-                          to: new Date(field.value.to),
-                        }
-                      : undefined
-                  }                  
-                  onSelect={(range) =>
-                    field.onChange(
-                      range
-                        ? {
-                            from: range.from ?? undefined,
-                            to: range.to ?? undefined,
-                          }
-                        : undefined
-                    )
-                  }                  
-                  captionLayout="dropdown"
-                />
-              </PopoverContent>
+                      <ChevronDownIcon />
+                    </Button>
+                  </PopoverTrigger>
 
-            </Popover>
-            
-            {errors.period && (
-              <span className="text-red-600 text-sm">{errors.period.message}</span>
+                  <PopoverContent align="start" className="p-0">
+                    <Calendar
+                      mode="range"
+                      selected={
+                        field.value && field.value.from && field.value.to
+                          ? {
+                              from: new Date(field.value.from),
+                              to: new Date(field.value.to),
+                            }
+                          : undefined
+                      }                      
+                      onSelect={(date) => field.onChange(date ? {
+                        from: date.from?.toISOString() ?? "",
+                        to: date.to?.toISOString() ?? "",
+                      } : undefined)}
+                      captionLayout="dropdown"
+                    />
+                  </PopoverContent>
+
+                </Popover>
+                
+                {errors.period && (
+                  <span className="text-red-600 text-sm">{errors.period.message}</span>
+                )}
+              </div>
             )}
-          </div>
-        )}
-      />     
+          />   
 
       <Controller
         name="type"
