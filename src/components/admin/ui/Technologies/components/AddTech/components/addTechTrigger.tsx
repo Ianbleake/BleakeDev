@@ -1,7 +1,20 @@
+import { Button } from "@/components/ui/button";
 import React from "react";
+import { TbDeviceDesktopPlus } from "react-icons/tb";
 
-export default function AddTechTrigger(): React.ReactElement {
+type AddTechTriggerProps = {
+  action: () => void;
+}
+
+export default function AddTechTrigger({
+  action,
+}: AddTechTriggerProps ): React.ReactElement {
   return (
-    <div>AddTechTrigger</div>
+    
+    <Button onClick={action} >
+      <TbDeviceDesktopPlus />
+      Add Technology
+    </Button>
+    
   );
 }
