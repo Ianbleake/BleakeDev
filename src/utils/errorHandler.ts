@@ -22,7 +22,6 @@ export const ERROR_CODES = {
 
 export function handleError(error: unknown, origin: string): never {
 
-
   if (isAuthError(error)) {
     const formatted = formatAuthError(error, origin);
     throw formatted;

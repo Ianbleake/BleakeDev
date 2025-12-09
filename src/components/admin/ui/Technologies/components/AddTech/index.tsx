@@ -24,7 +24,7 @@ export default function AddTech({
 
         <AddTechHeader/>
 
-        <AddTechForm ownerId={ownerId} />
+        <AddTechForm ownerId={ownerId} onClose={()=>setOpen(false)} />
 
       </SheetContent>
     </Sheet>

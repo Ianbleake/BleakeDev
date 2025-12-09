@@ -27,9 +27,9 @@ export default function ExperienceGrid({
   return (
     <div className="grid grid-cols-2 gap-4">
       {
-        experiencesItems.map((experience)=>{
+        experiencesItems.map((experience,index)=>{
           return(
-            <PageItem item={experience} key={experience.name} />
+            <PageItem item={experience} key={index} />
           )
         })
       }

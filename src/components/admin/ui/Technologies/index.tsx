@@ -1,10 +1,11 @@
 import { Card } from "@/components/ui/card";
 import React from "react";
 import TechHeader from "./components/techHeader";
-import TechGrid from "./components/TechGrid";
+
 import Empty from "../empty";
 import { TbDeviceDesktopCancel } from "react-icons/tb";
 import AddTech from "./components/AddTech";
+import TechGrid from "./components/TechGrid";
 
 type TechnologiesProps = {
   ownerId: string;
