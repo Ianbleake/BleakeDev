@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.39.12](https://github.com/Ianbleake/BleakeDev/compare/v2.39.11...v2.39.12) (2025-12-10)
+
+
+### Bug Fixes
+
+* experience info grid ([c106979](https://github.com/Ianbleake/BleakeDev/commit/c10697969903e741f0b10cfb51d4f3ef12d79ab5))
+* remove un used vars ([afbe11d](https://github.com/Ianbleake/BleakeDev/commit/afbe11d71e369afcc4ce03e9c89d3006bea40627))
+
 ## [2.39.11](https://github.com/Ianbleake/BleakeDev/compare/v2.39.10...v2.39.11) (2025-12-10)
 
 
