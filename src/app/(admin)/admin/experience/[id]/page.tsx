@@ -9,7 +9,6 @@ import { useDetailExperienceStorage } from '@/storage/Admin/detailExperienceStor
 import { BsBriefcase } from "react-icons/bs";
 import { useParams } from 'next/navigation';
 import React from 'react';
-import { FaRegBuilding } from "react-icons/fa";
 import { MdOutlineComputer } from "react-icons/md";
 import { BsCalendarDate } from "react-icons/bs";
 import { MdOutlineLocationOn } from "react-icons/md";
