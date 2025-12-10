@@ -19,6 +19,7 @@ type DetailExperienceState = {
   removeAchievement: (achievementId: string) => void;
 
   addTechnology: (newTechnology: Technology) => void;
+  removeTechnology: ( techId: string ) => void;
 };
 
 export const useDetailExperienceStorage = create<DetailExperienceState>((set ) => ({
@@ -77,6 +78,11 @@ export const useDetailExperienceStorage = create<DetailExperienceState>((set ) =
         technologies: [...state.technologies,newTechnology],
       }
       
-    }),
+  }),
+
+  removeTechnology: (techId) =>
+    set((state) => ({
+      technologies: state.technologies.filter((a) => a.id !== techId),
+    })),
 
 }));
