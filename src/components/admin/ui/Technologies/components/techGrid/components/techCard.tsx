@@ -6,7 +6,6 @@ type TechCardProps = {
   technology: Technology;
 }
 
-//TODO: Improve this component whit the actions dropdown menu
 export default function TechCard({
   technology,
 }: TechCardProps ): React.ReactElement {

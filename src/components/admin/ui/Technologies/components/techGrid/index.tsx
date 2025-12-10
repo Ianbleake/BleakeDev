@@ -1,5 +1,5 @@
 import React from "react";
-import TechCard from "./components/techCard";
+import TechMenu from "./components/techMenu";
 
 type TechGridProps = {
   technologies: Technology[];
@@ -13,7 +13,7 @@ export default function TechGrid({
       {
         technologies.map((technology) => {
           return(
-            <TechCard key={technology.id} technology={technology} />
+            <TechMenu key={technology.id} technology={technology} />
           );
         })
       }
