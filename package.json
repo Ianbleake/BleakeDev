@@ -1,6 +1,6 @@
 {
   "name": "portafolio",
-  "version": "2.39.12",
+  "version": "2.40.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
