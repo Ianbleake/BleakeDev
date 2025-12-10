@@ -3,6 +3,8 @@ import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { toast } from "sonner";
 
+//TODO:Create Technologies storage and implement here
+
 export default function useTechnologies () {
 
   const technologiesQuery = useQuery({

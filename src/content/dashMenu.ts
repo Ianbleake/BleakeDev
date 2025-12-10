@@ -1,4 +1,4 @@
-import { BriefcaseBusiness, Copy, GraduationCap, SquareCode, Medal, AppWindow } from "lucide-react"
+import { BriefcaseBusiness, Copy, GraduationCap, SquareCode, Medal, AppWindow, Cpu } from "lucide-react"
 
 export const items = [
   {
@@ -10,6 +10,11 @@ export const items = [
     title: "Categories",
     url: "/admin/categories",
     icon: Copy,
+  },
+  {
+    title: "Technologies",
+    url: "/admin/technologies",
+    icon: Cpu,
   },
   {
     title: "Education",
@@ -30,5 +35,5 @@ export const items = [
     title: "Skills",
     url: "/admin/skills",
     icon: Medal,
-  }
+  },
 ]
