@@ -25,7 +25,7 @@ export default function Technologies({
 
       {
         technologies.length > 0 ? (
-          <TechGrid technologies={technologies}/>
+          <TechGrid ownerId={ownerId} technologies={technologies}/>
         ) : (
           <Empty icon={TbDeviceDesktopCancel} title="No technologies" description="Add new technologies with the button on the header of this card" />
         )

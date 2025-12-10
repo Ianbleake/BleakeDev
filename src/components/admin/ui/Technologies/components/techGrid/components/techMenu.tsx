@@ -3,17 +3,29 @@ import React from "react";
 import TechCard from "./techCard";
 import { Info } from "lucide-react";
 import RemoveTech from "../../RemoveTech";
+import useRemoveTech from "@/hooks/technologies/useRemoveTech";
 
 type TechMenuProps = {
   technology: Technology;
+  ownerId: string;
 }
 
 export default function TechMenu({
   technology,
+  ownerId,
 }:TechMenuProps ): React.ReactElement {
 
+  const { mutate: removeTech } = useRemoveTech();
+
   const handleRemove = () => {
-    console.log("Tech removed...")
+    
+    const removedTechData = {
+      techId: technology.id,
+      ownerId: ownerId,
+      type: "experience",
+    }
+
+    removeTech(removedTechData)
   }
 
   return (
