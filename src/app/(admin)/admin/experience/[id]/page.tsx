@@ -63,12 +63,11 @@ export default function ExperienceDetailPage(): React.ReactElement {
     icon: BsBriefcase,
     title: detailInfo.company,
     infoItems: [
-      { icon: FaRegBuilding, info: detailInfo.company },
       { icon: MdOutlineComputer, info: detailInfo.position },
       { icon: BsCalendarDate, info: periodToString(detailInfo.period)},
       { icon: MdOutlineLocationOn, info: detailInfo.location },
       { icon: BsBriefcase, info: detailInfo.type },
-      { icon: GrTextAlignFull, info: detailInfo.description, className: "col-span-3" },
+      { icon: GrTextAlignFull, info: detailInfo.description, className: "col-span-2" },
     ],
     actions: [
       <ExperienceEdit experience={detailInfo} key={"editExperience"}/>,
