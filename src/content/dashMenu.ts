@@ -17,6 +17,11 @@ export const items = [
     icon: Cpu,
   },
   {
+    title: "Skills",
+    url: "/admin/skills",
+    icon: Medal,
+  },
+  {
     title: "Education",
     url: "/admin/education",
     icon: GraduationCap,
@@ -30,10 +35,5 @@ export const items = [
     title: "Projects",
     url: "/admin/projects",
     icon: SquareCode,
-  },
-  {
-    title: "Skills",
-    url: "/admin/skills",
-    icon: Medal,
   },
 ]
