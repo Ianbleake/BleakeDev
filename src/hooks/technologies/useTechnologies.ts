@@ -1,11 +1,13 @@
 import getAllTechnologies from "@/services/technologies/getAllTechnologies";
+import { useTechStorage } from "@/storage/Admin/techStorage";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { toast } from "sonner";
 
-//TODO:Create Technologies storage and implement here
 
 export default function useTechnologies () {
+
+  const { setTechs } = useTechStorage();
 
   const technologiesQuery = useQuery({
     queryKey: ["getTechnologies"],
@@ -18,13 +20,14 @@ export default function useTechnologies () {
     if(technologiesQuery.error){
       toast.error(technologiesQuery.error.message);
     }
-  },[technologiesQuery])
+  },[technologiesQuery.error])
 
   useEffect(()=>{
     if(technologiesQuery.data){
-      
+      setTechs(technologiesQuery.data);
     }
-  },[technologiesQuery])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[technologiesQuery.data])
 
   return {
     query: technologiesQuery,

@@ -9,13 +9,19 @@ import React from "react";
 
 type PageItemProps = {
   item: PageItem;
+  size?: "small" | "large";
 }
 
 export default function PageItem({
   item,
+  size = "large",
 }: PageItemProps ): React.ReactElement {
 
   const Icon = item.icon;
+
+  if(size === "small"){
+    
+  }
 
   return (
     <Card className="h-16 flex flex-row gap-4 items-center justify-start p-4 py-12 hover:bg-green-50 cursor-pointer transition-colors" onClick={item.action} >

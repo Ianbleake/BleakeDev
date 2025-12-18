@@ -1,9 +1,21 @@
 import React from "react";
+import CategoryCard from "../categories/CategoriesGrid/components/categoryCard";
 
-export default function TechnologiesGrid(): React.ReactElement {
+type TechnologiesGridProps = {
+  techs: Technology[];
+}
+
+export default function TechnologiesGrid({
+  techs,
+}:TechnologiesGridProps ): React.ReactElement {
+
   return (
     <div className="grid grid-cols-4 gap-4">
-
+      {
+        techs.map((tech) => (
+          <CategoryCard category={tech} key={tech.id} />
+        ))
+      }
     </div>
   );
 }
