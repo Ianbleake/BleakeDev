@@ -11,9 +11,9 @@ type BodyProps = {
 type PageItem = {
   icon: IconType;
   name: string;
-  valueOne: string;
+  valueOne?: string;
   valueTwo?: string;
-  action: () => void;
+  action?: () => void;
 };
 
 type PageCardHeaderData = {
