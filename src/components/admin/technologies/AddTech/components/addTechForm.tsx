@@ -3,42 +3,38 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { FiSave } from "react-icons/fi";
 import { RiArrowGoBackFill } from "react-icons/ri";
-import { RxUpdate } from "react-icons/rx";
 
-type EditTechFormProps = {
-  tech: Technology;
-  onClose: ()=>void;
-}
+type AddTechFormProps = {
+  onClose: () => void;
+};
 
-type EditTechFormData = {
+type addTechFormData = {
   name: string;
-}
+};
 
-export default function EditTechForm({
-  tech,
+export default function AddTechForm({
   onClose,
-}: EditTechFormProps ): React.ReactElement {
+}:AddTechFormProps ): React.ReactElement {
 
-  const { handleSubmit, register, formState: { errors, isSubmitting }  } = useForm<EditTechFormData>({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<addTechFormData>({
     defaultValues: {
-      name: tech.name,
-    }
-  })
+      name: "",
+    },
+  });
 
-  const onSubmit = (data: EditTechFormData ) => {
-
-    const updatedTech = {
-      ...tech,
-      name: data.name,
-    }
-
-    console.log(updatedTech);
+  const onSubmit = (data: addTechFormData) => {
+    console.log("Adding technology:", data);
     onClose();
-  }
+   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="px-4 flex flex-col gap-4">
+    <form className="px-4 flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
 
       <div className="flex flex-col gap-2">
         <Label>Name</Label>
@@ -64,11 +60,10 @@ export default function EditTechForm({
         </Button>
 
         <Button type="submit" disabled={isSubmitting}>
-          <RxUpdate />
-          {isSubmitting ? "Updating..." : "Update Technology"}
+          <FiSave />
+          {isSubmitting ? "Adding..." : "Add Technology"}
         </Button>
       </div>
-
     </form>
   );
 }

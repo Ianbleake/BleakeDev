@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
+import { Cpu } from "lucide-react";
 import React, { useState } from "react";
-import EditCategoryHeader from "./components/addCategoryHeader";
-import AddCategoryForm from "./components/addCategoryForm";
-import { IoCopy } from "react-icons/io5";
+import AddTechHeader from "./components/addTechHeader";
+import AddTechForm from "./components/addTechForm";
 
-export default function AddCategory(): React.ReactElement {
+
+export default function AddTech(): React.ReactElement {
 
   const [ open, setOpen ] = useState<boolean>(false);
 
@@ -13,14 +14,16 @@ export default function AddCategory(): React.ReactElement {
     <Sheet open={open} onOpenChange={setOpen} >
 
       <Button onClick={()=>setOpen(true)} className="ml-4 text-lg" >
-        Add Category
-        <IoCopy/>
+        Add Technology
+        <Cpu/>
       </Button>
 
       <SheetContent>
-        <EditCategoryHeader/>
 
-        <AddCategoryForm setClose={setOpen}/>
+        <AddTechHeader/>
+
+        <AddTechForm onClose={()=>setOpen(false)}/>
+
       </SheetContent>
     </Sheet>
   );

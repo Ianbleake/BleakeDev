@@ -1,6 +1,7 @@
 'use client';
 
 
+import AddTech from "@/components/admin/technologies/AddTech";
 import TechnologiesGrid from "@/components/admin/technologies/TechnologiesGrid";
 import NoData from "@/components/admin/ui/NoData";
 import PageCard from "@/components/admin/ui/PageCard";
@@ -23,6 +24,7 @@ export default function TechnologiesPage(): React.ReactElement {
     icon: Cpu,
     title: "Technologies",
     description: "Here can you handle the technologies.",
+    action: <AddTech/>
   }
 
   if(isLoading) {
