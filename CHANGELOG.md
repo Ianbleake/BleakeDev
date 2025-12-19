@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.40.1](https://github.com/Ianbleake/BleakeDev/compare/v2.40.0...v2.40.1) (2025-12-19)
+
+
+### Bug Fixes
+
+* improve pageItem with small version ([5962d57](https://github.com/Ianbleake/BleakeDev/commit/5962d5731f0ff3567efc9745ba6a3f1f4a8469da))
+
 ## [2.40.0](https://github.com/Ianbleake/BleakeDev/compare/v2.39.12...v2.40.0) (2025-12-18)
 
 
