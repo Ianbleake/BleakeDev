@@ -1,7 +1,9 @@
 import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import React from "react";
-import PageItem from "../ui/pageItem";
+import PageItem from "../../../ui/pageItem";
 import { Cpu, Info } from "lucide-react";
+import EditTech from "../../EditTech";
+import RemoveTech from "../../removeTech";
 
 type TechCardProps = {
   tech: Technology;
@@ -25,6 +27,10 @@ export default function TechCard({
         </DropdownMenuLabel>
 
         <DropdownMenuSeparator/>
+
+        <EditTech/>
+
+        <RemoveTech/>
 
       </DropdownMenuContent>
 

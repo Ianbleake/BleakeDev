@@ -1,6 +1,7 @@
 'use client';
 
-import TechnologiesGrid from "@/components/admin/technologies/technologiesGrid";
+
+import TechnologiesGrid from "@/components/admin/technologies/TechnologiesGrid";
 import NoData from "@/components/admin/ui/NoData";
 import PageCard from "@/components/admin/ui/PageCard";
 import CategoryCardSkeleton from "@/components/skeletons/categoryCardSkeleton";

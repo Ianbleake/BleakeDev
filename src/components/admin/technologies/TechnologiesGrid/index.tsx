@@ -1,5 +1,5 @@
 import React from "react";
-import TechCard from "./techCard";
+import TechCard from "./components/techCard";
 
 type TechnologiesGridProps = {
   techs: Technology[];
