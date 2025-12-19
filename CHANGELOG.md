@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.41.0](https://github.com/Ianbleake/BleakeDev/compare/v2.40.2...v2.41.0) (2025-12-19)
+
+
+### Features
+
+* implement technology deletion functionality with confirmation ([f7be2b9](https://github.com/Ianbleake/BleakeDev/commit/f7be2b91b64e59225b8509ab026e66b6a71b88a1))
+
+
+### Bug Fixes
+
+* add update tech service and hook ([9f024ad](https://github.com/Ianbleake/BleakeDev/commit/9f024ade3e97cbd8964cd5064eb17ad86c9feb94))
+
 ## [2.40.2](https://github.com/Ianbleake/BleakeDev/compare/v2.40.1...v2.40.2) (2025-12-19)
 
 
