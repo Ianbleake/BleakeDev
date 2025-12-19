@@ -4,6 +4,8 @@ import PageItem from "../../../ui/pageItem";
 import { Cpu, Info } from "lucide-react";
 import EditTech from "../../EditTech";
 import RemoveTech from "../../removeTech";
+import useDeleteTech from "@/hooks/technologies/useDeleteTech";
+
 
 type TechCardProps = {
   tech: Technology;
@@ -13,8 +15,10 @@ export default function TechCard({
   tech,
 }: TechCardProps ): React.ReactElement {
 
+  const { mutate: deleteTech } = useDeleteTech();
+
   const handleRemove = () => {
-    console.log(`Removing technology with id: ${tech.id}`);
+    deleteTech(tech.id);
   }
 
   return (
