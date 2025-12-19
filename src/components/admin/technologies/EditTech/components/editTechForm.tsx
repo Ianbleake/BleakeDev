@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import useUpdateTech from "@/hooks/technologies/useUpdateTech";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { RiArrowGoBackFill } from "react-icons/ri";
@@ -26,6 +27,8 @@ export default function EditTechForm({
     }
   })
 
+  const { mutate: updateTech } = useUpdateTech();
+
   const onSubmit = (data: EditTechFormData ) => {
 
     const updatedTech = {
@@ -33,8 +36,12 @@ export default function EditTechForm({
       name: data.name,
     }
 
-    console.log(updatedTech);
-    onClose();
+    updateTech(updatedTech, {
+      onSuccess: () => {
+        onClose();
+      }
+    });
+    
   }
 
   return (
