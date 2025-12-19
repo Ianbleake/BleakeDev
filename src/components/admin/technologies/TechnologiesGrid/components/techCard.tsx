@@ -12,6 +12,11 @@ type TechCardProps = {
 export default function TechCard({
   tech,
 }: TechCardProps ): React.ReactElement {
+
+  const handleRemove = () => {
+    console.log(`Removing technology with id: ${tech.id}`);
+  }
+
   return (
     <DropdownMenu>
 
@@ -28,9 +33,9 @@ export default function TechCard({
 
         <DropdownMenuSeparator/>
 
-        <EditTech/>
+        <EditTech tech={tech}/>
 
-        <RemoveTech/>
+        <RemoveTech action={handleRemove}/>
 
       </DropdownMenuContent>
 

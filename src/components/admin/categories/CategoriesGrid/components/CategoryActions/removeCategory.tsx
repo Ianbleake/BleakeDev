@@ -14,27 +14,27 @@ export default function RemoveCategory({
   return (
     <AlertDialog>
 
-    <AlertDialogTrigger asChild>
-      <DropdownMenuItem  onSelect={(e) => e.preventDefault()} >
-        <Trash className="mr-2 h-4 w-4" color={twTheme.colors.red[500]} />
-        <span className="text-red-500">Delete</span>
-      </DropdownMenuItem>
-    </AlertDialogTrigger>
+      <AlertDialogTrigger asChild>
+        <DropdownMenuItem  onSelect={(e) => e.preventDefault()} >
+          <Trash className="mr-2 h-4 w-4" color={twTheme.colors.red[500]} />
+          <span className="text-red-500">Delete</span>
+        </DropdownMenuItem>
+      </AlertDialogTrigger>
 
-    <AlertDialogContent>
-      <AlertDialogHeader>
-        <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-        <AlertDialogDescription>
-          This action cannot be undone. This will permanently delete your
-          category and remove your data from our servers.
-        </AlertDialogDescription>
-      </AlertDialogHeader>
-      <AlertDialogFooter>
-        <AlertDialogCancel>Cancel</AlertDialogCancel>
-        <AlertDialogAction className="bg-red-500 hover:bg-red-600" onClick={action} >Delete</AlertDialogAction>
-      </AlertDialogFooter>
-    </AlertDialogContent>
-    
-  </AlertDialog>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogDescription>
+            This action cannot be undone. This will permanently delete your
+            category and remove your data from our servers.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogAction className="bg-red-500 hover:bg-red-600" onClick={action} >Delete</AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+      
+    </AlertDialog>
   );
 }
