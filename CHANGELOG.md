@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.40.2](https://github.com/Ianbleake/BleakeDev/compare/v2.40.1...v2.40.2) (2025-12-19)
+
+
+### Bug Fixes
+
+* add create tech services and hooks ([824ab3f](https://github.com/Ianbleake/BleakeDev/commit/824ab3f4b1593e9e3fc64447ba5ab587b296dafb))
+
 ## [2.40.1](https://github.com/Ianbleake/BleakeDev/compare/v2.40.0...v2.40.1) (2025-12-19)
 
 
