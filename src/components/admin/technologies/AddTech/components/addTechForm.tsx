@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import useCreateTech from "@/hooks/technologies/useCreateTech";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { FiSave } from "react-icons/fi";
@@ -28,10 +29,15 @@ export default function AddTechForm({
     },
   });
 
+  const { mutate:createTech } = useCreateTech();
+
   const onSubmit = (data: addTechFormData) => {
-    console.log("Adding technology:", data);
-    onClose();
-   };
+    createTech(data, {
+      onSuccess: () => {
+        onClose();
+      }
+    })
+  };
 
   return (
     <form className="px-4 flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>

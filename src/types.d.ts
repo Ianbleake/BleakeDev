@@ -218,5 +218,6 @@ type deleteExperiencePayload = {
 type Technology = {
   id: string;
   name: string;
-  color: string;
  }
+
+type NewTechnology = Omit<Technology, "id">;

@@ -3,8 +3,6 @@ import { twTheme } from "@/utils/ThemeColors";
 import React from "react";
 import { TbDeviceImacCode } from "react-icons/tb";
 
-//TODO: Improve this component with add technologie action
-
 type TechHeaderProps = {
   children: React.ReactElement;
 }
